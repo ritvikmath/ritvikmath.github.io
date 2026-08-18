@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: One Year of Calorie Counting &#58 Lessons and Results
+image: /images/header_option_3_healthstats.png
+category: health
+summary: What a full year of calorie tracking revealed about habits, consistency, setbacks, and long-term health.
+search_terms: nutrition diet calories food logging weight loss weight gain body composition fitness exercise habits behavior change self tracking quantified self metabolism health journey daily routine personal data goals consistency
 ---
 
 <figure>

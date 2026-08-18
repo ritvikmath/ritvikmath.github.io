@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Salary Dynamics in the University of California
+image: /images/sankey.jpg
+category: society
+summary: Exploring how role, location, and institution shape salaries throughout the University of California.
+search_terms: salary wages compensation pay income employees university professors staff California UC campuses jobs careers economics inequality occupation payroll public sector interactive visualization Sankey scatterplot
 ---
 
 <figure>
@@ -451,7 +455,4 @@ A few takeaways:
 * If you are having trouble finding position titles, it is likely because they are so vague. Your best bet is probably to go to the UC Compensation website linked in the Data section of this post and look for the position title you want and then enter it into the tool. 
 
 Thanks for reading and please leave comments!
-
-
-
 

@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: What is the Probability that a God Exists?
+image: /images/header_rel.png
+category: society
+summary: A careful tour through probability, belief, evidence, and one of humanity's oldest questions.
+search_terms: religion theology faith God belief atheism agnosticism philosophy Bayesian probability Bayes theorem evidence prior posterior uncertainty reasoning spirituality existence Pascal
 ---
 
 <figure>
@@ -247,9 +251,6 @@ $$
 **So, for about the first third of your life, you believe in a god since your personal probability $p(t)$ is above the threshold, $Q(t)$ but for final two thirds of your life, this story reverses so that you no longer believe in a god.**
 
 We can try a lot of different functions of time for $G_{disbelief}$ and $G_{belief}$ and $p(t)$! The possibilities for exploring this model are endless! 
-
-
-
 
 
 

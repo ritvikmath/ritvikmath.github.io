@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Designing a Drama-Free Guest List
+image: /images/banner_drama.png
+category: relationships
+summary: Using linear programming to build the highest-scoring guest list without inviting interpersonal chaos.
+search_terms: optimization operations research linear programming integer programming constraints objective function guest list party planning social network friends relationships conflict drama scheduling decision science maximize score solver algorithm
 ---
 
 <figure>
@@ -21,10 +25,6 @@ title: Designing a Drama-Free Guest List
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
 </script>
-
-<center>
-<font size="4">Read Time: 10 min</font>
-</center>
 
 ---
 

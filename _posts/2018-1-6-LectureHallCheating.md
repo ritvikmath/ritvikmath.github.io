@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Detecting Cheating in Lecture Halls
+image: /images/coverpiclecture.png
+category: education
+summary: Exploring whether unusual exam-score patterns can provide statistical evidence of classroom cheating.
+search_terms: academic integrity exams tests students classroom professor education fraud detection anomaly detection hypothesis testing probability simulation seating chart adjacent scores matching answers dishonesty statistics
 ---
 
 <figure>
@@ -24,10 +28,6 @@ title: Detecting Cheating in Lecture Halls
 
 <center>
 <font size="5"><b>Using Statistics to Ensure Academic Honesty</b></font>
-</center>
-
-<center>
-<font size="4">Read Time: 10 min</font>
 </center>
 
 ---
@@ -146,10 +146,6 @@ This technique **can help determine when some forms of cheating have occurred** 
 
 ---
 Thanks for reading and please leave comments below!
-
-
-
-
 
 
 

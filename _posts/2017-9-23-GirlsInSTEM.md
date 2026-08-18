@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Why Girls Belong in STEM and Why There is More to the Picture
+image: /images/banner_gis.png
+category: education
+summary: Investigating gender, ethnicity, grades, and the forces affecting who persists in STEM fields.
+search_terms: women girls gender gap science technology engineering mathematics retention education college grades diversity ethnicity race representation pipeline inclusion academic performance belonging careers
 ---
 
 <figure>
@@ -172,5 +176,3 @@ If we, as a society, are really hoping to become experts in **'Gender Difference
 ---
 
 Thanks for reading and please leave comments!
-
-

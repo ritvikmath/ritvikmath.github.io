@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Building an Efficient Job Shift Scheduler
+image: /images/header_shifts.jpg
+category: society
+summary: Building an optimization model that turns complex staffing constraints into an efficient work schedule.
+search_terms: scheduling shifts workforce employees staffing optimization operations research linear programming integer programming constraints availability preferences fairness solver algorithm jobs management efficiency automation
 author: Ritvik Kharkar
 ---
 
@@ -532,6 +536,3 @@ It is totally up to you how much of SADIE's suggestions about optimal schedule y
 5. Run SADIE as usual, making sure to input the start schedule date and number of days to schedule properly
 
 Thanks for Reading and Leave Comments!
-
-
-

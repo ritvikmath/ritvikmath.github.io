@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Analyzing the UCLA Swipes Black Market
+image: /images/header.jpg
+category: society
+summary: Studying the incentives, pricing, and human behavior behind UCLA's underground meal-swipe economy.
+search_terms: UCLA dining meal swipes students black market underground economy supply demand pricing marketplace transactions incentives food college campus economics revenue sellers buyers Facebook social network
 ---
 
 <figure>

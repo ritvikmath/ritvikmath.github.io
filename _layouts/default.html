@@ -1,51 +1,50 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
     {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml">
   </head>
-
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+  <body class="{% if page.layout %}layout-{{ page.layout }}{% endif %}">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="shell header-inner">
+        <a class="brand" href="{{ site.baseurl }}/" aria-label="ritvikmath home">
+          <span class="brand-mark" aria-hidden="true"><img src="{{ site.baseurl }}/images/rlogo-modern.jpg" alt=""></span>
+          <span class="brand-copy"><strong>ritvikmath</strong><small>DATA SCIENCE FOR ALL</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="{{ site.baseurl }}/#analyses">Analyses</a>
+          <a href="{{ site.baseurl }}/#about">About</a>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+    <main id="main">{{ content }}</main>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <a class="brand brand-footer" href="{{ site.baseurl }}/#top" aria-label="Back to the top of ritvikmath"><span class="brand-mark"><img src="{{ site.baseurl }}/images/rlogo-modern.jpg" alt=""></span><span class="brand-copy"><strong>ritvikmath</strong></span></a>
+        </div>
+        <div class="footer-links">
+          <span>Explore</span>
+          <a href="{{ site.baseurl }}/#analyses">All analyses</a>
+          <a href="{{ site.baseurl }}/#about">About</a>
+        </div>
+        <div class="footer-links">
+          <span>Connect</span>
+          <a href="https://github.com/ritvikmath" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.youtube.com/channel/UCUcpVoi5KkJmnE3bvEhHR0Q" target="_blank" rel="noopener">YouTube ↗</a>
+        </div>
       </div>
-    </div>
-
+      <div class="shell footer-bottom"><span>© {{ site.time | date: '%Y' }} Ritvik Kharkar</span><span>Built with curiosity in California</span></div>
+    </footer>
+    <script src="{{ site.baseurl }}/assets/site.js" defer></script>
     {% include analytics.html %}
   </body>
 </html>

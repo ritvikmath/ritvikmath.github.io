@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Your Friends Have More Friends Than You
+image: /images/fcover2.png
+category: relationships
+summary: Three ways to understand the surprising mathematics behind the friendship paradox.
+search_terms: friendship paradox social networks graph theory nodes edges degree distribution average friends popularity inequality sampling bias network science connections variance proof probability social media
 ---
 
 <figure>
@@ -154,5 +158,3 @@ If you're still here, then we should talk because you are my kind of person :)
 So, your friends have more friends than you. Who cares! Quality over quantity right? **Find yourself a real tight knit batch of buds and let your worries melt away.**
 
 **Thanks for reading and please leave comments below!**
-
-

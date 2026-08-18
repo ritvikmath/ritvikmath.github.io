@@ -1,15 +1,39 @@
 ---
 layout: default
 ---
-
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+<div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+<article class="article-shell">
+  <header class="article-header">
+    <a class="back-link" href="{{ site.baseurl }}/#analyses">← All analyses</a>
+    <p class="eyebrow"><span></span> {{ page.category | default: 'Analysis' }}</p>
+    <h1>{{ page.title }}</h1>
+    <div class="article-meta"><span>By Ritvik Kharkar</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %e, %Y' }}</time><span>{{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</span></div>
+  </header>
+  <div class="article-content entry">{{ content }}</div>
+  {% assign related_posts = site.posts | where: "category", page.category %}
+  {% assign related_count = 0 %}
+  <aside class="article-related" aria-labelledby="related-heading">
+    <p class="eyebrow"><span></span> Keep exploring</p>
+    <h2 id="related-heading">Read Next</h2>
+    <div class="related-pills">
+      {% for post in related_posts %}
+        {% if post.url != page.url and related_count < 2 %}
+          <a class="related-pill" href="{{ site.baseurl }}{{ post.url }}" data-related-category="{{ post.category }}">
+            <span>{{ post.title }}</span><b aria-hidden="true">↗</b>
+          </a>
+          {% assign related_count = related_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% for post in site.posts %}
+        {% if post.category != page.category %}
+          <a class="related-pill random-related-candidate" href="{{ site.baseurl }}{{ post.url }}" data-related-category="{{ post.category }}" hidden>
+            <span>{{ post.title }}</span><b aria-hidden="true">↗</b>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </aside>
+  <footer class="article-return">
+    <a href="{{ site.baseurl }}/#analyses"><span aria-hidden="true">←</span> Browse all analyses</a>
+  </footer>
 </article>

@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: How to Get a Second Date
+image: /images/cover_img_speed_sec.png
+category: relationships
+summary: Turning real speed-dating data into a practical model of attraction and second-date decisions.
+search_terms: romance attraction dating relationships love compatibility beauty sincerity intelligence ambition fun machine learning prediction random forest classification psychology gender preferences match second date decisions
 ---
 
 <figure>
@@ -352,4 +356,3 @@ Perhaps it is better to go into a first date with a **hybrid mentality**, keepin
 **Thanks for reading and please leave comments below!**
 
 ---
-

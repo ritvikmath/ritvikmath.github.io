@@ -1,32 +1,51 @@
 ---
 layout: default
+title:
 ---
+<section class="topic-strip" id="topics" aria-label="Topics covered">
+  <div class="shell">
+    <span class="strip-label">Browse by topic</span>
+    <div class="topic-buttons" role="group" aria-label="Filter analyses by topic">
+      <button class="filter topic-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter topic-filter" type="button" data-filter="society" aria-pressed="false">Society</button>
+      <button class="filter topic-filter" type="button" data-filter="health" aria-pressed="false">Health</button>
+      <button class="filter topic-filter" type="button" data-filter="education" aria-pressed="false">Education</button>
+      <button class="filter topic-filter" type="button" data-filter="relationships" aria-pressed="false">Relationships</button>
+      <button class="filter topic-filter" type="button" data-filter="culture" aria-pressed="false">Culture</button>
+    </div>
+  </div>
+</section>
 
-<div class="posts">
-  
-  {% for post in site.posts %}
-  
-    <article class="post">
+<section class="archive shell" id="analyses">
+  <div class="section-heading">
+    <div><h2>Ideas, investigated.</h2><p>Every analysis starts with a question and follows the data wherever it leads.</p></div>
+    <div class="archive-count"><strong id="result-count">{{ site.posts | size }}</strong><span>analyses</span></div>
+  </div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-101872267-1', 'auto');
-  ga('send', 'pageview');
-</script>
-      </h1>
+  <div class="archive-tools">
+    <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search analyses</span><input id="archive-search" type="search" placeholder='search by keyword or idea (e.g. "probability" or "dating")' autocomplete="off"><kbd>⌘ K</kbd></label>
+  </div>
 
-      <div class="entry">
-        {{ post.excerpt }}
+  <div class="post-grid" id="post-grid">
+    {% for post in site.posts %}
+    <article class="post-card" data-category="{{ post.category | downcase }}" data-search="{{ post.title | strip_html | downcase }} {{ post.category | downcase }} {{ post.summary | downcase }} {{ post.search_terms | downcase }}">
+      <a class="card-image" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image }}" alt="" loading="lazy"><span>{{ post.category | default: 'Analysis' }}</span></a>
+      <div class="card-body">
+        <div class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time><span>{{ post.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span></div>
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.summary }}</p>
+        <a class="card-link" href="{{ site.baseurl }}{{ post.url }}" aria-label="Read {{ post.title }}">Read the analysis <span>↗</span></a>
       </div>
-
-      
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-
-      
     </article>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
+  <p class="no-results" id="no-results" hidden>No analyses matched that search. Try another phrase or topic.</p>
+</section>
+
+<section class="about-band" id="about">
+  <div class="shell about-band-grid">
+    <p class="eyebrow"><span></span> About</p>
+    <blockquote>“The world is full of deep questions that can be answered with the right data and a curious mind.”</blockquote>
+    <div><p>I started this blog as a way to see how far we could go by applying data science techniques to the right datasets. It's a collection of my findings, insights, and learnings along the way.</p></div>
+  </div>
+</section>

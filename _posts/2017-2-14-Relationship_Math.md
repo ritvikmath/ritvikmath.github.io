@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Uncovering The Forces Which Break Up Relationships
+image: /images/title_hearts.png
+category: relationships
+summary: What large-scale relationship data suggests about how couples meet, last, and eventually separate.
+search_terms: love romance couples marriage divorce breakup dating online dating relationships duration survival analysis probability age religion race workplace college meeting partners longitudinal survey internet
 ---
 
 <figure>
@@ -351,5 +355,3 @@ Rosenfeld, Michael J., Reuben J. Thomas, and Maja Falcon. 2015. How Couples Meet
 
 
 Thanks for reading and please leave comments!
-
-

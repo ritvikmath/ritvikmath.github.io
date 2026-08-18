@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Gun Violence in America &#58 An Analysis
+image: /images/mathgun.png
+category: society
+summary: A comprehensive statistical investigation of gun violence patterns across the United States.
+search_terms: firearms shootings homicide murder crime victims offenders weapons public safety law policy police race ethnicity geography states cities time trends classification prediction racial profiling United States violence
 ---
 
 <figure>
@@ -1063,9 +1067,6 @@ Finally, as new science and new mathematical methods become available, we should
 ---
 
 **Thanks for reading and please leave comments!**
-
-
-
 
 
 

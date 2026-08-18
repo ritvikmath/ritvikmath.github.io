@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Detecting Communities in the Harry Potter Universe
+image: /images/both.png
+category: culture
+summary: Using dialogue and text distance to uncover the hidden communities of the Harry Potter universe.
+search_terms: Harry Potter Hogwarts books novels text analysis natural language processing NLP clustering machine learning unsupervised learning dialogue characters communities distance similarity networks wizarding world literature
 ---
 
 <figure>
@@ -113,9 +117,6 @@ Cool Stuff!:
 
 
 Thanks for reading and please leave comments!
-
-
-
 
 
 

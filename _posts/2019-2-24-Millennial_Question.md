@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Where Can You Afford Avocado Toast AND a House?
+image: /images/avoCover3.png
+category: society
+summary: Mapping the American regions where incomes stretch furthest toward both home ownership and the millennial staple.
+search_terms: avocado toast housing affordability home prices cost of living income salary cities regions geography millennials real estate census consumer prices normalization scoring rankings Detroit San Francisco Chicago Pittsburgh Texas
 ---
 
 <figure>
@@ -16,10 +20,6 @@ title: Where Can You Afford Avocado Toast AND a House?
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
 </script>
-
-<center>
-<font size="4">Read Time: 5 min</font>
-</center>
 
 ---
 

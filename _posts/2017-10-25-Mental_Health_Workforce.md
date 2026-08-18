@@ -2,6 +2,10 @@
 layout: post
 comments: true
 title: Top 5 Most Toxic Workplace Combinations for Mental Health
+image: /images/mh_cover.jpg
+category: health
+summary: Identifying the combinations of workplace conditions most strongly associated with poor mental health.
+search_terms: mental health workplace employees jobs employer wellness depression anxiety treatment benefits remote work technology company culture toxic environment survey combinations interactions occupational health
 ---
 
 <figure>
