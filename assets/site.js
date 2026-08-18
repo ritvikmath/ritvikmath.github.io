@@ -19,7 +19,9 @@
     const queryTerms = query ? query.split(/\s+/) : [];
     let visible = 0;
     cards.forEach(function (card) {
-      const matchesTopic = activeFilter === 'all' || card.dataset.category === activeFilter;
+      const matchesTopic = activeFilter === 'all' ||
+        card.dataset.category === activeFilter ||
+        (activeFilter === 'authors-choice' && card.dataset.authorsChoice === 'true');
       const searchable = normalize(card.dataset.search || '');
       const matchesSearch = !queryTerms.length || queryTerms.every(function (term) {
         return searchable.indexOf(term) !== -1;

@@ -12,6 +12,7 @@ title:
       <button class="filter topic-filter" type="button" data-filter="education" aria-pressed="false">Education</button>
       <button class="filter topic-filter" type="button" data-filter="relationships" aria-pressed="false">Relationships</button>
       <button class="filter topic-filter" type="button" data-filter="culture" aria-pressed="false">Culture</button>
+      <button class="filter topic-filter" type="button" data-filter="authors-choice" aria-pressed="false">Author's Choice</button>
     </div>
   </div>
 </section>
@@ -28,7 +29,7 @@ title:
 
   <div class="post-grid" id="post-grid">
     {% for post in site.posts %}
-    <article class="post-card" data-category="{{ post.category | downcase }}" data-search="{{ post.title | strip_html | downcase }} {{ post.category | downcase }} {{ post.summary | downcase }} {{ post.search_terms | downcase }}">
+    <article class="post-card" data-category="{{ post.category | downcase }}" data-authors-choice="{{ post.authors_choice | default: false }}" data-search="{{ post.title | strip_html | downcase }} {{ post.category | downcase }} {{ post.summary | downcase }} {{ post.search_terms | downcase }}">
       <a class="card-image" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image }}" alt="" loading="lazy"><span>{{ post.category | default: 'Analysis' }}</span></a>
       <div class="card-body">
         <div class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time><span>{{ post.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span></div>
