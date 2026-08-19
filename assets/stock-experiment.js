@@ -6,6 +6,9 @@
 
   const context = canvas.getContext('2d');
   const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+  const timestampFormatter = new Intl.DateTimeFormat('en-US', {
+    month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+  });
   const shortDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
   const numberFormatter = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   let data = null;
@@ -21,6 +24,10 @@
 
   function updateSummary(payload) {
     document.querySelector('#market-date').textContent = dateFormatter.format(parseDate(payload.market_date));
+    const refreshed = document.querySelector('#market-refreshed');
+    const refreshedAt = new Date(payload.generated_at);
+    refreshed.dateTime = payload.generated_at;
+    refreshed.textContent = timestampFormatter.format(refreshedAt);
     document.querySelector('#market-latest').textContent = numberFormatter.format(payload.summary.latest);
     const change = document.querySelector('#market-change');
     const positive = payload.summary.change_percent >= 0;

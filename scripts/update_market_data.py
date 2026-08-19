@@ -2,6 +2,7 @@
 """Refresh static market data used by the Stock Trading experiment."""
 
 import json
+import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -40,8 +41,25 @@ def fetch_sp500():
     raise RuntimeError(f"Unable to refresh S&P 500 data: {last_error}")
 
 
+def existing_market_date():
+    """Return the currently published market date, if the data file is valid."""
+    if not OUTPUT.exists():
+        return None
+    try:
+        payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        return payload.get("market_date")
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
 def main():
     points = fetch_sp500()
+    latest_market_date = points[-1]["date"]
+    force_write = os.environ.get("FORCE_MARKET_DATA_WRITE", "").lower() in {"1", "true", "yes"}
+    if existing_market_date() == latest_market_date and not force_write:
+        print(f"No new market data; {latest_market_date} is already published.")
+        return
+
     first = points[0]["close"]
     latest = points[-1]["close"]
     payload = {
@@ -50,7 +68,7 @@ def main():
         "currency": "USD",
         "range": "3 months",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "market_date": points[-1]["date"],
+        "market_date": latest_market_date,
         "summary": {
             "latest": latest,
             "change_percent": round(((latest / first) - 1) * 100, 2),
