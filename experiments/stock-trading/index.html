@@ -1,0 +1,40 @@
+---
+layout: default
+title: Stock Trading
+permalink: /experiments/stock-trading/
+---
+<article class="experiment-shell">
+  <header class="experiment-header">
+    <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
+    <p class="eyebrow"><span></span> Experiment 001 · Markets</p>
+    <h1>Stock Trading</h1>
+    <p>A live workspace for testing systematic investing ideas against the market. For now, we begin with the benchmark itself.</p>
+    <div class="experiment-status"><span></span> Data through <strong id="market-date">loading…</strong></div>
+  </header>
+
+  <section class="market-panel" aria-labelledby="market-chart-heading">
+    <header class="market-panel-header">
+      <div><p class="eyebrow"><span></span> Live benchmark</p><h2 id="market-chart-heading">S&amp;P 500 · three months</h2></div>
+      <div class="market-latest"><span>Latest close</span><strong id="market-latest">—</strong><small id="market-change">—</small></div>
+    </header>
+
+    <div class="market-chart-wrap" id="market-chart-wrap">
+      <canvas id="market-chart" role="img" aria-label="Interactive chart of S&amp;P 500 closing prices over the latest three months"></canvas>
+      <div class="market-tooltip" id="market-tooltip" hidden><time></time><strong></strong></div>
+    </div>
+
+    <div class="market-range" aria-label="Three-month market summary">
+      <div><span>Period low</span><strong id="market-low">—</strong></div>
+      <div><span>Period high</span><strong id="market-high">—</strong></div>
+      <div><span>Observations</span><strong id="market-observations">—</strong></div>
+    </div>
+    <p class="market-source">Closing-price data provided by Yahoo Finance through yfinance. Educational experiment only—not investment advice.</p>
+  </section>
+
+  <section class="experiment-note">
+    <p class="notebook-kicker">where this goes next</p>
+    <h2>The benchmark comes first.</h2>
+    <p>Before testing a trading strategy, we need a clear baseline. This chart establishes the recent path of the S&amp;P 500. Future iterations can layer systematic portfolios onto the same timeline and make their assumptions, allocations, and tradeoffs visible.</p>
+  </section>
+</article>
+<script src="{{ site.baseurl }}/assets/stock-experiment.js" defer></script>
