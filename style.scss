@@ -277,18 +277,15 @@ body {
 .about-band-grid .margin-equation { font-family: var(--hand); font-size: 20px; font-weight: 400; }
 .article-content blockquote { background: rgba(247,219,117,.12); }
 .archive { position: relative; }
+.layout-post main { position: relative; }
 .graph-canvas { position: absolute; z-index: 2; top: 0; left: calc((100vw - 100%) / -2); pointer-events: none; }
-.site-header, .site-footer, .topic-strip, .section-heading, .archive-tools, .post-card, .about-band { position: relative; z-index: 3; }
-.graph-play-hint { position: fixed; z-index: 4; right: 22px; bottom: 17px; margin: 0; color: rgba(49,95,186,.68); font: 16px/1.1 var(--hand); transform: rotate(-1deg); transition: opacity .5s, transform .5s; pointer-events: none; }
-.graph-play-hint span { display: block; margin-top: 4px; color: rgba(205,89,82,.58); font-size: 12px; text-align: right; }
-.graph-play-hint.dismissed { opacity: 0; transform: translateY(5px) rotate(-1deg); }
+.site-header, .site-footer, .topic-strip, .section-heading, .archive-tools, .post-card, .about-band, .article-shell { position: relative; z-index: 3; }
 
 @media (max-width: 700px) {
   body { background-image: linear-gradient(rgba(64,113,170,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(64,113,170,.045) 1px, transparent 1px); background-size: 22px 22px; }
   .notebook-kicker { max-width: 100%; }
-  .graph-play-hint { right: 14px; bottom: 12px; font-size: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .graph-canvas, .graph-play-hint { display: none; }
+  .graph-canvas { display: none; }
 }

@@ -87,10 +87,9 @@
     updateProgress();
   }
 
-  const graphHint = document.querySelector('#graph-play-hint');
-  const graphSurface = document.querySelector('#analyses');
+  const graphSurface = document.querySelector('#analyses') || (document.body.classList.contains('layout-post') ? document.querySelector('main') : null);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (cards.length && graphSurface && !reducedMotion.matches) {
+  if (graphSurface && !reducedMotion.matches) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     const maxNodes = 12;
@@ -207,7 +206,7 @@
 
     function canPlaceNode(event) {
       if (event.button !== 0 || event.defaultPrevented || fadeStarted) return false;
-      if (event.target.closest('a, button, input, select, textarea, label, img, .post-card, .archive-tools, .topic-strip, .about-band, .site-header, .site-footer')) return false;
+      if (event.target.closest('a, button, input, select, textarea, label, img, .post-card, .archive-tools, .topic-strip, .about-band, .article-shell, .site-header, .site-footer')) return false;
       const surfaceBounds = graphSurface.getBoundingClientRect();
       return event.clientY >= surfaceBounds.top && event.clientY <= surfaceBounds.bottom;
     }
@@ -251,7 +250,6 @@
         const discarded = retiredConnections.shift();
         connections = connections.filter(function (connection) { return connection !== discarded; });
       }
-      if (graphHint) graphHint.classList.add('dismissed');
       window.clearTimeout(inactivityTimer);
       inactivityTimer = window.setTimeout(beginFade, inactivityDelay);
       requestDraw();
@@ -260,10 +258,7 @@
     window.addEventListener('resize', sizeCanvas, { passive: true });
     if ('ResizeObserver' in window) new ResizeObserver(sizeCanvas).observe(graphSurface);
     reducedMotion.addEventListener('change', function (event) { if (event.matches) clearGraph(); });
-    window.setTimeout(function () { if (graphHint) graphHint.classList.add('dismissed'); }, 7000);
     sizeCanvas();
-  } else if (graphHint) {
-    graphHint.hidden = true;
   }
 
   updateArchive();
