@@ -57,6 +57,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "2.7"
           bundler-cache: true
 
       - name: Configure GitHub Pages
