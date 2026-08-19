@@ -17,6 +17,7 @@
   let chartWidth = 0;
   let chartHeight = 0;
   let pixelRatio = 1;
+  let lastFetchAt = 0;
 
   function parseDate(value) {
     return new Date(value + 'T00:00:00Z');
@@ -176,18 +177,33 @@
   });
   window.addEventListener('resize', resizeChart, { passive: true });
 
-  fetch('/assets/data/sp500-3m.json')
-    .then(function (response) {
-      if (!response.ok) throw new Error('Market data request failed');
-      return response.json();
-    })
-    .then(function (payload) {
-      data = payload;
-      updateSummary(payload);
-      resizeChart();
-    })
-    .catch(function () {
-      wrap.classList.add('market-chart-error');
-      wrap.setAttribute('data-error', 'Market data is temporarily unavailable.');
-    });
+  function loadMarketData() {
+    lastFetchAt = Date.now();
+    const baseUrl = canvas.dataset.marketDataUrl || '/assets/data/sp500-3m.json';
+    const separator = baseUrl.indexOf('?') === -1 ? '?' : '&';
+    const dataUrl = baseUrl + separator + 'refresh=' + lastFetchAt;
+
+    fetch(dataUrl, { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Market data request failed');
+        return response.json();
+      })
+      .then(function (payload) {
+        data = payload;
+        wrap.classList.remove('market-chart-error');
+        wrap.removeAttribute('data-error');
+        updateSummary(payload);
+        resizeChart();
+      })
+      .catch(function () {
+        if (data) return;
+        wrap.classList.add('market-chart-error');
+        wrap.setAttribute('data-error', 'Market data is temporarily unavailable.');
+      });
+  }
+
+  window.addEventListener('pageshow', loadMarketData);
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && Date.now() - lastFetchAt > 60000) loadMarketData();
+  });
 }());

@@ -19,7 +19,7 @@ permalink: /experiments/stock-trading/
     </header>
 
     <div class="market-chart-wrap" id="market-chart-wrap">
-      <canvas id="market-chart" role="img" aria-label="Interactive chart of S&amp;P 500 closing prices over the latest three months"></canvas>
+      <canvas id="market-chart" data-market-data-url="{{ site.baseurl }}/assets/data/sp500-3m.json" role="img" aria-label="Interactive chart of S&amp;P 500 closing prices over the latest three months"></canvas>
       <div class="market-tooltip" id="market-tooltip" hidden><time></time><strong></strong></div>
     </div>
 
