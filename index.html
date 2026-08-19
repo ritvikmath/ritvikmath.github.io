@@ -25,11 +25,22 @@ title:
 
   <div class="archive-tools">
     <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search analyses</span><input id="archive-search" type="search" placeholder='search by keyword or idea (e.g. "probability" or "dating")' autocomplete="off"><kbd>⌘ K</kbd></label>
+    <label class="method-select" for="method-filter"><span>Browse by method</span><select id="method-filter">
+      <option value="all">All methods</option>
+      <option value="statistical analysis">Statistical analysis</option>
+      <option value="data visualization">Data visualization</option>
+      <option value="predictive modeling">Predictive modeling</option>
+      <option value="probability simulation">Probability &amp; simulation</option>
+      <option value="network analysis">Network analysis</option>
+      <option value="optimization">Optimization</option>
+      <option value="time series">Time series</option>
+      <option value="clustering nlp">Clustering &amp; NLP</option>
+    </select></label>
   </div>
 
   <div class="post-grid" id="post-grid">
     {% for post in site.posts %}
-    <article class="post-card" data-category="{{ post.category | downcase }}" data-authors-choice="{{ post.authors_choice | default: false }}" data-search="{{ post.title | strip_html | downcase }} {{ post.category | downcase }} {{ post.summary | downcase }} {{ post.search_terms | downcase }}">
+    <article class="post-card" data-category="{{ post.category | downcase }}" data-authors-choice="{{ post.authors_choice | default: false }}" data-methods="{{ post.methods | join: '|' | downcase }}" data-search="{{ post.title | strip_html | downcase }} {{ post.category | downcase }} {{ post.methods | join: ' ' | downcase }} {{ post.summary | downcase }} {{ post.search_terms | downcase }}">
       <a class="card-image" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image }}" alt="" loading="lazy"><span>{{ post.category | default: 'Analysis' }}</span></a>
       <div class="card-body">
         <div class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time><span>{{ post.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span></div>
@@ -40,13 +51,13 @@ title:
     </article>
     {% endfor %}
   </div>
-  <p class="no-results" id="no-results" hidden>No analyses matched that search. Try another phrase or topic.</p>
+  <p class="no-results" id="no-results" hidden>No analyses matched that search. Try another phrase, topic, or method.</p>
 </section>
 
 <section class="about-band" id="about">
   <div class="shell about-band-grid">
     <p class="eyebrow"><span></span> About</p>
-    <blockquote>“The world is full of deep questions that can be answered with the right data and a curious mind.”</blockquote>
+    <blockquote>The world is full of deep questions that can be answered with the right data and a curious mind.</blockquote>
     <div><p>I started this blog as a way to see how far we could go by applying data science techniques to the right datasets. It's a collection of my findings, insights, and learnings along the way.</p></div>
   </div>
 </section>

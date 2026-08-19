@@ -4,6 +4,7 @@ comments: true
 title: Why This Daily Bruin Image Made Me Cringe
 image: /images/typical_student.png
 category: society
+methods: [Statistical analysis, Data visualization]
 summary: Why combining the most common traits can create a deeply misleading picture of an average person.
 search_terms: statistics averages mode median mean demographics typical student UCLA data visualization misleading charts journalism media literacy intersectionality combinations fallacy representation Daily Bruin
 ---
@@ -69,7 +70,6 @@ See these articles for the correlation between SAT scores and family income.
 <a href="https://economix.blogs.nytimes.com/2009/08/27/sat-scores-and-family-income/" target="_blank">SAT Scores and Family Income</a>
 
 <a href="https://www.washingtonpost.com/news/wonk/wp/2014/03/05/these-four-charts-show-how-the-sat-favors-the-rich-educated-families/?utm_term=.0e83b6bf989c" target="_blank">These four charts show how the SAT favors rich, educated families</a>
-
 
 
 

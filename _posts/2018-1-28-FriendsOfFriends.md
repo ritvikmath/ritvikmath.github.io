@@ -4,6 +4,7 @@ comments: true
 title: Your Friends Have More Friends Than You
 image: /images/fcover2.png
 category: relationships
+methods: [Network analysis, Probability & simulation]
 summary: Three ways to understand the surprising mathematics behind the friendship paradox.
 search_terms: friendship paradox social networks graph theory nodes edges degree distribution average friends popularity inequality sampling bias network science connections variance proof probability social media
 ---

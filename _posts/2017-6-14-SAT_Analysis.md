@@ -4,6 +4,7 @@ comments: true
 title: Unearthing Hidden Biases in SAT Exam Scores
 image: /images/sat_cover.png
 category: education
+methods: [Statistical analysis, Data visualization]
 summary: Tracing how school size, participation, location, and family income relate to SAT performance.
 search_terms: standardized testing test scores schools students education inequality income wealth neighborhood New York City NYC enrollment participation rate math reading writing correlation socioeconomic status bias maps
 ---
@@ -214,7 +215,6 @@ For an exam that is so **heavily used to determine college admissions**, we need
 ---
 
 Thanks for reading and please leave comments below!
-
 
 
 

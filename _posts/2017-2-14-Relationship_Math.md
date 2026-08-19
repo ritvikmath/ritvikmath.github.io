@@ -4,6 +4,7 @@ comments: true
 title: Uncovering The Forces Which Break Up Relationships
 image: /images/title_hearts.png
 category: relationships
+methods: [Statistical analysis, Predictive modeling]
 summary: What large-scale relationship data suggests about how couples meet, last, and eventually separate.
 search_terms: love romance couples marriage divorce breakup dating online dating relationships duration survival analysis probability age religion race workplace college meeting partners longitudinal survey internet
 ---

@@ -2,31 +2,43 @@
   const search = document.querySelector('#archive-search');
   const cards = Array.from(document.querySelectorAll('.post-card'));
   const filters = Array.from(document.querySelectorAll('.filter'));
+  const methodFilter = document.querySelector('#method-filter');
   const count = document.querySelector('#result-count');
   const empty = document.querySelector('#no-results');
   let activeFilter = 'all';
 
   function normalize(value) {
-    return value
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, ' ')
-      .trim();
+    return String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  }
+
+  function queryTerms() {
+    const value = normalize(search ? search.value : '');
+    return value ? value.split(/\s+/) : [];
+  }
+
+  function cardMatchesTopic(card) {
+    return activeFilter === 'all' || card.dataset.category === activeFilter ||
+      (activeFilter === 'authors-choice' && card.dataset.authorsChoice === 'true');
+  }
+
+  function cardMatchesMethod(card) {
+    if (!methodFilter || methodFilter.value === 'all') return true;
+    return (card.dataset.methods || '').split('|').some(function (method) {
+      return normalize(method) === methodFilter.value;
+    });
+  }
+
+  function cardMatchesSearch(card, terms) {
+    const searchable = normalize(card.dataset.search);
+    return !terms.length || terms.every(function (term) { return searchable.indexOf(term) !== -1; });
   }
 
   function updateArchive() {
     if (!search) return;
-    const query = normalize(search.value);
-    const queryTerms = query ? query.split(/\s+/) : [];
+    const terms = queryTerms();
     let visible = 0;
     cards.forEach(function (card) {
-      const matchesTopic = activeFilter === 'all' ||
-        card.dataset.category === activeFilter ||
-        (activeFilter === 'authors-choice' && card.dataset.authorsChoice === 'true');
-      const searchable = normalize(card.dataset.search || '');
-      const matchesSearch = !queryTerms.length || queryTerms.every(function (term) {
-        return searchable.indexOf(term) !== -1;
-      });
-      const show = matchesTopic && matchesSearch;
+      const show = cardMatchesTopic(card) && cardMatchesMethod(card) && cardMatchesSearch(card, terms);
       card.hidden = !show;
       if (show) visible += 1;
     });
@@ -56,6 +68,8 @@
     });
   });
 
+  if (methodFilter) methodFilter.addEventListener('change', updateArchive);
+
   const randomRelated = Array.from(document.querySelectorAll('.random-related-candidate'));
   if (randomRelated.length) {
     const randomIndex = Math.floor(Math.random() * randomRelated.length);
@@ -72,4 +86,6 @@
     document.addEventListener('scroll', updateProgress, { passive: true });
     updateProgress();
   }
+
+  updateArchive();
 }());

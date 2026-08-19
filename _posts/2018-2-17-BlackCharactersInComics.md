@@ -4,6 +4,7 @@ comments: true
 title: The State of Black Characters in Comics
 image: /images/mycoverimgheroes.png
 category: culture
+methods: [Statistical analysis, Data visualization]
 summary: Measuring representation and examining how Black characters have appeared across the comic-book universe.
 search_terms: diversity representation race ethnicity Black African American comics comic books superheroes Marvel DC media culture inclusion bias characters popular culture demographics racial disparity
 ---

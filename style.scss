@@ -90,11 +90,15 @@ button, input { font: inherit; }
 .archive-count { display: flex; align-items: baseline; gap: 8px; }
 .archive-count strong { font: 500 36px/1 var(--serif); }
 .archive-count span { color: var(--muted); font: 10px/1 var(--mono); text-transform: uppercase; }
-.archive-tools { display: flex; align-items: center; gap: 24px; padding: 18px; margin-bottom: 34px; border: 1px solid var(--line); background: rgba(255,255,255,.45); }
+.archive-tools { display: flex; align-items: center; gap: 16px; padding: 18px; margin-bottom: 34px; border: 1px solid var(--line); background: rgba(255,255,255,.45); }
 .search-field { width: min(480px, 100%); min-height: 43px; display: flex; align-items: center; gap: 11px; padding: 0 12px; background: var(--white); border: 1px solid #d3d7d6; }
 .search-field > span:first-child { font-size: 20px; transform: rotate(-15deg); }
 .search-field input { width: 100%; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 12px; }
 .search-field kbd { color: #8b949f; border: 0; font: 9px/1 var(--mono); }
+.method-select { min-width: 290px; min-height: 43px; display: flex; align-items: center; gap: 11px; padding: 0 11px; margin-left: auto; border: 1px solid #d3d7d6; background: var(--white); }
+.method-select > span { color: var(--blue); font: 500 9px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.method-select select { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: var(--ink); cursor: pointer; font-size: 11px; font-weight: 700; }
+.method-select:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(40,100,220,.1); }
 .filters { display: flex; align-items: center; gap: 4px; overflow-x: auto; }
 .filter { padding: 10px 13px; border: 0; border-radius: 3px; color: #5d6774; background: transparent; cursor: pointer; font-size: 10px; font-weight: 700; }
 .filter:hover, .filter.active { color: var(--white); background: var(--ink); }
@@ -186,6 +190,7 @@ button, input { font: inherit; }
   .post-grid { grid-template-columns: repeat(2, 1fr); }
   .archive-tools { align-items: stretch; flex-direction: column; }
   .search-field { width: 100%; }
+  .method-select { width: 100%; margin-left: 0; }
   .about-band-grid { grid-template-columns: 1fr 2fr; }
   .about-band-grid > div { grid-column: 2; }
 }

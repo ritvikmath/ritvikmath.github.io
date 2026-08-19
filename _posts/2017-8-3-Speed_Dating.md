@@ -4,6 +4,7 @@ comments: true
 title: How to Get a Second Date
 image: /images/cover_img_speed_sec.png
 category: relationships
+methods: [Predictive modeling, Statistical analysis]
 summary: Turning real speed-dating data into a practical model of attraction and second-date decisions.
 search_terms: romance attraction dating relationships love compatibility beauty sincerity intelligence ambition fun machine learning prediction random forest classification psychology gender preferences match second date decisions
 ---

@@ -4,6 +4,7 @@ comments: true
 title: The Rise and Demise of College Majors
 image: /images/header_title_rod.png
 category: education
+methods: [Time series, Data visualization, Statistical analysis]
 summary: Following decades of enrollment data to see which college majors grew, faded, and transformed.
 search_terms: college university majors degrees enrollment education careers labor market trends history time series growth decline humanities STEM business popularity students fields of study boom bust
 ---
@@ -194,5 +195,4 @@ Perhaps then the idea is to strike a medium. Yes, follow your passion but get cr
 ---
 
 Thanks for reading and please leave comments!
-
 

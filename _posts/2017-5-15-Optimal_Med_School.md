@@ -4,6 +4,7 @@ comments: true
 title: Optimizing Your Chances of Medical School Admission
 image: /images/sig_head2.png
 category: education
+methods: [Predictive modeling, Optimization]
 authors_choice: true
 summary: Modeling how GPA and MCAT changes alter the probability of medical-school admission.
 search_terms: medical school admissions medicine doctors premed GPA MCAT acceptance probability logistic regression sigmoid predictive modeling grades test scores applicants strategy education healthcare career

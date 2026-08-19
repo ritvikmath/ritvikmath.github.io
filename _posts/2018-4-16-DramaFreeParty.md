@@ -4,6 +4,7 @@ comments: true
 title: Designing a Drama-Free Guest List
 image: /images/banner_drama.png
 category: relationships
+methods: [Optimization, Network analysis]
 authors_choice: true
 summary: Using linear programming to build the highest-scoring guest list without inviting interpersonal chaos.
 search_terms: optimization operations research linear programming integer programming constraints objective function guest list party planning social network friends relationships conflict drama scheduling decision science maximize score solver algorithm

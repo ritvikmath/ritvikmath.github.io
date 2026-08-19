@@ -4,6 +4,7 @@ comments: true
 title: How Many Hearts Beat in Sync With Yours?
 image: /images/coverbeat.jpeg
 category: health
+methods: [Probability & simulation, Statistical analysis]
 summary: Estimating how many people share your exact heartbeat at any given moment.
 search_terms: heart rate heartbeat pulse health physiology population estimation probability distribution simulation statistics normal distribution humans synchronization medical vital signs beats per minute
 ---

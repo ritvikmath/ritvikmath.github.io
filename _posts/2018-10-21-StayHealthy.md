@@ -4,6 +4,7 @@ comments: true
 title: How to Maintain Your Body in the Modern Workplace
 image: /images/better_cover_health.png
 category: health
+methods: [Statistical analysis]
 summary: A data-minded look at the small workplace habits that shape energy, movement, and health over time.
 search_terms: office wellness desk job sedentary sitting standing walking commute exercise calories energy expenditure workplace movement activity healthy habits nine to five fitness routine body maintenance
 
