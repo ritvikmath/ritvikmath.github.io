@@ -8,33 +8,36 @@ permalink: /experiments/stock-trading/
     <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
     <p class="eyebrow"><span></span> Experiment 001 · Markets</p>
     <h1>Stock Trading</h1>
-    <p>A live workspace for testing systematic investing ideas against the market. For now, we begin with the benchmark itself.</p>
+    <p>A live workspace for testing investing ideas against the market. We begin with a simple question: what would $1,000 invested in the S&amp;P 500 or Google be worth today?</p>
     <div class="experiment-status"><span></span> Data through <strong id="market-date">loading…</strong> · Refreshed <time id="market-refreshed">loading…</time></div>
   </header>
 
   <section class="market-panel" aria-labelledby="market-chart-heading">
     <header class="market-panel-header">
-      <div><p class="eyebrow"><span></span> Live benchmark</p><h2 id="market-chart-heading">S&amp;P 500 · three months</h2></div>
-      <div class="market-latest"><span>Latest close</span><strong id="market-latest">—</strong><small id="market-change">—</small></div>
+      <div><p class="eyebrow"><span></span> Experiment 001</p><h2 id="market-chart-heading">$1,000: S&amp;P 500 vs. Google</h2></div>
+      <div class="market-results" aria-label="Current investment values">
+        <div class="market-result market-result-sp500"><span>S&amp;P 500 · SPY</span><strong id="sp500-value">—</strong><small id="sp500-return">—</small></div>
+        <div class="market-result market-result-google"><span>Google · GOOGL</span><strong id="google-value">—</strong><small id="google-return">—</small></div>
+      </div>
     </header>
 
     <div class="market-chart-wrap" id="market-chart-wrap">
-      <canvas id="market-chart" data-market-data-url="{{ site.baseurl }}/assets/data/sp500-3m.json" role="img" aria-label="Interactive chart of S&amp;P 500 closing prices over the latest three months"></canvas>
-      <div class="market-tooltip" id="market-tooltip" hidden><time></time><strong></strong></div>
+      <canvas id="market-chart" data-market-data-url="{{ site.baseurl }}/assets/data/sp500-3m.json" role="img" aria-label="Interactive comparison of $1,000 invested in the S&amp;P 500 and Google over 90 days"></canvas>
+      <div class="market-tooltip" id="market-tooltip" hidden><time></time><span class="tooltip-sp500">S&amp;P 500 <strong></strong></span><span class="tooltip-google">Google <strong></strong></span></div>
     </div>
 
-    <div class="market-range" aria-label="Three-month market summary">
-      <div><span>Period low</span><strong id="market-low">—</strong></div>
-      <div><span>Period high</span><strong id="market-high">—</strong></div>
+    <div class="market-range" aria-label="90-day experiment summary">
+      <div><span>Starting amount</span><strong>$1,000 each</strong></div>
+      <div><span>Leader today</span><strong id="market-leader">—</strong></div>
       <div><span>Observations</span><strong id="market-observations">—</strong></div>
     </div>
-    <p class="market-source">Closing-price data provided by Yahoo Finance through yfinance. Educational experiment only—not investment advice.</p>
+    <p class="market-source">Assumes $1,000 invested at the first adjusted closing price in the 90-day window, with fractional shares and no fees or taxes. The S&amp;P 500 investment uses SPY as an investable proxy. Data provided by Yahoo Finance through yfinance. Educational experiment only—not investment advice.</p>
   </section>
 
   <section class="experiment-note">
-    <p class="notebook-kicker">where this goes next</p>
-    <h2>The benchmark comes first.</h2>
-    <p>Before testing a trading strategy, we need a clear baseline. This chart establishes the recent path of the S&amp;P 500. Future iterations can layer systematic portfolios onto the same timeline and make their assumptions, allocations, and tradeoffs visible.</p>
+    <p class="notebook-kicker">the first question</p>
+    <h2>Does one company beat the market?</h2>
+    <p>This is the simplest possible strategy comparison: buy once, hold, and watch. Both choices receive the same starting capital on the same date. Google offers concentrated exposure to one company; SPY spreads the investment across the S&amp;P 500. Future experiments can introduce rebalancing rules and adaptive strategies while keeping this passive baseline visible.</p>
   </section>
 </article>
 <script src="{{ site.baseurl }}/assets/stock-experiment.js" defer></script>
