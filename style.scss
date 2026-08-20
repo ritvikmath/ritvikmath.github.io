@@ -300,10 +300,19 @@ body {
 .experiment-number { position: relative; z-index: 2; display: inline-block; padding: 6px 8px; background: var(--ink); color: var(--white); font: 9px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 .experiment-card-visual > strong { position: absolute; z-index: 2; bottom: 42px; left: 24px; color: var(--ink); font: 500 30px/1 var(--serif); }
 .experiment-card-visual > small { position: absolute; z-index: 2; bottom: 23px; left: 24px; color: var(--muted); font: 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; }
-.market-sketch { position: absolute; inset: 35px 22px 60px 58px; display: flex; align-items: flex-end; justify-content: space-between; }
-.market-sketch:before { content: ""; position: absolute; inset: 18px 0 auto; height: 2px; background: var(--blue); transform: rotate(-9deg); transform-origin: left center; box-shadow: 57px -9px 0 -0.5px var(--blue), 112px -2px 0 -0.5px var(--blue); }
-.market-sketch i { position: relative; z-index: 1; width: 7px; border-radius: 7px 7px 0 0; background: rgba(49,95,186,.22); }
-.market-sketch i:nth-child(1) { height: 33%; }.market-sketch i:nth-child(2) { height: 44%; }.market-sketch i:nth-child(3) { height: 39%; }.market-sketch i:nth-child(4) { height: 58%; }.market-sketch i:nth-child(5) { height: 54%; }.market-sketch i:nth-child(6) { height: 72%; }.market-sketch i:nth-child(7) { height: 83%; }
+.comparison-sketch { position: absolute; inset: 43px 18px 57px; width: calc(100% - 36px); height: calc(100% - 100px); overflow: visible; }
+.comparison-baseline { stroke: rgba(39,47,59,.25); stroke-width: 1; stroke-dasharray: 4 5; }
+.comparison-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.comparison-line-spy { stroke: var(--blue); }
+.comparison-line-google { stroke: var(--coral); }
+.comparison-dot { stroke: #e9eef2; stroke-width: 2; }
+.comparison-dot-start { fill: var(--ink); }
+.comparison-dot-spy { fill: var(--blue); }
+.comparison-dot-google { fill: var(--coral); }
+.comparison-start-label, .comparison-end-label { fill: var(--muted); font: 8px var(--mono); letter-spacing: .07em; }
+.comparison-end-label { font-weight: 500; }
+.comparison-label-spy { fill: var(--blue); }
+.comparison-label-google { fill: var(--coral); }
 .experiment-card .card-body h2 { margin: 17px 0 10px; font: 500 27px/1.1 var(--serif); letter-spacing: -.015em; }
 .experiment-card .card-body h2 a:hover { color: var(--blue); }
 

@@ -14,14 +14,24 @@ permalink: /experiments/
     <article class="post-card experiment-card">
       <a class="experiment-card-visual" href="{{ site.baseurl }}/experiments/stock-trading/" aria-label="Open Stock Trading experiment">
         <span class="experiment-number">Experiment 001</span>
-        <div class="market-sketch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <strong>S&amp;P 500</strong>
-        <small>3 month view</small>
+        <svg class="comparison-sketch" viewBox="0 0 320 124" aria-hidden="true" focusable="false">
+          <line class="comparison-baseline" x1="12" y1="61" x2="307" y2="61"></line>
+          <text class="comparison-start-label" x="12" y="52">$1,000</text>
+          <path class="comparison-line comparison-line-spy" d="M14 64 C34 59 43 70 62 61 S91 48 108 54 S137 64 153 51 S180 44 196 47 S225 35 242 39 S276 24 304 29"></path>
+          <path class="comparison-line comparison-line-google" d="M14 64 C35 67 46 57 63 71 S91 83 109 75 S137 91 153 87 S181 72 198 96 S226 104 243 91 S273 108 304 101"></path>
+          <circle class="comparison-dot comparison-dot-start" cx="14" cy="64" r="4"></circle>
+          <circle class="comparison-dot comparison-dot-spy" cx="304" cy="29" r="4"></circle>
+          <circle class="comparison-dot comparison-dot-google" cx="304" cy="101" r="4"></circle>
+          <text class="comparison-end-label comparison-label-spy" x="296" y="20" text-anchor="end">SPY</text>
+          <text class="comparison-end-label comparison-label-google" x="296" y="119" text-anchor="end">GOOGL</text>
+        </svg>
+        <strong>$1,000 invested</strong>
+        <small>SPY vs GOOGL · 90 days</small>
       </a>
       <div class="card-body">
         <div class="card-meta"><span>Markets</span><span>Updated daily</span></div>
         <h2><a href="{{ site.baseurl }}/experiments/stock-trading/">Stock Trading</a></h2>
-        <p>A live laboratory for comparing systematic stock-trading ideas against simply investing in the S&amp;P 500.</p>
+        <p>A live comparison of what happens when the same $1,000 is invested in the broad market or in Google.</p>
         <a class="card-link" href="{{ site.baseurl }}/experiments/stock-trading/" aria-label="Open the Stock Trading experiment">Open the experiment <span>↗</span></a>
       </div>
     </article>
