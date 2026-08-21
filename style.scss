@@ -393,6 +393,7 @@ body {
 .math-zone-header { max-width: 760px; }
 .math-zone-header h2 { margin: 0; font: 500 clamp(42px, 6vw, 58px)/1 var(--serif); letter-spacing: -.035em; }
 .math-zone-header > p:last-child { margin: 19px 0 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.math-zone-header > p:last-child em { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.08em; font-style: italic; }
 .equation-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; padding: 1px; margin-top: 34px; background: var(--line); }
 .equation-list article { min-width: 0; padding: 27px 25px 25px; background-color: rgba(255,253,248,.95); background-image: linear-gradient(rgba(64,113,170,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(64,113,170,.045) 1px, transparent 1px); background-size: 20px 20px; }
 .equation-list article > span { color: var(--blue); font: 8px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; }
