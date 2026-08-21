@@ -87,10 +87,9 @@
     updateProgress();
   }
 
-  const graphSurface = document.querySelector('#analyses') || (document.body.classList.contains('layout-post') ? document.querySelector('main') : null);
+  const graphSurface = document.querySelector('#analyses');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (graphSurface && !reducedMotion.matches) {
-    const isArticleGraph = document.body.classList.contains('layout-post');
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     const maxNodes = 12;
@@ -109,7 +108,6 @@
     let pixelRatio = 1;
     let viewportWidth = 0;
     let viewportHeight = 0;
-    let previousGraphBounds = null;
 
     canvas.className = 'graph-canvas';
     canvas.setAttribute('aria-hidden', 'true');
@@ -128,41 +126,14 @@
       }
       viewportWidth = nextWidth;
       viewportHeight = nextHeight;
-      const maximumPixels = isArticleGraph ? 3000000 : 8000000;
-      const safeRatio = Math.sqrt(maximumPixels / Math.max(1, nextWidth * nextHeight));
+      const safeRatio = Math.sqrt(8000000 / Math.max(1, nextWidth * nextHeight));
       pixelRatio = Math.min(window.devicePixelRatio || 1, safeRatio, 2);
       canvas.width = Math.round(nextWidth * pixelRatio);
       canvas.height = Math.round(nextHeight * pixelRatio);
       canvas.style.width = nextWidth + 'px';
       canvas.style.height = nextHeight + 'px';
       context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-      previousGraphBounds = null;
       requestDraw();
-    }
-
-    function graphBounds() {
-      if (!nodes.length) return null;
-      const padding = 12;
-      const xs = nodes.map(function (node) { return node.x; });
-      const ys = nodes.map(function (node) { return node.y; });
-      return {
-        left: Math.max(0, Math.min.apply(null, xs) - padding),
-        top: Math.max(0, Math.min.apply(null, ys) - padding),
-        right: Math.min(viewportWidth, Math.max.apply(null, xs) + padding),
-        bottom: Math.min(viewportHeight, Math.max.apply(null, ys) + padding)
-      };
-    }
-
-    function clearPreviousGraph(nextBounds) {
-      if (!previousGraphBounds && !nextBounds) return;
-      const bounds = previousGraphBounds && nextBounds ? {
-        left: Math.min(previousGraphBounds.left, nextBounds.left),
-        top: Math.min(previousGraphBounds.top, nextBounds.top),
-        right: Math.max(previousGraphBounds.right, nextBounds.right),
-        bottom: Math.max(previousGraphBounds.bottom, nextBounds.bottom)
-      } : previousGraphBounds || nextBounds;
-      context.clearRect(bounds.left, bounds.top, bounds.right - bounds.left, bounds.bottom - bounds.top);
-      previousGraphBounds = nextBounds;
     }
 
     function clearGraph() {
@@ -172,8 +143,7 @@
       window.clearTimeout(inactivityTimer);
       if (frame) window.cancelAnimationFrame(frame);
       frame = 0;
-      if (isArticleGraph) clearPreviousGraph(null);
-      else context.clearRect(0, 0, viewportWidth, viewportHeight);
+      context.clearRect(0, 0, viewportWidth, viewportHeight);
     }
 
     function beginFade() {
@@ -189,11 +159,9 @@
 
     function drawGraph(now) {
       frame = 0;
+      context.clearRect(0, 0, viewportWidth, viewportHeight);
       connections = connections.filter(function (connection) { return !connection.retiredAt || now - connection.retiredAt < fadeDuration; });
       nodes = nodes.filter(function (node) { return !node.retiredAt || now - node.retiredAt < fadeDuration; });
-      const nextBounds = graphBounds();
-      if (isArticleGraph) clearPreviousGraph(nextBounds);
-      else context.clearRect(0, 0, viewportWidth, viewportHeight);
       if (!nodes.length) return;
       const opacity = fadeStarted ? Math.max(0, 1 - ((now - fadeStarted) / fadeDuration)) : 1;
       if (opacity <= 0) {

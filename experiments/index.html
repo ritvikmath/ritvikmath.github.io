@@ -17,22 +17,28 @@ permalink: /experiments/
         <svg class="comparison-sketch" viewBox="0 0 320 124" aria-hidden="true" focusable="false">
           <line class="comparison-baseline" x1="12" y1="61" x2="307" y2="61"></line>
           <text class="comparison-start-label" x="12" y="52">$1,000</text>
-          <path class="comparison-line comparison-line-spy" d="M14 64 C34 59 43 70 62 61 S91 48 108 54 S137 64 153 51 S180 44 196 47 S225 35 242 39 S276 24 304 29"></path>
+          <path class="comparison-line comparison-line-adaptive" d="M14 64 C34 61 43 68 62 59 S91 52 108 55 S137 47 153 49 S180 42 196 44 S225 34 242 37 S276 27 304 31"></path>
           <path class="comparison-line comparison-line-google" d="M14 64 C35 67 46 57 63 71 S91 83 109 75 S137 91 153 87 S181 72 198 96 S226 104 243 91 S273 108 304 101"></path>
+          <path class="comparison-line comparison-line-jpm" d="M14 64 C35 60 49 67 66 57 S96 53 115 46 S144 51 162 39 S192 42 211 33 S244 38 265 25 S287 28 304 20"></path>
+          <path class="comparison-line comparison-line-xom" d="M14 64 C31 70 48 62 65 66 S95 74 113 67 S143 57 162 63 S190 54 209 58 S238 48 256 52 S285 43 304 47"></path>
           <circle class="comparison-dot comparison-dot-start" cx="14" cy="64" r="4"></circle>
-          <circle class="comparison-dot comparison-dot-spy" cx="304" cy="29" r="4"></circle>
+          <circle class="comparison-dot comparison-dot-adaptive" cx="304" cy="31" r="4"></circle>
           <circle class="comparison-dot comparison-dot-google" cx="304" cy="101" r="4"></circle>
-          <text class="comparison-end-label comparison-label-spy" x="296" y="20" text-anchor="end">SPY</text>
+          <circle class="comparison-dot comparison-dot-jpm" cx="304" cy="20" r="4"></circle>
+          <circle class="comparison-dot comparison-dot-xom" cx="304" cy="47" r="4"></circle>
+          <text class="comparison-end-label comparison-label-jpm" x="296" y="11" text-anchor="end">JPM</text>
+          <text class="comparison-end-label comparison-label-adaptive" x="296" y="29" text-anchor="end">ADAPTIVE</text>
+          <text class="comparison-end-label comparison-label-xom" x="296" y="58" text-anchor="end">XOM</text>
           <text class="comparison-end-label comparison-label-google" x="296" y="119" text-anchor="end">GOOGL</text>
         </svg>
-        <strong>$1,000 invested</strong>
-        <small>SPY vs GOOGL · 90 days</small>
+        <strong>Explore, exploit, invest</strong>
+        <small>A live adaptive bandit</small>
       </a>
       <div class="card-body">
         <div class="card-meta"><span>Markets</span><span>Updated daily</span></div>
-        <h2><a href="{{ site.baseurl }}/experiments/stock-trading/">Stock Trading</a></h2>
-        <p>A live comparison of what happens when the same $1,000 is invested in the broad market or in Google.</p>
-        <a class="card-link" href="{{ site.baseurl }}/experiments/stock-trading/" aria-label="Open the Stock Trading experiment">Open the experiment <span>↗</span></a>
+        <h2><a href="{{ site.baseurl }}/experiments/stock-trading/">Adaptive Bandit</a></h2>
+        <p>A live backtest asking whether an explore-and-exploit strategy can outperform simply holding any of ten diverse S&amp;P 500 stocks.</p>
+        <a class="card-link" href="{{ site.baseurl }}/experiments/stock-trading/" aria-label="Open the Adaptive Bandit experiment">Open the experiment <span>↗</span></a>
       </div>
     </article>
   </div>

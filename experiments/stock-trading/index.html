@@ -6,38 +6,105 @@ permalink: /experiments/stock-trading/
 <article class="experiment-shell">
   <header class="experiment-header">
     <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
-    <p class="eyebrow"><span></span> Experiment 001 · Markets</p>
-    <h1>Stock Trading</h1>
-    <p>A live workspace for testing investing ideas against the market. We begin with a simple question: what would $1,000 invested in the S&amp;P 500 or Google be worth today?</p>
+    <p class="eyebrow"><span></span> Experiment 001 · Adaptive Bandit</p>
+    <h1>Explore, Exploit, Invest</h1>
+    <p>Can a simple learning rule beat buy-and-hold? This live backtest gives $1,000 to an adaptive strategy and ten companies across the S&amp;P 500, then lets one year of weekly decisions play out.</p>
     <div class="experiment-status"><span></span> Data through <strong id="market-date">loading…</strong> · Refreshed <time id="market-refreshed">loading…</time></div>
   </header>
 
   <section class="market-panel" aria-labelledby="market-chart-heading">
-    <header class="market-panel-header">
-      <div><p class="eyebrow"><span></span> Experiment 001</p><h2 id="market-chart-heading">$1,000: S&amp;P 500 vs. Google</h2></div>
-      <div class="market-results" aria-label="Current investment values">
-        <div class="market-result market-result-sp500"><span>S&amp;P 500 · SPY</span><strong id="sp500-value">—</strong><small id="sp500-return">—</small></div>
-        <div class="market-result market-result-google"><span>Google · GOOGL</span><strong id="google-value">—</strong><small id="google-return">—</small></div>
+    <header class="market-panel-header market-panel-header-stacked">
+      <div>
+        <p class="eyebrow"><span></span> One-year live backtest</p>
+        <h2 id="market-chart-heading">Can recent winners keep winning?</h2>
+        <p>Each line starts with $1,000. Ten buy one stock and never trade; the adaptive portfolio learns and reallocates every week.</p>
       </div>
     </header>
 
+    <div class="portfolio-results" id="portfolio-results" aria-label="Current portfolio values"></div>
+
     <div class="market-chart-wrap" id="market-chart-wrap">
-      <canvas id="market-chart" data-market-data-url="{{ site.baseurl }}/assets/data/sp500-3m.json" role="img" aria-label="Interactive comparison of $1,000 invested in the S&amp;P 500 and Google over 90 days"></canvas>
-      <div class="market-tooltip" id="market-tooltip" hidden><time></time><span class="tooltip-sp500">S&amp;P 500 <strong></strong></span><span class="tooltip-google">Google <strong></strong></span></div>
+      <canvas id="market-chart" data-market-data-url="{{ site.baseurl }}/assets/data/stock-bandit-1y.json" role="img" aria-label="Interactive one-year comparison of three buy-and-hold stocks and an adaptive weekly strategy"></canvas>
+      <div class="market-tooltip" id="market-tooltip" hidden>
+        <time></time>
+        <div class="tooltip-series" id="market-tooltip-series"></div>
+      </div>
     </div>
 
-    <div class="market-range" aria-label="90-day experiment summary">
+    <div class="market-range" aria-label="One-year experiment summary">
       <div><span>Starting amount</span><strong>$1,000 each</strong></div>
       <div><span>Leader today</span><strong id="market-leader">—</strong></div>
-      <div><span>Observations</span><strong id="market-observations">—</strong></div>
+      <div><span>Weekly decisions</span><strong id="market-rebalances">—</strong></div>
     </div>
-    <p class="market-source">Assumes $1,000 invested at the first adjusted closing price in the 90-day window, with fractional shares and no fees or taxes. The S&amp;P 500 investment uses SPY as an investable proxy. Educational experiment only—not investment advice.</p>
+
+    <section class="allocation-history-panel" aria-labelledby="allocation-history-heading">
+      <header>
+        <div><p class="eyebrow"><span></span> Explore ↔ exploit</p><h3 id="allocation-history-heading">Where the adaptive dollar went</h3></div>
+        <p>Every vertical slice totals 100%. Wider bands represent larger allocations.</p>
+      </header>
+      <div class="allocation-legend" id="allocation-legend" aria-label="Allocation chart legend"></div>
+      <div class="allocation-chart-wrap" id="allocation-chart-wrap">
+        <canvas id="allocation-chart" role="img" aria-label="Stacked chart of the adaptive portfolio's allocation across ten stocks over one year"></canvas>
+        <div class="allocation-tooltip" id="allocation-tooltip" hidden><time></time><div id="allocation-tooltip-series"></div></div>
+      </div>
+    </section>
+
+    <section class="allocation-panel" aria-labelledby="allocation-heading">
+      <div class="allocation-copy">
+        <p class="eyebrow"><span></span> What the model holds now</p>
+        <h3 id="allocation-heading">Current adaptive allocation</h3>
+        <p id="latest-decision">Waiting for the latest weekly decision…</p>
+      </div>
+      <div class="allocation-bars" id="allocation-bars"></div>
+    </section>
+
+    <p class="market-source">Uses adjusted prices, fractional shares, and weekly close-to-close signals. Assumes rebalancing at the weekly closing price with no fees, taxes, spread, or slippage. Educational experiment only—not investment advice.</p>
   </section>
 
-  <section class="experiment-note">
-    <p class="notebook-kicker">the first question</p>
-    <h2>Does one company beat the market?</h2>
-    <p>This is the simplest possible strategy comparison: buy once, hold, and watch. Both choices receive the same starting capital on the same date. Google offers concentrated exposure to one company; SPY spreads the investment across the S&amp;P 500. Future experiments can introduce rebalancing rules and adaptive strategies while keeping this passive baseline visible.</p>
+  <section class="experiment-method" aria-labelledby="method-heading">
+    <p class="notebook-kicker">the rule, without the jargon</p>
+    <h2 id="method-heading">How the adaptive strategy learns</h2>
+    <p class="method-intro">The model is intentionally small enough to inspect. It never predicts a price; it only changes how much capital each stock receives based on recent evidence.</p>
+    <ol class="method-steps">
+      <li><span>01</span><div><h3>Begin equally</h3><p>The first $1,000 is split ten ways—10% in each company across ten different parts of the economy.</p></div></li>
+      <li><span>02</span><div><h3>Observe one week</h3><p>After the final trading session of the week, the model measures each stock’s adjusted close-to-close return.</p></div></li>
+      <li><span>03</span><div><h3>Update the score</h3><p>Each score is 50% its previous value and 50% the newest weekly return. That remembers momentum without letting one week erase the past.</p></div></li>
+      <li><span>04</span><div><h3>Exploit, but keep exploring</h3><p>Higher scores receive more money the following week. Every stock keeps at least 3%, and no stock can exceed 30%.</p></div></li>
+    </ol>
+    <aside class="method-note">
+      <strong>Why “bandit”?</strong>
+      <p>The strategy balances exploitation—backing what has worked—with exploration—keeping capital in every option. Because all ten returns are observable, this is a deterministic bandit-inspired allocation rule rather than a classical hidden-reward bandit.</p>
+    </aside>
+  </section>
+
+  <section class="rebalance-history" aria-labelledby="history-heading">
+    <div class="history-heading-row">
+      <div><p class="eyebrow"><span></span> Decision log</p><h2 id="history-heading">Recent weekly allocations</h2></div>
+      <p>Weights shown are the allocations selected after that week’s returns.</p>
+    </div>
+    <div class="history-table-wrap">
+      <table>
+        <thead><tr><th>Week ending</th><th>Portfolio</th><th>Largest allocation</th><th>Weekly winner</th><th>Turnover</th></tr></thead>
+        <tbody id="rebalance-table"><tr><td colspan="5">Loading weekly decisions…</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="math-zone" aria-labelledby="math-zone-heading">
+    <header class="math-zone-header">
+      <p class="notebook-kicker">for those who want the symbols</p>
+      <h2 id="math-zone-heading">The Math Zone</h2>
+      <p>Everything the model does can be written in six equations. Let <em>i</em> identify one of the ten stocks, <em>w</em> a trading week, and <em>t</em> a trading day.</p>
+    </header>
+    <div class="equation-list">
+      <article><span>01 · baseline</span><h3>Buy-and-hold value</h3><div class="equation" aria-label="B sub i t equals 1000 times P sub i t divided by P sub i zero"><i>B</i><sub>i,t</sub> = 1000 · <span class="fraction"><span><i>P</i><sub>i,t</sub></span><span><i>P</i><sub>i,0</sub></span></span></div><p>Each comparison line buys $1,000 of one stock on day zero and never changes its number of shares.</p></article>
+      <article><span>02 · reward</span><h3>Weekly return</h3><div class="equation" aria-label="r sub i w equals P sub i end of w divided by P sub i start of w minus 1"><i>r</i><sub>i,w</sub> = <span class="fraction"><span><i>P</i><sub>i,end(w)</sub></span><span><i>P</i><sub>i,start(w)</sub></span></span> − 1</div><p>The reward is simply that stock’s adjusted percentage gain or loss during the week.</p></article>
+      <article><span>03 · memory</span><h3>Learned score</h3><div class="equation" aria-label="q sub i w equals 0.50 q sub i w minus 1 plus 0.50 r sub i w"><i>q</i><sub>i,w</sub> = 0.50<i>q</i><sub>i,w−1</sub> + 0.50<i>r</i><sub>i,w</sub></div><p>Half of the score comes from accumulated memory and half from the newest observation.</p></article>
+      <article><span>04 · exploitation</span><h3>Softmax preference</h3><div class="equation" aria-label="p sub i w equals e to the q sub i w over tau divided by the sum from j equals 1 to 10 of e to the q sub j w over tau"><i>p</i><sub>i,w</sub> = <span class="fraction fraction-wide"><span><i>e</i><sup><span class="sup-fraction"><i>q</i><sub>i,w</sub>/<i>τ</i></span></sup></span><span><span class="sigma"><sup>10</sup>∑<sub>j=1</sub></span> <i>e</i><sup><span class="sup-fraction"><i>q</i><sub>j,w</sub>/<i>τ</i></span></sup></span></span></div><p>With temperature τ = 0.04, stronger scores receive exponentially more preference without becoming an automatic all-in bet.</p></article>
+      <article><span>05 · exploration</span><h3>Mixed target weight</h3><div class="equation" aria-label="w tilde sub i w equals gamma over 10 plus quantity 1 minus gamma times p sub i w"><i>w̃</i><sub>i,w</sub> = <span class="fraction fraction-compact"><span><i>γ</i></span><span>10</span></span> + (1 − <i>γ</i>)<i>p</i><sub>i,w</sub></div><p>We set γ = 0.30. Thirty percent is spread equally, guaranteeing a 3% exploratory position in every stock.</p></article>
+      <article><span>06 · guardrail + value</span><h3>Portfolio update</h3><div class="equation" aria-label="w sub i w equals cap normalize of w tilde sub i w at 0.30"><i>w</i><sub>i,w</sub> = <span class="math-function">CapNormalize</span>(<i>w̃</i><sub>i,w</sub>, 0.30)</div><div class="equation equation-secondary" aria-label="V sub t equals the sum from i equals 1 to 10 of n sub i t times P sub i t"><i>V</i><sub>t</sub> = <span class="sigma"><sup>10</sup>∑<sub>i=1</sub></span> <i>n</i><sub>i,t</sub><i>P</i><sub>i,t</sub></div><p>Any position above 30% is capped and its excess redistributed. Portfolio value is the sum of shares times adjusted prices.</p></article>
+    </div>
+    <aside class="math-caveat"><strong>One optimistic assumption</strong><p>The backtest observes the weekly closing return and rebalances at that same adjusted close. A production simulation should execute at the next tradable price and include spread, slippage, taxes, and fees.</p></aside>
   </section>
 </article>
 <script src="{{ site.baseurl }}/assets/stock-experiment.js" defer></script>
