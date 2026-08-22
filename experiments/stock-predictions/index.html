@@ -9,7 +9,7 @@ permalink: /experiments/stock-predictions/
     <p class="eyebrow"><span></span> Experiment 002 · Machine learning</p>
     <h1>Can XGBoost Predict Tomorrow?</h1>
     <p>Four possible directions, fourteen signals, ten stocks, and one deliberately skeptical test of whether yesterday contains a useful hint about the next trading day.</p>
-    <div class="experiment-status"><span></span> Data through <strong id="prediction-market-date">loading…</strong> · refreshed <time id="prediction-generated-at">loading…</time></div>
+    <div class="experiment-status experiment-status-static">Frozen data snapshot through <strong id="prediction-market-date">loading…</strong></div>
   </header>
 
   <section class="prediction-scorecard taped-panel" aria-labelledby="scorecard-heading">
@@ -24,14 +24,6 @@ permalink: /experiments/stock-predictions/
       <div class="prediction-tooltip" id="prediction-tooltip" hidden><time></time><span>Exact category <strong data-value="accuracy"></strong></span><span>Up or down <strong data-value="direction_accuracy"></strong></span></div>
     </div>
     <div class="prediction-chart-key"><span class="key-exact">Exact four-way category</span><span class="key-direction">Direction only</span><span class="key-chance">Four-way chance: 25%</span></div>
-  </section>
-
-  <section class="current-forecast" aria-labelledby="forecast-heading">
-    <div class="section-heading-row">
-      <div><p class="eyebrow"><span></span> Latest reading</p><h2 id="forecast-heading">What it predicts next</h2></div>
-      <p>Probabilities are the model’s relative confidence—not a promise, recommendation, or calibrated chance of profit.</p>
-    </div>
-    <div class="forecast-grid" id="forecast-grid" aria-live="polite"></div>
   </section>
 
   <section class="prediction-explainer" aria-labelledby="target-heading">
@@ -98,16 +90,26 @@ permalink: /experiments/stock-predictions/
     <h2 id="method-heading">How the test works</h2>
     <ol class="method-steps prediction-method-steps">
       <li><span>01</span><div><h3>Pool the ten stocks</h3><p>Each stock-day becomes one example. Stock identity is included, while the same signal definitions apply to every company.</p></div></li>
-      <li><span>02</span><div><h3>Split forward in time</h3><p>The earliest 80% of dates train the evaluation model; the newest 20% form one untouched chronological test. Future observations never leak backward.</p></div></li>
+      <li><span>02</span><div><h3>Split forward in time</h3><p>The earliest 80% of dates train the model; the newest 20% form one untouched chronological test. Dates are never shuffled.</p></div></li>
       <li><span>03</span><div><h3>Balance the classes</h3><p>Training examples are weighted so rare large moves matter. The headline balanced accuracy is the mean recall across all four labels.</p></div></li>
-      <li><span>04</span><div><h3>Refit for tomorrow</h3><p>After scoring the untouched test, a separate live model refits on every labeled date. The daily workflow publishes its new next-day reading after market data updates.</p></div></li>
+      <li><span>04</span><div><h3>Fit exactly once</h3><p>The frozen model is fitted once on training rows and applied once to the held-out period. There is no refit, daily forecast, or automated data refresh.</p></div></li>
     </ol>
+    <aside class="leakage-check">
+      <div><p class="eyebrow"><span></span> Leakage audit</p><h3>What keeps the future out</h3></div>
+      <ul>
+        <li><strong>Past-only inputs.</strong> Every feature at date <i>t</i> uses prices and volume from <i>t</i> or earlier; the label alone uses the return from <i>t</i> to <i>t+1</i>.</li>
+        <li><strong>One-session embargo.</strong> The final training row is removed when its next-day label would touch the first test date.</li>
+        <li><strong>Train-only learning.</strong> Class weights and every fitted tree use training rows only. The fixed ±1% labels, features, and model settings are not selected from test performance.</li>
+        <li><strong>Diagnostics stay diagnostic.</strong> The test-set confusion matrix and permutation importance explain the frozen model; they are never fed back into it.</li>
+      </ul>
+      <p><strong>Known limitation:</strong> the ten companies were selected as today’s large S&amp;P 500 representatives, not from a historical point-in-time membership database. That creates selection and survivorship bias, so the result should not be generalized to “all stocks.”</p>
+    </aside>
     <aside class="prediction-caveat"><strong>This is a prediction study, not a trading system</strong><p>Accuracy does not include spreads, slippage, taxes, position sizing, or the cost of acting on weak confidence. Technical indicators summarize past price and volume; they do not create information about tomorrow. Treat the result as an experiment in market predictability, not investment advice.</p></aside>
   </section>
 
   <section class="experiment-sources" aria-labelledby="sources-heading">
     <h2 id="sources-heading">Notes &amp; sources</h2>
-    <p>The signal families follow commonly used technical-analysis concepts described by <a href="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/what-is-technical-analysis" target="_blank" rel="noopener">Fidelity’s technical-analysis guide ↗</a>. Model implementation uses <a href="https://xgboost.readthedocs.io/en/stable/python/python_api.html#xgboost.XGBClassifier" target="_blank" rel="noopener">XGBoost’s scikit-learn classifier ↗</a>. The evaluation uses <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html" target="_blank" rel="noopener">scikit-learn balanced accuracy ↗</a> and held-out <a href="https://scikit-learn.org/stable/modules/permutation_importance.html" target="_blank" rel="noopener">permutation importance ↗</a>.</p>
+    <p>The signal families follow commonly used technical-analysis concepts described by <a href="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/what-is-technical-analysis" target="_blank" rel="noopener">Fidelity’s technical-analysis guide ↗</a>. Model implementation uses <a href="https://xgboost.readthedocs.io/en/stable/python/python_api.html#xgboost.XGBClassifier" target="_blank" rel="noopener">XGBoost’s scikit-learn classifier ↗</a>. The evaluation follows scikit-learn guidance on <a href="https://scikit-learn.org/stable/common_pitfalls.html#data-leakage" target="_blank" rel="noopener">preventing data leakage ↗</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html" target="_blank" rel="noopener">balanced accuracy ↗</a>, and held-out <a href="https://scikit-learn.org/stable/modules/permutation_importance.html" target="_blank" rel="noopener">permutation importance ↗</a>.</p>
   </section>
 </article>
 <script src="{{ site.baseurl }}/assets/stock-predictions.js" defer></script>

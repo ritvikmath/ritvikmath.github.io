@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Train and evaluate the live four-class XGBoost stock-direction experiment."""
+"""Generate the frozen four-class XGBoost stock-direction study."""
 
 import json
-import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -20,6 +19,8 @@ from update_market_data import ASSETS
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "assets" / "data" / "stock-direction-xgb.json"
+SNAPSHOT_START = "2020-08-01"
+SNAPSHOT_END_EXCLUSIVE = "2026-08-22"
 CLASS_NAMES = ("Very negative", "Negative", "Positive", "Very positive")
 FEATURE_LABELS = {
     "return_1d": "1-day return",
@@ -41,14 +42,15 @@ FEATURES = tuple(FEATURE_LABELS)
 
 
 def fetch_history():
-    """Fetch six years of adjusted OHLCV history plus the S&P 500 proxy."""
+    """Fetch the experiment's fixed adjusted-OHLCV snapshot plus the S&P 500 proxy."""
     symbols = [asset["symbol"] for asset in ASSETS] + ["SPY"]
     last_error = None
     for attempt in range(3):
         try:
             history = yf.download(
                 symbols,
-                period="6y",
+                start=SNAPSHOT_START,
+                end=SNAPSHOT_END_EXCLUSIVE,
                 interval="1d",
                 auto_adjust=True,
                 actions=False,
@@ -66,7 +68,7 @@ def fetch_history():
             last_error = error
             if attempt < 2:
                 time.sleep(2 ** attempt)
-    raise RuntimeError(f"Unable to refresh prediction data: {last_error}")
+    raise RuntimeError(f"Unable to download the frozen prediction snapshot: {last_error}")
 
 
 def rsi(close, period=14):
@@ -108,6 +110,7 @@ def make_stock_frame(history, asset, spy_close):
     frame["market_return_5d"] = spy_close.reindex(frame.index).pct_change(5)
     frame["relative_strength_21d"] = frame["return_21d"] - spy_close.reindex(frame.index).pct_change(21)
     frame["next_return"] = close.shift(-1) / close - 1
+    frame["target_date"] = pd.Series(frame.index, index=frame.index).shift(-1)
     frame["stock_id"] = asset["id"]
     frame["symbol"] = symbol
     return frame.replace([np.inf, -np.inf], np.nan)
@@ -154,15 +157,20 @@ def make_model():
 def train_experiment(history):
     spy_close = history.xs("SPY", axis=1, level=1)["Close"]
     all_frames = [make_stock_frame(history, asset, spy_close) for asset in ASSETS]
-    latest_rows = pd.concat([frame.dropna(subset=FEATURES).tail(1) for frame in all_frames])
-    labeled = pd.concat(all_frames).dropna(subset=[*FEATURES, "next_return"]).sort_index()
+    labeled = pd.concat(all_frames).dropna(subset=[*FEATURES, "next_return", "target_date"]).sort_index()
     labeled["target"] = classify_returns(labeled["next_return"].to_numpy())
 
     dates = sorted(labeled.index.unique())
     split_index = int(len(dates) * 0.8)
     split_date = dates[split_index]
-    train = labeled[labeled.index < split_date]
+    train = labeled[(labeled.index < split_date) & (labeled["target_date"] < split_date)]
     test = labeled[labeled.index >= split_date]
+    if train.empty or test.empty:
+        raise ValueError("Chronological split produced an empty partition")
+    if train.index.max() >= split_date or train["target_date"].max() >= split_date:
+        raise ValueError("Training information crosses the embargo into the test period")
+    if test.index.min() < split_date:
+        raise ValueError("Test observations precede the chronological cutoff")
     x_train = design_matrix(train)
     x_test = design_matrix(test)
     y_train = train["target"].to_numpy()
@@ -172,7 +180,6 @@ def train_experiment(history):
     weights = compute_sample_weight(class_weight="balanced", y=y_train)
     model.fit(x_train, y_train, sample_weight=weights)
     predictions = model.predict(x_test).astype(int)
-    probabilities = model.predict_proba(x_test)
 
     majority_class = int(pd.Series(y_train).value_counts().idxmax())
     majority_predictions = np.full_like(y_test, majority_class)
@@ -228,34 +235,20 @@ def train_experiment(history):
         reverse=True,
     )
 
-    live_model = make_model()
-    all_x = design_matrix(labeled)
-    all_y = labeled["target"].to_numpy()
-    live_weights = compute_sample_weight(class_weight="balanced", y=all_y)
-    live_model.fit(all_x, all_y, sample_weight=live_weights)
-    latest_x = design_matrix(latest_rows)
-    latest_probabilities = live_model.predict_proba(latest_x)
-    latest_predictions = live_model.predict(latest_x).astype(int)
-    current_predictions = []
-    for row_index, (_, row) in enumerate(latest_rows.iterrows()):
-        class_id = int(latest_predictions[row_index])
-        current_predictions.append({
-            "id": row["stock_id"],
-            "symbol": row["symbol"],
-            "name": next(asset["name"] for asset in ASSETS if asset["id"] == row["stock_id"]),
-            "class_id": class_id,
-            "prediction": CLASS_NAMES[class_id],
-            "confidence": rounded_percent(latest_probabilities[row_index][class_id]),
-            "probabilities": [rounded_percent(value) for value in latest_probabilities[row_index]],
-        })
-
     class_counts = pd.Series(y_test).value_counts().reindex(range(4), fill_value=0)
     return {
         "experiment": "stock-direction-xgboost",
+        "frozen_snapshot": True,
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "market_date": latest_rows.index.max().date().isoformat(),
+        "market_date": history.index.max().date().isoformat(),
         "history_start": labeled.index.min().date().isoformat(),
         "test_start": split_date.date().isoformat(),
+        "train_target_end": train["target_date"].max().date().isoformat(),
+        "split": {
+            "method": "fixed chronological 80/20 holdout",
+            "embargo_sessions": 1,
+            "model_fits": 1,
+        },
         "thresholds": {
             "very_negative": "return < -1%",
             "negative": "-1% ≤ return < 0%",
@@ -288,26 +281,12 @@ def train_experiment(history):
         "per_stock": per_stock,
         "accuracy_history": accuracy_history,
         "feature_importance": feature_importance,
-        "current_predictions": current_predictions,
     }
-
-
-def existing_market_date():
-    if not OUTPUT.exists():
-        return None
-    try:
-        return json.loads(OUTPUT.read_text(encoding="utf-8")).get("market_date")
-    except (OSError, json.JSONDecodeError):
-        return None
 
 
 def main():
     history = fetch_history()
     payload = train_experiment(history)
-    force_write = os.environ.get("FORCE_MARKET_DATA_WRITE", "").lower() in {"1", "true", "yes"}
-    if existing_market_date() == payload["market_date"] and not force_write:
-        print(f"No new prediction data; {payload['market_date']} is already published.")
-        return
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
     temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

@@ -11,9 +11,6 @@
   const allocationContext = allocationCanvas.getContext('2d');
   const stockPalette = ['#315fba', '#d96c54', '#3f8b68', '#b1892d', '#735fa5', '#2d8995', '#a85f78', '#6d813d', '#bd7137', '#596276'];
   const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-  const timestampFormatter = new Intl.DateTimeFormat('en-US', {
-    month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
-  });
   const shortDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
   const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 });
   let data = null;
@@ -28,7 +25,6 @@
   let marketHeight = 0;
   let allocationHeight = 0;
   let pixelRatio = 1;
-  let lastFetchAt = 0;
 
   function parseDate(value) {
     return new Date(value + 'T00:00:00Z');
@@ -175,9 +171,6 @@
 
   function updateSummary(payload) {
     document.querySelector('#market-date').textContent = dateFormatter.format(parseDate(payload.market_date));
-    const refreshed = document.querySelector('#market-refreshed');
-    refreshed.dateTime = payload.generated_at;
-    refreshed.textContent = timestampFormatter.format(new Date(payload.generated_at));
     updateResults();
     document.querySelector('#market-leader').textContent = seriesById(payload.leader).name;
     document.querySelector('#market-rebalances').textContent = payload.rebalance_count;
@@ -412,10 +405,8 @@
   window.addEventListener('resize', resizeCharts, { passive: true });
 
   function loadMarketData() {
-    lastFetchAt = Date.now();
     const baseUrl = marketCanvas.dataset.marketDataUrl || '/assets/data/stock-bandit-1y.json';
-    const separator = baseUrl.indexOf('?') === -1 ? '?' : '&';
-    fetch(baseUrl + separator + 'refresh=' + lastFetchAt, { cache: 'no-store' })
+    fetch(baseUrl)
       .then(function (response) { if (!response.ok) throw new Error('Market data request failed'); return response.json(); })
       .then(function (payload) {
         if (payload.experiment !== 'adaptive-stock-bandit' || !payload.points || !payload.allocation_points || payload.series.length !== 11) {
@@ -436,7 +427,4 @@
   }
 
   window.addEventListener('pageshow', loadMarketData);
-  document.addEventListener('visibilitychange', function () {
-    if (!document.hidden && Date.now() - lastFetchAt > 60000) loadMarketData();
-  });
 }());

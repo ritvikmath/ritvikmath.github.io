@@ -8,14 +8,14 @@ permalink: /experiments/stock-trading/
     <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
     <p class="eyebrow"><span></span> Experiment 001 · Adaptive Bandit</p>
     <h1>Explore, Exploit, Invest</h1>
-    <p>Can a simple learning rule beat buy-and-hold? This live backtest gives $1,000 to an adaptive strategy and ten companies across the S&amp;P 500, then lets one year of weekly decisions play out.</p>
-    <div class="experiment-status"><span></span> Data through <strong id="market-date">loading…</strong> · Refreshed <time id="market-refreshed">loading…</time></div>
+    <p>Can a simple learning rule beat buy-and-hold? This frozen backtest gives $1,000 to an adaptive strategy and ten companies across the S&amp;P 500, then lets one year of weekly decisions play out.</p>
+    <div class="experiment-status experiment-status-static">Frozen data snapshot through <strong id="market-date">loading…</strong></div>
   </header>
 
   <section class="market-panel" aria-labelledby="market-chart-heading">
     <header class="market-panel-header market-panel-header-stacked">
       <div>
-        <p class="eyebrow"><span></span> One-year live backtest</p>
+        <p class="eyebrow"><span></span> One-year backtest</p>
         <h2 id="market-chart-heading">Can recent winners keep winning?</h2>
         <p>Each line starts with $1,000. Ten buy one stock and never trade; the adaptive portfolio learns and reallocates every week.</p>
       </div>
@@ -51,9 +51,9 @@ permalink: /experiments/stock-trading/
 
     <section class="allocation-panel" aria-labelledby="allocation-heading">
       <div class="allocation-copy">
-        <p class="eyebrow"><span></span> What the model holds now</p>
-        <h3 id="allocation-heading">Current adaptive allocation</h3>
-        <p id="latest-decision">Waiting for the latest weekly decision…</p>
+        <p class="eyebrow"><span></span> Final snapshot allocation</p>
+        <h3 id="allocation-heading">Where the adaptive model finished</h3>
+        <p id="latest-decision">Loading the final weekly decision…</p>
       </div>
       <div class="allocation-bars" id="allocation-bars"></div>
     </section>

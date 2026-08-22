@@ -383,6 +383,13 @@ body {
 .boosting-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 28px 0 22px; }.boosting-strip span, .boosting-strip strong { padding: 11px 13px; border: 1px solid var(--line); background: rgba(255,253,248,.9); font: 9px/1 var(--mono); text-transform: uppercase; }.boosting-strip b { color: var(--blue); font: 500 18px/1 var(--serif); }
 .xgb-math { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 10px 22px; align-items: start; margin-top: 27px; padding: 22px; border-left: 3px solid var(--blue); background: rgba(49,95,186,.05); }.xgb-math > span { padding-top: 9px; color: var(--blue); font: 8px/1 var(--mono); text-transform: uppercase; }.xgb-equations { display: grid; gap: 18px; min-width: 0; }.xgb-equations math { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 9px 0; color: var(--ink); font-size: 24px; white-space: nowrap; }.xgb-math > p { grid-column: 2; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
 .prediction-caveat { display: grid; grid-template-columns: 220px 1fr; gap: 28px; margin-top: 22px; padding: 22px 24px; border: 1px solid rgba(217,108,84,.2); border-left: 3px solid var(--coral); background: rgba(217,108,84,.045); }.prediction-caveat strong { font: 500 20px/1.1 var(--serif); }.prediction-caveat p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+.leakage-check { margin-top: 24px; padding: 25px 26px; border: 1px solid rgba(49,95,186,.2); background: rgba(49,95,186,.045); }
+.leakage-check h3 { margin: 0; font: 500 28px/1.05 var(--serif); }
+.leakage-check ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin: 22px 0 0; padding: 1px; background: rgba(49,95,186,.16); list-style: none; }
+.leakage-check li { padding: 18px; background: rgba(255,253,248,.9); color: var(--muted); font-size: 10px; line-height: 1.7; }
+.leakage-check li strong { color: var(--ink); }
+.leakage-check > p { margin: 17px 0 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.leakage-check > p strong { color: var(--coral); }
 .experiment-sources { padding-bottom: 10px; }.experiment-sources h2 { font-size: 34px; }.experiment-sources p { max-width: 800px; color: var(--muted); font-size: 11px; line-height: 1.8; }.experiment-sources a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 
 .experiment-shell { width: min(1060px, calc(100% - 48px)); margin: 0 auto; padding: 82px 0 120px; }
@@ -547,4 +554,6 @@ body {
   .xgb-math { grid-template-columns: 1fr; gap: 13px; padding: 19px 17px; }
   .xgb-math > p { grid-column: 1; }
   .prediction-caveat { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
+  .leakage-check { padding: 20px 16px; }
+  .leakage-check ul { grid-template-columns: 1fr; }
 }

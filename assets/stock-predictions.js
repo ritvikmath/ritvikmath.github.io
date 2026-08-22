@@ -5,9 +5,7 @@
   if (!chart || !wrap || !tooltip) return;
 
   const context = chart.getContext('2d');
-  const classColors = ['#b95b52', '#d69a69', '#62a58b', '#2e7c61'];
   const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-  const timestampFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
   let data = null;
   let width = 0;
   let height = 330;
@@ -33,20 +31,6 @@
     const directionGap = Math.abs(metrics.direction_accuracy - 50);
     const directionVerdict = directionGap < 0.1 ? 'effectively a coin flip' : 'only ' + directionGap.toFixed(1) + ' point' + (directionGap.toFixed(1) === '1.0' ? '' : 's') + ' from a coin flip';
     document.querySelector('#prediction-verdict').innerHTML = '<strong>Bottom line:</strong> the four-way model scores ' + lift.toFixed(1) + ' points above balanced chance, but its up-or-down result is ' + directionVerdict + '. That is interesting evidence of a small classification pattern—not a dependable trading edge.';
-  }
-
-  function renderForecasts() {
-    const grid = document.querySelector('#forecast-grid');
-    grid.innerHTML = '';
-    data.current_predictions.forEach(function (item) {
-      const card = document.createElement('article');
-      card.className = 'forecast-card forecast-class-' + item.class_id;
-      const probabilities = item.probabilities.map(function (value, index) {
-        return '<span style="--probability:' + value + '%;--class-color:' + classColors[index] + '"><i></i><b>' + data.classes[index].name.replace('Very ', 'V. ') + '</b><em>' + pct(value) + '</em></span>';
-      }).join('');
-      card.innerHTML = '<header><span>' + item.symbol + '</span><small>' + item.name + '</small></header><strong>' + item.prediction + '</strong><p>' + pct(item.confidence) + ' model confidence</p><div class="forecast-probabilities">' + probabilities + '</div>';
-      grid.appendChild(card);
-    });
   }
 
   function renderConfusion() {
@@ -159,14 +143,13 @@
   chart.addEventListener('pointerleave', function () { selected = -1; tooltip.hidden = true; requestDraw(); });
   window.addEventListener('resize', resize, { passive: true });
 
-  fetch('/assets/data/stock-direction-xgb.json?v=' + Date.now(), { cache: 'no-store' })
+  fetch('/assets/data/stock-direction-xgb.json')
     .then(function (response) { if (!response.ok) throw new Error('Prediction data unavailable'); return response.json(); })
     .then(function (payload) {
       if (payload.experiment !== 'stock-direction-xgboost') throw new Error('Unexpected prediction dataset');
       data = payload;
       document.querySelector('#prediction-market-date').textContent = dateFormatter.format(parseDate(data.market_date));
-      document.querySelector('#prediction-generated-at').textContent = timestampFormatter.format(new Date(data.generated_at));
-      renderMetrics(); renderForecasts(); renderConfusion(); renderStockAccuracy(); renderImportance(); resize();
+      renderMetrics(); renderConfusion(); renderStockAccuracy(); renderImportance(); resize();
     })
     .catch(function (error) {
       document.querySelector('#prediction-metrics').innerHTML = '<p class="market-source">' + error.message + '</p>';

@@ -1,12 +1,9 @@
-name: Refresh market data and deploy Pages
+name: Deploy Pages
 
 on:
   push:
     branches:
       - master
-  schedule:
-    - cron: "30 18 * * 1-5"
-      timezone: America/Los_Angeles
   workflow_dispatch:
 
 concurrency:
@@ -14,7 +11,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -24,36 +21,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
-
-      - name: Set up Python
-        if: github.event_name != 'push'
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: scripts/requirements-market.txt
-
-      - name: Refresh market data
-        if: github.event_name != 'push'
-        env:
-          FORCE_MARKET_DATA_WRITE: ${{ github.event_name == 'workflow_dispatch' }}
-        run: |
-          pip install -r scripts/requirements-market.txt
-          python scripts/update_market_data.py
-          python scripts/update_stock_predictions.py
-
-      - name: Commit new market data
-        if: github.event_name != 'push'
-        run: |
-          if git diff --quiet -- assets/data/stock-bandit-1y.json assets/data/stock-direction-xgb.json; then
-            echo "No new market data to commit."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add assets/data/stock-bandit-1y.json assets/data/stock-direction-xgb.json
-            git commit -m "Update stock experiment data"
-            git push
-          fi
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
