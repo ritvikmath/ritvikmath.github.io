@@ -1,0 +1,113 @@
+---
+layout: default
+title: Can XGBoost Predict Tomorrow?
+permalink: /experiments/stock-predictions/
+---
+<article class="experiment-shell prediction-experiment">
+  <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
+  <header class="experiment-header">
+    <p class="eyebrow"><span></span> Experiment 002 · Machine learning</p>
+    <h1>Can XGBoost Predict Tomorrow?</h1>
+    <p>Four possible directions, fourteen signals, ten stocks, and one deliberately skeptical test of whether yesterday contains a useful hint about the next trading day.</p>
+    <div class="experiment-status"><span></span> Data through <strong id="prediction-market-date">loading…</strong> · refreshed <time id="prediction-generated-at">loading…</time></div>
+  </header>
+
+  <section class="prediction-scorecard taped-panel" aria-labelledby="scorecard-heading">
+    <header>
+      <div><p class="eyebrow"><span></span> Held-out results</p><h2 id="scorecard-heading">How much signal did it find?</h2></div>
+      <p>The model never sees these final dates during training. Higher is better, but modest scores are the honest expectation for noisy daily markets.</p>
+    </header>
+    <div class="prediction-metrics" id="prediction-metrics" aria-live="polite"></div>
+    <p class="prediction-verdict" id="prediction-verdict"></p>
+    <div class="prediction-chart-wrap" id="prediction-chart-wrap">
+      <canvas id="prediction-accuracy-chart" role="img" aria-label="Rolling sixty-day exact-category and up-or-down accuracy"></canvas>
+      <div class="prediction-tooltip" id="prediction-tooltip" hidden><time></time><span>Exact category <strong data-value="accuracy"></strong></span><span>Up or down <strong data-value="direction_accuracy"></strong></span></div>
+    </div>
+    <div class="prediction-chart-key"><span class="key-exact">Exact four-way category</span><span class="key-direction">Direction only</span><span class="key-chance">Four-way chance: 25%</span></div>
+  </section>
+
+  <section class="current-forecast" aria-labelledby="forecast-heading">
+    <div class="section-heading-row">
+      <div><p class="eyebrow"><span></span> Latest reading</p><h2 id="forecast-heading">What it predicts next</h2></div>
+      <p>Probabilities are the model’s relative confidence—not a promise, recommendation, or calibrated chance of profit.</p>
+    </div>
+    <div class="forecast-grid" id="forecast-grid" aria-live="polite"></div>
+  </section>
+
+  <section class="prediction-explainer" aria-labelledby="target-heading">
+    <div class="explainer-copy">
+      <p class="notebook-kicker">first, define the question</p>
+      <h2 id="target-heading">Four ways tomorrow can go</h2>
+      <p>Rather than guess an exact price, the model classifies the next adjusted-close return. There is no universal industry standard for these labels, so this experiment uses a simple symmetric 1% boundary that is easy to interpret and keeps “direction” separate from “magnitude.”</p>
+    </div>
+    <div class="return-class-scale" aria-label="Next-day return categories">
+      <div class="class-vnegative"><strong>Very negative</strong><span>below −1%</span></div>
+      <div class="class-negative"><strong>Negative</strong><span>−1% to 0%</span></div>
+      <div class="class-positive"><strong>Positive</strong><span>0% to +1%</span></div>
+      <div class="class-vpositive"><strong>Very positive</strong><span>+1% or more</span></div>
+    </div>
+  </section>
+
+  <section class="prediction-diagnostics" aria-labelledby="diagnostics-heading">
+    <header class="section-heading-row">
+      <div><p class="eyebrow"><span></span> Where it succeeds—and slips</p><h2 id="diagnostics-heading">Read the mistakes, not just the score</h2></div>
+      <p>Balanced accuracy gives each class equal weight. The confusion matrix shows which classes the model tends to confuse.</p>
+    </header>
+    <div class="diagnostic-grid">
+      <div class="confusion-panel"><h3>Confusion matrix</h3><p>Rows are what happened; columns are what the model predicted.</p><div class="confusion-matrix" id="confusion-matrix"></div></div>
+      <div class="stock-accuracy-panel"><h3>Accuracy by stock</h3><p>Exact four-way accuracy and simpler up-or-down accuracy.</p><div class="stock-accuracy-bars" id="stock-accuracy-bars"></div></div>
+    </div>
+  </section>
+
+  <section class="feature-section" aria-labelledby="features-heading">
+    <div class="section-heading-row">
+      <div><p class="eyebrow"><span></span> Fourteen clues</p><h2 id="features-heading">What the model actually reads</h2></div>
+      <p>A compact set spanning momentum, trend, volatility, volume, and market context. Importance is measured on held-out data by shuffling one signal at a time.</p>
+    </div>
+    <div class="feature-layout">
+      <div class="feature-importance" id="feature-importance"></div>
+      <div class="feature-families">
+        <article><span>01</span><h3>Momentum</h3><p>Returns over 1, 5, 21, and 63 trading days, plus 14-day RSI and relative strength against the S&amp;P 500.</p></article>
+        <article><span>02</span><h3>Trend</h3><p>Distance from 20- and 50-day moving averages and the gap between 12- and 26-day exponential averages.</p></article>
+        <article><span>03</span><h3>Risk + participation</h3><p>Recent volatility, drawdown, average true range, unusual volume, and the market’s own weekly return.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="xgb-nutshell" aria-labelledby="xgb-heading">
+    <p class="notebook-kicker">xgboost in a nutshell</p>
+    <h2 id="xgb-heading">A committee that learns from its misses</h2>
+    <div class="boosting-strip" aria-hidden="true"><span>small tree</span><b>+</b><span>fix the errors</span><b>+</b><span>repeat</span><b>→</b><strong>four probabilities</strong></div>
+    <p>XGBoost builds many shallow decision trees in sequence. Each new tree focuses on patterns the earlier trees handled poorly; their weighted votes become probabilities for the four return classes. Here, 260 depth-three trees keep each individual rule modest.</p>
+    <div class="xgb-math">
+      <span>prediction</span>
+      <div class="xgb-equations">
+        <math display="block" aria-label="F sub k of x equals the sum from m equals 1 to 260 of eta times f sub m k of x">
+          <mrow><msub><mi>F</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mn>260</mn></munderover><mi>η</mi><mo>·</mo><msub><mi>f</mi><mrow><mi>m</mi><mo>,</mo><mi>k</mi></mrow></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow>
+        </math>
+        <math display="block" aria-label="Probability of y equals k given x equals e to the F sub k of x divided by the sum from j equals 1 to 4 of e to the F sub j of x">
+          <mrow><mi>P</mi><mo>(</mo><mi>y</mi><mo>=</mo><mi>k</mi><mo>|</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><msup><mi>e</mi><mrow><msub><mi>F</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow></msup><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></munderover><msup><mi>e</mi><mrow><msub><mi>F</mi><mi>j</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow></msup></mrow></mfrac></mrow>
+        </math>
+      </div>
+      <p>Each tree adds a small class-specific correction, scaled by learning rate <i>η</i> = 0.04. Softmax turns the four accumulated scores into probabilities.</p>
+    </div>
+  </section>
+
+  <section class="experiment-method" aria-labelledby="method-heading">
+    <p class="notebook-kicker">the honest setup</p>
+    <h2 id="method-heading">How the test works</h2>
+    <ol class="method-steps prediction-method-steps">
+      <li><span>01</span><div><h3>Pool the ten stocks</h3><p>Each stock-day becomes one example. Stock identity is included, while the same signal definitions apply to every company.</p></div></li>
+      <li><span>02</span><div><h3>Split forward in time</h3><p>The earliest 80% of dates train the evaluation model; the newest 20% form one untouched chronological test. Future observations never leak backward.</p></div></li>
+      <li><span>03</span><div><h3>Balance the classes</h3><p>Training examples are weighted so rare large moves matter. The headline balanced accuracy is the mean recall across all four labels.</p></div></li>
+      <li><span>04</span><div><h3>Refit for tomorrow</h3><p>After scoring the untouched test, a separate live model refits on every labeled date. The daily workflow publishes its new next-day reading after market data updates.</p></div></li>
+    </ol>
+    <aside class="prediction-caveat"><strong>This is a prediction study, not a trading system</strong><p>Accuracy does not include spreads, slippage, taxes, position sizing, or the cost of acting on weak confidence. Technical indicators summarize past price and volume; they do not create information about tomorrow. Treat the result as an experiment in market predictability, not investment advice.</p></aside>
+  </section>
+
+  <section class="experiment-sources" aria-labelledby="sources-heading">
+    <h2 id="sources-heading">Notes &amp; sources</h2>
+    <p>The signal families follow commonly used technical-analysis concepts described by <a href="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/what-is-technical-analysis" target="_blank" rel="noopener">Fidelity’s technical-analysis guide ↗</a>. Model implementation uses <a href="https://xgboost.readthedocs.io/en/stable/python/python_api.html#xgboost.XGBClassifier" target="_blank" rel="noopener">XGBoost’s scikit-learn classifier ↗</a>. The evaluation uses <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html" target="_blank" rel="noopener">scikit-learn balanced accuracy ↗</a> and held-out <a href="https://scikit-learn.org/stable/modules/permutation_importance.html" target="_blank" rel="noopener">permutation importance ↗</a>.</p>
+  </section>
+</article>
+<script src="{{ site.baseurl }}/assets/stock-predictions.js" defer></script>
