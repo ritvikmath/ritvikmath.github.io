@@ -23,8 +23,14 @@ STARTING_AGE = 22.0
 ALPHA = 0.075
 RIDGE = 1.0
 SWITCH_COST = 0.001
-ALLOCATION_TEMPERATURE = 0.08
-MINIMUM_ALLOCATION = 0.10
+ALLOCATION_ANCHOR = 0.60
+ALLOCATION_MAX_TILT = 0.30
+ALLOCATION_SIGNAL_SCALE = 0.05
+ALLOCATION_SMOOTHING = 0.50
+ALLOCATION_NO_TRADE_BAND = 0.03
+ALLOCATION_MINIMUM = 0.15
+ALLOCATION_MAXIMUM = 0.90
+STOCK_VOLATILITY_GUARDRAIL = 0.20
 FEATURES = (
     ("relative_momentum_3m", "3-month relative momentum", "Which asset has led over roughly one quarter."),
     ("relative_momentum_12m", "12-month relative momentum", "Whether stock leadership persists over a fuller market cycle."),
@@ -104,6 +110,7 @@ def build_context(closes):
     )
     context["stock_bond_correlation_6m"] = returns["SPY"].rolling(126).corr(returns["AGG"]).clip(-1, 1)
     context["relative_trend_10m"] = clipped(stock_trend - bond_trend, -0.50, 0.50, 0.25)
+    context["stock_volatility_3m"] = returns["SPY"].rolling(63).std() * np.sqrt(252)
     return context
 
 
@@ -138,12 +145,24 @@ def metrics(points, key, period_returns, contributions):
     }
 
 
-def allocation_from_scores(scores):
-    ordered = np.array([scores["SPY"], scores["AGG"]], dtype=float)
-    preferences = np.exp((ordered - ordered.max()) / ALLOCATION_TEMPERATURE)
-    stock_probability = float(preferences[0] / preferences.sum())
-    stock_weight = MINIMUM_ALLOCATION + (1 - 2 * MINIMUM_ALLOCATION) * stock_probability
-    return {"SPY": stock_weight, "AGG": 1 - stock_weight}
+def risk_aware_allocation(predicted_excess_return, uncertainty, stock_volatility, previous_stock_weight):
+    """Turn a noisy SPY-minus-AGG forecast into a conservative portfolio tilt."""
+    confidence = 1.0 / (1.0 + 2.0 * uncertainty)
+    directional_tilt = ALLOCATION_MAX_TILT * np.tanh(predicted_excess_return / ALLOCATION_SIGNAL_SCALE)
+    target = ALLOCATION_ANCHOR + confidence * directional_tilt
+
+    if stock_volatility > STOCK_VOLATILITY_GUARDRAIL:
+        target *= STOCK_VOLATILITY_GUARDRAIL / stock_volatility
+    target = float(np.clip(target, ALLOCATION_MINIMUM, ALLOCATION_MAXIMUM))
+
+    if previous_stock_weight is None:
+        stock_weight = target
+    else:
+        stock_weight = previous_stock_weight + ALLOCATION_SMOOTHING * (target - previous_stock_weight)
+        if abs(stock_weight - previous_stock_weight) < ALLOCATION_NO_TRADE_BAND:
+            stock_weight = previous_stock_weight
+    stock_weight = float(np.clip(stock_weight, ALLOCATION_MINIMUM, ALLOCATION_MAXIMUM))
+    return {"SPY": stock_weight, "AGG": 1 - stock_weight}, target, confidence
 
 
 def contribution_inflation_summary(cpi, start_date, end_date, final_contribution):
@@ -176,8 +195,8 @@ def run_backtest(closes, cpi):
     dimension = len(FEATURES) + 1
     matrices = {symbol: np.eye(dimension) * RIDGE for symbol in SYMBOLS}
     rewards = {symbol: np.zeros(dimension) for symbol in SYMBOLS}
-    allocation_matrices = {symbol: np.eye(dimension) * RIDGE for symbol in SYMBOLS}
-    allocation_rewards = {symbol: np.zeros(dimension) for symbol in SYMBOLS}
+    allocation_matrix = np.eye(dimension) * RIDGE
+    allocation_reward = np.zeros(dimension)
     values = {"bandit": STARTING_VALUE, "allocation": STARTING_VALUE, "spy": STARTING_VALUE, "agg": STARTING_VALUE, "balanced": STARTING_VALUE}
     period_returns = {key: [] for key in values}
     contributions = STARTING_VALUE
@@ -214,9 +233,9 @@ def run_backtest(closes, cpi):
             observed_reward = float(np.clip(gross_return, -0.25, 0.25))
             matrices[pending["action"]] += np.outer(pending["x"], pending["x"])
             rewards[pending["action"]] += observed_reward * pending["x"]
-            for symbol in SYMBOLS:
-                allocation_matrices[symbol] += np.outer(pending["x"], pending["x"])
-                allocation_rewards[symbol] += float(np.clip(asset_returns[symbol], -0.25, 0.25)) * pending["x"]
+            observed_excess_return = float(np.clip(asset_returns["SPY"] - asset_returns["AGG"], -0.35, 0.35))
+            allocation_matrix += np.outer(pending["x"], pending["x"])
+            allocation_reward += observed_excess_return * pending["x"]
             best_action = max(SYMBOLS, key=asset_returns.get)
             decisions.append({
                 "start": pending["decision_date"].date().isoformat(),
@@ -231,6 +250,9 @@ def run_backtest(closes, cpi):
                 "allocation": {symbol: round(pending["allocation"][symbol] * 100, 2) for symbol in SYMBOLS},
                 "allocation_return": round(allocation_net_return * 100, 2),
                 "allocation_turnover": round(pending["allocation_turnover"] * 100, 2),
+                "allocation_target": round(pending["allocation_target"] * 100, 2),
+                "allocation_confidence": round(pending["allocation_confidence"] * 100, 2),
+                "predicted_excess_return": round(pending["predicted_excess_return"] * 100, 2),
                 "spy_return": round(asset_returns["SPY"] * 100, 2),
                 "agg_return": round(asset_returns["AGG"] * 100, 2),
                 "best_action": best_action,
@@ -254,7 +276,6 @@ def run_backtest(closes, cpi):
         scores = {}
         estimates = {}
         bonuses = {}
-        allocation_scores = {}
         for symbol in SYMBOLS:
             inverse = np.linalg.inv(matrices[symbol])
             theta = inverse @ rewards[symbol]
@@ -263,9 +284,6 @@ def run_backtest(closes, cpi):
             estimates[symbol] = estimate
             bonuses[symbol] = bonus
             scores[symbol] = estimate + bonus
-            allocation_inverse = np.linalg.inv(allocation_matrices[symbol])
-            allocation_theta = allocation_inverse @ allocation_rewards[symbol]
-            allocation_scores[symbol] = float(allocation_theta @ x + ALPHA * np.sqrt(x @ allocation_inverse @ x))
 
         choice_number = len(decisions)
         if choice_number < 2:
@@ -278,7 +296,16 @@ def run_backtest(closes, cpi):
         switched = previous_action is not None and action != previous_action
         if switched:
             values["bandit"] *= 1 - SWITCH_COST
-        allocation = allocation_from_scores(allocation_scores)
+        allocation_inverse = np.linalg.inv(allocation_matrix)
+        allocation_theta = allocation_inverse @ allocation_reward
+        predicted_excess_return = float(allocation_theta @ x)
+        allocation_uncertainty = float(np.sqrt(x @ allocation_inverse @ x))
+        allocation, allocation_target, allocation_confidence = risk_aware_allocation(
+            predicted_excess_return,
+            allocation_uncertainty,
+            float(context.loc[decision_date, "stock_volatility_3m"]),
+            previous_stock_weight,
+        )
         allocation_turnover = 0.0 if previous_stock_weight is None else abs(allocation["SPY"] - previous_stock_weight)
         allocation_cost = SWITCH_COST * allocation_turnover
         values["allocation"] *= 1 - allocation_cost
@@ -296,7 +323,10 @@ def run_backtest(closes, cpi):
             "bonuses": {symbol: round(bonuses[symbol], 5) for symbol in SYMBOLS},
             "context": {name: round(float(context.loc[decision_date, name]), 4) for name, _, _ in FEATURES},
             "allocation": allocation,
-            "allocation_scores": {symbol: round(allocation_scores[symbol], 5) for symbol in SYMBOLS},
+            "allocation_target": allocation_target,
+            "allocation_confidence": allocation_confidence,
+            "predicted_excess_return": predicted_excess_return,
+            "allocation_uncertainty": allocation_uncertainty,
             "allocation_turnover": allocation_turnover,
             "allocation_cost": allocation_cost,
         }
@@ -334,8 +364,14 @@ def run_backtest(closes, cpi):
             "switch_cost_percent": SWITCH_COST * 100,
             "reward_clip": [-25, 25],
             "warm_up_quarters": 2,
-            "allocation_temperature": ALLOCATION_TEMPERATURE,
-            "minimum_asset_weight_percent": MINIMUM_ALLOCATION * 100,
+            "allocation_model": "shared online ridge model of SPY minus AGG quarterly return",
+            "allocation_anchor_percent": ALLOCATION_ANCHOR * 100,
+            "allocation_maximum_tilt_percent": ALLOCATION_MAX_TILT * 100,
+            "allocation_smoothing": ALLOCATION_SMOOTHING,
+            "allocation_no_trade_band_percent": ALLOCATION_NO_TRADE_BAND * 100,
+            "minimum_stock_weight_percent": ALLOCATION_MINIMUM * 100,
+            "maximum_stock_weight_percent": ALLOCATION_MAXIMUM * 100,
+            "stock_volatility_guardrail_percent": STOCK_VOLATILITY_GUARDRAIL * 100,
             "feature_count": len(FEATURES),
             "feature_scaling": "fixed before the backtest; no future-fitted scaler",
             "hyperparameter_tuning": "none",
