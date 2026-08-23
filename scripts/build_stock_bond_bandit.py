@@ -18,7 +18,7 @@ SYMBOLS = ("SPY", "AGG")
 SNAPSHOT_START = "2003-09-22"
 SNAPSHOT_END_EXCLUSIVE = "2026-08-23"
 STARTING_VALUE = 1000.0
-QUARTERLY_CONTRIBUTION = 1000.0
+BASE_QUARTERLY_CONTRIBUTION = 1000.0
 STARTING_AGE = 22.0
 ALPHA = 0.075
 RIDGE = 1.0
@@ -146,42 +146,24 @@ def allocation_from_scores(scores):
     return {"SPY": stock_weight, "AGG": 1 - stock_weight}
 
 
-def add_inflation_view(points, cpi, strategy_keys):
-    """Express every nominal point in dollars from the first backtest month."""
-    dates = pd.DatetimeIndex(point["date"] for point in points)
-    observed_cpi = cpi.reindex(dates, method="ffill")
-    if observed_cpi.isna().any():
-        raise ValueError("CPI does not cover every backtest point")
-
-    base_cpi = float(observed_cpi.iloc[0])
-    real_contributed = 0.0
-    previous_nominal_contributed = 0.0
-    for point, cpi_value in zip(points, observed_cpi):
-        cpi_value = float(cpi_value)
-        factor = base_cpi / cpi_value
-        new_contribution = point["contributed"] - previous_nominal_contributed
-        real_contributed += new_contribution * factor
-        point["cpi"] = round(cpi_value, 3)
-        point["inflation_factor"] = round(factor, 6)
-        point["real_contributed"] = round(real_contributed, 2)
-        for key in strategy_keys:
-            point[f"{key}_real"] = round(point[key] * factor, 2)
-        previous_nominal_contributed = point["contributed"]
-
-    end_cpi = float(observed_cpi.iloc[-1])
+def contribution_inflation_summary(cpi, start_date, end_date, final_contribution):
+    """Describe how the quarterly contribution grows with the CPI price level."""
+    base_cpi = float(cpi.asof(start_date))
+    end_cpi = float(cpi.asof(end_date))
     return {
         "series": "CPIAUCSL",
         "name": "Consumer Price Index for All Urban Consumers: All Items",
         "source": "U.S. Bureau of Labor Statistics via FRED",
         "frequency": "monthly",
         "seasonally_adjusted": True,
-        "base_date": points[0]["date"],
+        "base_date": start_date.date().isoformat(),
         "base_cpi": round(base_cpi, 3),
-        "end_date": points[-1]["date"],
+        "end_date": end_date.date().isoformat(),
         "end_cpi": round(end_cpi, 3),
         "cumulative_inflation_percent": round((end_cpi / base_cpi - 1) * 100, 2),
-        "end_dollar_in_base_dollars": round(base_cpi / end_cpi, 4),
-        "real_total_contributed": round(real_contributed, 2),
+        "base_quarterly_contribution": BASE_QUARTERLY_CONTRIBUTION,
+        "final_quarterly_contribution": round(final_contribution, 2),
+        "contribution_policy": "The quarterly contribution starts at $1,000 and changes in proportion to CPI.",
     }
 
 
@@ -201,7 +183,8 @@ def run_backtest(closes, cpi):
     contributions = STARTING_VALUE
     first_entry_position = closes.index.get_loc(dates[0]) + 1
     first_entry = closes.index[first_entry_position]
-    points = [{"date": first_entry.date().isoformat(), "age": STARTING_AGE, "contributed": contributions, **{key: round(value, 2) for key, value in values.items()}}]
+    base_cpi = float(cpi.asof(first_entry))
+    points = [{"date": first_entry.date().isoformat(), "age": STARTING_AGE, "quarterly_contribution": STARTING_VALUE, "contributed": contributions, **{key: round(value, 2) for key, value in values.items()}}]
     decisions = []
     pending = None
     previous_action = None
@@ -257,11 +240,12 @@ def run_backtest(closes, cpi):
                 "bonuses": pending["bonuses"],
                 "context": pending["context"],
             })
-            contributions += QUARTERLY_CONTRIBUTION
+            quarterly_contribution = BASE_QUARTERLY_CONTRIBUTION * float(cpi.asof(decision_date)) / base_cpi
+            contributions += quarterly_contribution
             for key in values:
-                values[key] += QUARTERLY_CONTRIBUTION
+                values[key] += quarterly_contribution
             age = STARTING_AGE + (decision_date - first_entry).days / 365.25
-            points.append({"date": decision_date.date().isoformat(), "age": round(age, 2), "contributed": contributions, **{key: round(value, 2) for key, value in values.items()}})
+            points.append({"date": decision_date.date().isoformat(), "age": round(age, 2), "quarterly_contribution": round(quarterly_contribution, 2), "contributed": round(contributions, 2), **{key: round(value, 2) for key, value in values.items()}})
 
         if decision_date == dates[-1]:
             break
@@ -321,9 +305,7 @@ def run_backtest(closes, cpi):
 
     start_date, end_date = first_entry, dates[-1]
     summary = {key: metrics(points, key, period_returns[key], contributions) for key in values}
-    inflation = add_inflation_view(points, cpi, values.keys())
-    for key in values:
-        summary[key]["real_terminal_value"] = points[-1][f"{key}_real"]
+    inflation = contribution_inflation_summary(cpi, start_date, end_date, points[-1]["quarterly_contribution"])
     choices = {symbol: sum(decision["action"] == symbol for decision in decisions) for symbol in SYMBOLS}
     stock_weights = [decision["allocation"]["SPY"] for decision in decisions]
     return {
@@ -334,7 +316,8 @@ def run_backtest(closes, cpi):
         "backtest_start": start_date.date().isoformat(),
         "backtest_end": end_date.date().isoformat(),
         "starting_value": STARTING_VALUE,
-        "quarterly_contribution": QUARTERLY_CONTRIBUTION,
+        "base_quarterly_contribution": BASE_QUARTERLY_CONTRIBUTION,
+        "final_quarterly_contribution": points[-1]["quarterly_contribution"],
         "total_contributed": contributions,
         "starting_age": STARTING_AGE,
         "ending_age": round(STARTING_AGE + (end_date - start_date).days / 365.25, 2),

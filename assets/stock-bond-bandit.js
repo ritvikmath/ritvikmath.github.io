@@ -43,7 +43,7 @@
     const keys = ['bandit', 'allocation', 'spy', 'balanced', 'agg'];
     cards.innerHTML = keys.map(function (key) {
       const item = data.summary[key];
-      return '<article style="--strategy-color:' + colors[key] + '"><span>' + names[key] + '</span><strong>' + money.format(item.terminal_value) + '</strong><small>' + signed(item.annualized_return) + ' time-weighted · ' + item.max_drawdown.toFixed(1) + '% max drawdown</small><small class="sb-real-value"><b>' + money.format(item.real_terminal_value) + '</b> after inflation · 2004 dollars</small></article>';
+      return '<article style="--strategy-color:' + colors[key] + '"><span>' + names[key] + '</span><strong>' + money.format(item.terminal_value) + '</strong><small>' + signed(item.annualized_return) + ' time-weighted · ' + item.max_drawdown.toFixed(1) + '% max drawdown</small></article>';
     }).join('');
     const chartKeys = keys.concat(['contributed']);
     document.querySelector('#sb-chart-key').innerHTML = chartKeys.map(function (key) { return '<span class="key-' + key + '" style="--strategy-color:' + colors[key] + '">' + names[key] + '</span>'; }).join('');
@@ -56,9 +56,8 @@
     const bandit = data.summary.bandit;
     const allocation = data.summary.allocation;
     document.querySelector('#sb-result-note').innerHTML = '<strong>The result at age ' + endingAge + ':</strong> after ' + money.format(data.total_contributed) + ' of deposits, ' + names[leader] + ' finished with the most money. The contextual mix reached ' + money.format(allocation.terminal_value) + ', compared with ' + money.format(bandit.terminal_value) + ' for the all-in version. These are historical results and do not predict future returns.';
-    document.querySelector('#sb-life-summary').innerHTML = '<span><strong>Age ' + data.starting_age.toFixed(0) + '</strong>' + fullDate.format(parseDate(data.backtest_start)) + '</span><span><strong>' + money.format(data.quarterly_contribution) + '</strong>added every quarter</span><span><strong>' + money.format(data.total_contributed) + '</strong>total contributed</span><span><strong>Age ' + endingAge + '</strong>' + fullDate.format(parseDate(data.backtest_end)) + '</span>';
+    document.querySelector('#sb-life-summary').innerHTML = '<span><strong>Age ' + data.starting_age.toFixed(0) + '</strong>' + fullDate.format(parseDate(data.backtest_start)) + '</span><span><strong>' + money.format(data.base_quarterly_contribution) + ' to ' + money.format(data.final_quarterly_contribution) + '</strong>quarterly deposit grows with CPI</span><span><strong>' + money.format(data.total_contributed) + '</strong>total contributed</span><span><strong>Age ' + endingAge + '</strong>' + fullDate.format(parseDate(data.backtest_end)) + '</span>';
     document.querySelector('#sb-ending-age-copy').textContent = endingAge;
-    document.querySelector('#sb-inflation-caption').innerHTML = 'Consumer prices rose <strong>' + data.inflation.cumulative_inflation_percent.toFixed(1) + '%</strong> during the backtest. Each card’s “after inflation” statistic translates its ending balance into October 2004 purchasing power using monthly U.S. CPI.';
   }
 
   function resize() {

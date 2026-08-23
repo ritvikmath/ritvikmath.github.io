@@ -562,10 +562,6 @@ body {
 .sb-chart-key .key-contributed:before { height: 1px; background: repeating-linear-gradient(90deg, var(--strategy-color) 0 4px, transparent 4px 7px); }
 .sb-chart-wrap, .sb-regime-wrap { position: relative; touch-action: pan-y; }
 .sb-chart-wrap { min-height: 350px; margin-top: 8px; }.sb-chart-wrap canvas, .sb-regime-wrap canvas { display: block; cursor: crosshair; }
-.sb-scorecards .sb-real-value { margin-top: 11px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--muted); }
-.sb-scorecards .sb-real-value b { color: var(--ink); font-weight: 600; }
-.sb-inflation-caption { margin: 18px 0 0; padding: 14px 16px; border-left: 3px solid var(--gold); background: rgba(177,137,45,.055); color: var(--muted); font-size: 10px; line-height: 1.65; }
-.sb-inflation-caption strong { color: var(--ink); font-weight: 600; }
 .sb-tooltip { width: 205px; min-width: 0; }.sb-tooltip > div { display: grid; gap: 7px; margin-top: 9px; }.sb-tooltip > div > span { display: flex; gap: 12px; color: var(--muted); font: 8px/1.2 var(--mono); }.sb-tooltip > div > span:before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--series-color); }.sb-tooltip b { font-weight: 400; }.sb-tooltip .sb-tooltip-choice { display: block; margin: 1px 0 4px; font: 500 18px/1 var(--serif); }
 .sb-result-note { margin: 12px 0 0; padding: 15px 17px; border-left: 3px solid var(--blue); background: rgba(49,95,186,.045); color: var(--muted); font-size: 11px; line-height: 1.7; }.sb-result-note strong { color: var(--ink); }
 .sb-choice-section, .sb-features, .sb-sources { max-width: 940px; margin: 0 auto; padding-top: 88px; }
@@ -577,7 +573,7 @@ body {
 .sb-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 28px; padding: 1px; background: var(--line); }
 .sb-feature-grid article { min-height: 180px; padding: 23px 21px; background: rgba(255,253,248,.94); }
 .sb-feature-grid span { color: var(--blue); font: 9px/1 var(--mono); }.sb-feature-grid h3 { margin: 14px 0 0; font: 500 22px/1.08 var(--serif); }.sb-feature-grid p { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
-.sb-math .equation { justify-content: center; white-space: normal; }.sb-math math { width: max-content; min-width: 0; font-size: 22px; }.sb-math .equation math + math { margin-top: 9px; }
+.sb-math .equation { justify-content: center; white-space: normal; }.sb-math math { flex: 0 0 auto; width: max-content; min-width: 0; font-size: 22px; }.sb-math .equation math + math { margin-top: 9px; }
 .sb-sources { padding-bottom: 12px; }.sb-sources p { margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }.sb-sources a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
 @media (max-width: 700px) {
@@ -644,5 +640,7 @@ body {
   .sb-choice-section, .sb-features, .sb-sources, .sb-method { padding-top: 62px; }
   .sb-choice-summary { grid-template-columns: repeat(2, 1fr); }
   .sb-feature-grid { grid-template-columns: 1fr; }.sb-feature-grid article { min-height: 0; padding: 21px 18px; }
-  .sb-math math { font-size: 16px; }
+  .sb-math .equation { justify-content: flex-start; overflow-x: auto; padding-inline: 11px; -webkit-overflow-scrolling: touch; }
+  .sb-math math { font-size: 13px; }
+  .sb-math .equation-wide math { font-size: 12px; }
 }
