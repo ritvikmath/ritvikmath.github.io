@@ -30,7 +30,7 @@
     const lift = metrics.balanced_accuracy - 25;
     const directionGap = Math.abs(metrics.direction_accuracy - 50);
     const directionVerdict = directionGap < 0.1 ? 'effectively a coin flip' : 'only ' + directionGap.toFixed(1) + ' point' + (directionGap.toFixed(1) === '1.0' ? '' : 's') + ' from a coin flip';
-    document.querySelector('#prediction-verdict').innerHTML = '<strong>Bottom line:</strong> the four-way model scores ' + lift.toFixed(1) + ' points above balanced chance, but its up-or-down result is ' + directionVerdict + '. That is interesting evidence of a small classification pattern—not a dependable trading edge.';
+    document.querySelector('#prediction-verdict').innerHTML = '<strong>Bottom line:</strong> the four-way model scores ' + lift.toFixed(1) + ' points above balanced chance, but its up-or-down result is ' + directionVerdict + '. This suggests a small classification pattern, but not a dependable trading edge.';
   }
 
   function renderConfusion() {

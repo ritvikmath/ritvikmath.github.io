@@ -33,8 +33,8 @@ permalink: /experiments/stock-trading/
 
     <div class="market-range" aria-label="One-year experiment summary">
       <div><span>Starting amount</span><strong>$1,000 each</strong></div>
-      <div><span>Leader today</span><strong id="market-leader">—</strong></div>
-      <div><span>Weekly decisions</span><strong id="market-rebalances">—</strong></div>
+      <div><span>Leader today</span><strong id="market-leader">...</strong></div>
+      <div><span>Weekly decisions</span><strong id="market-rebalances">...</strong></div>
     </div>
 
     <section class="allocation-history-panel" aria-labelledby="allocation-history-heading">
@@ -58,7 +58,7 @@ permalink: /experiments/stock-trading/
       <div class="allocation-bars" id="allocation-bars"></div>
     </section>
 
-    <p class="market-source">Uses adjusted prices, fractional shares, and weekly close-to-close signals. Assumes rebalancing at the weekly closing price with no fees, taxes, spread, or slippage. Educational experiment only—not investment advice.</p>
+    <p class="market-source">Uses adjusted prices, fractional shares, and weekly close-to-close signals. Assumes rebalancing at the weekly closing price with no fees, taxes, spread, or slippage. This experiment is for education and is not investment advice.</p>
   </section>
 
   <section class="experiment-method" aria-labelledby="method-heading">
@@ -66,14 +66,14 @@ permalink: /experiments/stock-trading/
     <h2 id="method-heading">How the adaptive strategy learns</h2>
     <p class="method-intro">The model is intentionally small enough to inspect. It never predicts a price; it only changes how much capital each stock receives based on recent evidence.</p>
     <ol class="method-steps">
-      <li><span>01</span><div><h3>Begin equally</h3><p>The first $1,000 is split ten ways—10% in each company across ten different parts of the economy.</p></div></li>
+      <li><span>01</span><div><h3>Begin equally</h3><p>The first $1,000 is split ten ways, with 10% in each company across ten different parts of the economy.</p></div></li>
       <li><span>02</span><div><h3>Observe one week</h3><p>After the final trading session of the week, the model measures each stock’s adjusted close-to-close return.</p></div></li>
       <li><span>03</span><div><h3>Update the score</h3><p>Each score is 50% its previous value and 50% the newest weekly return. That remembers momentum without letting one week erase the past.</p></div></li>
       <li><span>04</span><div><h3>Exploit, but keep exploring</h3><p>Higher scores receive more money the following week. Every stock keeps at least 3%, and no stock can exceed 30%.</p></div></li>
     </ol>
     <aside class="method-note">
       <strong>Why “bandit”?</strong>
-      <p>The strategy balances exploitation—backing what has worked—with exploration—keeping capital in every option. Because all ten returns are observable, this is a deterministic bandit-inspired allocation rule rather than a classical hidden-reward bandit.</p>
+      <p>The strategy balances exploitation, which backs what has worked, with exploration, which keeps capital in every option. Because all ten returns are observable, this is a deterministic bandit-inspired allocation rule rather than a classical hidden-reward bandit.</p>
     </aside>
   </section>
 

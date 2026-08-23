@@ -7,10 +7,45 @@ permalink: /experiments/
   <header class="experiment-archive-header">
     <p class="notebook-kicker">models in motion</p>
     <h1>Experiments</h1>
-    <p>Ongoing projects where the data keeps changing and the question keeps evolving.</p>
+    <p>Models, backtests, and small computational adventures where a question gets room to move.</p>
   </header>
 
   <div class="post-grid experiment-grid">
+    <article class="post-card experiment-card">
+      <a class="experiment-card-visual stock-bond-card-visual" href="{{ site.baseurl }}/experiments/stock-bond-bandit/" aria-label="Open Stocks, Bonds, and a Contextual Bandit experiment">
+        <svg class="stock-bond-sketch" viewBox="0 0 320 170" aria-hidden="true" focusable="false">
+          <path class="sb-card-axis" d="M38 134 H287 M49 145 V27"></path>
+          <path class="sb-card-stock" d="M49 124 C69 119 77 126 94 109 S123 104 140 84 S169 91 187 61 S218 69 235 43 S263 48 282 24"></path>
+          <path class="sb-card-bond" d="M49 124 C74 118 88 121 106 111 S139 113 158 100 S192 101 212 89 S249 91 282 76"></path>
+          <circle class="sb-card-choice sb-card-choice-one" cx="94" cy="109" r="6"></circle>
+          <circle class="sb-card-choice sb-card-choice-two" cx="158" cy="100" r="6"></circle>
+          <circle class="sb-card-choice sb-card-choice-three" cx="235" cy="43" r="6"></circle>
+          <text x="246" y="32">SPY</text><text x="251" y="70">AGG</text>
+        </svg>
+      </a>
+      <div class="card-body">
+        <div class="card-meta"><span>Asset allocation</span><span>22-year backtest</span></div>
+        <h2><a href="{{ site.baseurl }}/experiments/stock-bond-bandit/">Stocks, Bonds, and a Contextual Bandit</a></h2>
+        <p>From age 22 onward, quarterly deposits test both an all-in bandit and a continuously blended stock-and-bond strategy against familiar passive paths.</p>
+        <a class="card-link" href="{{ site.baseurl }}/experiments/stock-bond-bandit/" aria-label="Open Stocks, Bonds, and a Contextual Bandit">Open the experiment <span>↗</span></a>
+      </div>
+    </article>
+    <article class="post-card experiment-card">
+      <a class="experiment-card-visual prediction-card-visual" href="{{ site.baseurl }}/experiments/stock-predictions/" aria-label="Open Can XGBoost Predict Tomorrow experiment">
+        <svg class="tree-sketch" viewBox="0 0 320 170" aria-hidden="true" focusable="false">
+          <path d="M160 24 L92 69 M160 24 L228 69 M92 69 L53 116 M92 69 L129 116 M228 69 L191 116 M228 69 L267 116"></path>
+          <circle cx="160" cy="24" r="10"></circle><circle cx="92" cy="69" r="9"></circle><circle cx="228" cy="69" r="9"></circle>
+          <circle class="leaf leaf-one" cx="53" cy="116" r="11"></circle><circle class="leaf leaf-two" cx="129" cy="116" r="11"></circle><circle class="leaf leaf-three" cx="191" cy="116" r="11"></circle><circle class="leaf leaf-four" cx="267" cy="116" r="11"></circle>
+          <path class="probability-strokes" d="M34 148 H89 M105 148 H151 M169 148 H215 M231 148 H289"></path>
+        </svg>
+      </a>
+      <div class="card-body">
+        <div class="card-meta"><span>Machine learning</span><span>Frozen snapshot</span></div>
+        <h2><a href="{{ site.baseurl }}/experiments/stock-predictions/">Can XGBoost Predict Tomorrow?</a></h2>
+        <p>A four-class prediction test asking whether fourteen familiar market signals contain useful information about the next trading day.</p>
+        <a class="card-link" href="{{ site.baseurl }}/experiments/stock-predictions/" aria-label="Open Can XGBoost Predict Tomorrow">Open the experiment <span>↗</span></a>
+      </div>
+    </article>
     <article class="post-card experiment-card">
       <a class="experiment-card-visual" href="{{ site.baseurl }}/experiments/stock-trading/" aria-label="Open An Adaptive Bandit experiment">
         <svg class="comparison-sketch" viewBox="0 0 320 124" aria-hidden="true" focusable="false">
@@ -31,22 +66,6 @@ permalink: /experiments/
         <h2><a href="{{ site.baseurl }}/experiments/stock-trading/">An Adaptive Bandit</a></h2>
         <p>A one-year backtest asking whether an explore-and-exploit strategy can outperform simply holding any of ten diverse S&amp;P 500 stocks.</p>
         <a class="card-link" href="{{ site.baseurl }}/experiments/stock-trading/" aria-label="Open An Adaptive Bandit">Open the experiment <span>↗</span></a>
-      </div>
-    </article>
-    <article class="post-card experiment-card">
-      <a class="experiment-card-visual prediction-card-visual" href="{{ site.baseurl }}/experiments/stock-predictions/" aria-label="Open Can XGBoost Predict Tomorrow experiment">
-        <svg class="tree-sketch" viewBox="0 0 320 170" aria-hidden="true" focusable="false">
-          <path d="M160 24 L92 69 M160 24 L228 69 M92 69 L53 116 M92 69 L129 116 M228 69 L191 116 M228 69 L267 116"></path>
-          <circle cx="160" cy="24" r="10"></circle><circle cx="92" cy="69" r="9"></circle><circle cx="228" cy="69" r="9"></circle>
-          <circle class="leaf leaf-one" cx="53" cy="116" r="11"></circle><circle class="leaf leaf-two" cx="129" cy="116" r="11"></circle><circle class="leaf leaf-three" cx="191" cy="116" r="11"></circle><circle class="leaf leaf-four" cx="267" cy="116" r="11"></circle>
-          <path class="probability-strokes" d="M34 148 H89 M105 148 H151 M169 148 H215 M231 148 H289"></path>
-        </svg>
-      </a>
-      <div class="card-body">
-        <div class="card-meta"><span>Machine learning</span><span>Frozen snapshot</span></div>
-        <h2><a href="{{ site.baseurl }}/experiments/stock-predictions/">Can XGBoost Predict Tomorrow?</a></h2>
-        <p>A four-class prediction test asking whether fourteen familiar market signals contain useful information about the next trading day.</p>
-        <a class="card-link" href="{{ site.baseurl }}/experiments/stock-predictions/" aria-label="Open Can XGBoost Predict Tomorrow">Open the experiment <span>↗</span></a>
       </div>
     </article>
   </div>

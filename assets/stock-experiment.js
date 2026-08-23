@@ -92,7 +92,7 @@
       const row = document.createElement('div');
       row.className = 'allocation-row';
       row.style.setProperty('--series-color', colors[item.id]);
-      row.innerHTML = '<span>' + item.symbol + '</span><div><i id="' + item.id + '-bar"></i></div><strong id="' + item.id + '-weight">—</strong>';
+      row.innerHTML = '<span>' + item.symbol + '</span><div><i id="' + item.id + '-bar"></i></div><strong id="' + item.id + '-weight">...</strong>';
       bars.appendChild(row);
 
       const legendItem = document.createElement('span');

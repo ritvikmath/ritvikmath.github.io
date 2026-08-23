@@ -1,0 +1,107 @@
+---
+layout: default
+title: Stocks, Bonds, and a Contextual Bandit
+permalink: /experiments/stock-bond-bandit/
+---
+<article class="experiment-shell stock-bond-experiment">
+  <header class="experiment-header">
+    <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
+    <p class="eyebrow"><span></span> Experiment 003 · Asset allocation</p>
+    <h1>Stocks, Bonds, and a Contextual Bandit</h1>
+    <p>Follow one investor from age 22 through every quarter the shared data allows. Can a learning system build a better long-term path by choosing between U.S. stocks and bonds, or by continuously mixing the two?</p>
+    <div class="experiment-status experiment-status-static">Frozen backtest · <strong id="sb-period">loading…</strong></div>
+  </header>
+
+  <section class="sb-intuition taped-panel" aria-labelledby="sb-intuition-heading">
+    <div>
+      <p class="notebook-kicker">intuition before equations</p>
+      <h2 id="sb-intuition-heading">Two roads for the same $1,000</h2>
+      <p>Stocks are usually the growth engine, while high-quality bonds are often the steadier counterweight. A fixed portfolio includes both. Here we ask whether an algorithm can use recent market information to choose the better investment for the next three months.</p>
+    </div>
+    <div class="sb-asset-pair" aria-label="The two investment choices">
+      <article><span>Stocks</span><strong>SPY</strong><p>Broad exposure to large U.S. companies through the S&amp;P 500.</p></article>
+      <span class="sb-versus">or</span>
+      <article><span>Bonds</span><strong>AGG</strong><p>Broad exposure to the U.S. investment-grade bond market.</p></article>
+    </div>
+  </section>
+
+  <section class="sb-life-summary" id="sb-life-summary" aria-label="Investor timeline and contributions"></section>
+
+  <section class="sb-results market-panel" aria-labelledby="sb-results-heading">
+    <header class="market-panel-header market-panel-header-stacked">
+      <div><p class="eyebrow"><span></span> Long-horizon backtest</p><h2 id="sb-results-heading">What became of a lifetime of deposits?</h2><p>Every path starts with $1,000 at age 22 and receives another $1,000 each quarter. SPY and AGG stay put, 60/40 rebalances, the all-in bandit chooses one asset, and the contextual mix chooses an exact percentage of each.</p></div>
+    </header>
+    <div class="sb-scorecards" id="sb-scorecards" aria-label="Strategy result summaries"></div>
+    <div class="sb-chart-key" id="sb-chart-key" aria-label="Growth chart legend"></div>
+    <div class="sb-chart-wrap" id="sb-growth-wrap">
+      <canvas id="sb-growth-chart" data-source="{{ site.baseurl }}/assets/data/stock-bond-bandit.json" role="img" aria-label="Interactive growth comparison of the contextual bandit, SPY, AGG, and a rebalanced 60/40 portfolio"></canvas>
+      <div class="market-tooltip sb-tooltip" id="sb-growth-tooltip" hidden><time></time><div></div></div>
+    </div>
+    <p class="sb-result-note" id="sb-result-note">Loading the frozen result…</p>
+    <p class="sb-inflation-caption" id="sb-inflation-caption">Inflation-adjusted figures use monthly U.S. CPI and are expressed in October 2004 dollars.</p>
+  </section>
+
+  <section class="sb-choice-section" aria-labelledby="sb-choice-heading">
+    <div class="section-heading-row">
+      <div><p class="eyebrow"><span></span> Quarter by quarter</p><h2 id="sb-choice-heading">How did it split the money?</h2></div>
+      <p>Each vertical slice is one quarter. Blue is the percentage in SPY and gold is the percentage in AGG. Hover or tap to see the exact mix and the all-in model’s choice.</p>
+    </div>
+    <div class="sb-choice-summary" id="sb-choice-summary"></div>
+    <div class="sb-regime-wrap" id="sb-regime-wrap">
+      <canvas id="sb-regime-chart" role="img" aria-label="Interactive timeline of quarterly SPY and AGG choices"></canvas>
+      <div class="market-tooltip sb-tooltip sb-regime-tooltip" id="sb-regime-tooltip" hidden><time></time><div></div></div>
+    </div>
+  </section>
+
+  <section class="experiment-method sb-method" aria-labelledby="sb-method-heading">
+    <p class="notebook-kicker">how the machine thinks</p>
+    <h2 id="sb-method-heading">Context changes the bet</h2>
+    <p class="method-intro">A normal two-armed bandit remembers only which arm paid off. A <em>contextual</em> bandit also looks at the situation before choosing. We run it two ways: a classical all-in choice, plus a contextual semi-bandit that holds both assets and turns their scores into a continuously changing allocation.</p>
+    <ol class="method-steps">
+      <li><span>01</span><div><h3>Calculate the current signals</h3><p>At the end of each quarter, calculate six signals using only the adjusted prices available on that date. No information from the next quarter is used.</p></div></li>
+      <li><span>02</span><div><h3>Score both choices</h3><p>SPY and AGG each have their own linear reward model. The score combines expected return with an uncertainty bonus.</p></div></li>
+      <li><span>03</span><div><h3>Explore when unsure</h3><p>The uncertainty bonus favors an asset in contexts the model has not seen often. The first two quarters also deliberately try one asset each.</p></div></li>
+      <li><span>04</span><div><h3>Choose or blend</h3><p>The all-in version takes the higher score. The mix uses both scores to select exact weights between 10% and 90%, then both held arms provide feedback.</p></div></li>
+      <li><span>05</span><div><h3>Add the next $1,000</h3><p>After the quarter’s growth is measured, the investor contributes another $1,000 to every strategy before the next allocation executes.</p></div></li>
+      <li><span>06</span><div><h3>Learn, then wait a day</h3><p>Only completed-quarter returns update the models. Each new allocation executes one full trading session after its context is observed.</p></div></li>
+    </ol>
+    <aside class="leakage-check">
+      <div><p class="eyebrow"><span></span> Backtest checks</p><h3>How we avoid using future information</h3></div>
+      <ul>
+        <li><strong>Strict event order.</strong> Learn from the completed quarter, observe current context, choose, then wait one trading session to execute.</li>
+        <li><strong>No future-fitted preprocessing.</strong> Signal scales, clipping limits, exploration strength, and costs are declared before the first simulated quarter.</li>
+        <li><strong>No parameter search.</strong> There is one frozen run. We do not test many settings and keep the one that wins in hindsight.</li>
+        <li><strong>Equal cash flows.</strong> Every strategy receives the same $1,000 on the same quarterly schedule; the dashed chart line shows principal contributed.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="sb-features feature-section" aria-labelledby="sb-features-heading">
+    <div class="section-heading-row"><div><p class="eyebrow"><span></span> Six signals only</p><h2 id="sb-features-heading">The information used each quarter</h2></div><p>These six features summarize recent trend, risk, market stress, and diversification. We keep the list short because the quarterly dataset is not large.</p></div>
+    <div class="sb-feature-grid" id="sb-feature-grid"></div>
+  </section>
+
+  <section class="math-zone sb-math" aria-labelledby="sb-math-heading">
+    <header class="math-zone-header">
+      <p class="notebook-kicker">for those who want the symbols</p>
+      <h2 id="sb-math-heading">The Math Zone</h2>
+      <p>The intuition is “predicted reward plus curiosity.” Let <em>a</em> be an asset arm, <em>q</em> a quarter, and <strong>x</strong><sub>q</sub> the six-signal context plus an intercept.</p>
+    </header>
+    <div class="equation-list">
+      <article><span>01 · context</span><h3>What the model sees</h3><div class="equation"><math display="block"><msub><mi mathvariant="bold">x</mi><mi>q</mi></msub><mo>=</mo><mo>[</mo><mn>1</mn><mo>,</mo><msub><mi>m</mi><mrow><mn>3</mn><mi>m</mi></mrow></msub><mo>,</mo><msub><mi>m</mi><mrow><mn>12</mn><mi>m</mi></mrow></msub><mo>,</mo><mi>v</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>ρ</mi><mo>,</mo><mi>τ</mi><mo>]</mo></math></div><p>Relative momentum at two horizons, a volatility gap, stock drawdown, stock-bond correlation, and relative trend distance.</p></article>
+      <article><span>02 · memory</span><h3>Learned coefficients</h3><div class="equation"><math display="block"><msub><mi mathvariant="bold">θ</mi><mi>a</mi></msub><mo>=</mo><msubsup><mi>A</mi><mi>a</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><msub><mi mathvariant="bold">b</mi><mi>a</mi></msub></math></div><p>Each asset maintains its own ridge-regression estimate of how context has related to its observed quarterly rewards.</p></article>
+      <article><span>03 · choose</span><h3>LinUCB score</h3><div class="equation"><math display="block"><msub><mi>p</mi><mrow><mi>a</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>=</mo><msubsup><mi mathvariant="bold">θ</mi><mi>a</mi><mi>T</mi></msubsup><msub><mi mathvariant="bold">x</mi><mi>q</mi></msub><mo>+</mo><mi>α</mi><msqrt><mrow><msubsup><mi mathvariant="bold">x</mi><mi>q</mi><mi>T</mi></msubsup><msubsup><mi>A</mi><mi>a</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><msub><mi mathvariant="bold">x</mi><mi>q</mi></msub></mrow></msqrt></math></div><p>The first term exploits the larger predicted reward. The square-root term explores uncertainty. Here α = 0.075, fixed in advance.</p></article>
+      <article><span>04 · blend</span><h3>Continuous stock weight</h3><div class="equation"><math display="block"><msub><mi>w</mi><mrow><mi>SPY</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>=</mo><mn>0.10</mn><mo>+</mo><mn>0.80</mn><mfrac><msup><mi>e</mi><mrow><msub><mi>p</mi><mrow><mi>SPY</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>/</mo><mi>T</mi></mrow></msup><mrow><msup><mi>e</mi><mrow><msub><mi>p</mi><mrow><mi>SPY</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>/</mo><mi>T</mi></mrow></msup><mo>+</mo><msup><mi>e</mi><mrow><msub><mi>p</mi><mrow><mi>AGG</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>/</mo><mi>T</mi></mrow></msup></mrow></mfrac></math></div><p>Softmax turns the score gap into an exact allocation. A 10% floor keeps both assets present; T = 0.08 controls how strongly the mix reacts.</p></article>
+      <article><span>05 · observe</span><h3>Quarterly reward</h3><div class="equation"><math display="block"><msub><mi>r</mi><mrow><mi>a</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>P</mi><mrow><mi>a</mi><mo>,</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>P</mi><mrow><mi>a</mi><mo>,</mo><mi>q</mi></mrow></msub></mfrac><mo>−</mo><mn>1</mn></math></div><p>The selected or held ETFs’ adjusted close-to-close returns are observed only after the next quarter finishes.</p></article>
+      <article><span>06 · update</span><h3>The observed arms learn</h3><div class="equation"><math display="block"><msub><mi>A</mi><mi>a</mi></msub><mo>←</mo><msub><mi>A</mi><mi>a</mi></msub><mo>+</mo><msub><mi mathvariant="bold">x</mi><mi>q</mi></msub><msubsup><mi mathvariant="bold">x</mi><mi>q</mi><mi>T</mi></msubsup></math><math display="block"><msub><mi mathvariant="bold">b</mi><mi>a</mi></msub><mo>←</mo><msub><mi mathvariant="bold">b</mi><mi>a</mi></msub><mo>+</mo><msub><mi>r</mi><mrow><mi>a</mi><mo>,</mo><mi>q</mi></mrow></msub><msub><mi mathvariant="bold">x</mi><mi>q</mi></msub></math></div><p>The all-in bandit updates only its chosen arm. The mix holds both, so its semi-bandit model observes and updates both arm rewards.</p></article>
+      <article><span>07 · wealth + saving</span><h3>The lifetime path</h3><div class="equation"><math display="block"><msub><mi>V</mi><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>V</mi><mi>q</mi></msub><mo>(</mo><mn>1</mn><mo>+</mo><msub><mi>r</mi><mi>q</mi></msub><mo>−</mo><msub><mi>c</mi><mi>q</mi></msub><mo>)</mo><mo>+</mo><mn>1000</mn></math></div><p>Growth happens first, then the next quarterly $1,000 arrives. Reallocation costs 0.10% times turnover; taxes and account-specific fees remain outside the experiment.</p></article>
+    </div>
+  </section>
+
+  <section class="experiment-sources sb-sources" aria-labelledby="sb-sources-heading">
+    <h2 id="sb-sources-heading">What this analysis can tell us</h2>
+    <p>This is one historical path with two modern ETFs, and it should not be treated as a retirement recommendation. The investor reaches age <span id="sb-ending-age-copy">44</span> because that is where the available snapshot ends. We do not project any future results. AGG limits the shared history because it launched in September 2003. ETF adjusted prices provide a useful approximation of total returns, but they are not a point-in-time institutional index dataset. The test also ignores taxes and fund tracking differences. Finally, market relationships can change, so the result depends on the particular period tested.</p>
+    <p>Asset descriptions come from <a href="https://www.ssga.com/us/en/individual/etfs/spdr-sp-500-etf-trust-spy" target="_blank" rel="noopener">State Street’s SPY materials ↗</a> and <a href="https://www.ishares.com/us/products/239458/ishares-core-u-s-aggregate-bond-etf" target="_blank" rel="noopener">iShares’ AGG materials ↗</a>. The diversification framing follows the <a href="https://www.investor.gov/introduction-investing/getting-started/asset-allocation" target="_blank" rel="noopener">SEC’s Investor.gov guide ↗</a>. Momentum horizons are informed by the published <a href="https://fairmodel.econ.yale.edu/ec439/mosk.pdf" target="_blank" rel="noopener">time-series momentum research ↗</a>, while the changing diversification role of correlation is discussed by the <a href="https://www.federalreserve.gov/newsevents/speech/clarida20191112a.htm" target="_blank" rel="noopener">Federal Reserve ↗</a>. The learning rule is the disjoint linear model from the original <a href="https://arxiv.org/abs/1003.0146" target="_blank" rel="noopener">LinUCB paper ↗</a>. Inflation adjustments use the <a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">monthly seasonally adjusted CPI-U from the U.S. Bureau of Labor Statistics via FRED ↗</a>. This experiment is for education and is not investment advice.</p>
+  </section>
+</article>
+<script src="{{ site.baseurl }}/assets/stock-bond-bandit.js" defer></script>

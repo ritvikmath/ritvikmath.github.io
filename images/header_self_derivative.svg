@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">An exponential curve whose slope equals its value</title>
+  <desc id="desc">A minimal notebook-style graph of an exponential curve with the equation f prime of x equals f of x.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#315fba" stroke-opacity=".085"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#fbf7ee"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M132 0V630" stroke="#cf6553" stroke-opacity=".22" stroke-width="2"/>
+
+  <g fill="none" stroke="#172238" stroke-opacity=".48" stroke-width="2.5">
+    <path d="M210 520H1040"/>
+    <path d="M360 555V88"/>
+  </g>
+  <g fill="#6b6c6b" font-family="DM Mono, monospace" font-size="18">
+    <text x="1022" y="550">x</text>
+    <text x="330" y="105">y</text>
+    <text x="334" y="548">0</text>
+  </g>
+
+  <path d="M215 508 C385 498 535 469 662 414 C790 358 902 253 1017 95"
+        fill="none" stroke="#172238" stroke-width="8" stroke-linecap="round"/>
+  <path d="M215 508 C385 498 535 469 662 414 C790 358 902 253 1017 95"
+        fill="none" stroke="#315fba" stroke-width="3" stroke-dasharray="11 13" stroke-linecap="round"/>
+
+  <g transform="translate(190 135)">
+    <rect width="290" height="92" rx="2" fill="#fffdf8" fill-opacity=".92" stroke="#d6d0c5"/>
+    <text x="145" y="60" text-anchor="middle" fill="#172238" font-family="Newsreader, Georgia, serif" font-size="47">f′(x) = f(x)</text>
+  </g>
+  <text x="745" y="460" fill="#315fba" font-family="DM Mono, monospace" font-size="19">same curve, same slope</text>
+</svg>
