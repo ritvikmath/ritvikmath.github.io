@@ -323,7 +323,7 @@ body {
 .experiment-archive-header { max-width: 720px; margin-bottom: 52px; }
 .experiment-archive-header h1 { margin: 0; font: 500 clamp(52px, 6vw, 72px)/1 var(--serif); letter-spacing: -.035em; }
 .experiment-archive-header > p:last-child { max-width: 610px; margin: 18px 0 0; color: var(--muted); font-size: 15px; }
-.experiment-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 790px; }
+.experiment-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
 .experiment-card-visual { position: relative; height: 230px; overflow: hidden; padding: 24px; background-color: #e9eef2; background-image: linear-gradient(rgba(49,95,186,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(49,95,186,.1) 1px, transparent 1px); background-size: 22px 22px; }
 .comparison-sketch { position: absolute; inset: 25px 18px; width: calc(100% - 36px); height: calc(100% - 50px); overflow: visible; }
 .comparison-baseline { stroke: rgba(39,47,59,.25); stroke-width: 1; stroke-dasharray: 4 5; }
@@ -575,6 +575,10 @@ body {
 .sb-feature-grid span { color: var(--blue); font: 9px/1 var(--mono); }.sb-feature-grid h3 { margin: 14px 0 0; font: 500 22px/1.08 var(--serif); }.sb-feature-grid p { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
 .sb-math .equation { justify-content: center; white-space: normal; }.sb-math math { flex: 0 0 auto; width: max-content; min-width: 0; font-size: 22px; }.sb-math .equation math + math { margin-top: 9px; }
 .sb-sources { padding-bottom: 12px; }.sb-sources p { margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }.sb-sources a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+@media (max-width: 960px) {
+  .experiment-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 700px) {
   .primary-nav { gap: 0; }
