@@ -112,6 +112,10 @@ def simulate_backtest(dates, closes):
         asset_id: STARTING_INVESTMENT / float(closes.iloc[0][symbol_for[asset_id]])
         for asset_id in asset_ids
     }
+    equal_weight_shares = {
+        asset_id: (STARTING_INVESTMENT / len(asset_ids)) / float(closes.iloc[0][symbol_for[asset_id]])
+        for asset_id in asset_ids
+    }
     weights = {asset_id: 1 / len(asset_ids) for asset_id in asset_ids}
     scores = {asset_id: 0.0 for asset_id in asset_ids}
     adaptive_shares = {
@@ -137,7 +141,8 @@ def simulate_backtest(dates, closes):
             for asset_id in asset_ids
         }
         adaptive_value = sum(adaptive_shares[asset_id] * prices[asset_id] for asset_id in asset_ids)
-        point = {"date": date, "adaptive": round(adaptive_value, 2)}
+        equal_weight_value = sum(equal_weight_shares[asset_id] * prices[asset_id] for asset_id in asset_ids)
+        point = {"date": date, "adaptive": round(adaptive_value, 2), "equal": round(equal_weight_value, 2)}
         for asset_id in asset_ids:
             point[asset_id] = round(buy_hold_shares[asset_id] * prices[asset_id], 2)
         points.append(point)
@@ -191,6 +196,13 @@ def build_payload(dates, closes):
         "detail": "Weekly allocation",
         "latest_value": points[-1]["adaptive"],
         "return_percent": round((points[-1]["adaptive"] / STARTING_INVESTMENT - 1) * 100, 2),
+    }, {
+        "id": "equal",
+        "symbol": "EQUAL",
+        "name": "Equal-Weight Hold",
+        "detail": "10% in each stock, never rebalanced",
+        "latest_value": points[-1]["equal"],
+        "return_percent": round((points[-1]["equal"] / STARTING_INVESTMENT - 1) * 100, 2),
     }]
     for asset in ASSETS:
         series.append({
@@ -209,6 +221,10 @@ def build_payload(dates, closes):
         "market_date": dates[-1],
         "start_date": dates[0],
         "leader": leader["id"],
+        "adaptive_vs_equal_weight": {
+            "dollar_difference": round(points[-1]["adaptive"] - points[-1]["equal"], 2),
+            "return_difference_points": round((points[-1]["adaptive"] - points[-1]["equal"]) / STARTING_INVESTMENT * 100, 2),
+        },
         "strategy": {
             "score_memory_percent": SCORE_MEMORY * 100,
             "latest_week_percent": (1 - SCORE_MEMORY) * 100,

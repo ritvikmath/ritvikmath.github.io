@@ -26,6 +26,17 @@ permalink: /experiments/stock-predictions/
     <div class="prediction-chart-key"><span class="key-exact">Exact four-way category</span><span class="key-direction">Direction only</span><span class="key-chance">Four-way chance: 25%</span></div>
   </section>
 
+  <section class="experiment-findings" aria-labelledby="prediction-findings-heading">
+    <p class="notebook-kicker">the short version</p>
+    <h2 id="prediction-findings-heading">Findings and Next Steps</h2>
+    <div class="findings-grid">
+      <article><span>What worked</span><h3>A faint four-class signal</h3><p>Exact accuracy reached 29.04%, just above the 28.60% majority-class baseline. Balanced accuracy was 29.22%, so the result was not driven only by the most common label.</p></article>
+      <article><span>What fell short</span><h3>Direction stayed near chance</h3><p>Up-or-down accuracy was 50.24%. The model found too little dependable information to support a useful claim about predicting tomorrow, especially before trading costs.</p></article>
+      <article><span>What I learned</span><h3>More detail is not always more signal</h3><p>XGBoost can detect small nonlinear patterns, but familiar technical indicators mostly summarize the same noisy price history. A complex model cannot manufacture information that is not there.</p></article>
+    </div>
+    <div class="findings-next"><h3>What I would try next</h3><ul><li>Repeat the evaluation with rolling walk-forward retraining across several market regimes.</li><li>Compare against simpler logistic and persistence models.</li><li>Test whether acting only on high-confidence predictions improves results after costs.</li></ul></div>
+  </section>
+
   <section class="prediction-explainer" aria-labelledby="target-heading">
     <div class="explainer-copy">
       <p class="notebook-kicker">first, define the question</p>

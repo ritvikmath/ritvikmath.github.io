@@ -8,7 +8,7 @@ permalink: /experiments/stock-trading/
     <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
     <p class="eyebrow"><span></span> Experiment 001 · Adaptive Bandit</p>
     <h1>Explore, Exploit, Invest</h1>
-    <p>Can a simple learning rule beat buy-and-hold? This frozen backtest gives $1,000 to an adaptive strategy and ten companies across the S&amp;P 500, then lets one year of weekly decisions play out.</p>
+    <p>Can a simple learning rule beat buy-and-hold? This frozen backtest compares a weekly adaptive strategy with ten single-stock investments and a simple portfolio that starts equally across all ten, then does nothing.</p>
     <div class="experiment-status experiment-status-static">Frozen data snapshot through <strong id="market-date">loading…</strong></div>
   </header>
 
@@ -17,14 +17,14 @@ permalink: /experiments/stock-trading/
       <div>
         <p class="eyebrow"><span></span> One-year backtest</p>
         <h2 id="market-chart-heading">Can recent winners keep winning?</h2>
-        <p>Each line starts with $1,000. Ten buy one stock and never trade; the adaptive portfolio learns and reallocates every week.</p>
+        <p>Each line starts with $1,000. Ten buy one stock, one splits the money equally and never trades, and the adaptive portfolio learns and reallocates every week.</p>
       </div>
     </header>
 
     <div class="portfolio-results" id="portfolio-results" aria-label="Current portfolio values"></div>
 
     <div class="market-chart-wrap" id="market-chart-wrap">
-      <canvas id="market-chart" data-market-data-url="{{ site.baseurl }}/assets/data/stock-bandit-1y.json" role="img" aria-label="Interactive one-year comparison of three buy-and-hold stocks and an adaptive weekly strategy"></canvas>
+      <canvas id="market-chart" data-market-data-url="{{ site.baseurl }}/assets/data/stock-bandit-1y.json" role="img" aria-label="Interactive one-year comparison of an adaptive weekly strategy, an untouched equal-weight portfolio, and ten single-stock investments"></canvas>
       <div class="market-tooltip" id="market-tooltip" hidden>
         <time></time>
         <div class="tooltip-series" id="market-tooltip-series"></div>
@@ -36,6 +36,7 @@ permalink: /experiments/stock-trading/
       <div><span>Leader today</span><strong id="market-leader">...</strong></div>
       <div><span>Weekly decisions</span><strong id="market-rebalances">...</strong></div>
     </div>
+    <p class="market-comparison-note" id="equal-weight-result">Comparing the adaptive strategy with the equal-weight benchmark…</p>
 
     <section class="allocation-history-panel" aria-labelledby="allocation-history-heading">
       <header>
@@ -59,6 +60,17 @@ permalink: /experiments/stock-trading/
     </section>
 
     <p class="market-source">Uses adjusted prices, fractional shares, and weekly close-to-close signals. Assumes rebalancing at the weekly closing price with no fees, taxes, spread, or slippage. This experiment is for education and is not investment advice.</p>
+  </section>
+
+  <section class="experiment-findings" aria-labelledby="stock-findings-heading">
+    <p class="notebook-kicker">the short version</p>
+    <h2 id="stock-findings-heading">Findings and Next Steps</h2>
+    <div class="findings-grid">
+      <article><span>What worked</span><h3>A small adaptive edge</h3><p>The bandit finished at $1,354.06 versus $1,332.09 for the untouched equal-weight portfolio. Reallocating added $21.97, or 2.20 percentage points, in this one-year window.</p></article>
+      <article><span>What fell short</span><h3>It did not find the best stocks</h3><p>Several single-stock holds finished well ahead of the bandit. The strategy reduced concentration risk, but this result is not evidence that it can reliably identify winners.</p></article>
+      <article><span>What I learned</span><h3>The benchmark changes the story</h3><p>Beating an equal ten-stock hold is more informative than beating a few hand-picked stocks, but the edge is small enough that realistic trading costs and timing could erase it.</p></article>
+    </div>
+    <div class="findings-next"><h3>What I would try next</h3><ul><li>Execute at the next tradable price and include spread, taxes, and slippage.</li><li>Repeat the test across many non-overlapping one-year periods.</li><li>Compare weekly adaptation with a periodically rebalanced equal-weight portfolio.</li></ul></div>
   </section>
 
   <section class="experiment-method" aria-labelledby="method-heading">
@@ -97,7 +109,7 @@ permalink: /experiments/stock-trading/
       <p>Everything the model does can be written in six equations. Let <em>i</em> identify one of the ten stocks, <em>w</em> a trading week, and <em>t</em> a trading day.</p>
     </header>
     <div class="equation-list">
-      <article><span>01 · baseline</span><h3>Buy-and-hold value</h3><div class="equation" aria-label="B sub i t equals 1000 times P sub i t divided by P sub i zero"><i>B</i><sub>i,t</sub> = 1000 · <span class="fraction"><span><i>P</i><sub>i,t</sub></span><span><i>P</i><sub>i,0</sub></span></span></div><p>Each comparison line buys $1,000 of one stock on day zero and never changes its number of shares.</p></article>
+      <article><span>01 · baselines</span><h3>Buy-and-hold values</h3><div class="equation" aria-label="B sub i t equals 1000 times P sub i t divided by P sub i zero"><i>B</i><sub>i,t</sub> = 1000 · <span class="fraction"><span><i>P</i><sub>i,t</sub></span><span><i>P</i><sub>i,0</sub></span></span></div><div class="equation equation-secondary" aria-label="E sub t equals one tenth times the sum from i equals 1 to 10 of B sub i t"><i>E</i><sub>t</sub> = <span class="fraction fraction-compact"><span>1</span><span>10</span></span><span class="sigma"><sup>10</sup>∑<sub>i=1</sub></span> <i>B</i><sub>i,t</sub></div><p>The single-stock lines put all $1,000 into one company. The equal-weight benchmark puts $100 into each company on day zero and never rebalances.</p></article>
       <article><span>02 · reward</span><h3>Weekly return</h3><div class="equation" aria-label="r sub i w equals P sub i end of w divided by P sub i start of w minus 1"><i>r</i><sub>i,w</sub> = <span class="fraction"><span><i>P</i><sub>i,end(w)</sub></span><span><i>P</i><sub>i,start(w)</sub></span></span> − 1</div><p>The reward is simply that stock’s adjusted percentage gain or loss during the week.</p></article>
       <article><span>03 · memory</span><h3>Learned score</h3><div class="equation" aria-label="q sub i w equals 0.50 q sub i w minus 1 plus 0.50 r sub i w"><i>q</i><sub>i,w</sub> = 0.50<i>q</i><sub>i,w−1</sub> + 0.50<i>r</i><sub>i,w</sub></div><p>Half of the score comes from accumulated memory and half from the newest observation.</p></article>
       <article><span>04 · exploitation</span><h3>Softmax preference</h3><div class="equation" aria-label="p sub i w equals e to the q sub i w over tau divided by the sum from j equals 1 to 10 of e to the q sub j w over tau"><i>p</i><sub>i,w</sub> = <span class="fraction fraction-wide"><span><i>e</i><sup><span class="sup-fraction"><i>q</i><sub>i,w</sub>/<i>τ</i></span></sup></span><span><span class="sigma"><sup>10</sup>∑<sub>j=1</sub></span> <i>e</i><sup><span class="sup-fraction"><i>q</i><sub>j,w</sub>/<i>τ</i></span></sup></span></span></div><p>With temperature τ = 0.04, stronger scores receive exponentially more preference without becoming an automatic all-in bet.</p></article>

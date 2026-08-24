@@ -16,7 +16,7 @@
   let data = null;
   let stockSeries = [];
   let series = [];
-  let colors = { adaptive: '#18243a' };
+  let colors = { adaptive: '#18243a', equal: '#d96c54' };
   let marketSelectedIndex = -1;
   let allocationSelectedIndex = -1;
   let marketFrame = 0;
@@ -47,7 +47,7 @@
   }
 
   function buildDynamicInterface(payload) {
-    stockSeries = payload.series.filter(function (item) { return item.id !== 'adaptive'; });
+    stockSeries = payload.series.filter(function (item) { return item.id !== 'adaptive' && item.id !== 'equal'; });
     series = payload.series;
     stockSeries.forEach(function (item, index) { colors[item.id] = stockPalette[index % stockPalette.length]; });
 
@@ -55,10 +55,10 @@
     results.innerHTML = '';
     series.forEach(function (item) {
       const card = document.createElement('div');
-      card.className = 'portfolio-result' + (item.id === 'adaptive' ? ' portfolio-result-adaptive' : '');
+      card.className = 'portfolio-result' + (item.id === 'adaptive' || item.id === 'equal' ? ' portfolio-result-featured' : '');
       card.style.setProperty('--series-color', colors[item.id]);
       const label = document.createElement('span');
-      label.textContent = item.id === 'adaptive' ? item.name : item.name + ' · ' + item.symbol;
+      label.textContent = item.id === 'adaptive' || item.id === 'equal' ? item.name : item.name + ' · ' + item.symbol;
       const value = document.createElement('strong');
       value.id = item.id + '-value';
       const change = document.createElement('small');
@@ -77,7 +77,7 @@
       row.dataset.series = item.id;
       row.style.setProperty('--series-color', colors[item.id]);
       const label = document.createElement('b');
-      label.textContent = item.id === 'adaptive' ? 'Adaptive' : item.symbol;
+      label.textContent = item.id === 'adaptive' ? 'Adaptive' : item.id === 'equal' ? 'Equal hold' : item.symbol;
       const value = document.createElement('strong');
       row.appendChild(label);
       row.appendChild(value);
@@ -174,6 +174,12 @@
     updateResults();
     document.querySelector('#market-leader').textContent = seriesById(payload.leader).name;
     document.querySelector('#market-rebalances').textContent = payload.rebalance_count;
+    const comparison = payload.adaptive_vs_equal_weight;
+    const comparisonDirection = comparison.dollar_difference >= 0 ? 'finished ahead of' : 'finished behind';
+    document.querySelector('#equal-weight-result').innerHTML = '<strong>The clean benchmark:</strong> the adaptive bandit ' +
+      comparisonDirection + ' the untouched equal-weight portfolio by <strong>' +
+      moneyFormatter.format(Math.abs(comparison.dollar_difference)) + '</strong> (' +
+      Math.abs(comparison.return_difference_points).toFixed(2) + ' percentage points).';
     updateAllocation(payload);
     updateHistory(payload);
     const values = series.map(function (item) { return item.name + ' ' + moneyFormatter.format(item.latest_value); }).join(', ');
@@ -265,8 +271,8 @@
         if (index === 0) marketContext.moveTo(x, y); else marketContext.lineTo(x, y);
       });
       marketContext.strokeStyle = colors[item.id];
-      marketContext.globalAlpha = item.id === 'adaptive' ? 1 : .78;
-      marketContext.lineWidth = item.id === 'adaptive' ? 3.4 : 1.45;
+      marketContext.globalAlpha = item.id === 'adaptive' || item.id === 'equal' ? 1 : .72;
+      marketContext.lineWidth = item.id === 'adaptive' ? 3.4 : item.id === 'equal' ? 2.8 : 1.35;
       marketContext.lineJoin = 'round';
       marketContext.lineCap = 'round';
       marketContext.stroke();
@@ -286,7 +292,7 @@
       marketContext.setLineDash([]);
       series.forEach(function (item) {
         marketContext.beginPath();
-        marketContext.arc(x, yFor(selected[item.id]), item.id === 'adaptive' ? 5 : 3.5, 0, Math.PI * 2);
+        marketContext.arc(x, yFor(selected[item.id]), item.id === 'adaptive' || item.id === 'equal' ? 5 : 3.5, 0, Math.PI * 2);
         marketContext.fillStyle = colors[item.id];
         marketContext.fill();
       });
@@ -409,7 +415,7 @@
     fetch(baseUrl)
       .then(function (response) { if (!response.ok) throw new Error('Market data request failed'); return response.json(); })
       .then(function (payload) {
-        if (payload.experiment !== 'adaptive-stock-bandit' || !payload.points || !payload.allocation_points || payload.series.length !== 11) {
+        if (payload.experiment !== 'adaptive-stock-bandit' || !payload.points || !payload.allocation_points || payload.series.length !== 12) {
           throw new Error('Market data has an unsupported format');
         }
         data = payload;

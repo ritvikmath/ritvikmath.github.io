@@ -40,6 +40,17 @@ permalink: /experiments/stock-bond-bandit/
     <p class="sb-result-note" id="sb-result-note">Loading the frozen result…</p>
   </section>
 
+  <section class="experiment-findings" aria-labelledby="stock-bond-findings-heading">
+    <p class="notebook-kicker">the short version</p>
+    <h2 id="stock-bond-findings-heading">Findings and Next Steps</h2>
+    <div class="findings-grid">
+      <article><span>What worked</span><h3>The decisive bandit won this history</h3><p>The all-in bandit finished at $617,689, ahead of SPY at $502,040, while also experiencing a smaller maximum drawdown. Its quarterly choice matched the better asset about 66% of the time.</p></article>
+      <article><span>What fell short</span><h3>The smarter mix was not smarter enough</h3><p>The contextual mix finished at $302,226, below the simple 60/40 portfolio at $310,981. Its cautious tilts reduced risk, but its forecasts did not add enough return to justify the extra machinery.</p></article>
+      <article><span>What I learned</span><h3>One path can flatter a rule</h3><p>The all-in result is striking, not conclusive. It comes from one ETF era with one frozen specification, and repeated quarterly deposits make timing and market regime especially important.</p></article>
+    </div>
+    <div class="findings-next"><h3>What I would try next</h3><ul><li>Test earlier stock and bond index proxies across more economic regimes.</li><li>Run rolling out-of-sample tests instead of judging one continuous path.</li><li>Stress-test taxes, execution costs, contribution timing, and simpler allocation rules.</li></ul></div>
+  </section>
+
   <section class="sb-choice-section" aria-labelledby="sb-choice-heading">
     <div class="section-heading-row">
       <div><p class="eyebrow"><span></span> Quarter by quarter</p><h2 id="sb-choice-heading">How did it split the money?</h2></div>
