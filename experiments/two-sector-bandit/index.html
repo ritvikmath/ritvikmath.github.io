@@ -1,0 +1,93 @@
+---
+layout: default
+title: Can a Bandit Beat Three Very Human Trading Rules?
+permalink: /experiments/two-sector-bandit/
+---
+<article class="experiment-shell two-stock-experiment">
+  <header class="experiment-header">
+    <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
+    <p class="eyebrow"><span></span> Experiment 004 · Five S&amp;P 500 Sectors</p>
+    <h1>Can a Bandit Beat Three Very Human Trading Rules?</h1>
+    <p>Suppose we have $1,000 to divide among technology, health care, energy, financials, and consumer staples. We can let a model choose the split, but we can also try a few rules that probably feel familiar to anyone who has watched an investment fall: sell it, chase whatever is going up, or buy more while it is cheap. Which approach actually works best?</p>
+    <div class="experiment-status experiment-status-static">Frozen two-year backtest through <strong id="two-stock-date">loading…</strong></div>
+  </header>
+
+  <section class="two-stock-intro taped-panel" aria-labelledby="two-stock-intro-heading">
+    <div><p class="notebook-kicker">why use sectors?</p><h2 id="two-stock-intro-heading">Let's Start With the Five Investments</h2><p>Each fund holds many companies from one part of the economy. That gives us investments that can behave quite differently without letting one company's earnings report take over the whole experiment.</p></div>
+    <div class="sector-roster">
+      <article style="--sector-color:#315fba"><span>Technology</span><strong>XLK</strong></article>
+      <article style="--sector-color:#d96c54"><span>Health care</span><strong>XLV</strong></article>
+      <article style="--sector-color:#b88922"><span>Energy</span><strong>XLE</strong></article>
+      <article style="--sector-color:#378b72"><span>Financials</span><strong>XLF</strong></article>
+      <article style="--sector-color:#8266a8"><span>Consumer staples</span><strong>XLP</strong></article>
+    </div>
+  </section>
+
+  <section class="market-panel two-stock-results" aria-labelledby="two-stock-results-heading">
+    <header class="market-panel-header market-panel-header-stacked"><div><p class="eyebrow"><span></span> The Result</p><h2 id="two-stock-results-heading">So, Who Made the Most Money?</h2><p>Every strategy begins with the same $1,000 and only gets to use weeks that have already happened. The model looks at several pieces of market history. The other three strategies each follow one simple rule.</p></div></header>
+    <div class="two-stock-scorecards" id="two-stock-scorecards"></div>
+    <div class="two-stock-key" id="two-stock-key"></div>
+    <div class="market-chart-wrap two-stock-chart-wrap" id="two-stock-chart-wrap">
+      <canvas id="two-stock-chart" data-source="{{ site.baseurl }}/assets/data/two-sector-bandit.json" role="img" aria-label="Two-year growth of the five-sector contextual allocator and panic seller, performance chaser, and dip buyer rules"></canvas>
+      <div class="market-tooltip" id="two-stock-tooltip" hidden><time></time><div></div></div>
+    </div>
+    <p class="market-comparison-note" id="two-stock-verdict">Loading the frozen result…</p>
+    <section class="behavior-profiles" aria-labelledby="behavior-profiles-heading">
+      <h3 id="behavior-profiles-heading">What are the three human rules?</h3>
+      <div>
+        <article><span>01</span><h4>The Panic Seller</h4><p>If the largest holding loses at least 2% and another sector does at least 1 percentage point better, put 60% into the better sector.</p></article>
+        <article><span>02</span><h4>The Performance Chaser</h4><p>If one sector beats every other sector by at least 1.5 percentage points, put 60% into that week's winner.</p></article>
+        <article><span>03</span><h4>The Dip Buyer</h4><p>If one sector loses at least 2% and trails the next-worst sector by at least 1 percentage point, put 60% into the sector that just fell.</p></article>
+      </div>
+      <p>If nothing triggers a rule, it does nothing. The remaining 40% is divided evenly among the other four sectors. Every choice uses last week's returns, and every trade costs 0.10% of the money moved.</p>
+    </section>
+  </section>
+
+  <section class="two-stock-allocation" aria-labelledby="two-stock-allocation-heading">
+    <div class="section-heading-row"><div><p class="eyebrow"><span></span> Week by Week</p><h2 id="two-stock-allocation-heading">How Did the Model Split the Money?</h2></div><p>Each line shows the percentage placed in one sector. Together, the five lines always add up to 100%.</p></div>
+    <div class="two-stock-allocation-wrap" id="two-stock-allocation-wrap">
+      <canvas id="two-stock-allocation-chart" role="img" aria-label="Interactive chart of the model's weekly allocation among five sector ETFs"></canvas>
+      <div class="allocation-tooltip" id="two-stock-allocation-tooltip" hidden><time></time><div></div></div>
+    </div>
+    <div class="two-stock-key allocation-key" id="two-stock-allocation-key"></div>
+    <div class="two-stock-facts" id="two-stock-facts"></div>
+  </section>
+
+  <section class="experiment-findings" aria-labelledby="two-stock-findings-heading">
+    <p class="notebook-kicker">so what happened?</p><h2 id="two-stock-findings-heading">What Did We Learn?</h2>
+    <div class="findings-grid">
+      <article><span>The model</span><h3>It Beat the Panic Seller</h3><p>The model finished at $1,382, while the panic seller reached $1,249. The model also changed its mind gradually instead of moving most of the portfolio after a bad week.</p></article>
+      <article><span>The surprise</span><h3>The Two Simple Rules Won</h3><p>The dip buyer finished first at $1,520, followed by the performance chaser at $1,494. Over these two years, both recent rebounds and continued sector runs were strong enough to beat the model.</p></article>
+      <article><span>The caveat</span><h3>Two Years Is Definitely Not Forever</h3><p>This is a short test containing just over 100 weekly choices. It tells us what happened during this particular market, not what these rules will do in the next one.</p></article>
+    </div>
+    <div class="findings-next"><h3>Where Do We Go From Here?</h3><ul><li>Run the same four rules over several different periods instead of just this one.</li><li>See what happens to the dip buyer during a long decline rather than a quick drop and recovery.</li><li>Choose all of the cutoffs using an earlier training period, then leave the final test period completely untouched.</li></ul></div>
+  </section>
+
+  <section class="experiment-method" aria-labelledby="two-stock-method-heading">
+    <p class="notebook-kicker">inside the model</p><h2 id="two-stock-method-heading">So How Does the Bandit Choose?</h2>
+    <p class="method-intro">The model can divide the money among all five sectors, but it must keep at least 5% in each one. It estimates which sectors are more likely to do well next week, turns those predictions into a split, and tries not to completely rearrange the portfolio every Friday.</p>
+    <ol class="method-steps">
+      <li><span>01</span><div><h3>Start With What We Know</h3><p>Before each week, the model compares every sector's four-week return, thirteen-week return, volatility, and drawdown with the average of the other sectors. Everything comes from prices that were already known at the time.</p></div></li>
+      <li><span>02</span><div><h3>Make Five Predictions</h3><p>An online ridge regression estimates how each sector might perform relative to the five-sector average next week. The model starts with equal allocations and learns only after each week is finished.</p></div></li>
+      <li><span>03</span><div><h3>Turn Predictions Into a Split</h3><p>Higher predictions receive more money, while uncertain predictions are pulled closer together. Every sector keeps at least 5%, so the model can tilt but never make an all-or-nothing bet.</p></div></li>
+      <li><span>04</span><div><h3>Don't Move Too Fast</h3><p>The model balances its new prediction against last week's allocation. A small change is easy to make. A large change needs a much stronger prediction. This keeps the portfolio from bouncing around every week.</p></div></li>
+    </ol>
+    <aside class="method-note"><strong>Is this technically a bandit?</strong><p>Not quite in the strictest sense. At the end of each week, we can see all five ETF returns even if the model put very little money into some of them. A pure bandit would only see the result of the choice it made. This model borrows the continuous decision-making and uncertainty ideas from contextual bandits, but it uses all five returns once they become available.</p></aside>
+  </section>
+
+  <section class="math-zone" aria-labelledby="two-stock-math-heading">
+    <header class="math-zone-header"><p class="notebook-kicker">for those who want the symbols</p><h2 id="two-stock-math-heading">The Math Zone</h2><p>Let <em>i</em> identify one of the five sectors, <em>t</em> be a week, <strong>x</strong><sub>i,t</sub> its past-only market context, and <em>w</em><sub>i,t</sub> its share of the portfolio.</p></header>
+    <div class="equation-list">
+      <article><span>01 · context</span><h3>What the model sees</h3><div class="equation"><strong>x</strong><sub>i,t</sub> = [1, <i>m</i><sub>4,i,t</sub>, <i>m</i><sub>13,i,t</sub>, <i>v</i><sub>i,t</sub>, <i>d</i><sub>i,t</sub>]</div><p>The bounded features compare sector <i>i</i> with the other sectors using prices known before week <i>t</i>.</p></article>
+      <article><span>02 · prediction</span><h3>Relative return</h3><div class="equation"><span class="hat">r</span><sub>i,t+1</sub> = <strong>x</strong><sub>i,t</sub><sup>T</sup><strong>θ</strong><sub>t</sub></div><p>Online ridge regression makes one relative-return prediction for each sector.</p></article>
+      <article><span>03 · target</span><h3>From scores to percentages</h3><div class="equation"><i>g</i><sub>i,t</sub> = 0.05 + 0.75 <span class="fraction"><span>exp(<i>s</i><sub>i,t</sub>/τ)</span><span>Σ<sub>j</sub> exp(<i>s</i><sub>j,t</sub>/τ)</span></span></div><p>A softmax converts five confidence-adjusted scores into percentages. The five 5% minimums leave 75% for the model to distribute.</p></article>
+      <article><span>04 · choose</span><h3>Don't forget last week</h3><div class="equation"><i>w</i><sub>i,t</sub> = <span class="fraction"><span><i>g</i><sub>i,t</sub> + 3<i>w</i><sub>i,t−1</sub></span><span>4</span></span></div><p>One quarter of the new allocation comes from this week's target and three quarters comes from the previous allocation.</p></article>
+    </div>
+  </section>
+
+  <section class="experiment-sources" aria-labelledby="two-sector-sources-heading">
+    <h2 id="two-sector-sources-heading">Notes &amp; sources</h2>
+    <p>The three profiles are intentionally simplified trading rules, not diagnoses of real investors. Their ideas echo research on <a href="https://www.aeaweb.org/conference/2018/preliminary/paper/f29rn7fR" target="_blank" rel="noopener">loss aversion ↗</a>, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1993.tb04702.x" target="_blank" rel="noopener">buying recent winners ↗</a>, and <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1985.tb05004.x" target="_blank" rel="noopener">market overreaction and reversals ↗</a>. Barber and Odean’s study also found that <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/0022-1082.00226" target="_blank" rel="noopener">frequent individual trading was associated with worse performance ↗</a>. <a href="https://www.jmlr.org/papers/v21/19-650.html" target="_blank" rel="noopener">Krishnamurthy et al. study contextual bandits with continuous actions ↗</a>, while <a href="https://www.web.stanford.edu/~boyd/papers/portfolio.html" target="_blank" rel="noopener">Boyd et al. incorporate transaction costs into portfolio optimization ↗</a>. Adjusted daily prices come from the frozen Yahoo Finance snapshot. This experiment is for education and is not investment advice.</p>
+  </section>
+</article>
+<script src="{{ site.baseurl }}/assets/two-sector-bandit.js" defer></script>
