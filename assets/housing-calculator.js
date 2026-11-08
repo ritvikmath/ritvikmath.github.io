@@ -2,13 +2,20 @@
   'use strict';
   const root = typeof document === 'undefined' ? null : document.querySelector('#housing-calculator');
 
-  // Public-only configuration. Every model input is explicitly declared here.
-  // These values were invented for this page and have no dependency on the local research app.
+  // Public-only, fictional starting profiles. Rounded moderate anchors reference
+  // public West Hills market and ACS figures; no personal financial data is used.
+  const HOUSE_PROFILES = Object.freeze({
+    lower: Object.freeze({ name: 'Lower-priced West Hills-area home', price: 750000, rent: 3500, comparableRent: 3500, insurance: 275, hoa: 0, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 150, repairAmount: 10000 }),
+    moderate: Object.freeze({ name: 'Moderately priced West Hills-area home', price: 1000000, rent: 4500, comparableRent: 4500, insurance: 350, hoa: 0, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 200, repairAmount: 15000 }),
+    higher: Object.freeze({ name: 'Higher-priced West Hills-area home', price: 1400000, rent: 6000, comparableRent: 6000, insurance: 500, hoa: 100, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 275, repairAmount: 22000 })
+  });
+  const FINANCIAL_PROFILES = Object.freeze({
+    lower: Object.freeze({ income: 6000, living: 3200, cash: 40000, taxable: 40000, taxableBasis: 35000, retirement: 50000, minimumAccessible: 10000, minimumSurplus: 250, reserveMonths: 4 }),
+    moderate: Object.freeze({ income: 9500, living: 4500, cash: 130000, taxable: 130000, taxableBasis: 105000, retirement: 225000, minimumAccessible: 30000, minimumSurplus: 500, reserveMonths: 6 }),
+    higher: Object.freeze({ income: 16000, living: 6500, cash: 250000, taxable: 400000, taxableBasis: 300000, retirement: 500000, minimumAccessible: 75000, minimumSurplus: 1500, reserveMonths: 9 })
+  });
   const PUBLIC_DEFAULTS = Object.freeze({
-    name: 'Fictional two-bedroom home', price: 640000, rent: 2950, comparableRent: '',
-    insurance: 240, hoa: 0, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 140,
-    income: 10800, living: 4100, cash: 95000, taxable: 165000, taxableBasis: 140000,
-    retirement: 210000, minimumAccessible: 30000, minimumSurplus: 500, reserveMonths: 6,
+    ...HOUSE_PROFILES.moderate, ...FINANCIAL_PROFILES.moderate,
     gainTax: 18, incomeGrowth: 2.5, childCost: 0, childStart: 3, childYears: 0,
     downPayment: 20, mortgageRate: 6.4, mortgageYears: 30, closingCosts: 2.5,
     extraPrincipal: 0, pmi: 0, horizon: 10, forecastYears: 30, investmentReturn: 6.0,
@@ -18,6 +25,8 @@
     taxMode: 'none', annualTaxBenefit: 0
   });
   const INPUT_IDS = Object.keys(PUBLIC_DEFAULTS);
+  const HOUSE_PROFILE_IDS = new Set(Object.keys(HOUSE_PROFILES.moderate));
+  const FINANCIAL_PROFILE_IDS = new Set(Object.keys(FINANCIAL_PROFILES.moderate));
   const STORAGE_KEY = 'ritvikmath.housing.public.v1';
   const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
   const percent = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
@@ -160,6 +169,13 @@
   }
 
   function setDefaults(values) { INPUT_IDS.forEach(id => { if (input(id)) input(id).value = values[id]; }); }
+  function clearOutput() { result = null; document.querySelector('#housing-results').hidden = true; document.querySelector('#housing-error').hidden = true; }
+  function applyProfile(group, key) {
+    if (key === 'custom') return;
+    const values = group === 'house' ? HOUSE_PROFILES[key] : FINANCIAL_PROFILES[key];
+    Object.entries(values).forEach(([id, value]) => { if (input(id)) input(id).value = value; });
+    clearOutput();
+  }
   function signedMoney(value) { return (value >= 0 ? '+' : '−') + money.format(Math.abs(value)); }
   function render(output) {
     result = output; const c=output.config, m=output.metrics;
@@ -217,9 +233,12 @@
 
   document.querySelectorAll('.housing-step-nav button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.housing-step-nav button').forEach(x=>x.classList.toggle('active',x===button));document.querySelectorAll('[data-panel]').forEach(panel=>panel.hidden=panel.dataset.panel!==button.dataset.step);}));
   document.querySelector('#housing-form').addEventListener('submit',event=>{event.preventDefault();document.querySelector('#housing-error').hidden=true;try{render(evaluate(readConfig()));}catch(error){showError(error.message);}});
-  document.querySelector('#housing-reset').addEventListener('click',()=>{setDefaults(PUBLIC_DEFAULTS);result=null;document.querySelector('#housing-results').hidden=true;document.querySelector('#housing-error').hidden=true;});
+  document.querySelector('#housing-house-profile').addEventListener('change',event=>applyProfile('house',event.target.value));
+  document.querySelector('#housing-financial-profile').addEventListener('change',event=>applyProfile('financial',event.target.value));
+  document.querySelector('#housing-form').addEventListener('input',event=>{if(HOUSE_PROFILE_IDS.has(event.target.id))document.querySelector('#housing-house-profile').value='custom';if(FINANCIAL_PROFILE_IDS.has(event.target.id))document.querySelector('#housing-financial-profile').value='custom';});
+  document.querySelector('#housing-reset').addEventListener('click',()=>{setDefaults(PUBLIC_DEFAULTS);document.querySelector('#housing-house-profile').value='moderate';document.querySelector('#housing-financial-profile').value='moderate';clearOutput();});
   document.querySelector('#housing-save').addEventListener('click',()=>{try{if(!result)result=evaluate(readConfig());const saves=readSaves(),snapshot={id:String(Date.now()),name:result.config.name, savedAt:new Date().toISOString(),config:result.config,result};saves.unshift(snapshot);if(writeSaves(saves))renderSaves();}catch(error){showError(error.message);}});
-  document.querySelector('#housing-saved-list').addEventListener('click',event=>{const open=event.target.dataset.open,del=event.target.dataset.delete,saves=readSaves();if(open){const saved=saves.find(x=>x.id===open);if(saved){setDefaults(saved.config);render(saved.result);}}if(del){const index=saves.findIndex(x=>x.id===del);if(index>=0){deletedSave={item:saves[index],index};saves.splice(index,1);if(writeSaves(saves)){renderSaves();document.querySelector('#housing-undo-wrap').hidden=false;}}}});
+  document.querySelector('#housing-saved-list').addEventListener('click',event=>{const open=event.target.dataset.open,del=event.target.dataset.delete,saves=readSaves();if(open){const saved=saves.find(x=>x.id===open);if(saved){setDefaults(saved.config);document.querySelector('#housing-house-profile').value='custom';document.querySelector('#housing-financial-profile').value='custom';render(saved.result);}}if(del){const index=saves.findIndex(x=>x.id===del);if(index>=0){deletedSave={item:saves[index],index};saves.splice(index,1);if(writeSaves(saves)){renderSaves();document.querySelector('#housing-undo-wrap').hidden=false;}}}});
   document.querySelector('#housing-undo').addEventListener('click',()=>{if(!deletedSave)return;const saves=readSaves();saves.splice(deletedSave.index,0,deletedSave.item);if(writeSaves(saves)){deletedSave=null;renderSaves();document.querySelector('#housing-undo-wrap').hidden=true;}});
   document.querySelector('#housing-export').addEventListener('click',()=>{try{if(!result)result=evaluate(readConfig());download('housing-comparison.json',JSON.stringify(result,null,2),'application/json');}catch(error){showError(error.message);}});
   document.querySelector('#housing-csv').addEventListener('click',()=>{try{if(!result)result=evaluate(readConfig());const rows=['month,buy_net_worth,rent_net_worth,buy_accessible,rent_accessible,home_equity,mortgage_balance'];result.buy.rows.forEach((b,i)=>{const r=result.rent.rows[i];rows.push([i,b.netWorth,r.netWorth,b.accessible,r.accessible,b.equity,b.balance].map(v=>typeof v==='number'?v.toFixed(2):v).join(','));});download('housing-monthly.csv',rows.join('\n'),'text/csv');}catch(error){showError(error.message);}});

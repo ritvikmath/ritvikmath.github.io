@@ -17,6 +17,7 @@ The calculator below follows both choices month by month from the same starting 
 
 <section class="housing-calculator" id="housing-calculator" aria-labelledby="housing-calculator-title">
   <header class="housing-tool-header"><div><p class="lab-kicker">Runs entirely in your browser</p><h2 id="housing-calculator-title">Buying versus renting calculator</h2><p>Your entries and saved comparisons stay on this device. They are not sent to ritvikmath or placed in the page URL.</p></div><button class="housing-secondary" id="housing-reset" type="button">Reset fictional example</button></header>
+  <section class="housing-presets" aria-labelledby="housing-presets-title"><div><p class="lab-kicker">Start with a scenario</p><h3 id="housing-presets-title">Choose two profiles</h3><p>These fictional starting points are anchored to rounded West Hills-area market and income figures. Pick a home and household profile, then change any field you want.</p></div><label>House profile<select id="housing-house-profile"><option value="lower">Lower-priced home</option><option value="moderate" selected>Moderately priced home</option><option value="higher">Higher-priced home</option><option value="custom">Custom values</option></select></label><label>Financial profile<select id="housing-financial-profile"><option value="lower">Lower income and savings</option><option value="moderate" selected>Moderate income and savings</option><option value="higher">Higher income and savings</option><option value="custom">Custom values</option></select></label></section>
   <details class="housing-saves"><summary>Saved comparisons <span id="housing-save-count">0</span></summary><p>Saved only in this browser. Clearing site data removes them, so download a backup if you need one.</p><div id="housing-saved-list"></div><div id="housing-undo-wrap" hidden><button type="button" id="housing-undo">Undo delete</button></div></details>
   <div class="housing-privacy-note"><strong>Fictional example — replace with your own.</strong> Every prefilled amount below was invented for this public calculator and is not a recommended target or a real household.</div>
   <form id="housing-form">
@@ -53,6 +54,8 @@ The mortgage uses a standard fixed-rate amortization schedule. Property tax can 
 
 The optional FRED button fetches public observations for the 30-year mortgage benchmark, CPI, national rent inflation, the three-month Treasury yield, and the national house-price index. It displays dates and does not apply anything automatically. A national benchmark is not a lender quote, a local rent forecast, an insurance quote, or a prediction. Manual mode remains fully usable if FRED is unavailable.
 
+The preset profiles are fictional conveniences, not financial classifications or recommendations. Their moderate anchors use a rounded recent West Hills median sale price of about $1.0 million from [Redfin](https://www.redfin.com/neighborhood/3006/CA/Los-Angeles/West-Hills/housing-market), a rounded area median rent of about $4,500 from [Realtor.com](https://www.realtor.com/local/market/california/los-angeles/west-hills), and the 2024 ACS median household income of $151,190 for ZIP 91307 reported by [Census Reporter](https://censusreporter.org/profiles/86000US91307-91307/). The monthly take-home amounts are illustrative conversions, not tax estimates.
+
 Property information is manual entry only. The page does not contact, scrape, or transmit information to listing websites.
 
 ## A small math zone {#math}
@@ -80,5 +83,5 @@ where $A$ is accessible financial assets, $P$ is the home value, $C$ is selling 
 The precision of those equations should not be mistaken for certainty in their inputs. Appreciation, rent growth, investment returns, repairs, taxes, and the eventual selling date are unknown. The sensitivity table is therefore as important as the headline result.
 
 <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/housing-calculator.css?v=20261108-3">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/housing-calculator.css?v=20261108-4">
 <script src="{{ site.baseurl }}/assets/housing-calculator.js" defer></script>
