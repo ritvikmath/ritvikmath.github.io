@@ -18,6 +18,8 @@
   function buildInterface() {
     const s = data.snapshot;
     document.querySelector('#attribution-period').textContent = date(s.prior_date) + ' → ' + date(s.date);
+    document.querySelector('#attribution-result-date').textContent = date(s.date);
+    document.querySelector('#attribution-results-heading').textContent = 'A ' + Math.abs(s.spy_return_pct).toFixed(2) + '% ' + (s.spy_return_pct >= 0 ? 'up' : 'down') + ' day, taken apart';
     document.querySelector('#attribution-summary').innerHTML = [
       ['SPY return', signed(s.spy_return_pct, 2)],
       ['Stocks up', s.advancers + ' of ' + s.covered_holdings],
@@ -25,7 +27,15 @@
       ['Negative pull', signed(s.negative_bps, 1)]
     ].map(function (item, index) { return '<article' + (index === 0 ? ' class="featured"' : '') + '><span>' + item[0] + '</span><strong>' + item[1] + '</strong></article>'; }).join('');
     const topTwo = data.top_positive[0].contribution_bps + data.top_positive[1].contribution_bps;
-    document.querySelector('#attribution-verdict').innerHTML = '<strong>The literal answer:</strong> ' + s.advancers + ' securities added ' + s.positive_bps.toFixed(1) + ' basis points while ' + s.decliners + ' removed ' + Math.abs(s.negative_bps).toFixed(1) + '. Microsoft and Nvidia alone added ' + topTwo.toFixed(1) + ' basis points. The reconstructed basket finished at ' + signed(s.basket_return_pct, 2) + ', only ' + Math.abs(s.residual_bps).toFixed(1) + ' basis points from SPY.';
+    const leaders = data.top_positive.slice(0, 2);
+    const largestPull = data.top_negative[0];
+    document.querySelector('#attribution-verdict').innerHTML = '<strong>The literal answer:</strong> ' + s.advancers + ' securities added ' + s.positive_bps.toFixed(1) + ' basis points while ' + s.decliners + ' removed ' + Math.abs(s.negative_bps).toFixed(1) + '. ' + leaders[0].ticker + ' and ' + leaders[1].ticker + ' alone added ' + topTwo.toFixed(1) + ' basis points. The reconstructed basket finished at ' + signed(s.basket_return_pct, 2) + ', only ' + Math.abs(s.residual_bps).toFixed(1) + ' basis points from SPY.';
+    document.querySelector('#attribution-main-heading').textContent = leaders[0].name + ' and ' + leaders[1].name + ' added the most';
+    document.querySelector('#attribution-main-copy').textContent = 'Together they supplied ' + topTwo.toFixed(1) + ' basis points of the reconstructed market move.';
+    document.querySelector('#attribution-breadth-heading').textContent = s.advancers + ' securities rose and ' + s.decliners + ' fell';
+    document.querySelector('#attribution-breadth-copy').textContent = 'Positive contributions totaled ' + s.positive_bps.toFixed(1) + ' basis points before decliners removed ' + Math.abs(s.negative_bps).toFixed(1) + '.';
+    document.querySelector('#attribution-pull-heading').textContent = largestPull.name + ' pulled the other way';
+    document.querySelector('#attribution-pull-copy').textContent = 'Its ' + signed(largestPull.return_pct, 2) + ' return contributed ' + signed(largestPull.contribution_bps, 1) + ' to the day.';
     function rows(items) {
       return items.slice(0, 6).map(function (item) { return '<article><div><strong>' + item.ticker + '</strong><span>' + item.name + '</span></div><span>' + item.weight_pct.toFixed(2) + '% weight</span><b class="' + (item.contribution_bps >= 0 ? 'positive' : 'negative') + '">' + signed(item.contribution_bps, 1) + '</b></article>'; }).join('');
     }
@@ -96,5 +106,5 @@
   canvas.addEventListener('pointerdown', select);
   canvas.addEventListener('pointerleave', function (event) { if (event.pointerType === 'touch') return; selected = -1; tooltip.hidden = true; draw(); });
   window.addEventListener('resize', resize);
-  fetch(canvas.dataset.source, { cache: 'no-store' }).then(function (response) { if (!response.ok) throw new Error('Could not load data'); return response.json(); }).then(function (payload) { data = payload; buildInterface(); resize(); }).catch(function () { document.querySelector('#attribution-verdict').textContent = 'The frozen attribution data could not be loaded.'; });
+  fetch(canvas.dataset.source, { cache: 'no-store' }).then(function (response) { if (!response.ok) throw new Error('Could not load data'); return response.json(); }).then(function (payload) { data = payload; buildInterface(); resize(); }).catch(function () { document.querySelector('#attribution-verdict').textContent = 'The latest attribution data could not be loaded.'; });
 }());

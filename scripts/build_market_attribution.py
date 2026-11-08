@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a frozen constituent-level attribution of one large SPY trading day."""
+"""Build a constituent-level attribution of the latest complete SPY trading day."""
 
 import json
 import math
@@ -16,7 +16,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "assets" / "data" / "market-attribution.json"
-TARGET_DATE = date(2026, 9, 3)
 HOLDINGS_URL = "https://www.ssga.com/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spy.xlsx"
 YAHOO_CHART = "https://query1.finance.yahoo.com/v8/finance/chart/{}"
 USER_AGENT = "Mozilla/5.0 (compatible; ritvikmath research snapshot)"
@@ -59,9 +58,6 @@ def load_holdings():
     rows = parse_xlsx_rows(download(HOLDINGS_URL))
     as_of_text = next(row.get("B", "") for row in rows if row.get("A") == "Holdings:")
     as_of = datetime.strptime(as_of_text.replace("As of ", ""), "%d-%b-%Y").date()
-    if as_of != TARGET_DATE:
-        raise ValueError(f"Expected holdings dated {TARGET_DATE}; State Street supplied {as_of}")
-
     holdings = []
     for row in rows:
         ticker = row.get("B", "").strip()
@@ -79,9 +75,9 @@ def yahoo_ticker(ticker):
     return ticker.replace(".", "-")
 
 
-def fetch_two_closes(ticker):
-    start = int(datetime.combine(TARGET_DATE - timedelta(days=5), datetime.min.time(), tzinfo=timezone.utc).timestamp())
-    end = int(datetime.combine(TARGET_DATE + timedelta(days=2), datetime.min.time(), tzinfo=timezone.utc).timestamp())
+def fetch_two_closes(ticker, target_date):
+    start = int(datetime.combine(target_date - timedelta(days=5), datetime.min.time(), tzinfo=timezone.utc).timestamp())
+    end = int(datetime.combine(target_date + timedelta(days=2), datetime.min.time(), tzinfo=timezone.utc).timestamp())
     params = urllib.parse.urlencode({"period1": start, "period2": end, "interval": "1d", "events": "history"})
     url = f"{YAHOO_CHART.format(urllib.parse.quote(yahoo_ticker(ticker)))}?{params}"
     last_error = None
@@ -95,11 +91,11 @@ def fetch_two_closes(ticker):
                 for timestamp, close in zip(result["timestamp"], closes)
                 if close is not None
             }
-            prior_dates = [day for day in observations if day < TARGET_DATE]
-            if TARGET_DATE not in observations or not prior_dates:
+            prior_dates = [day for day in observations if day < target_date]
+            if target_date not in observations or not prior_dates:
                 raise ValueError("target or prior close missing")
             previous = max(prior_dates)
-            return previous, float(observations[previous]), float(observations[TARGET_DATE])
+            return previous, float(observations[previous]), float(observations[target_date])
         except Exception as error:
             last_error = error
             if attempt < 2:
@@ -109,10 +105,15 @@ def fetch_two_closes(ticker):
 
 def build():
     holdings_date, holdings = load_holdings()
+    if OUTPUT.exists():
+        existing = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        if existing.get("snapshot", {}).get("date") == holdings_date.isoformat():
+            print(f"No new attribution holdings; {holdings_date} is already published.")
+            return
     prices = {}
     failures = []
     with ThreadPoolExecutor(max_workers=12) as executor:
-        futures = {executor.submit(fetch_two_closes, item["ticker"]): item["ticker"] for item in holdings}
+        futures = {executor.submit(fetch_two_closes, item["ticker"], holdings_date): item["ticker"] for item in holdings}
         for future in as_completed(futures):
             ticker = futures[future]
             try:
@@ -146,7 +147,7 @@ def build():
 
     records.sort(key=lambda item: item["contribution"], reverse=True)
     basket_return = sum(item["contribution"] for item in records)
-    _, spy_prior, spy_close = fetch_two_closes("SPY")
+    _, spy_prior, spy_close = fetch_two_closes("SPY", holdings_date)
     spy_return = spy_close / spy_prior - 1
     positive = [item for item in records if item["contribution"] > 0]
     negative = [item for item in records if item["contribution"] < 0]
@@ -165,7 +166,7 @@ def build():
     payload = {
         "snapshot": {
             "prior_date": prior_date.isoformat(),
-            "date": TARGET_DATE.isoformat(),
+            "date": holdings_date.isoformat(),
             "holdings_date": holdings_date.isoformat(),
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "spy_prior_close": round(spy_prior, 4),
@@ -192,7 +193,9 @@ def build():
     }
     if not math.isclose(sum(item["weight_pct"] for item in payload["constituents"]), 100, abs_tol=0.1):
         raise ValueError("Opening weights do not sum to approximately 100%")
-    OUTPUT.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    temporary = OUTPUT.with_suffix(".tmp")
+    temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(OUTPUT)
     print(f"Wrote {OUTPUT}")
     print(json.dumps(payload["snapshot"], indent=2))
     print("Top positive:", [(x["ticker"], x["contribution_bps"]) for x in payload["top_positive"][:5]])

@@ -9,7 +9,7 @@ permalink: /experiments/stock-predictions/
     <p class="eyebrow"><span></span> Experiment 002 · Machine learning</p>
     <h1>Can XGBoost Predict Tomorrow?</h1>
     <p>Four possible directions, fourteen signals, ten stocks, and one deliberately skeptical test of whether yesterday contains a useful hint about the next trading day.</p>
-    <div class="experiment-status experiment-status-static">Frozen data snapshot through <strong id="prediction-market-date">loading…</strong></div>
+    <div class="experiment-status experiment-status-static">Live out-of-sample scorecard through <strong id="prediction-market-date">loading…</strong></div>
   </header>
 
   <section class="prediction-scorecard taped-panel" aria-labelledby="scorecard-heading">
@@ -30,8 +30,8 @@ permalink: /experiments/stock-predictions/
     <p class="notebook-kicker">the short version</p>
     <h2 id="prediction-findings-heading">Findings and Next Steps</h2>
     <div class="findings-grid">
-      <article><span>What worked</span><h3>A faint four-class signal</h3><p>Exact accuracy reached 29.04%, just above the 28.60% majority-class baseline. Balanced accuracy was 29.22%, so the result was not driven only by the most common label.</p></article>
-      <article><span>What fell short</span><h3>Direction stayed near chance</h3><p>Up-or-down accuracy was 50.24%. The model found too little dependable information to support a useful claim about predicting tomorrow, especially before trading costs.</p></article>
+      <article><span>What worked</span><h3>A four-class scorecard</h3><p id="prediction-finding-exact">Loading the latest held-out accuracy.</p></article>
+      <article><span>What fell short</span><h3>Direction is the harder test</h3><p id="prediction-finding-direction">Loading the latest directional accuracy.</p></article>
       <article><span>What I learned</span><h3>More detail is not always more signal</h3><p>XGBoost can detect small nonlinear patterns, but familiar technical indicators mostly summarize the same noisy price history. A complex model cannot manufacture information that is not there.</p></article>
     </div>
     <div class="findings-next"><h3>What I would try next</h3><ul><li>Repeat the evaluation with rolling walk-forward retraining across several market regimes.</li><li>Compare against simpler logistic and persistence models.</li><li>Test whether acting only on high-confidence predictions improves results after costs.</li></ul></div>
@@ -103,7 +103,7 @@ permalink: /experiments/stock-predictions/
       <li><span>01</span><div><h3>Pool the ten stocks</h3><p>Each stock-day becomes one example. Stock identity is included, while the same signal definitions apply to every company.</p></div></li>
       <li><span>02</span><div><h3>Split forward in time</h3><p>The earliest 80% of dates train the model; the newest 20% form one untouched chronological test. Dates are never shuffled.</p></div></li>
       <li><span>03</span><div><h3>Balance the classes</h3><p>Training examples are weighted so rare large moves matter. The headline balanced accuracy is the mean recall across all four labels.</p></div></li>
-      <li><span>04</span><div><h3>Fit exactly once</h3><p>The frozen model is fitted once on training rows and applied once to the held-out period. There is no refit, daily forecast, or automated data refresh.</p></div></li>
+      <li><span>04</span><div><h3>Fit exactly once</h3><p>The model is fitted once on training rows. Each newly completed market day is then added to the held-out scorecard without retraining, so the test remains genuinely unseen.</p></div></li>
     </ol>
     <aside class="leakage-check">
       <div><p class="eyebrow"><span></span> Leakage audit</p><h3>What keeps the future out</h3></div>
@@ -111,7 +111,7 @@ permalink: /experiments/stock-predictions/
         <li><strong>Past-only inputs.</strong> Every feature at date <i>t</i> uses prices and volume from <i>t</i> or earlier; the label alone uses the return from <i>t</i> to <i>t+1</i>.</li>
         <li><strong>One-session embargo.</strong> The final training row is removed when its next-day label would touch the first test date.</li>
         <li><strong>Train-only learning.</strong> Class weights and every fitted tree use training rows only. The fixed ±1% labels, features, and model settings are not selected from test performance.</li>
-        <li><strong>Diagnostics stay diagnostic.</strong> The test-set confusion matrix and permutation importance explain the frozen model; they are never fed back into it.</li>
+        <li><strong>Diagnostics stay diagnostic.</strong> The test-set confusion matrix and permutation importance explain the model; they are never fed back into it.</li>
       </ul>
       <p><strong>Known limitation:</strong> the ten companies were selected as today’s large S&amp;P 500 representatives, not from a historical point-in-time membership database. That creates selection and survivorship bias, so the result should not be generalized to “all stocks.”</p>
     </aside>

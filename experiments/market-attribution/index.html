@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Why Was the Market Up?
+title: What Moved the Market?
 permalink: /experiments/market-attribution/
 ---
 <article class="experiment-shell attribution-experiment">
   <header class="experiment-header">
     <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
     <p class="eyebrow"><span></span> Experiment 005 · Market attribution</p>
-    <h1>Why Was the Market Up?</h1>
+    <h1>What Moved the Market?</h1>
     <p>The S&amp;P 500 is not a mood or a headline. It is a weighted collection of companies. So when it moves, we should be able to take the move apart and see exactly which stocks pushed it up and which pulled it back.</p>
     <div class="experiment-status experiment-status-static">One trading day · <strong id="attribution-period">loading…</strong></div>
   </header>
@@ -26,14 +26,14 @@ permalink: /experiments/market-attribution/
 
   <section class="market-panel attribution-results" aria-labelledby="attribution-results-heading">
     <header class="market-panel-header market-panel-header-stacked">
-      <div><p class="eyebrow"><span></span> September 3, 2026</p><h2 id="attribution-results-heading">A 1.05% day, taken apart</h2><p>Green bars pushed SPY upward and coral bars pulled it downward. A basis point is one hundredth of a percentage point. Hover or tap any bar for the stock's weight, return, and contribution.</p></div>
+      <div><p class="eyebrow"><span></span> <span id="attribution-result-date">Latest complete session</span></p><h2 id="attribution-results-heading">The latest market day, taken apart</h2><p>Green bars pushed SPY upward and coral bars pulled it downward. A basis point is one hundredth of a percentage point. Hover or tap any bar for the stock's weight, return, and contribution.</p></div>
     </header>
     <div class="attribution-summary" id="attribution-summary" aria-label="Market attribution summary"></div>
     <div class="attribution-chart-wrap" id="attribution-chart-wrap">
-      <canvas id="attribution-chart" data-source="{{ site.baseurl }}/assets/data/market-attribution.json" role="img" aria-label="Interactive chart of the largest positive and negative company contributions to SPY on September 3, 2026"></canvas>
+      <canvas id="attribution-chart" data-source="{{ site.baseurl }}/assets/data/market-attribution.json" role="img" aria-label="Interactive chart of the largest positive and negative company contributions to SPY on the latest complete session"></canvas>
       <div class="market-tooltip attribution-tooltip" id="attribution-tooltip" hidden><strong></strong><div></div></div>
     </div>
-    <p class="attribution-verdict" id="attribution-verdict">Loading the frozen result…</p>
+    <p class="attribution-verdict" id="attribution-verdict">Loading the latest result…</p>
   </section>
 
   <section class="attribution-ledger" aria-labelledby="attribution-ledger-heading">
@@ -48,9 +48,9 @@ permalink: /experiments/market-attribution/
     <p class="notebook-kicker">so what happened?</p>
     <h2 id="attribution-findings-heading">Findings and Next Steps</h2>
     <div class="findings-grid">
-      <article><span>The main answer</span><h3>Microsoft and Nvidia did the most work</h3><p>Together they supplied nearly 30 basis points, or more than a quarter of the reconstructed 1.06% basket gain.</p></article>
-      <article><span>The wider market</span><h3>This was not only a mega-cap day</h3><p>340 of 503 securities advanced. The five largest positive contributors explain about half of the basket gain, but hundreds of smaller gains supplied the rest.</p></article>
-      <article><span>The counterweight</span><h3>Broadcom pulled the other way</h3><p>Its 2.74% decline removed about 7.2 basis points. All decliners together removed 24.6 basis points from an otherwise stronger positive day.</p></article>
+      <article><span>The main answer</span><h3 id="attribution-main-heading">Loading the largest contributors</h3><p id="attribution-main-copy">The newest holdings and prices are being assembled.</p></article>
+      <article><span>The wider market</span><h3 id="attribution-breadth-heading">Loading market breadth</h3><p id="attribution-breadth-copy">The number of advancing and declining securities will appear here.</p></article>
+      <article><span>The counterweight</span><h3 id="attribution-pull-heading">Loading the largest counterweight</h3><p id="attribution-pull-copy">The largest move against the market will appear here.</p></article>
     </div>
     <div class="findings-next"><h3>Where I would take this next</h3><ul><li>Repeat the ledger on a sharp down day and compare how concentrated the damage was.</li><li>Group contributions by sector to see whether the day was broad or driven by one part of the economy.</li><li>Build a daily archive using point-in-time holdings so index membership changes are handled exactly.</li></ul></div>
   </section>
@@ -58,12 +58,12 @@ permalink: /experiments/market-attribution/
   <section class="experiment-method" aria-labelledby="attribution-method-heading">
     <p class="notebook-kicker">from a headline to a ledger</p>
     <h2 id="attribution-method-heading">How I counted the move</h2>
-    <p class="method-intro">The S&amp;P 500 gives larger publicly tradable companies more weight. I used State Street's SPY holdings dated September 3 and the closing price change of every security from September 2 to September 3.</p>
+    <p class="method-intro">The S&amp;P 500 gives larger publicly tradable companies more weight. This page uses the newest complete State Street SPY holdings file and the closing price change of every covered security from the prior trading session.</p>
     <ol class="method-steps">
-      <li><span>01</span><div><h3>Start with the same basket</h3><p>The file contains 503 securities because a few S&amp;P 500 companies have two listed share classes. Together the measured securities cover 99.80% of SPY's closing weight.</p></div></li>
+      <li><span>01</span><div><h3>Start with the same basket</h3><p>The file can contain more than 500 securities because a few S&amp;P 500 companies have two listed share classes. The validation step requires the measured securities to cover at least 99.5% of SPY's closing weight.</p></div></li>
       <li><span>02</span><div><h3>Reconstruct opening weights</h3><p>The published weights are from the end of the day. I reverse each stock's return to estimate what its weight was before trading began.</p></div></li>
       <li><span>03</span><div><h3>Multiply weight by return</h3><p>A stock at 6% of the basket that rises 2% adds about 0.12 percentage points. That is 12 basis points of market movement.</p></div></li>
-      <li><span>04</span><div><h3>Add every contribution</h3><p>The 503 company contributions produce a reconstructed basket return of 1.058%, versus SPY's observed 1.047% price return.</p></div></li>
+      <li><span>04</span><div><h3>Add every contribution</h3><p>Adding all covered company contributions reconstructs the basket return. The page reports the small residual versus SPY rather than forcing the two numbers to agree.</p></div></li>
     </ol>
     <aside class="method-note"><strong>Why is there a residual?</strong><p>The difference is 1.1 basis points. SPY is a tradable fund rather than the index itself, and its return can differ slightly because of cash, fees, trading, corporate actions, rounding, and market-price tracking. Keeping that residual visible is more honest than forcing the numbers to agree.</p></aside>
   </section>
@@ -78,14 +78,14 @@ permalink: /experiments/market-attribution/
       <article><span>01 · company return</span><h3>How far did it move?</h3><div class="equation"><math display="block"><msub><mi>r</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>P</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub><msub><mi>P</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub></mfrac><mo>−</mo><mn>1</mn></math></div><p>This is the ordinary close-to-close stock return.</p></article>
       <article><span>02 · opening weight</span><h3>How much did it count?</h3><div class="equation equation-wide"><math display="block"><msub><mi>w</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mfrac><mfrac><msub><mi>w</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub><mrow><mn>1</mn><mo>+</mo><msub><mi>r</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub></mrow></mfrac><mrow><munderover><mo>∑</mo><mi>j</mi><mi>N</mi></munderover><mfrac><msub><mi>w</mi><mrow><mi>j</mi><mo>,</mo><mi>t</mi></mrow></msub><mrow><mn>1</mn><mo>+</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>,</mo><mi>t</mi></mrow></msub></mrow></mfrac></mrow></mfrac></math></div><p>Because State Street reports closing weights, we divide out the day's return and renormalize to recover the opening basket.</p></article>
       <article><span>03 · contribution</span><h3>What did it add?</h3><div class="equation"><math display="block"><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>w</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><msub><mi>r</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub></math></div><p>Contribution combines size and movement. Multiply by 10,000 to express it in basis points.</p></article>
-      <article><span>04 · the whole day</span><h3>Put the market back together</h3><div class="equation"><math display="block"><msub><mi>R</mi><mi>t</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub></math></div><p>Add the pushes and pulls. Positive contributions totaled 130.4 basis points; negative ones removed 24.6, leaving 105.8.</p></article>
+      <article><span>04 · the whole day</span><h3>Put the market back together</h3><div class="equation"><math display="block"><msub><mi>R</mi><mi>t</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>c</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub></math></div><p>Add the positive and negative contributions to reconstruct the market's move for the day.</p></article>
     </div>
   </section>
 
   <section class="experiment-sources attribution-sources" aria-labelledby="attribution-sources-heading">
     <h2 id="attribution-sources-heading">What this does and does not explain</h2>
     <p>This is an arithmetic attribution, not proof that any headline caused a stock to move. It uses SPY as a transparent, investable approximation of the S&amp;P 500 rather than proprietary point-in-time index files. Closing prices also hide everything that happened within the trading day.</p>
-    <p>The weighting and divisor framework follows <a href="https://www.spglobal.com/spdji/en/methodology/article/index-mathematics-methodology/" target="_blank" rel="noopener">S&amp;P Dow Jones Indices' Index Mathematics Methodology ↗</a>. Constituent names, shares, and weights come from <a href="https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy" target="_blank" rel="noopener">State Street's SPY holdings dated September 3, 2026 ↗</a>. Close-to-close prices come from Yahoo Finance. This experiment is for education and is not investment advice.</p>
+    <p>The weighting and divisor framework follows <a href="https://www.spglobal.com/spdji/en/methodology/article/index-mathematics-methodology/" target="_blank" rel="noopener">S&amp;P Dow Jones Indices' Index Mathematics Methodology ↗</a>. Constituent names, shares, and weights come from <a href="https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy" target="_blank" rel="noopener">State Street's latest complete SPY holdings ↗</a>. Close-to-close prices come from Yahoo Finance. This experiment is for education and is not investment advice.</p>
   </section>
 </article>
 <script src="{{ site.baseurl }}/assets/market-attribution.js" defer></script>

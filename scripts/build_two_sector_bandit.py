@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the frozen five-sector behavioral-allocation experiment."""
+"""Build the rolling live five-sector behavioral-allocation experiment."""
 
 import json
 import math
@@ -285,6 +285,8 @@ def main():
         "data_source": "Yahoo Finance adjusted daily prices",
         "start_date": output_points[0]["date"],
         "market_date": output_points[-1]["date"],
+        "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "live_evaluation": True,
         "starting_value": STARTING_VALUE,
         "assets": ASSETS,
         "strategy": {
@@ -318,7 +320,14 @@ def main():
         "points": output_points,
         "decisions": decisions,
     }
-    OUTPUT.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    if OUTPUT.exists():
+        existing = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        if existing.get("market_date") == payload["market_date"]:
+            print(f"No new sector observations; {payload['market_date']} is already published.")
+            return
+    temporary = OUTPUT.with_suffix(".tmp")
+    temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(OUTPUT)
     print(f"Wrote {OUTPUT.relative_to(ROOT)} from {payload['start_date']} through {payload['market_date']}")
     print(json.dumps(payload["summary"], indent=2))
     print("Switches:", {strategy: behavior_switches[strategy] for strategy in behavior_functions})

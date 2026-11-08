@@ -180,6 +180,8 @@
       comparisonDirection + ' the untouched equal-weight portfolio by <strong>' +
       moneyFormatter.format(Math.abs(comparison.dollar_difference)) + '</strong> (' +
       Math.abs(comparison.return_difference_points).toFixed(2) + ' percentage points).';
+    document.querySelector('#stock-finding-comparison-heading').textContent = comparison.dollar_difference >= 0 ? 'The adaptive rule finished ahead' : 'Equal weight finished ahead';
+    document.querySelector('#stock-finding-comparison').textContent = 'The bandit finished at ' + moneyFormatter.format(seriesById('adaptive').latest_value) + ' versus ' + moneyFormatter.format(seriesById('equal').latest_value) + ' for the untouched equal-weight portfolio, a difference of ' + moneyFormatter.format(Math.abs(comparison.dollar_difference)) + ' (' + Math.abs(comparison.return_difference_points).toFixed(2) + ' percentage points).';
     updateAllocation(payload);
     updateHistory(payload);
     const values = series.map(function (item) { return item.name + ' ' + moneyFormatter.format(item.latest_value); }).join(', ');

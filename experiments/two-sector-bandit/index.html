@@ -9,7 +9,7 @@ permalink: /experiments/two-sector-bandit/
     <p class="eyebrow"><span></span> Experiment 004 · Five S&amp;P 500 Sectors</p>
     <h1>Can a Bandit Beat Three Very Human Trading Rules?</h1>
     <p>Suppose we have $1,000 to divide among technology, health care, energy, financials, and consumer staples. We can let a model choose the split, but we can also try a few rules that probably feel familiar to anyone who has watched an investment fall: sell it, chase whatever is going up, or buy more while it is cheap. Which approach actually works best?</p>
-    <div class="experiment-status experiment-status-static">Frozen two-year backtest through <strong id="two-stock-date">loading…</strong></div>
+    <div class="experiment-status experiment-status-static">Rolling two-year backtest through <strong id="two-stock-date">loading…</strong></div>
   </header>
 
   <section class="two-stock-intro taped-panel" aria-labelledby="two-stock-intro-heading">
@@ -31,7 +31,7 @@ permalink: /experiments/two-sector-bandit/
       <canvas id="two-stock-chart" data-source="{{ site.baseurl }}/assets/data/two-sector-bandit.json" role="img" aria-label="Two-year growth of the five-sector contextual allocator and panic seller, performance chaser, and dip buyer rules"></canvas>
       <div class="market-tooltip" id="two-stock-tooltip" hidden><time></time><div></div></div>
     </div>
-    <p class="market-comparison-note" id="two-stock-verdict">Loading the frozen result…</p>
+    <p class="market-comparison-note" id="two-stock-verdict">Loading the latest result…</p>
     <section class="behavior-profiles" aria-labelledby="behavior-profiles-heading">
       <h3 id="behavior-profiles-heading">What are the three human rules?</h3>
       <div>
@@ -56,8 +56,8 @@ permalink: /experiments/two-sector-bandit/
   <section class="experiment-findings" aria-labelledby="two-stock-findings-heading">
     <p class="notebook-kicker">so what happened?</p><h2 id="two-stock-findings-heading">What Did We Learn?</h2>
     <div class="findings-grid">
-      <article><span>The model</span><h3>It Beat the Panic Seller</h3><p>The model finished at $1,382, while the panic seller reached $1,249. The model also changed its mind gradually instead of moving most of the portfolio after a bad week.</p></article>
-      <article><span>The surprise</span><h3>The Two Simple Rules Won</h3><p>The dip buyer finished first at $1,520, followed by the performance chaser at $1,494. Over these two years, both recent rebounds and continued sector runs were strong enough to beat the model.</p></article>
+      <article><span>The model</span><h3 id="sector-model-finding-heading">How the model compared</h3><p id="sector-model-finding">Loading the latest result.</p></article>
+      <article><span>The surprise</span><h3 id="sector-leader-finding-heading">Who finished first?</h3><p id="sector-leader-finding">Loading the latest result.</p></article>
       <article><span>The caveat</span><h3>Two Years Is Definitely Not Forever</h3><p>This is a short test containing just over 100 weekly choices. It tells us what happened during this particular market, not what these rules will do in the next one.</p></article>
     </div>
     <div class="findings-next"><h3>Where Do We Go From Here?</h3><ul><li>Run the same four rules over several different periods instead of just this one.</li><li>See what happens to the dip buyer during a long decline rather than a quick drop and recovery.</li><li>Choose all of the cutoffs using an earlier training period, then leave the final test period completely untouched.</li></ul></div>
@@ -87,7 +87,7 @@ permalink: /experiments/two-sector-bandit/
 
   <section class="experiment-sources" aria-labelledby="two-sector-sources-heading">
     <h2 id="two-sector-sources-heading">Notes &amp; sources</h2>
-    <p>The three profiles are intentionally simplified trading rules, not diagnoses of real investors. Their ideas echo research on <a href="https://www.aeaweb.org/conference/2018/preliminary/paper/f29rn7fR" target="_blank" rel="noopener">loss aversion ↗</a>, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1993.tb04702.x" target="_blank" rel="noopener">buying recent winners ↗</a>, and <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1985.tb05004.x" target="_blank" rel="noopener">market overreaction and reversals ↗</a>. Barber and Odean’s study also found that <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/0022-1082.00226" target="_blank" rel="noopener">frequent individual trading was associated with worse performance ↗</a>. <a href="https://www.jmlr.org/papers/v21/19-650.html" target="_blank" rel="noopener">Krishnamurthy et al. study contextual bandits with continuous actions ↗</a>, while <a href="https://www.web.stanford.edu/~boyd/papers/portfolio.html" target="_blank" rel="noopener">Boyd et al. incorporate transaction costs into portfolio optimization ↗</a>. Adjusted daily prices come from the frozen Yahoo Finance snapshot. This experiment is for education and is not investment advice.</p>
+    <p>The three profiles are intentionally simplified trading rules, not diagnoses of real investors. Their ideas echo research on <a href="https://www.aeaweb.org/conference/2018/preliminary/paper/f29rn7fR" target="_blank" rel="noopener">loss aversion ↗</a>, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1993.tb04702.x" target="_blank" rel="noopener">buying recent winners ↗</a>, and <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1985.tb05004.x" target="_blank" rel="noopener">market overreaction and reversals ↗</a>. Barber and Odean’s study also found that <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/0022-1082.00226" target="_blank" rel="noopener">frequent individual trading was associated with worse performance ↗</a>. <a href="https://www.jmlr.org/papers/v21/19-650.html" target="_blank" rel="noopener">Krishnamurthy et al. study contextual bandits with continuous actions ↗</a>, while <a href="https://www.web.stanford.edu/~boyd/papers/portfolio.html" target="_blank" rel="noopener">Boyd et al. incorporate transaction costs into portfolio optimization ↗</a>. Adjusted daily prices come from Yahoo Finance and refresh after completed market sessions. This experiment is for education and is not investment advice.</p>
   </section>
 </article>
 <script src="{{ site.baseurl }}/assets/two-sector-bandit.js" defer></script>

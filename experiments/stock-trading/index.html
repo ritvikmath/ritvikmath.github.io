@@ -8,8 +8,8 @@ permalink: /experiments/stock-trading/
     <a class="back-link" href="{{ site.baseurl }}/experiments/">← All experiments</a>
     <p class="eyebrow"><span></span> Experiment 001 · Adaptive Bandit</p>
     <h1>Explore, Exploit, Invest</h1>
-    <p>Can a simple learning rule beat buy-and-hold? This frozen backtest compares a weekly adaptive strategy with ten single-stock investments and a simple portfolio that starts equally across all ten, then does nothing.</p>
-    <div class="experiment-status experiment-status-static">Frozen data snapshot through <strong id="market-date">loading…</strong></div>
+    <p>Can a simple learning rule beat buy-and-hold? This rolling backtest compares a weekly adaptive strategy with ten single-stock investments and a simple portfolio that starts equally across all ten, then does nothing.</p>
+    <div class="experiment-status experiment-status-static">Updated after market close through <strong id="market-date">loading…</strong></div>
   </header>
 
   <section class="market-panel" aria-labelledby="market-chart-heading">
@@ -52,7 +52,7 @@ permalink: /experiments/stock-trading/
 
     <section class="allocation-panel" aria-labelledby="allocation-heading">
       <div class="allocation-copy">
-        <p class="eyebrow"><span></span> Final snapshot allocation</p>
+        <p class="eyebrow"><span></span> Latest allocation</p>
         <h3 id="allocation-heading">Where the adaptive model finished</h3>
         <p id="latest-decision">Loading the final weekly decision…</p>
       </div>
@@ -66,7 +66,7 @@ permalink: /experiments/stock-trading/
     <p class="notebook-kicker">the short version</p>
     <h2 id="stock-findings-heading">Findings and Next Steps</h2>
     <div class="findings-grid">
-      <article><span>What worked</span><h3>A small adaptive edge</h3><p>The bandit finished at $1,354.06 versus $1,332.09 for the untouched equal-weight portfolio. Reallocating added $21.97, or 2.20 percentage points, in this one-year window.</p></article>
+      <article><span>What worked</span><h3 id="stock-finding-comparison-heading">Comparing with equal weight</h3><p id="stock-finding-comparison">Loading the latest result.</p></article>
       <article><span>What fell short</span><h3>It did not find the best stocks</h3><p>Several single-stock holds finished well ahead of the bandit. The strategy reduced concentration risk, but this result is not evidence that it can reliably identify winners.</p></article>
       <article><span>What I learned</span><h3>The benchmark changes the story</h3><p>Beating an equal ten-stock hold is more informative than beating a few hand-picked stocks, but the edge is small enough that realistic trading costs and timing could erase it.</p></article>
     </div>

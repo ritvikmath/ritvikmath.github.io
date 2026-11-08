@@ -149,6 +149,8 @@
       if (payload.experiment !== 'stock-direction-xgboost') throw new Error('Unexpected prediction dataset');
       data = payload;
       document.querySelector('#prediction-market-date').textContent = dateFormatter.format(parseDate(data.market_date));
+      document.querySelector('#prediction-finding-exact').textContent = 'Exact accuracy is ' + data.metrics.accuracy.toFixed(2) + '%, versus ' + data.metrics.majority_accuracy.toFixed(2) + '% for always choosing the most common training label. Balanced accuracy is ' + data.metrics.balanced_accuracy.toFixed(2) + '%.';
+      document.querySelector('#prediction-finding-direction').textContent = 'Up-or-down accuracy is ' + data.metrics.direction_accuracy.toFixed(2) + '%. The model must remain meaningfully above chance on future unseen days before this becomes evidence of a dependable signal.';
       renderMetrics(); renderConfusion(); renderStockAccuracy(); renderImportance(); resize();
     })
     .catch(function (error) {

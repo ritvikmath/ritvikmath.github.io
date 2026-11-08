@@ -42,7 +42,13 @@
     const panic = data.summary.panic;
     const fomo = data.summary.fomo;
     const dip = data.summary.dip;
-    document.querySelector('#two-stock-verdict').innerHTML = '<strong>The result:</strong> the dip buyer finished ' + money.format(dip.final_value - bandit.final_value) + ' ahead of the model, and the performance chaser finished ' + money.format(fomo.final_value - bandit.final_value) + ' ahead. The model still beat the panic seller by ' + money.format(bandit.final_value - panic.final_value) + '. Two years is enough to compare these runs, but not enough to declare one rule the permanent winner.';
+    const ordered = keys.slice().sort(function (a, b) { return data.summary[b].final_value - data.summary[a].final_value; });
+    const leader = data.summary[ordered[0]];
+    document.querySelector('#two-stock-verdict').innerHTML = '<strong>The result:</strong> ' + leader.label + ' finished first at ' + money.format(leader.final_value) + '. The contextual allocator finished at ' + money.format(bandit.final_value) + '. Two years is enough to compare these runs, but not enough to declare one rule the permanent winner.';
+    document.querySelector('#sector-model-finding-heading').textContent = 'The model finished ' + (ordered.indexOf('bandit') + 1) + ' of 4';
+    document.querySelector('#sector-model-finding').textContent = 'The contextual allocator reached ' + money.format(bandit.final_value) + '. Its gradual allocation changes are different from the behavioral rules, but they did not guarantee the highest return in this window.';
+    document.querySelector('#sector-leader-finding-heading').textContent = leader.label + ' finished first';
+    document.querySelector('#sector-leader-finding').textContent = 'It ended at ' + money.format(leader.final_value) + ', ' + money.format(Math.abs(leader.final_value - bandit.final_value)) + (leader.final_value >= bandit.final_value ? ' ahead of ' : ' behind ') + 'the contextual allocator.';
     document.querySelector('#two-stock-facts').innerHTML = '<span><strong>5</strong> sector funds</span><span><strong>' + data.decisions.length + '</strong> weekly choices</span><span><strong>' + data.maximum_weekly_move.toFixed(1) + ' points</strong> largest weekly move</span><span><strong>' + money.format(data.total_cost) + '</strong> model trading cost</span>';
     document.querySelector('#two-stock-allocation-key').innerHTML = data.assets.map(function (asset) { return '<span style="--series-color:' + colors[asset.id] + '">' + asset.symbol + ' · ' + asset.sector + '</span>'; }).join('');
   }
@@ -150,5 +156,5 @@
   fetch(chart.dataset.source, { cache: 'no-store' }).then(function (response) { if (!response.ok) throw new Error('Could not load experiment data'); return response.json(); }).then(function (payload) {
     if (payload.experiment !== 'five-sector-behavioral-bandit') throw new Error('Unexpected experiment data');
     data = payload; buildInterface(); resize();
-  }).catch(function () { document.querySelector('#two-stock-verdict').textContent = 'The frozen experiment data could not be loaded.'; });
+  }).catch(function () { document.querySelector('#two-stock-verdict').textContent = 'The latest experiment data could not be loaded.'; });
 }());

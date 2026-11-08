@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the frozen four-class XGBoost stock-direction study."""
+"""Extend the fixed-model, out-of-sample XGBoost stock-direction study."""
 
 import json
 import time
@@ -20,7 +20,7 @@ from update_market_data import ASSETS
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "assets" / "data" / "stock-direction-xgb.json"
 SNAPSHOT_START = "2020-08-01"
-SNAPSHOT_END_EXCLUSIVE = "2026-08-22"
+FIXED_TEST_START = "2025-06-24"
 CLASS_NAMES = ("Very negative", "Negative", "Positive", "Very positive")
 FEATURE_LABELS = {
     "return_1d": "1-day return",
@@ -42,7 +42,7 @@ FEATURES = tuple(FEATURE_LABELS)
 
 
 def fetch_history():
-    """Fetch the experiment's fixed adjusted-OHLCV snapshot plus the S&P 500 proxy."""
+    """Fetch adjusted OHLCV history through the latest completed session."""
     symbols = [asset["symbol"] for asset in ASSETS] + ["SPY"]
     last_error = None
     for attempt in range(3):
@@ -50,7 +50,6 @@ def fetch_history():
             history = yf.download(
                 symbols,
                 start=SNAPSHOT_START,
-                end=SNAPSHOT_END_EXCLUSIVE,
                 interval="1d",
                 auto_adjust=True,
                 actions=False,
@@ -68,7 +67,7 @@ def fetch_history():
             last_error = error
             if attempt < 2:
                 time.sleep(2 ** attempt)
-    raise RuntimeError(f"Unable to download the frozen prediction snapshot: {last_error}")
+    raise RuntimeError(f"Unable to download the prediction history: {last_error}")
 
 
 def rsi(close, period=14):
@@ -160,9 +159,7 @@ def train_experiment(history):
     labeled = pd.concat(all_frames).dropna(subset=[*FEATURES, "next_return", "target_date"]).sort_index()
     labeled["target"] = classify_returns(labeled["next_return"].to_numpy())
 
-    dates = sorted(labeled.index.unique())
-    split_index = int(len(dates) * 0.8)
-    split_date = dates[split_index]
+    split_date = pd.Timestamp(FIXED_TEST_START)
     train = labeled[(labeled.index < split_date) & (labeled["target_date"] < split_date)]
     test = labeled[labeled.index >= split_date]
     if train.empty or test.empty:
@@ -238,14 +235,14 @@ def train_experiment(history):
     class_counts = pd.Series(y_test).value_counts().reindex(range(4), fill_value=0)
     return {
         "experiment": "stock-direction-xgboost",
-        "frozen_snapshot": True,
+        "live_evaluation": True,
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "market_date": history.index.max().date().isoformat(),
         "history_start": labeled.index.min().date().isoformat(),
         "test_start": split_date.date().isoformat(),
         "train_target_end": train["target_date"].max().date().isoformat(),
         "split": {
-            "method": "fixed chronological 80/20 holdout",
+            "method": "fixed chronological holdout with a growing never-trained-on test period",
             "embargo_sessions": 1,
             "model_fits": 1,
         },
@@ -287,6 +284,11 @@ def train_experiment(history):
 def main():
     history = fetch_history()
     payload = train_experiment(history)
+    if OUTPUT.exists():
+        existing = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        if existing.get("market_date") == payload["market_date"]:
+            print(f"No new prediction observations; {payload['market_date']} is already published.")
+            return
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
     temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

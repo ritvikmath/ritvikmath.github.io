@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the frozen SPY-versus-AGG quarterly contextual-bandit experiment."""
+"""Build the live SPY-versus-AGG quarterly contextual-bandit experiment."""
 
 import json
 import time
@@ -16,7 +16,6 @@ OUTPUT = ROOT / "assets" / "data" / "stock-bond-bandit.json"
 CPI_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
 SYMBOLS = ("SPY", "AGG")
 SNAPSHOT_START = "2003-09-22"
-SNAPSHOT_END_EXCLUSIVE = "2026-08-23"
 STARTING_VALUE = 1000.0
 BASE_QUARTERLY_CONTRIBUTION = 1000.0
 STARTING_AGE = 22.0
@@ -48,7 +47,6 @@ def fetch_prices():
             raw = yf.download(
                 list(SYMBOLS),
                 start=SNAPSHOT_START,
-                end=SNAPSHOT_END_EXCLUSIVE,
                 interval="1d",
                 auto_adjust=True,
                 actions=False,
@@ -63,7 +61,7 @@ def fetch_prices():
             last_error = error
             if attempt < 2:
                 time.sleep(2 ** attempt)
-    raise RuntimeError(f"Unable to download the frozen SPY/AGG snapshot: {last_error}")
+    raise RuntimeError(f"Unable to download SPY/AGG history: {last_error}")
 
 
 def fetch_cpi():
@@ -73,14 +71,14 @@ def fetch_cpi():
         try:
             frame = pd.read_csv(CPI_URL, parse_dates=["observation_date"])
             series = frame.set_index("observation_date")["CPIAUCSL"].replace(".", np.nan).astype(float).dropna()
-            if series.index.max() < pd.Timestamp("2026-07-01"):
-                raise ValueError("The CPI snapshot does not cover the backtest end")
+            if series.index.max() < pd.Timestamp.now(tz="UTC").tz_localize(None) - pd.DateOffset(months=3):
+                raise ValueError("The CPI series is unexpectedly stale")
             return series.sort_index()
         except Exception as error:
             last_error = error
             if attempt < 2:
                 time.sleep(2 ** attempt)
-    raise RuntimeError(f"Unable to download the frozen CPI snapshot: {last_error}")
+    raise RuntimeError(f"Unable to download CPI history: {last_error}")
 
 
 def clipped(series, lower, upper, scale):
@@ -269,9 +267,6 @@ def run_backtest(closes, cpi):
             age = STARTING_AGE + (decision_date - first_entry).days / 365.25
             points.append({"date": decision_date.date().isoformat(), "age": round(age, 2), "quarterly_contribution": round(quarterly_contribution, 2), "contributed": round(contributions, 2), **{key: round(value, 2) for key, value in values.items()}})
 
-        if decision_date == dates[-1]:
-            break
-
         x = feature_vector(context.loc[decision_date])
         scores = {}
         estimates = {}
@@ -333,6 +328,23 @@ def run_backtest(closes, cpi):
         previous_action = action
         previous_stock_weight = allocation["SPY"]
 
+    # The current quarter is not learned from until it closes, but every portfolio
+    # is marked to the latest daily close so the published values remain current.
+    market_date = closes.index[-1]
+    if pending is not None and market_date > pending["execution_date"]:
+        live_returns = {
+            symbol: float(closes.loc[market_date, symbol] / closes.loc[pending["execution_date"], symbol] - 1)
+            for symbol in SYMBOLS
+        }
+        live_values = dict(values)
+        live_values["bandit"] *= 1 + live_returns[pending["action"]]
+        live_values["allocation"] *= 1 + sum(pending["allocation"][symbol] * live_returns[symbol] for symbol in SYMBOLS)
+        live_values["spy"] *= 1 + live_returns["SPY"]
+        live_values["agg"] *= 1 + live_returns["AGG"]
+        live_values["balanced"] *= 1 + 0.60 * live_returns["SPY"] + 0.40 * live_returns["AGG"]
+        age = STARTING_AGE + (market_date - first_entry).days / 365.25
+        points.append({"date": market_date.date().isoformat(), "age": round(age, 2), "quarterly_contribution": 0.0, "contributed": round(contributions, 2), **{key: round(value, 2) for key, value in live_values.items()}})
+
     start_date, end_date = first_entry, dates[-1]
     summary = {key: metrics(points, key, period_returns[key], contributions) for key in values}
     inflation = contribution_inflation_summary(cpi, start_date, end_date, points[-1]["quarterly_contribution"])
@@ -340,17 +352,19 @@ def run_backtest(closes, cpi):
     stock_weights = [decision["allocation"]["SPY"] for decision in decisions]
     return {
         "experiment": "stock-bond-contextual-bandit",
-        "frozen_snapshot": True,
+        "live_evaluation": True,
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "data_start": closes.index.min().date().isoformat(),
         "backtest_start": start_date.date().isoformat(),
         "backtest_end": end_date.date().isoformat(),
+        "market_date": market_date.date().isoformat(),
+        "last_completed_quarter": decisions[-1]["end"],
         "starting_value": STARTING_VALUE,
         "base_quarterly_contribution": BASE_QUARTERLY_CONTRIBUTION,
         "final_quarterly_contribution": points[-1]["quarterly_contribution"],
         "total_contributed": contributions,
         "starting_age": STARTING_AGE,
-        "ending_age": round(STARTING_AGE + (end_date - start_date).days / 365.25, 2),
+        "ending_age": round(STARTING_AGE + (market_date - start_date).days / 365.25, 2),
         "assets": [
             {"symbol": "SPY", "name": "SPDR S&P 500 ETF Trust", "role": "U.S. stocks"},
             {"symbol": "AGG", "name": "iShares Core U.S. Aggregate Bond ETF", "role": "U.S. investment-grade bonds"},
@@ -396,13 +410,18 @@ def run_backtest(closes, cpi):
 
 def main():
     payload = run_backtest(fetch_prices(), fetch_cpi())
+    if OUTPUT.exists():
+        existing = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        if existing.get("market_date") == payload["market_date"]:
+            print(f"No new stock/bond observations; {payload['market_date']} is already published.")
+            return
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".tmp")
     temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     temporary.replace(OUTPUT)
     print(
-        f"Saved {payload['choice_summary']['quarters']} frozen quarterly decisions "
-        f"from {payload['backtest_start']} through {payload['backtest_end']} to {OUTPUT}"
+        f"Saved {payload['choice_summary']['quarters']} completed quarterly decisions "
+        f"and marked portfolios through {payload['market_date']} to {OUTPUT}"
     )
 
 

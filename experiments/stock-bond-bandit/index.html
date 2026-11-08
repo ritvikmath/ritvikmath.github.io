@@ -9,7 +9,7 @@ permalink: /experiments/stock-bond-bandit/
     <p class="eyebrow"><span></span> Experiment 003 · Asset allocation</p>
     <h1>Stocks, Bonds, and a Contextual Bandit</h1>
     <p>Follow one investor from age 22 through every quarter the shared data allows. Can a learning system build a better long-term path by choosing between U.S. stocks and bonds, or by continuously mixing the two?</p>
-    <div class="experiment-status experiment-status-static">Frozen backtest · <strong id="sb-period">loading…</strong></div>
+    <div class="experiment-status experiment-status-static">Updated after market close · <strong id="sb-period">loading…</strong></div>
   </header>
 
   <section class="sb-intuition taped-panel" aria-labelledby="sb-intuition-heading">
@@ -37,16 +37,16 @@ permalink: /experiments/stock-bond-bandit/
       <canvas id="sb-growth-chart" data-source="{{ site.baseurl }}/assets/data/stock-bond-bandit.json" role="img" aria-label="Interactive growth comparison of the contextual bandit, SPY, AGG, and a rebalanced 60/40 portfolio"></canvas>
       <div class="market-tooltip sb-tooltip" id="sb-growth-tooltip" hidden><time></time><div></div></div>
     </div>
-    <p class="sb-result-note" id="sb-result-note">Loading the frozen result…</p>
+    <p class="sb-result-note" id="sb-result-note">Loading the latest result…</p>
   </section>
 
   <section class="experiment-findings" aria-labelledby="stock-bond-findings-heading">
     <p class="notebook-kicker">the short version</p>
     <h2 id="stock-bond-findings-heading">Findings and Next Steps</h2>
     <div class="findings-grid">
-      <article><span>What worked</span><h3>The decisive bandit won this history</h3><p>The all-in bandit finished at $617,689, ahead of SPY at $502,040, while also experiencing a smaller maximum drawdown. Its quarterly choice matched the better asset about 66% of the time.</p></article>
-      <article><span>What fell short</span><h3>The smarter mix was not smarter enough</h3><p>The contextual mix finished at $302,226, below the simple 60/40 portfolio at $310,981. Its cautious tilts reduced risk, but its forecasts did not add enough return to justify the extra machinery.</p></article>
-      <article><span>What I learned</span><h3>One path can flatter a rule</h3><p>The all-in result is striking, not conclusive. It comes from one ETF era with one frozen specification, and repeated quarterly deposits make timing and market regime especially important.</p></article>
+      <article><span>What worked</span><h3 id="sb-finding-bandit-heading">Comparing the all-in bandit</h3><p id="sb-finding-bandit">Loading the latest result.</p></article>
+      <article><span>What fell short</span><h3 id="sb-finding-mix-heading">Comparing the contextual mix</h3><p id="sb-finding-mix">Loading the latest result.</p></article>
+      <article><span>What I learned</span><h3>One path can flatter a rule</h3><p>The all-in result is striking, not conclusive. It comes from one ETF era with one fixed specification, and repeated quarterly deposits make timing and market regime especially important.</p></article>
     </div>
     <div class="findings-next"><h3>What I would try next</h3><ul><li>Test earlier stock and bond index proxies across more economic regimes.</li><li>Run rolling out-of-sample tests instead of judging one continuous path.</li><li>Stress-test taxes, execution costs, contribution timing, and simpler allocation rules.</li></ul></div>
   </section>
@@ -80,7 +80,7 @@ permalink: /experiments/stock-bond-bandit/
       <ul>
         <li><strong>Strict event order.</strong> Learn from the completed quarter, observe current context, choose, then wait one trading session to execute.</li>
         <li><strong>No future-fitted preprocessing.</strong> Signal scales, clipping limits, exploration strength, and costs are declared before the first simulated quarter.</li>
-        <li><strong>No parameter search.</strong> There is one frozen run. We do not test many settings and keep the one that wins in hindsight.</li>
+        <li><strong>No parameter search.</strong> There is one fixed run. We do not test many settings and keep the one that wins in hindsight.</li>
         <li><strong>Equal cash flows.</strong> Every strategy receives the same $1,000 on the same quarterly schedule; the dashed chart line shows principal contributed.</li>
       </ul>
     </aside>
@@ -110,7 +110,7 @@ permalink: /experiments/stock-bond-bandit/
 
   <section class="experiment-sources sb-sources" aria-labelledby="sb-sources-heading">
     <h2 id="sb-sources-heading">What this analysis can tell us</h2>
-    <p>This is one historical path with two modern ETFs, and it should not be treated as a retirement recommendation. The investor reaches age <span id="sb-ending-age-copy">44</span> because that is where the available snapshot ends. We do not project any future results. AGG limits the shared history because it launched in September 2003. ETF adjusted prices provide a useful approximation of total returns, but they are not a point-in-time institutional index dataset. The test also ignores taxes and fund tracking differences. Finally, market relationships can change, so the result depends on the particular period tested.</p>
+    <p>This is one historical path with two modern ETFs, and it should not be treated as a retirement recommendation. The investor reaches age <span id="sb-ending-age-copy">44</span> at the latest available market date. We do not project any future results. AGG limits the shared history because it launched in September 2003. ETF adjusted prices provide a useful approximation of total returns, but they are not a point-in-time institutional index dataset. The test also ignores taxes and fund tracking differences. Finally, market relationships can change, so the result depends on the particular period tested.</p>
     <p>Asset descriptions come from <a href="https://www.ssga.com/us/en/individual/etfs/spdr-sp-500-etf-trust-spy" target="_blank" rel="noopener">State Street’s SPY materials ↗</a> and <a href="https://www.ishares.com/us/products/239458/ishares-core-u-s-aggregate-bond-etf" target="_blank" rel="noopener">iShares’ AGG materials ↗</a>. The diversification framing follows the <a href="https://www.investor.gov/introduction-investing/getting-started/asset-allocation" target="_blank" rel="noopener">SEC’s Investor.gov guide ↗</a>. Momentum horizons are informed by the published <a href="https://fairmodel.econ.yale.edu/ec439/mosk.pdf" target="_blank" rel="noopener">time-series momentum research ↗</a>. The risk and turnover guardrails follow the practical concerns described in <a href="https://web.stanford.edu/~boyd/papers/markowitz.html" target="_blank" rel="noopener">Markowitz Portfolio Construction at Seventy ↗</a> and Stanford’s work on <a href="https://stanford.edu/~boyd/papers/portfolio.html" target="_blank" rel="noopener">portfolio optimization with transaction costs ↗</a>. Volatility scaling is motivated by <a href="https://papers.ssrn.com/abstract=2773438" target="_blank" rel="noopener">Moreira and Muir’s volatility-managed portfolios research ↗</a>. The all-in learning rule is the disjoint linear model from the original <a href="https://arxiv.org/abs/1003.0146" target="_blank" rel="noopener">LinUCB paper ↗</a>. Quarterly contributions grow using the <a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">monthly seasonally adjusted CPI-U from the U.S. Bureau of Labor Statistics via FRED ↗</a>. This experiment is for education and is not investment advice.</p>
   </section>
 </article>
