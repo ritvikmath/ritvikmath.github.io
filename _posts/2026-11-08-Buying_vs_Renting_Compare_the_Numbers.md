@@ -83,5 +83,5 @@ where $A$ is accessible financial assets, $P$ is the home value, $C$ is selling 
 The precision of those equations should not be mistaken for certainty in their inputs. Appreciation, rent growth, investment returns, repairs, taxes, and the eventual selling date are unknown. The sensitivity table is therefore as important as the headline result.
 
 <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/housing-calculator.css?v=20261108-4">
-<script src="{{ site.baseurl }}/assets/housing-calculator.js" defer></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/housing-calculator.css?v=20261108-5">
+<script src="{{ site.baseurl }}/assets/housing-calculator.js?v=20261108-5" defer></script>

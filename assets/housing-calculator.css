@@ -6,3 +6,4 @@
 .housing-presets{display:grid;grid-template-columns:minmax(240px,1.35fr) repeat(2,minmax(190px,.65fr));gap:1rem;align-items:end;margin:1.8rem 0;padding:1.25rem;border:1px dashed #bdc8db;background:#f5f8fd}.housing-presets h3{margin:.15rem 0 .3rem;font:700 1.5rem Georgia,serif}.housing-presets p{margin:0;color:#687080;font-size:.84rem;line-height:1.6}.housing-presets label{display:flex;flex-direction:column;gap:.45rem;font-size:.78rem;font-weight:700}.housing-presets select{width:100%;border:1px solid #b8c2d3;border-radius:0;background:#fff;padding:.75rem;font:inherit;color:var(--hc-navy)}.housing-presets select:focus{outline:3px solid rgba(49,95,186,.2);border-color:var(--hc-blue)}
 @media(max-width:820px){.housing-presets{grid-template-columns:1fr 1fr}.housing-presets>div{grid-column:1/-1}}
 @media(max-width:540px){.housing-presets{grid-template-columns:1fr}.housing-presets>div{grid-column:auto}}
+.housing-audit pre{color:var(--hc-navy)!important;line-height:1.6}

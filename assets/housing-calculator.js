@@ -5,9 +5,9 @@
   // Public-only, fictional starting profiles. Rounded moderate anchors reference
   // public West Hills market and ACS figures; no personal financial data is used.
   const HOUSE_PROFILES = Object.freeze({
-    lower: Object.freeze({ name: 'Lower-priced West Hills-area home', price: 750000, rent: 3500, comparableRent: 3500, insurance: 275, hoa: 0, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 150, repairAmount: 10000 }),
+    lower: Object.freeze({ name: 'Lower-priced West Hills-area home', price: 750000, rent: 3500, comparableRent: 3500, insurance: 280, hoa: 0, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 150, repairAmount: 10000 }),
     moderate: Object.freeze({ name: 'Moderately priced West Hills-area home', price: 1000000, rent: 4500, comparableRent: 4500, insurance: 350, hoa: 0, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 200, repairAmount: 15000 }),
-    higher: Object.freeze({ name: 'Higher-priced West Hills-area home', price: 1400000, rent: 6000, comparableRent: 6000, insurance: 500, hoa: 100, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 275, repairAmount: 22000 })
+    higher: Object.freeze({ name: 'Higher-priced West Hills-area home', price: 1400000, rent: 6000, comparableRent: 6000, insurance: 500, hoa: 100, propertyTax: 1.15, maintenance: 1.0, sellingCost: 5.5, utilities: 280, repairAmount: 22000 })
   });
   const FINANCIAL_PROFILES = Object.freeze({
     lower: Object.freeze({ income: 6000, living: 3200, cash: 40000, taxable: 40000, taxableBasis: 35000, retirement: 50000, minimumAccessible: 10000, minimumSurplus: 250, reserveMonths: 4 }),
@@ -228,7 +228,16 @@
   function showError(message){const el=document.querySelector('#housing-error');el.textContent=message;el.hidden=false;}
   function download(name,text,type){const blob=new Blob([text],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 
-  globalThis.ritvikmathHousingPublic = { payment, simulate, evaluate, defaults: { ...PUBLIC_DEFAULTS } };
+  globalThis.ritvikmathHousingPublic = {
+    payment,
+    simulate,
+    evaluate,
+    defaults: { ...PUBLIC_DEFAULTS },
+    profiles: {
+      house: Object.fromEntries(Object.entries(HOUSE_PROFILES).map(([key, values]) => [key, { ...values }])),
+      financial: Object.fromEntries(Object.entries(FINANCIAL_PROFILES).map(([key, values]) => [key, { ...values }]))
+    }
+  };
   if (!root) return;
 
   document.querySelectorAll('.housing-step-nav button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.housing-step-nav button').forEach(x=>x.classList.toggle('active',x===button));document.querySelectorAll('[data-panel]').forEach(panel=>panel.hidden=panel.dataset.panel!==button.dataset.step);}));
