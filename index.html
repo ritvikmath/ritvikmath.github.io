@@ -46,7 +46,7 @@ title:
   <div class="post-grid" id="post-grid">
     {% for post in site.posts %}
     <article class="post-card" data-category="{{ post.category | downcase }}" data-authors-choice="{{ post.authors_choice | default: false }}" data-methods="{{ post.methods | join: '|' | downcase }}" data-search="{{ post.title | strip_html | downcase }} {{ post.category | downcase }} {{ post.methods | join: ' ' | downcase }} {{ post.summary | downcase }} {{ post.search_terms | downcase }}">
-      <a class="card-image" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image }}" alt="" loading="lazy"><span>{{ post.category | default: 'Analysis' }}</span></a>
+      <a class="card-image{% if post.thumbnail_fit == 'contain' %} card-image--contain{% endif %}" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image }}" alt="" loading="lazy"><span>{{ post.category | default: 'Analysis' }}</span></a>
       <div class="card-body">
         <div class="card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time><span>{{ post.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span></div>
         <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>

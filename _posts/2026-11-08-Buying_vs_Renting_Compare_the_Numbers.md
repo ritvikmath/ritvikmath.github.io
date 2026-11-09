@@ -3,6 +3,7 @@ layout: post
 comments: false
 title: "Buying vs. Renting: Compare the Numbers"
 image: /images/header_buy_vs_rent.svg
+thumbnail_fit: contain
 category: mathematics
 methods: [Financial modeling, Simulation, Sensitivity analysis, Data visualization]
 summary: An interactive, private-by-design calculator for comparing the cash flow, equity, opportunity cost, and uncertainty of buying a home versus renting.
