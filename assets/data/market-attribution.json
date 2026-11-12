@@ -1,3715 +1,3715 @@
 {
   "snapshot": {
-    "prior_date": "2026-11-06",
-    "date": "2026-11-09",
-    "holdings_date": "2026-11-09",
-    "generated_at": "2026-11-11T08:09:46+00:00",
-    "spy_prior_close": 735.29,
-    "spy_close": 752.69,
-    "spy_return_pct": 2.3664,
-    "basket_return_pct": 2.3463,
-    "residual_bps": 2.012,
+    "prior_date": "2026-11-09",
+    "date": "2026-11-10",
+    "holdings_date": "2026-11-10",
+    "generated_at": "2026-11-12T08:44:06+00:00",
+    "spy_prior_close": 752.69,
+    "spy_close": 749.92,
+    "spy_return_pct": -0.368,
+    "basket_return_pct": -0.3842,
+    "residual_bps": 1.613,
     "covered_holdings": 503,
-    "covered_end_weight_pct": 99.8897,
-    "advancers": 423,
-    "decliners": 78,
-    "unchanged": 2,
-    "positive_bps": 272.554,
-    "negative_bps": -37.924
+    "covered_end_weight_pct": 99.8898,
+    "advancers": 247,
+    "decliners": 250,
+    "unchanged": 6,
+    "positive_bps": 48.848,
+    "negative_bps": -87.263
   },
   "top_positive": [
     {
       "name": "Broadcom Inc",
       "ticker": "AVGO",
-      "weight_pct": 2.1977,
-      "return_pct": 8.7814,
-      "contribution_bps": 19.299
-    },
-    {
-      "name": "Apple Inc",
-      "ticker": "AAPL",
-      "weight_pct": 7.8595,
-      "return_pct": 2.4301,
-      "contribution_bps": 19.1
-    },
-    {
-      "name": "Microsoft Corp",
-      "ticker": "MSFT",
-      "weight_pct": 6.1976,
-      "return_pct": 2.7459,
-      "contribution_bps": 17.018
-    },
-    {
-      "name": "Advanced Micro Devices",
-      "ticker": "AMD",
-      "weight_pct": 1.1529,
-      "return_pct": 13.2594,
-      "contribution_bps": 15.287
+      "weight_pct": 2.3357,
+      "return_pct": 3.9126,
+      "contribution_bps": 9.139
     },
     {
       "name": "Amazon.Com Inc",
       "ticker": "AMZN",
-      "weight_pct": 4.0034,
-      "return_pct": 2.9425,
-      "contribution_bps": 11.78
-    },
-    {
-      "name": "Meta Platforms Inc Class A",
-      "ticker": "META",
-      "weight_pct": 2.1162,
-      "return_pct": 5.1168,
-      "contribution_bps": 10.828
-    },
-    {
-      "name": "Tesla Inc",
-      "ticker": "TSLA",
-      "weight_pct": 1.5879,
-      "return_pct": 5.5357,
-      "contribution_bps": 8.79
-    },
-    {
-      "name": "Micron Technology Inc",
-      "ticker": "MU",
-      "weight_pct": 1.2257,
-      "return_pct": 6.2536,
-      "contribution_bps": 7.665
+      "weight_pct": 4.0258,
+      "return_pct": 1.476,
+      "contribution_bps": 5.942
     },
     {
       "name": "Eli Lilly + Co",
       "ticker": "LLY",
-      "weight_pct": 1.704,
-      "return_pct": 4.2799,
-      "contribution_bps": 7.293
+      "weight_pct": 1.736,
+      "return_pct": 1.4406,
+      "contribution_bps": 2.501
     },
     {
-      "name": "Applied Materials Inc",
-      "ticker": "AMAT",
-      "weight_pct": 0.4154,
-      "return_pct": 11.3699,
-      "contribution_bps": 4.723
+      "name": "Berkshire Hathaway Inc Cl B",
+      "ticker": "BRK.B",
+      "weight_pct": 1.6462,
+      "return_pct": 1.4063,
+      "contribution_bps": 2.315
     },
     {
-      "name": "Lam Research Corp",
-      "ticker": "LRCX",
-      "weight_pct": 0.3944,
-      "return_pct": 10.4121,
-      "contribution_bps": 4.106
+      "name": "Advanced Micro Devices",
+      "ticker": "AMD",
+      "weight_pct": 1.2757,
+      "return_pct": 1.3036,
+      "contribution_bps": 1.663
     },
     {
-      "name": "Palantir Technologies Inc A",
-      "ticker": "PLTR",
-      "weight_pct": 0.5805,
-      "return_pct": 5.4994,
-      "contribution_bps": 3.192
+      "name": "Unitedhealth Group Inc",
+      "ticker": "UNH",
+      "weight_pct": 0.5485,
+      "return_pct": 1.8862,
+      "contribution_bps": 1.035
+    },
+    {
+      "name": "Rtx Corp",
+      "ticker": "RTX",
+      "weight_pct": 0.4067,
+      "return_pct": 2.0172,
+      "contribution_bps": 0.82
+    },
+    {
+      "name": "Tesla Inc",
+      "ticker": "TSLA",
+      "weight_pct": 1.6372,
+      "return_pct": 0.4576,
+      "contribution_bps": 0.749
+    },
+    {
+      "name": "Cvs Health Corp",
+      "ticker": "CVS",
+      "weight_pct": 0.1676,
+      "return_pct": 4.4106,
+      "contribution_bps": 0.739
+    },
+    {
+      "name": "Texas Instruments Inc",
+      "ticker": "TXN",
+      "weight_pct": 0.4152,
+      "return_pct": 1.6197,
+      "contribution_bps": 0.672
+    },
+    {
+      "name": "Coca Cola Co/The",
+      "ticker": "KO",
+      "weight_pct": 0.5715,
+      "return_pct": 0.9164,
+      "contribution_bps": 0.524
+    },
+    {
+      "name": "Lockheed Martin Corp",
+      "ticker": "LMT",
+      "weight_pct": 0.1837,
+      "return_pct": 2.5383,
+      "contribution_bps": 0.466
     }
   ],
   "top_negative": [
     {
       "name": "Nvidia Corp",
       "ticker": "NVDA",
-      "weight_pct": 7.1046,
-      "return_pct": -4.2703,
-      "contribution_bps": -30.339
+      "weight_pct": 6.6438,
+      "return_pct": -5.4738,
+      "contribution_bps": -36.366
     },
     {
-      "name": "Philip Morris International",
-      "ticker": "PM",
-      "weight_pct": 0.4852,
-      "return_pct": -2.4055,
-      "contribution_bps": -1.167
+      "name": "Microsoft Corp",
+      "ticker": "MSFT",
+      "weight_pct": 6.2203,
+      "return_pct": -2.2048,
+      "contribution_bps": -13.714
     },
     {
-      "name": "Exxonmobil Holdings Corp",
-      "ticker": "XOM",
-      "weight_pct": 1.0727,
-      "return_pct": -0.6873,
-      "contribution_bps": -0.737
+      "name": "Apple Inc",
+      "ticker": "AAPL",
+      "weight_pct": 7.8642,
+      "return_pct": -0.6216,
+      "contribution_bps": -4.889
     },
     {
-      "name": "Accenture Plc Cl A",
-      "ticker": "ACN",
-      "weight_pct": 0.2507,
-      "return_pct": -2.3532,
-      "contribution_bps": -0.59
+      "name": "Micron Technology Inc",
+      "ticker": "MU",
+      "weight_pct": 1.2723,
+      "return_pct": -1.0966,
+      "contribution_bps": -1.395
     },
     {
-      "name": "Chevron Corp",
-      "ticker": "CVX",
-      "weight_pct": 0.6609,
-      "return_pct": -0.8607,
-      "contribution_bps": -0.569
+      "name": "Ge Vernova Inc",
+      "ticker": "GEV",
+      "weight_pct": 0.3393,
+      "return_pct": -3.8947,
+      "contribution_bps": -1.321
     },
     {
-      "name": "Conocophillips",
-      "ticker": "COP",
-      "weight_pct": 0.2576,
-      "return_pct": -1.3209,
-      "contribution_bps": -0.34
+      "name": "Moderna Inc",
+      "ticker": "MRNA",
+      "weight_pct": 0.1535,
+      "return_pct": -6.7546,
+      "contribution_bps": -1.037
     },
     {
-      "name": "Capital One Financial Corp",
-      "ticker": "COF",
-      "weight_pct": 0.1946,
-      "return_pct": -1.6298,
-      "contribution_bps": -0.317
+      "name": "Caterpillar Inc",
+      "ticker": "CAT",
+      "weight_pct": 0.4229,
+      "return_pct": -2.3895,
+      "contribution_bps": -1.01
     },
     {
-      "name": "Elevance Health Inc",
-      "ticker": "ELV",
-      "weight_pct": 0.145,
-      "return_pct": -1.7316,
-      "contribution_bps": -0.251
+      "name": "Intel Corp",
+      "ticker": "INTC",
+      "weight_pct": 0.4532,
+      "return_pct": -2.0886,
+      "contribution_bps": -0.946
     },
     {
-      "name": "Take Two Interactive Softwre",
-      "ticker": "TTWO",
-      "weight_pct": 0.0594,
-      "return_pct": -3.4765,
-      "contribution_bps": -0.207
+      "name": "Newmont Corp",
+      "ticker": "NEM",
+      "weight_pct": 0.2025,
+      "return_pct": -4.1547,
+      "contribution_bps": -0.841
     },
     {
-      "name": "Humana Inc",
-      "ticker": "HUM",
-      "weight_pct": 0.0822,
-      "return_pct": -2.4254,
-      "contribution_bps": -0.199
+      "name": "Alphabet Inc Cl C",
+      "ticker": "GOOG",
+      "weight_pct": 2.089,
+      "return_pct": -0.3811,
+      "contribution_bps": -0.796
     },
     {
-      "name": "First Solar Inc",
-      "ticker": "FSLR",
-      "weight_pct": 0.0341,
-      "return_pct": -4.738,
-      "contribution_bps": -0.161
+      "name": "Alphabet Inc Cl A",
+      "ticker": "GOOGL",
+      "weight_pct": 2.5983,
+      "return_pct": -0.2672,
+      "contribution_bps": -0.694
     },
     {
-      "name": "Pfizer Inc",
-      "ticker": "PFE",
-      "weight_pct": 0.2633,
-      "return_pct": -0.5444,
-      "contribution_bps": -0.143
+      "name": "Applovin Corp Class A",
+      "ticker": "APP",
+      "weight_pct": 0.1708,
+      "return_pct": -3.5341,
+      "contribution_bps": -0.604
     }
   ],
   "constituents": [
     {
       "name": "Broadcom Inc",
       "ticker": "AVGO",
-      "weight_pct": 2.1977,
-      "return_pct": 8.7814,
-      "contribution_bps": 19.299
-    },
-    {
-      "name": "Apple Inc",
-      "ticker": "AAPL",
-      "weight_pct": 7.8595,
-      "return_pct": 2.4301,
-      "contribution_bps": 19.1
-    },
-    {
-      "name": "Microsoft Corp",
-      "ticker": "MSFT",
-      "weight_pct": 6.1976,
-      "return_pct": 2.7459,
-      "contribution_bps": 17.018
-    },
-    {
-      "name": "Advanced Micro Devices",
-      "ticker": "AMD",
-      "weight_pct": 1.1529,
-      "return_pct": 13.2594,
-      "contribution_bps": 15.287
+      "weight_pct": 2.3357,
+      "return_pct": 3.9126,
+      "contribution_bps": 9.139
     },
     {
       "name": "Amazon.Com Inc",
       "ticker": "AMZN",
-      "weight_pct": 4.0034,
-      "return_pct": 2.9425,
-      "contribution_bps": 11.78
-    },
-    {
-      "name": "Meta Platforms Inc Class A",
-      "ticker": "META",
-      "weight_pct": 2.1162,
-      "return_pct": 5.1168,
-      "contribution_bps": 10.828
-    },
-    {
-      "name": "Tesla Inc",
-      "ticker": "TSLA",
-      "weight_pct": 1.5879,
-      "return_pct": 5.5357,
-      "contribution_bps": 8.79
-    },
-    {
-      "name": "Micron Technology Inc",
-      "ticker": "MU",
-      "weight_pct": 1.2257,
-      "return_pct": 6.2536,
-      "contribution_bps": 7.665
+      "weight_pct": 4.0258,
+      "return_pct": 1.476,
+      "contribution_bps": 5.942
     },
     {
       "name": "Eli Lilly + Co",
       "ticker": "LLY",
-      "weight_pct": 1.704,
-      "return_pct": 4.2799,
-      "contribution_bps": 7.293
-    },
-    {
-      "name": "Applied Materials Inc",
-      "ticker": "AMAT",
-      "weight_pct": 0.4154,
-      "return_pct": 11.3699,
-      "contribution_bps": 4.723
-    },
-    {
-      "name": "Lam Research Corp",
-      "ticker": "LRCX",
-      "weight_pct": 0.3944,
-      "return_pct": 10.4121,
-      "contribution_bps": 4.106
-    },
-    {
-      "name": "Palantir Technologies Inc A",
-      "ticker": "PLTR",
-      "weight_pct": 0.5805,
-      "return_pct": 5.4994,
-      "contribution_bps": 3.192
-    },
-    {
-      "name": "Jpmorgan Chase + Co",
-      "ticker": "JPM",
-      "weight_pct": 1.3984,
-      "return_pct": 2.2691,
-      "contribution_bps": 3.173
-    },
-    {
-      "name": "Alphabet Inc Cl A",
-      "ticker": "GOOGL",
-      "weight_pct": 2.6284,
-      "return_pct": 1.1834,
-      "contribution_bps": 3.11
-    },
-    {
-      "name": "Cisco Systems Inc",
-      "ticker": "CSCO",
-      "weight_pct": 0.5819,
-      "return_pct": 5.1145,
-      "contribution_bps": 2.976
-    },
-    {
-      "name": "Caterpillar Inc",
-      "ticker": "CAT",
-      "weight_pct": 0.4037,
-      "return_pct": 7.2051,
-      "contribution_bps": 2.909
-    },
-    {
-      "name": "Kla Corp",
-      "ticker": "KLAC",
-      "weight_pct": 0.2847,
-      "return_pct": 9.3075,
-      "contribution_bps": 2.65
-    },
-    {
-      "name": "Texas Instruments Inc",
-      "ticker": "TXN",
-      "weight_pct": 0.3985,
-      "return_pct": 6.6232,
-      "contribution_bps": 2.64
-    },
-    {
-      "name": "Arista Networks Inc",
-      "ticker": "ANET",
-      "weight_pct": 0.2813,
-      "return_pct": 8.9988,
-      "contribution_bps": 2.532
-    },
-    {
-      "name": "Intel Corp",
-      "ticker": "INTC",
-      "weight_pct": 0.4397,
-      "return_pct": 5.4904,
-      "contribution_bps": 2.414
-    },
-    {
-      "name": "Analog Devices Inc",
-      "ticker": "ADI",
-      "weight_pct": 0.2784,
-      "return_pct": 8.5543,
-      "contribution_bps": 2.381
-    },
-    {
-      "name": "Amphenol Corp Cl A",
-      "ticker": "APH",
-      "weight_pct": 0.2892,
-      "return_pct": 8.2049,
-      "contribution_bps": 2.372
-    },
-    {
-      "name": "Ge Vernova Inc",
-      "ticker": "GEV",
-      "weight_pct": 0.3241,
-      "return_pct": 7.1347,
-      "contribution_bps": 2.313
-    },
-    {
-      "name": "Johnson + Johnson",
-      "ticker": "JNJ",
-      "weight_pct": 1.0474,
-      "return_pct": 2.1324,
-      "contribution_bps": 2.233
-    },
-    {
-      "name": "Palo Alto Networks Inc",
-      "ticker": "PANW",
-      "weight_pct": 0.4023,
-      "return_pct": 5.4327,
-      "contribution_bps": 2.186
-    },
-    {
-      "name": "General Electric",
-      "ticker": "GE",
-      "weight_pct": 0.5276,
-      "return_pct": 3.8052,
-      "contribution_bps": 2.008
-    },
-    {
-      "name": "Crowdstrike Holdings Inc   A",
-      "ticker": "CRWD",
-      "weight_pct": 0.3473,
-      "return_pct": 5.385,
-      "contribution_bps": 1.87
-    },
-    {
-      "name": "Goldman Sachs Group Inc",
-      "ticker": "GS",
-      "weight_pct": 0.3966,
-      "return_pct": 4.6661,
-      "contribution_bps": 1.851
-    },
-    {
-      "name": "Marvell Technology Inc",
-      "ticker": "MRVL",
-      "weight_pct": 0.1947,
-      "return_pct": 9.4901,
-      "contribution_bps": 1.848
-    },
-    {
-      "name": "Seagate Technology Holdings",
-      "ticker": "STX",
-      "weight_pct": 0.1644,
-      "return_pct": 9.7941,
-      "contribution_bps": 1.61
-    },
-    {
-      "name": "Thermo Fisher Scientific Inc",
-      "ticker": "TMO",
-      "weight_pct": 0.4039,
-      "return_pct": 3.8675,
-      "contribution_bps": 1.562
-    },
-    {
-      "name": "Home Depot Inc",
-      "ticker": "HD",
-      "weight_pct": 0.539,
-      "return_pct": 2.8969,
-      "contribution_bps": 1.561
-    },
-    {
-      "name": "Alphabet Inc Cl C",
-      "ticker": "GOOG",
-      "weight_pct": 2.1227,
-      "return_pct": 0.7326,
-      "contribution_bps": 1.555
-    },
-    {
-      "name": "Monolithic Power Systems Inc",
-      "ticker": "MPWR",
-      "weight_pct": 0.0922,
-      "return_pct": 16.5998,
-      "contribution_bps": 1.531
-    },
-    {
-      "name": "Western Digital Corp",
-      "ticker": "WDC",
-      "weight_pct": 0.1496,
-      "return_pct": 9.8567,
-      "contribution_bps": 1.475
-    },
-    {
-      "name": "Rtx Corp",
-      "ticker": "RTX",
-      "weight_pct": 0.4019,
-      "return_pct": 3.5773,
-      "contribution_bps": 1.438
-    },
-    {
-      "name": "Constellation Energy",
-      "ticker": "CEG",
-      "weight_pct": 0.1296,
-      "return_pct": 10.4581,
-      "contribution_bps": 1.355
+      "weight_pct": 1.736,
+      "return_pct": 1.4406,
+      "contribution_bps": 2.501
     },
     {
       "name": "Berkshire Hathaway Inc Cl B",
       "ticker": "BRK.B",
-      "weight_pct": 1.6723,
-      "return_pct": 0.7637,
-      "contribution_bps": 1.277
+      "weight_pct": 1.6462,
+      "return_pct": 1.4063,
+      "contribution_bps": 2.315
     },
     {
-      "name": "Corning Inc",
-      "ticker": "GLW",
-      "weight_pct": 0.1323,
-      "return_pct": 9.2528,
-      "contribution_bps": 1.224
-    },
-    {
-      "name": "Quanta Services Inc",
-      "ticker": "PWR",
-      "weight_pct": 0.1277,
-      "return_pct": 9.3511,
-      "contribution_bps": 1.195
-    },
-    {
-      "name": "Sandisk Corp",
-      "ticker": "SNDK",
-      "weight_pct": 0.1918,
-      "return_pct": 6.1612,
-      "contribution_bps": 1.182
-    },
-    {
-      "name": "Bank Of America Corp",
-      "ticker": "BAC",
-      "weight_pct": 0.5056,
-      "return_pct": 2.2865,
-      "contribution_bps": 1.156
-    },
-    {
-      "name": "Oracle Corp",
-      "ticker": "ORCL",
-      "weight_pct": 0.359,
-      "return_pct": 3.1783,
-      "contribution_bps": 1.141
-    },
-    {
-      "name": "Eaton Corp Plc",
-      "ticker": "ETN",
-      "weight_pct": 0.208,
-      "return_pct": 5.1446,
-      "contribution_bps": 1.07
-    },
-    {
-      "name": "Procter + Gamble Co/The",
-      "ticker": "PG",
-      "weight_pct": 0.6048,
-      "return_pct": 1.7654,
-      "contribution_bps": 1.068
-    },
-    {
-      "name": "Vertiv Holdings Co A",
-      "ticker": "VRT",
-      "weight_pct": 0.1108,
-      "return_pct": 9.6303,
-      "contribution_bps": 1.067
-    },
-    {
-      "name": "Morgan Stanley",
-      "ticker": "MS",
-      "weight_pct": 0.3405,
-      "return_pct": 3.1195,
-      "contribution_bps": 1.062
-    },
-    {
-      "name": "Qualcomm Inc",
-      "ticker": "QCOM",
-      "weight_pct": 0.278,
-      "return_pct": 3.6636,
-      "contribution_bps": 1.018
-    },
-    {
-      "name": "Coherent Corp",
-      "ticker": "COHR",
-      "weight_pct": 0.0595,
-      "return_pct": 16.7937,
-      "contribution_bps": 0.999
-    },
-    {
-      "name": "Bloom Energy Corp  A",
-      "ticker": "BE",
-      "weight_pct": 0.0803,
-      "return_pct": 11.9141,
-      "contribution_bps": 0.956
-    },
-    {
-      "name": "Costco Wholesale Corp",
-      "ticker": "COST",
-      "weight_pct": 0.7351,
-      "return_pct": 1.1978,
-      "contribution_bps": 0.881
-    },
-    {
-      "name": "Moderna Inc",
-      "ticker": "MRNA",
-      "weight_pct": 0.1485,
-      "return_pct": 5.8263,
-      "contribution_bps": 0.865
-    },
-    {
-      "name": "Dell Technologies  C",
-      "ticker": "DELL",
-      "weight_pct": 0.1563,
-      "return_pct": 5.412,
-      "contribution_bps": 0.846
-    },
-    {
-      "name": "Uber Technologies Inc",
-      "ticker": "UBER",
-      "weight_pct": 0.2204,
-      "return_pct": 3.7615,
-      "contribution_bps": 0.829
-    },
-    {
-      "name": "Blackrock Inc",
-      "ticker": "BLK",
-      "weight_pct": 0.2671,
-      "return_pct": 3.0402,
-      "contribution_bps": 0.812
-    },
-    {
-      "name": "Lumentum Holdings Inc",
-      "ticker": "LITE",
-      "weight_pct": 0.0751,
-      "return_pct": 10.689,
-      "contribution_bps": 0.802
-    },
-    {
-      "name": "Applovin Corp Class A",
-      "ticker": "APP",
-      "weight_pct": 0.1668,
-      "return_pct": 4.8004,
-      "contribution_bps": 0.801
-    },
-    {
-      "name": "Ferguson Enterprises Inc",
-      "ticker": "FERG",
-      "weight_pct": 0.0711,
-      "return_pct": 11.2238,
-      "contribution_bps": 0.798
-    },
-    {
-      "name": "Merck + Co. Inc.",
-      "ticker": "MRK",
-      "weight_pct": 0.5695,
-      "return_pct": 1.3835,
-      "contribution_bps": 0.788
-    },
-    {
-      "name": "Deere + Co",
-      "ticker": "DE",
-      "weight_pct": 0.265,
-      "return_pct": 2.9227,
-      "contribution_bps": 0.775
-    },
-    {
-      "name": "Parker Hannifin Corp",
-      "ticker": "PH",
-      "weight_pct": 0.1822,
-      "return_pct": 4.2276,
-      "contribution_bps": 0.77
-    },
-    {
-      "name": "Citigroup Inc",
-      "ticker": "C",
-      "weight_pct": 0.3139,
-      "return_pct": 2.4527,
-      "contribution_bps": 0.77
-    },
-    {
-      "name": "Marathon Petroleum Corp",
-      "ticker": "MPC",
-      "weight_pct": 0.1645,
-      "return_pct": 4.5984,
-      "contribution_bps": 0.756
-    },
-    {
-      "name": "Wells Fargo + Co",
-      "ticker": "WFC",
-      "weight_pct": 0.3993,
-      "return_pct": 1.8466,
-      "contribution_bps": 0.737
-    },
-    {
-      "name": "Starbucks Corp",
-      "ticker": "SBUX",
-      "weight_pct": 0.1892,
-      "return_pct": 3.8232,
-      "contribution_bps": 0.723
-    },
-    {
-      "name": "Cadence Design Sys Inc",
-      "ticker": "CDNS",
-      "weight_pct": 0.1386,
-      "return_pct": 5.1919,
-      "contribution_bps": 0.72
-    },
-    {
-      "name": "United Rentals Inc",
-      "ticker": "URI",
-      "weight_pct": 0.1032,
-      "return_pct": 6.8778,
-      "contribution_bps": 0.71
-    },
-    {
-      "name": "Newmont Corp",
-      "ticker": "NEM",
-      "weight_pct": 0.2003,
-      "return_pct": 3.515,
-      "contribution_bps": 0.704
-    },
-    {
-      "name": "Teradyne Inc",
-      "ticker": "TER",
-      "weight_pct": 0.0539,
-      "return_pct": 12.7303,
-      "contribution_bps": 0.686
-    },
-    {
-      "name": "Lockheed Martin Corp",
-      "ticker": "LMT",
-      "weight_pct": 0.1813,
-      "return_pct": 3.7226,
-      "contribution_bps": 0.675
-    },
-    {
-      "name": "Lowe S Cos Inc",
-      "ticker": "LOW",
-      "weight_pct": 0.198,
-      "return_pct": 3.3623,
-      "contribution_bps": 0.666
-    },
-    {
-      "name": "Freeport Mcmoran Inc",
-      "ticker": "FCX",
-      "weight_pct": 0.1341,
-      "return_pct": 4.8973,
-      "contribution_bps": 0.657
-    },
-    {
-      "name": "Howmet Aerospace Inc",
-      "ticker": "HWM",
-      "weight_pct": 0.129,
-      "return_pct": 5.0678,
-      "contribution_bps": 0.654
-    },
-    {
-      "name": "Trane Technologies Plc",
-      "ticker": "TT",
-      "weight_pct": 0.1393,
-      "return_pct": 4.6794,
-      "contribution_bps": 0.652
-    },
-    {
-      "name": "Equinix Inc",
-      "ticker": "EQIX",
-      "weight_pct": 0.1574,
-      "return_pct": 4.1265,
-      "contribution_bps": 0.65
-    },
-    {
-      "name": "Walt Disney Co/The",
-      "ticker": "DIS",
-      "weight_pct": 0.3169,
-      "return_pct": 2.03,
-      "contribution_bps": 0.643
-    },
-    {
-      "name": "Union Pacific Corp",
-      "ticker": "UNP",
-      "weight_pct": 0.2714,
-      "return_pct": 2.3608,
-      "contribution_bps": 0.641
-    },
-    {
-      "name": "Emerson Electric Co",
-      "ticker": "EMR",
-      "weight_pct": 0.1422,
-      "return_pct": 4.4164,
-      "contribution_bps": 0.628
-    },
-    {
-      "name": "Johnson Controls Internation",
-      "ticker": "JCI",
-      "weight_pct": 0.1285,
-      "return_pct": 4.7841,
-      "contribution_bps": 0.615
-    },
-    {
-      "name": "Honeywell Aerospace Inc",
-      "ticker": "HONA",
-      "weight_pct": 0.0764,
-      "return_pct": 7.7492,
-      "contribution_bps": 0.592
-    },
-    {
-      "name": "Hewlett Packard Enterprise",
-      "ticker": "HPE",
-      "weight_pct": 0.0935,
-      "return_pct": 6.1872,
-      "contribution_bps": 0.578
-    },
-    {
-      "name": "Ciena Corp",
-      "ticker": "CIEN",
-      "weight_pct": 0.0542,
-      "return_pct": 10.6578,
-      "contribution_bps": 0.577
-    },
-    {
-      "name": "Abbvie Inc",
-      "ticker": "ABBV",
-      "weight_pct": 0.8099,
-      "return_pct": 0.6831,
-      "contribution_bps": 0.553
-    },
-    {
-      "name": "Mcdonald S Corp",
-      "ticker": "MCD",
-      "weight_pct": 0.3076,
-      "return_pct": 1.7793,
-      "contribution_bps": 0.547
-    },
-    {
-      "name": "Blackstone Inc",
-      "ticker": "BX",
-      "weight_pct": 0.1411,
-      "return_pct": 3.8075,
-      "contribution_bps": 0.537
-    },
-    {
-      "name": "Prologis Inc",
-      "ticker": "PLD",
-      "weight_pct": 0.1898,
-      "return_pct": 2.8277,
-      "contribution_bps": 0.537
-    },
-    {
-      "name": "Te Connectivity Plc",
-      "ticker": "TEL",
-      "weight_pct": 0.0943,
-      "return_pct": 5.6712,
-      "contribution_bps": 0.535
-    },
-    {
-      "name": "Target Corp",
-      "ticker": "TGT",
-      "weight_pct": 0.1125,
-      "return_pct": 4.7282,
-      "contribution_bps": 0.532
-    },
-    {
-      "name": "Comfort Systems Usa Inc",
-      "ticker": "FIX",
-      "weight_pct": 0.0564,
-      "return_pct": 9.4084,
-      "contribution_bps": 0.53
-    },
-    {
-      "name": "T Mobile Us Inc",
-      "ticker": "TMUS",
-      "weight_pct": 0.123,
-      "return_pct": 4.1356,
-      "contribution_bps": 0.509
-    },
-    {
-      "name": "Synopsys Inc",
-      "ticker": "SNPS",
-      "weight_pct": 0.1357,
-      "return_pct": 3.6651,
-      "contribution_bps": 0.497
-    },
-    {
-      "name": "Sherwin Williams Co/The",
-      "ticker": "SHW",
-      "weight_pct": 0.1233,
-      "return_pct": 4.0192,
-      "contribution_bps": 0.496
-    },
-    {
-      "name": "Tjx Companies Inc",
-      "ticker": "TJX",
-      "weight_pct": 0.2352,
-      "return_pct": 2.0916,
-      "contribution_bps": 0.492
+      "name": "Advanced Micro Devices",
+      "ticker": "AMD",
+      "weight_pct": 1.2757,
+      "return_pct": 1.3036,
+      "contribution_bps": 1.663
     },
     {
       "name": "Unitedhealth Group Inc",
       "ticker": "UNH",
-      "weight_pct": 0.5566,
-      "return_pct": 0.8804,
-      "contribution_bps": 0.49
+      "weight_pct": 0.5485,
+      "return_pct": 1.8862,
+      "contribution_bps": 1.035
     },
     {
-      "name": "Flex Ltd",
-      "ticker": "FLEX",
-      "weight_pct": 0.0405,
-      "return_pct": 12.0235,
-      "contribution_bps": 0.487
+      "name": "Rtx Corp",
+      "ticker": "RTX",
+      "weight_pct": 0.4067,
+      "return_pct": 2.0172,
+      "contribution_bps": 0.82
     },
     {
-      "name": "General Motors Co",
-      "ticker": "GM",
-      "weight_pct": 0.1187,
-      "return_pct": 4.0506,
-      "contribution_bps": 0.481
-    },
-    {
-      "name": "Danaher Corp",
-      "ticker": "DHR",
-      "weight_pct": 0.2267,
-      "return_pct": 2.1151,
-      "contribution_bps": 0.479
-    },
-    {
-      "name": "Gilead Sciences Inc",
-      "ticker": "GILD",
-      "weight_pct": 0.3255,
-      "return_pct": 1.4561,
-      "contribution_bps": 0.474
-    },
-    {
-      "name": "Valero Energy Corp",
-      "ticker": "VLO",
-      "weight_pct": 0.1569,
-      "return_pct": 2.973,
-      "contribution_bps": 0.467
-    },
-    {
-      "name": "Phillips 66",
-      "ticker": "PSX",
-      "weight_pct": 0.1541,
-      "return_pct": 2.9709,
-      "contribution_bps": 0.458
-    },
-    {
-      "name": "Williams Cos Inc",
-      "ticker": "WMB",
-      "weight_pct": 0.1234,
-      "return_pct": 3.6985,
-      "contribution_bps": 0.457
-    },
-    {
-      "name": "Vistra Corp",
-      "ticker": "VST",
-      "weight_pct": 0.0619,
-      "return_pct": 7.3077,
-      "contribution_bps": 0.453
-    },
-    {
-      "name": "Keysight Technologies In",
-      "ticker": "KEYS",
-      "weight_pct": 0.073,
-      "return_pct": 6.1882,
-      "contribution_bps": 0.452
-    },
-    {
-      "name": "Honeywell International Inc",
-      "ticker": "HON",
-      "weight_pct": 0.11,
-      "return_pct": 4.0673,
-      "contribution_bps": 0.447
-    },
-    {
-      "name": "Intuitive Surgical Inc",
-      "ticker": "ISRG",
-      "weight_pct": 0.2517,
-      "return_pct": 1.7138,
-      "contribution_bps": 0.431
-    },
-    {
-      "name": "Delta Air Lines Inc",
-      "ticker": "DAL",
-      "weight_pct": 0.0814,
-      "return_pct": 5.2752,
-      "contribution_bps": 0.43
-    },
-    {
-      "name": "Amgen Inc",
-      "ticker": "AMGN",
-      "weight_pct": 0.3917,
-      "return_pct": 1.0447,
-      "contribution_bps": 0.409
-    },
-    {
-      "name": "Apollo Global Management Inc",
-      "ticker": "APO",
-      "weight_pct": 0.0868,
-      "return_pct": 4.6681,
-      "contribution_bps": 0.405
-    },
-    {
-      "name": "Csx Corp",
-      "ticker": "CSX",
-      "weight_pct": 0.143,
-      "return_pct": 2.7687,
-      "contribution_bps": 0.396
-    },
-    {
-      "name": "Mastercard Inc   A",
-      "ticker": "MA",
-      "weight_pct": 0.8304,
-      "return_pct": 0.4765,
-      "contribution_bps": 0.396
-    },
-    {
-      "name": "United Airlines Holdings Inc",
-      "ticker": "UAL",
-      "weight_pct": 0.0577,
-      "return_pct": 6.7767,
-      "contribution_bps": 0.391
-    },
-    {
-      "name": "Wabtec Corp",
-      "ticker": "WAB",
-      "weight_pct": 0.0752,
-      "return_pct": 5.1483,
-      "contribution_bps": 0.387
-    },
-    {
-      "name": "Royal Caribbean Cruises Ltd",
-      "ticker": "RCL",
-      "weight_pct": 0.1278,
-      "return_pct": 3.0016,
-      "contribution_bps": 0.384
-    },
-    {
-      "name": "Idexx Laboratories Inc",
-      "ticker": "IDXX",
-      "weight_pct": 0.0836,
-      "return_pct": 4.5278,
-      "contribution_bps": 0.379
-    },
-    {
-      "name": "Bank Of New York Mellon Corp",
-      "ticker": "BNY",
-      "weight_pct": 0.1575,
-      "return_pct": 2.3761,
-      "contribution_bps": 0.374
-    },
-    {
-      "name": "Pnc Financial Services Group",
-      "ticker": "PNC",
-      "weight_pct": 0.1415,
-      "return_pct": 2.6267,
-      "contribution_bps": 0.372
-    },
-    {
-      "name": "Fedex Corp",
-      "ticker": "FDX",
-      "weight_pct": 0.1067,
-      "return_pct": 3.4724,
-      "contribution_bps": 0.371
-    },
-    {
-      "name": "Linde Plc",
-      "ticker": "LIN",
-      "weight_pct": 0.3736,
-      "return_pct": 0.9859,
-      "contribution_bps": 0.368
-    },
-    {
-      "name": "Us Bancorp",
-      "ticker": "USB",
-      "weight_pct": 0.1457,
-      "return_pct": 2.5231,
-      "contribution_bps": 0.368
-    },
-    {
-      "name": "Cencora Inc",
-      "ticker": "COR",
-      "weight_pct": 0.1001,
-      "return_pct": 3.6575,
-      "contribution_bps": 0.366
-    },
-    {
-      "name": "On Semiconductor",
-      "ticker": "ON",
-      "weight_pct": 0.0388,
-      "return_pct": 9.1613,
-      "contribution_bps": 0.355
-    },
-    {
-      "name": "Cummins Inc",
-      "ticker": "CMI",
-      "weight_pct": 0.0973,
-      "return_pct": 3.6439,
-      "contribution_bps": 0.355
-    },
-    {
-      "name": "Netflix Inc",
-      "ticker": "NFLX",
-      "weight_pct": 0.4151,
-      "return_pct": 0.8516,
-      "contribution_bps": 0.354
-    },
-    {
-      "name": "Fortinet Inc",
-      "ticker": "FTNT",
-      "weight_pct": 0.1152,
-      "return_pct": 3.0545,
-      "contribution_bps": 0.352
-    },
-    {
-      "name": "Motorola Solutions Inc",
-      "ticker": "MSI",
-      "weight_pct": 0.1338,
-      "return_pct": 2.6161,
-      "contribution_bps": 0.35
-    },
-    {
-      "name": "Ametek Inc",
-      "ticker": "AME",
-      "weight_pct": 0.0827,
-      "return_pct": 4.1851,
-      "contribution_bps": 0.346
-    },
-    {
-      "name": "L3Harris Technologies Inc",
-      "ticker": "LHX",
-      "weight_pct": 0.0764,
-      "return_pct": 4.4365,
-      "contribution_bps": 0.339
-    },
-    {
-      "name": "Kimberly Clark Corp",
-      "ticker": "KMB",
-      "weight_pct": 0.1045,
-      "return_pct": 3.2279,
-      "contribution_bps": 0.337
-    },
-    {
-      "name": "Booking Holdings Inc",
-      "ticker": "BKNG",
-      "weight_pct": 0.1898,
-      "return_pct": 1.7552,
-      "contribution_bps": 0.333
-    },
-    {
-      "name": "Digital Realty Trust Inc",
-      "ticker": "DLR",
-      "weight_pct": 0.0963,
-      "return_pct": 3.3869,
-      "contribution_bps": 0.326
-    },
-    {
-      "name": "Nxp Semiconductors Nv",
-      "ticker": "NXPI",
-      "weight_pct": 0.0985,
-      "return_pct": 3.2744,
-      "contribution_bps": 0.323
-    },
-    {
-      "name": "General Dynamics Corp",
-      "ticker": "GD",
-      "weight_pct": 0.1412,
-      "return_pct": 2.2623,
-      "contribution_bps": 0.32
-    },
-    {
-      "name": "Everpure Inc A",
-      "ticker": "P",
-      "weight_pct": 0.0506,
-      "return_pct": 6.2946,
-      "contribution_bps": 0.319
-    },
-    {
-      "name": "Schwab (Charles) Corp",
-      "ticker": "SCHW",
-      "weight_pct": 0.2337,
-      "return_pct": 1.3553,
-      "contribution_bps": 0.317
-    },
-    {
-      "name": "United Parcel Service Cl B",
-      "ticker": "UPS",
-      "weight_pct": 0.1276,
-      "return_pct": 2.4561,
-      "contribution_bps": 0.313
-    },
-    {
-      "name": "Paccar Inc",
-      "ticker": "PCAR",
-      "weight_pct": 0.0844,
-      "return_pct": 3.6772,
-      "contribution_bps": 0.31
-    },
-    {
-      "name": "Emcor Group Inc",
-      "ticker": "EME",
-      "weight_pct": 0.0422,
-      "return_pct": 7.3038,
-      "contribution_bps": 0.308
-    },
-    {
-      "name": "Targa Resources Corp",
-      "ticker": "TRGP",
-      "weight_pct": 0.0893,
-      "return_pct": 3.4166,
-      "contribution_bps": 0.305
-    },
-    {
-      "name": "Crh Plc",
-      "ticker": "CRH",
-      "weight_pct": 0.099,
-      "return_pct": 3.0799,
-      "contribution_bps": 0.305
-    },
-    {
-      "name": "Carvana Co",
-      "ticker": "CVNA",
-      "weight_pct": 0.0832,
-      "return_pct": 3.6564,
-      "contribution_bps": 0.304
-    },
-    {
-      "name": "Nrg Energy Inc",
-      "ticker": "NRG",
-      "weight_pct": 0.0294,
-      "return_pct": 10.3183,
-      "contribution_bps": 0.303
-    },
-    {
-      "name": "Robinhood Markets Inc   A",
-      "ticker": "HOOD",
-      "weight_pct": 0.1008,
-      "return_pct": 2.9786,
-      "contribution_bps": 0.3
-    },
-    {
-      "name": "Ross Stores Inc",
-      "ticker": "ROST",
-      "weight_pct": 0.1164,
-      "return_pct": 2.5574,
-      "contribution_bps": 0.298
-    },
-    {
-      "name": "Northrop Grumman Corp",
-      "ticker": "NOC",
-      "weight_pct": 0.1106,
-      "return_pct": 2.678,
-      "contribution_bps": 0.296
-    },
-    {
-      "name": "Waters Corp",
-      "ticker": "WAT",
-      "weight_pct": 0.0708,
-      "return_pct": 4.174,
-      "contribution_bps": 0.296
-    },
-    {
-      "name": "Boston Scientific Corp",
-      "ticker": "BSX",
-      "weight_pct": 0.0973,
-      "return_pct": 2.9708,
-      "contribution_bps": 0.289
-    },
-    {
-      "name": "Metlife Inc",
-      "ticker": "MET",
-      "weight_pct": 0.0823,
-      "return_pct": 3.4599,
-      "contribution_bps": 0.285
-    },
-    {
-      "name": "Fastenal Co",
-      "ticker": "FAST",
-      "weight_pct": 0.0954,
-      "return_pct": 2.9817,
-      "contribution_bps": 0.285
-    },
-    {
-      "name": "3M Co",
-      "ticker": "MMM",
-      "weight_pct": 0.15,
-      "return_pct": 1.8796,
-      "contribution_bps": 0.282
+      "name": "Tesla Inc",
+      "ticker": "TSLA",
+      "weight_pct": 1.6372,
+      "return_pct": 0.4576,
+      "contribution_bps": 0.749
     },
     {
       "name": "Cvs Health Corp",
       "ticker": "CVS",
-      "weight_pct": 0.1687,
-      "return_pct": 1.6697,
-      "contribution_bps": 0.282
+      "weight_pct": 0.1676,
+      "return_pct": 4.4106,
+      "contribution_bps": 0.739
     },
     {
-      "name": "American Express Co",
-      "ticker": "AXP",
-      "weight_pct": 0.266,
-      "return_pct": 1.0343,
-      "contribution_bps": 0.275
-    },
-    {
-      "name": "Microchip Technology Inc",
-      "ticker": "MCHP",
-      "weight_pct": 0.0498,
-      "return_pct": 5.3985,
-      "contribution_bps": 0.269
-    },
-    {
-      "name": "Qnity Electronics Inc",
-      "ticker": "Q",
-      "weight_pct": 0.0386,
-      "return_pct": 6.9145,
-      "contribution_bps": 0.267
-    },
-    {
-      "name": "Welltower Inc",
-      "ticker": "WELL",
-      "weight_pct": 0.2769,
-      "return_pct": 0.9551,
-      "contribution_bps": 0.264
-    },
-    {
-      "name": "Block Inc",
-      "ticker": "XYZ",
-      "weight_pct": 0.0727,
-      "return_pct": 3.6032,
-      "contribution_bps": 0.262
-    },
-    {
-      "name": "Chipotle Mexican Grill Inc",
-      "ticker": "CMG",
-      "weight_pct": 0.0683,
-      "return_pct": 3.8048,
-      "contribution_bps": 0.26
-    },
-    {
-      "name": "Vylor Inc",
-      "ticker": "VYLR",
-      "weight_pct": 0.0734,
-      "return_pct": 3.4075,
-      "contribution_bps": 0.25
-    },
-    {
-      "name": "Carnival Corp Ltd",
-      "ticker": "CCL",
-      "weight_pct": 0.0593,
-      "return_pct": 4.1582,
-      "contribution_bps": 0.247
-    },
-    {
-      "name": "Nike Inc  Cl B",
-      "ticker": "NKE",
-      "weight_pct": 0.073,
-      "return_pct": 3.3428,
-      "contribution_bps": 0.244
-    },
-    {
-      "name": "Verizon Communications Inc",
-      "ticker": "VZ",
-      "weight_pct": 0.2984,
-      "return_pct": 0.8098,
-      "contribution_bps": 0.242
-    },
-    {
-      "name": "Agilent Technologies Inc",
-      "ticker": "A",
-      "weight_pct": 0.0779,
-      "return_pct": 3.0957,
-      "contribution_bps": 0.241
-    },
-    {
-      "name": "Regeneron Pharmaceuticals",
-      "ticker": "REGN",
-      "weight_pct": 0.1393,
-      "return_pct": 1.7261,
-      "contribution_bps": 0.24
-    },
-    {
-      "name": "Ecolab Inc",
-      "ticker": "ECL",
-      "weight_pct": 0.1191,
-      "return_pct": 2.0154,
-      "contribution_bps": 0.24
-    },
-    {
-      "name": "Illinois Tool Works",
-      "ticker": "ITW",
-      "weight_pct": 0.1146,
-      "return_pct": 2.0573,
-      "contribution_bps": 0.236
-    },
-    {
-      "name": "Rockwell Automation Inc",
-      "ticker": "ROK",
-      "weight_pct": 0.0655,
-      "return_pct": 3.5918,
-      "contribution_bps": 0.235
-    },
-    {
-      "name": "Simon Property Group Inc",
-      "ticker": "SPG",
-      "weight_pct": 0.1163,
-      "return_pct": 2.0095,
-      "contribution_bps": 0.234
-    },
-    {
-      "name": "Edwards Lifesciences Corp",
-      "ticker": "EW",
-      "weight_pct": 0.0928,
-      "return_pct": 2.5162,
-      "contribution_bps": 0.233
-    },
-    {
-      "name": "Ameriprise Financial Inc",
-      "ticker": "AMP",
-      "weight_pct": 0.0695,
-      "return_pct": 3.352,
-      "contribution_bps": 0.233
-    },
-    {
-      "name": "Okta Inc",
-      "ticker": "OKTA",
-      "weight_pct": 0.044,
-      "return_pct": 5.2641,
-      "contribution_bps": 0.232
-    },
-    {
-      "name": "State Street Corp",
-      "ticker": "STT",
-      "weight_pct": 0.0714,
-      "return_pct": 3.2133,
-      "contribution_bps": 0.229
-    },
-    {
-      "name": "Hca Healthcare Inc",
-      "ticker": "HCA",
-      "weight_pct": 0.1147,
-      "return_pct": 2.0,
-      "contribution_bps": 0.229
-    },
-    {
-      "name": "Southern Co/The",
-      "ticker": "SO",
-      "weight_pct": 0.1671,
-      "return_pct": 1.332,
-      "contribution_bps": 0.223
-    },
-    {
-      "name": "Jabil Inc",
-      "ticker": "JBL",
-      "weight_pct": 0.0394,
-      "return_pct": 5.6339,
-      "contribution_bps": 0.222
+      "name": "Texas Instruments Inc",
+      "ticker": "TXN",
+      "weight_pct": 0.4152,
+      "return_pct": 1.6197,
+      "contribution_bps": 0.672
     },
     {
       "name": "Coca Cola Co/The",
       "ticker": "KO",
-      "weight_pct": 0.5828,
-      "return_pct": 0.3763,
-      "contribution_bps": 0.219
+      "weight_pct": 0.5715,
+      "return_pct": 0.9164,
+      "contribution_bps": 0.524
     },
     {
-      "name": "Air Products + Chemicals Inc",
-      "ticker": "APD",
-      "weight_pct": 0.1066,
-      "return_pct": 2.047,
-      "contribution_bps": 0.218
+      "name": "Lockheed Martin Corp",
+      "ticker": "LMT",
+      "weight_pct": 0.1837,
+      "return_pct": 2.5383,
+      "contribution_bps": 0.466
     },
     {
-      "name": "Netapp Inc",
-      "ticker": "NTAP",
-      "weight_pct": 0.0522,
-      "return_pct": 4.0664,
-      "contribution_bps": 0.212
+      "name": "Take Two Interactive Softwre",
+      "ticker": "TTWO",
+      "weight_pct": 0.056,
+      "return_pct": 8.3124,
+      "contribution_bps": 0.466
     },
     {
-      "name": "Ingersoll Rand Inc",
-      "ticker": "IR",
-      "weight_pct": 0.0449,
-      "return_pct": 4.6873,
-      "contribution_bps": 0.21
+      "name": "Mckesson Corp",
+      "ticker": "MCK",
+      "weight_pct": 0.1896,
+      "return_pct": 2.1919,
+      "contribution_bps": 0.416
     },
     {
-      "name": "Norfolk Southern Corp",
-      "ticker": "NSC",
-      "weight_pct": 0.1131,
-      "return_pct": 1.8378,
-      "contribution_bps": 0.208
+      "name": "Accenture Plc Cl A",
+      "ticker": "ACN",
+      "weight_pct": 0.2391,
+      "return_pct": 1.6276,
+      "contribution_bps": 0.389
     },
     {
-      "name": "Best Buy Co Inc",
-      "ticker": "BBY",
-      "weight_pct": 0.0309,
-      "return_pct": 6.6747,
-      "contribution_bps": 0.206
+      "name": "Elevance Health Inc",
+      "ticker": "ELV",
+      "weight_pct": 0.1392,
+      "return_pct": 2.7256,
+      "contribution_bps": 0.379
     },
     {
-      "name": "Iron Mountain Inc",
-      "ticker": "IRM",
-      "weight_pct": 0.05,
-      "return_pct": 4.065,
-      "contribution_bps": 0.203
+      "name": "Progressive Corp",
+      "ticker": "PGR",
+      "weight_pct": 0.2033,
+      "return_pct": 1.8592,
+      "contribution_bps": 0.378
     },
     {
-      "name": "Ares Management Corp   A",
-      "ticker": "ARES",
-      "weight_pct": 0.0472,
-      "return_pct": 4.1797,
-      "contribution_bps": 0.197
+      "name": "General Electric",
+      "ticker": "GE",
+      "weight_pct": 0.5351,
+      "return_pct": 0.7063,
+      "contribution_bps": 0.378
     },
     {
-      "name": "Dover Corp",
-      "ticker": "DOV",
-      "weight_pct": 0.0433,
-      "return_pct": 4.4788,
-      "contribution_bps": 0.194
+      "name": "Mastercard Inc   A",
+      "ticker": "MA",
+      "weight_pct": 0.8146,
+      "return_pct": 0.462,
+      "contribution_bps": 0.376
     },
     {
-      "name": "Medtronic Plc",
-      "ticker": "MDT",
-      "weight_pct": 0.1959,
-      "return_pct": 0.9725,
-      "contribution_bps": 0.191
-    },
-    {
-      "name": "Public Service Enterprise Gp",
-      "ticker": "PEG",
-      "weight_pct": 0.0571,
-      "return_pct": 3.3329,
-      "contribution_bps": 0.19
-    },
-    {
-      "name": "Zoetis Inc",
-      "ticker": "ZTS",
-      "weight_pct": 0.0516,
-      "return_pct": 3.6776,
-      "contribution_bps": 0.19
-    },
-    {
-      "name": "Transdigm Group Inc",
-      "ticker": "TDG",
-      "weight_pct": 0.1039,
-      "return_pct": 1.8245,
-      "contribution_bps": 0.19
-    },
-    {
-      "name": "Kinder Morgan Inc",
-      "ticker": "KMI",
-      "weight_pct": 0.0925,
-      "return_pct": 2.0361,
-      "contribution_bps": 0.188
-    },
-    {
-      "name": "Fifth Third Bancorp",
-      "ticker": "FITB",
-      "weight_pct": 0.0757,
-      "return_pct": 2.4887,
-      "contribution_bps": 0.188
-    },
-    {
-      "name": "Dupont De Nemours Inc",
-      "ticker": "DD",
-      "weight_pct": 0.0313,
-      "return_pct": 5.8832,
-      "contribution_bps": 0.184
-    },
-    {
-      "name": "Dollar Tree Inc",
-      "ticker": "DLTR",
-      "weight_pct": 0.0397,
-      "return_pct": 4.6439,
-      "contribution_bps": 0.184
-    },
-    {
-      "name": "At+T Inc",
-      "ticker": "T",
-      "weight_pct": 0.2329,
-      "return_pct": 0.7859,
-      "contribution_bps": 0.183
-    },
-    {
-      "name": "Truist Financial Corp",
-      "ticker": "TFC",
-      "weight_pct": 0.0947,
-      "return_pct": 1.9239,
-      "contribution_bps": 0.182
-    },
-    {
-      "name": "Illumina Inc",
-      "ticker": "ILMN",
-      "weight_pct": 0.0506,
-      "return_pct": 3.5894,
-      "contribution_bps": 0.182
-    },
-    {
-      "name": "Iqvia Holdings Inc",
-      "ticker": "IQV",
-      "weight_pct": 0.0702,
-      "return_pct": 2.5788,
-      "contribution_bps": 0.181
-    },
-    {
-      "name": "Teledyne Technologies Inc",
-      "ticker": "TDY",
-      "weight_pct": 0.0452,
-      "return_pct": 3.9994,
-      "contribution_bps": 0.181
-    },
-    {
-      "name": "Old Dominion Freight Line",
-      "ticker": "ODFL",
-      "weight_pct": 0.0484,
-      "return_pct": 3.6199,
-      "contribution_bps": 0.175
-    },
-    {
-      "name": "Kkr + Co Inc",
-      "ticker": "KKR",
-      "weight_pct": 0.1047,
-      "return_pct": 1.6687,
-      "contribution_bps": 0.175
-    },
-    {
-      "name": "Colgate Palmolive Co",
-      "ticker": "CL",
-      "weight_pct": 0.1211,
-      "return_pct": 1.4292,
-      "contribution_bps": 0.173
-    },
-    {
-      "name": "Salesforce Inc",
-      "ticker": "CRM",
-      "weight_pct": 0.2754,
-      "return_pct": 0.6038,
-      "contribution_bps": 0.166
-    },
-    {
-      "name": "Intl Business Machines Corp",
-      "ticker": "IBM",
-      "weight_pct": 0.3607,
-      "return_pct": 0.4531,
-      "contribution_bps": 0.163
-    },
-    {
-      "name": "Garmin Ltd",
-      "ticker": "GRMN",
-      "weight_pct": 0.0745,
-      "return_pct": 2.1816,
-      "contribution_bps": 0.163
-    },
-    {
-      "name": "Abbott Laboratories",
-      "ticker": "ABT",
-      "weight_pct": 0.2993,
-      "return_pct": 0.5276,
-      "contribution_bps": 0.158
-    },
-    {
-      "name": "S+P Global Inc",
-      "ticker": "SPGI",
-      "weight_pct": 0.2223,
-      "return_pct": 0.7033,
-      "contribution_bps": 0.156
-    },
-    {
-      "name": "Intercontinental Exchange In",
-      "ticker": "ICE",
-      "weight_pct": 0.1522,
-      "return_pct": 1.0216,
-      "contribution_bps": 0.155
-    },
-    {
-      "name": "American International Group",
-      "ticker": "AIG",
-      "weight_pct": 0.064,
-      "return_pct": 2.418,
-      "contribution_bps": 0.155
-    },
-    {
-      "name": "American Electric Power",
-      "ticker": "AEP",
-      "weight_pct": 0.1078,
-      "return_pct": 1.4226,
-      "contribution_bps": 0.153
-    },
-    {
-      "name": "Biogen Inc",
-      "ticker": "BIIB",
-      "weight_pct": 0.0579,
-      "return_pct": 2.6253,
-      "contribution_bps": 0.152
-    },
-    {
-      "name": "Nucor Corp",
-      "ticker": "NUE",
-      "weight_pct": 0.0873,
-      "return_pct": 1.7431,
-      "contribution_bps": 0.152
-    },
-    {
-      "name": "Prudential Financial Inc",
-      "ticker": "PRU",
-      "weight_pct": 0.0645,
-      "return_pct": 2.3566,
-      "contribution_bps": 0.152
-    },
-    {
-      "name": "Vertex Pharmaceuticals Inc",
-      "ticker": "VRTX",
-      "weight_pct": 0.2182,
-      "return_pct": 0.6909,
-      "contribution_bps": 0.151
-    },
-    {
-      "name": "Cdw Corp/De",
-      "ticker": "CDW",
-      "weight_pct": 0.0307,
-      "return_pct": 4.8471,
-      "contribution_bps": 0.149
-    },
-    {
-      "name": "West Pharmaceutical Services",
-      "ticker": "WST",
-      "weight_pct": 0.044,
-      "return_pct": 3.3216,
-      "contribution_bps": 0.146
-    },
-    {
-      "name": "Becton Dickinson And Co",
-      "ticker": "BDX",
-      "weight_pct": 0.0906,
-      "return_pct": 1.5905,
-      "contribution_bps": 0.144
-    },
-    {
-      "name": "Echostar Corp A",
-      "ticker": "ECHO",
-      "weight_pct": 0.0206,
-      "return_pct": 6.9436,
-      "contribution_bps": 0.143
-    },
-    {
-      "name": "Southwest Airlines Co",
-      "ticker": "LUV",
-      "weight_pct": 0.0343,
-      "return_pct": 4.162,
-      "contribution_bps": 0.143
-    },
-    {
-      "name": "Huntington Bancshares Inc",
-      "ticker": "HBAN",
-      "weight_pct": 0.049,
-      "return_pct": 2.9089,
-      "contribution_bps": 0.142
-    },
-    {
-      "name": "Williams Sonoma Inc",
-      "ticker": "WSM",
-      "weight_pct": 0.0472,
-      "return_pct": 2.9993,
-      "contribution_bps": 0.142
-    },
-    {
-      "name": "Northern Trust Corp",
-      "ticker": "NTRS",
-      "weight_pct": 0.0497,
-      "return_pct": 2.8305,
-      "contribution_bps": 0.141
-    },
-    {
-      "name": "Vulcan Materials Co",
-      "ticker": "VMC",
-      "weight_pct": 0.0579,
-      "return_pct": 2.3769,
-      "contribution_bps": 0.138
-    },
-    {
-      "name": "Principal Financial Group",
-      "ticker": "PFG",
-      "weight_pct": 0.034,
-      "return_pct": 4.0393,
-      "contribution_bps": 0.137
-    },
-    {
-      "name": "Ulta Beauty Inc",
-      "ticker": "ULTA",
-      "weight_pct": 0.0434,
-      "return_pct": 3.1593,
-      "contribution_bps": 0.137
-    },
-    {
-      "name": "Jacobs Solutions Inc",
-      "ticker": "J",
-      "weight_pct": 0.0272,
-      "return_pct": 5.0302,
-      "contribution_bps": 0.137
-    },
-    {
-      "name": "Raymond James Financial Inc",
-      "ticker": "RJF",
-      "weight_pct": 0.0446,
-      "return_pct": 3.0649,
-      "contribution_bps": 0.137
-    },
-    {
-      "name": "Dr Horton Inc",
-      "ticker": "DHI",
-      "weight_pct": 0.0608,
-      "return_pct": 2.1868,
-      "contribution_bps": 0.133
-    },
-    {
-      "name": "Reddit Inc Cl A",
-      "ticker": "RDDT",
-      "weight_pct": 0.0219,
-      "return_pct": 5.9832,
-      "contribution_bps": 0.131
-    },
-    {
-      "name": "Ralph Lauren Corp",
-      "ticker": "RL",
-      "weight_pct": 0.0223,
-      "return_pct": 5.8317,
-      "contribution_bps": 0.13
-    },
-    {
-      "name": "Servicenow Inc",
-      "ticker": "NOW",
-      "weight_pct": 0.1659,
-      "return_pct": 0.7747,
-      "contribution_bps": 0.129
-    },
-    {
-      "name": "Invesco Ltd",
-      "ticker": "IVZ",
-      "weight_pct": 0.019,
-      "return_pct": 6.7578,
-      "contribution_bps": 0.128
-    },
-    {
-      "name": "Moody S Corp",
-      "ticker": "MCO",
-      "weight_pct": 0.1185,
-      "return_pct": 1.0699,
-      "contribution_bps": 0.127
-    },
-    {
-      "name": "Mettler Toledo International",
-      "ticker": "MTD",
-      "weight_pct": 0.0541,
-      "return_pct": 2.3302,
-      "contribution_bps": 0.126
-    },
-    {
-      "name": "Interactive Brokers Gro Cl A",
-      "ticker": "IBKR",
-      "weight_pct": 0.0541,
-      "return_pct": 2.3081,
-      "contribution_bps": 0.125
-    },
-    {
-      "name": "Citizens Financial Group",
-      "ticker": "CFG",
-      "weight_pct": 0.0422,
-      "return_pct": 2.9412,
-      "contribution_bps": 0.124
-    },
-    {
-      "name": "Carrier Global Corp",
-      "ticker": "CARR",
-      "weight_pct": 0.0679,
-      "return_pct": 1.8137,
-      "contribution_bps": 0.123
-    },
-    {
-      "name": "Martin Marietta Materials",
-      "ticker": "MLM",
-      "weight_pct": 0.0491,
-      "return_pct": 2.4742,
-      "contribution_bps": 0.121
-    },
-    {
-      "name": "Estee Lauder Companies Cl A",
-      "ticker": "EL",
-      "weight_pct": 0.0428,
-      "return_pct": 2.8167,
-      "contribution_bps": 0.121
-    },
-    {
-      "name": "Cbre Group Inc   A",
-      "ticker": "CBRE",
-      "weight_pct": 0.0606,
-      "return_pct": 1.963,
-      "contribution_bps": 0.119
-    },
-    {
-      "name": "Charles River Laboratories",
-      "ticker": "CRL",
-      "weight_pct": 0.0251,
-      "return_pct": 4.6871,
-      "contribution_bps": 0.118
-    },
-    {
-      "name": "Ge Healthcare Technology",
-      "ticker": "GEHC",
-      "weight_pct": 0.0585,
-      "return_pct": 2.0029,
-      "contribution_bps": 0.117
-    },
-    {
-      "name": "Nordson Corp",
-      "ticker": "NDSN",
-      "weight_pct": 0.0259,
-      "return_pct": 4.5117,
-      "contribution_bps": 0.117
+      "name": "Marriott International  Cl A",
+      "ticker": "MAR",
+      "weight_pct": 0.1369,
+      "return_pct": 2.6609,
+      "contribution_bps": 0.364
     },
     {
       "name": "Pepsico Inc",
       "ticker": "PEP",
-      "weight_pct": 0.3032,
-      "return_pct": 0.3821,
-      "contribution_bps": 0.116
+      "weight_pct": 0.2974,
+      "return_pct": 1.2193,
+      "contribution_bps": 0.363
     },
     {
-      "name": "Sysco Corp",
-      "ticker": "SYY",
-      "weight_pct": 0.058,
-      "return_pct": 1.9776,
-      "contribution_bps": 0.115
+      "name": "Qualcomm Inc",
+      "ticker": "QCOM",
+      "weight_pct": 0.2815,
+      "return_pct": 1.2014,
+      "contribution_bps": 0.338
     },
     {
-      "name": "Masco Corp",
-      "ticker": "MAS",
-      "weight_pct": 0.0253,
-      "return_pct": 4.5001,
-      "contribution_bps": 0.114
+      "name": "Union Pacific Corp",
+      "ticker": "UNP",
+      "weight_pct": 0.2709,
+      "return_pct": 1.2154,
+      "contribution_bps": 0.329
     },
     {
-      "name": "M + T Bank Corp",
-      "ticker": "MTB",
-      "weight_pct": 0.0493,
-      "return_pct": 2.287,
-      "contribution_bps": 0.113
-    },
-    {
-      "name": "Twilio Inc   A",
-      "ticker": "TWLO",
-      "weight_pct": 0.0491,
-      "return_pct": 2.2869,
-      "contribution_bps": 0.112
-    },
-    {
-      "name": "Generac Holdings Inc",
-      "ticker": "GNRC",
-      "weight_pct": 0.0163,
-      "return_pct": 6.7711,
-      "contribution_bps": 0.11
-    },
-    {
-      "name": "Paypal Holdings Inc",
-      "ticker": "PYPL",
-      "weight_pct": 0.0795,
-      "return_pct": 1.3673,
-      "contribution_bps": 0.109
-    },
-    {
-      "name": "Dte Energy Company",
-      "ticker": "DTE",
-      "weight_pct": 0.0443,
-      "return_pct": 2.4208,
-      "contribution_bps": 0.107
-    },
-    {
-      "name": "Eog Resources Inc",
-      "ticker": "EOG",
-      "weight_pct": 0.1214,
-      "return_pct": 0.8836,
-      "contribution_bps": 0.107
-    },
-    {
-      "name": "Slb Ltd",
-      "ticker": "SLB",
-      "weight_pct": 0.1164,
-      "return_pct": 0.9215,
-      "contribution_bps": 0.107
-    },
-    {
-      "name": "Clorox Company",
-      "ticker": "CLX",
-      "weight_pct": 0.0192,
-      "return_pct": 5.5722,
-      "contribution_bps": 0.107
-    },
-    {
-      "name": "Viatris Inc",
-      "ticker": "VTRS",
-      "weight_pct": 0.036,
-      "return_pct": 2.9131,
-      "contribution_bps": 0.105
-    },
-    {
-      "name": "Idex Corp",
-      "ticker": "IEX",
-      "weight_pct": 0.0265,
-      "return_pct": 3.9385,
-      "contribution_bps": 0.104
-    },
-    {
-      "name": "Fedex Freight Holding Co",
-      "ticker": "FDXF",
-      "weight_pct": 0.0233,
-      "return_pct": 4.4432,
-      "contribution_bps": 0.103
-    },
-    {
-      "name": "Ppg Industries Inc",
-      "ticker": "PPG",
-      "weight_pct": 0.0428,
-      "return_pct": 2.3942,
-      "contribution_bps": 0.102
-    },
-    {
-      "name": "Tapestry Inc",
-      "ticker": "TPR",
-      "weight_pct": 0.0414,
-      "return_pct": 2.4624,
-      "contribution_bps": 0.102
-    },
-    {
-      "name": "Dollar General Corp",
-      "ticker": "DG",
-      "weight_pct": 0.0465,
-      "return_pct": 2.1906,
-      "contribution_bps": 0.102
-    },
-    {
-      "name": "Expeditors Intl Wash Inc",
-      "ticker": "EXPD",
-      "weight_pct": 0.0376,
-      "return_pct": 2.6976,
-      "contribution_bps": 0.101
-    },
-    {
-      "name": "Hubbell Inc",
-      "ticker": "HUBB",
-      "weight_pct": 0.0358,
-      "return_pct": 2.8222,
-      "contribution_bps": 0.101
-    },
-    {
-      "name": "Pultegroup Inc",
-      "ticker": "PHM",
-      "weight_pct": 0.0391,
-      "return_pct": 2.5587,
-      "contribution_bps": 0.1
-    },
-    {
-      "name": "Steel Dynamics Inc",
-      "ticker": "STLD",
-      "weight_pct": 0.0473,
-      "return_pct": 2.0906,
-      "contribution_bps": 0.099
-    },
-    {
-      "name": "Revvity Inc",
-      "ticker": "RVTY",
-      "weight_pct": 0.0273,
-      "return_pct": 3.6168,
-      "contribution_bps": 0.099
-    },
-    {
-      "name": "Hilton Worldwide Holdings In",
-      "ticker": "HLT",
-      "weight_pct": 0.1309,
-      "return_pct": 0.7504,
-      "contribution_bps": 0.098
-    },
-    {
-      "name": "Dexcom Inc",
-      "ticker": "DXCM",
-      "weight_pct": 0.047,
-      "return_pct": 2.0904,
-      "contribution_bps": 0.098
-    },
-    {
-      "name": "Walmart Inc",
-      "ticker": "WMT",
-      "weight_pct": 0.8801,
-      "return_pct": 0.1115,
-      "contribution_bps": 0.098
-    },
-    {
-      "name": "Franklin Templeton Inc",
-      "ticker": "BEN",
-      "weight_pct": 0.0154,
-      "return_pct": 6.3445,
-      "contribution_bps": 0.098
-    },
-    {
-      "name": "Huntington Ingalls Industrie",
-      "ticker": "HII",
-      "weight_pct": 0.0179,
-      "return_pct": 5.4097,
-      "contribution_bps": 0.097
-    },
-    {
-      "name": "Nasdaq Inc",
-      "ticker": "NDAQ",
-      "weight_pct": 0.0744,
-      "return_pct": 1.2883,
-      "contribution_bps": 0.096
-    },
-    {
-      "name": "Cardinal Health Inc",
-      "ticker": "CAH",
-      "weight_pct": 0.0992,
-      "return_pct": 0.9458,
-      "contribution_bps": 0.094
-    },
-    {
-      "name": "Omnicom Group",
-      "ticker": "OMC",
-      "weight_pct": 0.0373,
-      "return_pct": 2.4661,
-      "contribution_bps": 0.092
-    },
-    {
-      "name": "Entergy Corp",
-      "ticker": "ETR",
-      "weight_pct": 0.0812,
-      "return_pct": 1.1217,
-      "contribution_bps": 0.091
-    },
-    {
-      "name": "Baker Hughes Co",
-      "ticker": "BKR",
-      "weight_pct": 0.0746,
-      "return_pct": 1.2116,
-      "contribution_bps": 0.09
-    },
-    {
-      "name": "Autozone Inc",
-      "ticker": "AZO",
-      "weight_pct": 0.0825,
-      "return_pct": 1.0857,
-      "contribution_bps": 0.09
-    },
-    {
-      "name": "Tractor Supply Company",
-      "ticker": "TSCO",
-      "weight_pct": 0.0301,
-      "return_pct": 2.8886,
-      "contribution_bps": 0.087
-    },
-    {
-      "name": "Align Technology Inc",
-      "ticker": "ALGN",
-      "weight_pct": 0.0172,
-      "return_pct": 4.9759,
-      "contribution_bps": 0.086
-    },
-    {
-      "name": "Lennar Corp A",
-      "ticker": "LEN",
-      "weight_pct": 0.0268,
-      "return_pct": 3.2004,
-      "contribution_bps": 0.086
-    },
-    {
-      "name": "Mondelez International Inc A",
-      "ticker": "MDLZ",
-      "weight_pct": 0.1324,
-      "return_pct": 0.6362,
-      "contribution_bps": 0.084
-    },
-    {
-      "name": "Constellation Brands Inc A",
-      "ticker": "STZ",
-      "weight_pct": 0.0336,
-      "return_pct": 2.4935,
-      "contribution_bps": 0.084
+      "name": "Kla Corp",
+      "ticker": "KLAC",
+      "weight_pct": 0.304,
+      "return_pct": 1.0635,
+      "contribution_bps": 0.323
     },
     {
       "name": "The Cigna Group",
       "ticker": "CI",
-      "weight_pct": 0.1221,
-      "return_pct": 0.6846,
-      "contribution_bps": 0.084
+      "weight_pct": 0.1201,
+      "return_pct": 2.5474,
+      "contribution_bps": 0.306
     },
     {
-      "name": "Regions Financial Corp",
-      "ticker": "RF",
-      "weight_pct": 0.0381,
-      "return_pct": 2.19,
-      "contribution_bps": 0.083
+      "name": "Chubb Ltd",
+      "ticker": "CB",
+      "weight_pct": 0.1959,
+      "return_pct": 1.5573,
+      "contribution_bps": 0.305
     },
     {
-      "name": "International Paper Co",
-      "ticker": "IP",
-      "weight_pct": 0.0288,
-      "return_pct": 2.896,
-      "contribution_bps": 0.083
+      "name": "Gilead Sciences Inc",
+      "ticker": "GILD",
+      "weight_pct": 0.3226,
+      "return_pct": 0.9154,
+      "contribution_bps": 0.295
     },
     {
-      "name": "Zimmer Biomet Holdings Inc",
-      "ticker": "ZBH",
-      "weight_pct": 0.0317,
-      "return_pct": 2.5949,
-      "contribution_bps": 0.082
+      "name": "Kkr + Co Inc",
+      "ticker": "KKR",
+      "weight_pct": 0.104,
+      "return_pct": 2.8137,
+      "contribution_bps": 0.293
     },
     {
-      "name": "Fortive Corp",
-      "ticker": "FTV",
-      "weight_pct": 0.0309,
-      "return_pct": 2.6465,
-      "contribution_bps": 0.082
+      "name": "Allstate Corp",
+      "ticker": "ALL",
+      "weight_pct": 0.0984,
+      "return_pct": 2.8882,
+      "contribution_bps": 0.284
     },
     {
-      "name": "T Rowe Price Group Inc",
-      "ticker": "TROW",
-      "weight_pct": 0.0366,
-      "return_pct": 2.223,
-      "contribution_bps": 0.081
+      "name": "Humana Inc",
+      "ticker": "HUM",
+      "weight_pct": 0.0783,
+      "return_pct": 3.5064,
+      "contribution_bps": 0.275
     },
     {
-      "name": "Aflac Inc",
-      "ticker": "AFL",
-      "weight_pct": 0.0871,
-      "return_pct": 0.935,
-      "contribution_bps": 0.081
+      "name": "Philip Morris International",
+      "ticker": "PM",
+      "weight_pct": 0.4626,
+      "return_pct": 0.5851,
+      "contribution_bps": 0.271
     },
     {
-      "name": "Tko Group Holdings Inc",
-      "ticker": "TKO",
-      "weight_pct": 0.0178,
-      "return_pct": 4.5288,
-      "contribution_bps": 0.081
+      "name": "Targa Resources Corp",
+      "ticker": "TRGP",
+      "weight_pct": 0.0902,
+      "return_pct": 2.8104,
+      "contribution_bps": 0.253
     },
     {
-      "name": "Keycorp",
-      "ticker": "KEY",
-      "weight_pct": 0.0298,
-      "return_pct": 2.6858,
-      "contribution_bps": 0.08
+      "name": "Cme Group Inc",
+      "ticker": "CME",
+      "weight_pct": 0.1681,
+      "return_pct": 1.5007,
+      "contribution_bps": 0.252
     },
     {
-      "name": "Assurant Inc",
-      "ticker": "AIZ",
-      "weight_pct": 0.024,
-      "return_pct": 3.3257,
-      "contribution_bps": 0.08
+      "name": "Nucor Corp",
+      "ticker": "NUE",
+      "weight_pct": 0.0867,
+      "return_pct": 2.9008,
+      "contribution_bps": 0.252
     },
     {
-      "name": "Hunt (Jb) Transprt Svcs Inc",
-      "ticker": "JBHT",
-      "weight_pct": 0.0256,
-      "return_pct": 3.1119,
-      "contribution_bps": 0.08
+      "name": "Eog Resources Inc",
+      "ticker": "EOG",
+      "weight_pct": 0.1197,
+      "return_pct": 2.0751,
+      "contribution_bps": 0.248
     },
     {
-      "name": "Deckers Outdoor Corp",
-      "ticker": "DECK",
-      "weight_pct": 0.0184,
-      "return_pct": 4.2902,
-      "contribution_bps": 0.079
+      "name": "Applied Materials Inc",
+      "ticker": "AMAT",
+      "weight_pct": 0.4519,
+      "return_pct": 0.5343,
+      "contribution_bps": 0.241
     },
     {
-      "name": "Oneok Inc",
-      "ticker": "OKE",
-      "weight_pct": 0.0847,
-      "return_pct": 0.9273,
-      "contribution_bps": 0.079
-    },
-    {
-      "name": "Stanley Black + Decker Inc",
-      "ticker": "SWK",
-      "weight_pct": 0.027,
-      "return_pct": 2.8298,
-      "contribution_bps": 0.076
-    },
-    {
-      "name": "Doordash Inc   A",
-      "ticker": "DASH",
-      "weight_pct": 0.1064,
-      "return_pct": 0.718,
-      "contribution_bps": 0.076
-    },
-    {
-      "name": "Church + Dwight Co Inc",
-      "ticker": "CHD",
-      "weight_pct": 0.0408,
-      "return_pct": 1.811,
-      "contribution_bps": 0.074
-    },
-    {
-      "name": "Intl Flavors + Fragrances",
-      "ticker": "IFF",
-      "weight_pct": 0.0334,
-      "return_pct": 2.1907,
-      "contribution_bps": 0.073
-    },
-    {
-      "name": "Steris Plc",
-      "ticker": "STE",
-      "weight_pct": 0.039,
-      "return_pct": 1.8391,
-      "contribution_bps": 0.072
-    },
-    {
-      "name": "Host Hotels + Resorts Inc",
-      "ticker": "HST",
-      "weight_pct": 0.0265,
-      "return_pct": 2.6807,
-      "contribution_bps": 0.071
-    },
-    {
-      "name": "Vivmark Residential",
-      "ticker": "VMRK",
-      "weight_pct": 0.074,
-      "return_pct": 0.9617,
-      "contribution_bps": 0.071
-    },
-    {
-      "name": "Quest Diagnostics Inc",
-      "ticker": "DGX",
-      "weight_pct": 0.0446,
-      "return_pct": 1.5804,
-      "contribution_bps": 0.071
-    },
-    {
-      "name": "Allegion Plc",
-      "ticker": "ALLE",
-      "weight_pct": 0.0248,
-      "return_pct": 2.7671,
-      "contribution_bps": 0.069
-    },
-    {
-      "name": "Nisource Inc",
-      "ticker": "NI",
-      "weight_pct": 0.0333,
-      "return_pct": 2.0612,
-      "contribution_bps": 0.069
-    },
-    {
-      "name": "Realty Income Corp",
-      "ticker": "O",
-      "weight_pct": 0.0879,
-      "return_pct": 0.7791,
-      "contribution_bps": 0.068
-    },
-    {
-      "name": "C.H. Robinson Worldwide Inc",
-      "ticker": "CHRW",
-      "weight_pct": 0.0233,
-      "return_pct": 2.9203,
-      "contribution_bps": 0.068
-    },
-    {
-      "name": "Labcorp Holdings Inc",
-      "ticker": "LH",
-      "weight_pct": 0.0466,
-      "return_pct": 1.4349,
-      "contribution_bps": 0.067
-    },
-    {
-      "name": "Comcast Corp Class A",
-      "ticker": "CMCSA",
-      "weight_pct": 0.1356,
-      "return_pct": 0.492,
-      "contribution_bps": 0.067
-    },
-    {
-      "name": "Keurig Dr Pepper Inc",
-      "ticker": "KDP",
-      "weight_pct": 0.0786,
-      "return_pct": 0.8463,
-      "contribution_bps": 0.067
-    },
-    {
-      "name": "Copart Inc",
-      "ticker": "CPRT",
-      "weight_pct": 0.0421,
-      "return_pct": 1.5649,
-      "contribution_bps": 0.066
-    },
-    {
-      "name": "Packaging Corp Of America",
-      "ticker": "PKG",
-      "weight_pct": 0.0349,
-      "return_pct": 1.8863,
-      "contribution_bps": 0.066
-    },
-    {
-      "name": "Wec Energy Group Inc",
-      "ticker": "WEC",
-      "weight_pct": 0.0595,
-      "return_pct": 1.1047,
-      "contribution_bps": 0.066
-    },
-    {
-      "name": "Fair Isaac Corp",
-      "ticker": "FICO",
-      "weight_pct": 0.0239,
-      "return_pct": 2.7266,
-      "contribution_bps": 0.065
-    },
-    {
-      "name": "Vici Properties Inc",
-      "ticker": "VICI",
-      "weight_pct": 0.0429,
-      "return_pct": 1.4925,
-      "contribution_bps": 0.064
-    },
-    {
-      "name": "Veeva Systems Inc Class A",
-      "ticker": "VEEV",
-      "weight_pct": 0.0714,
-      "return_pct": 0.8791,
-      "contribution_bps": 0.063
-    },
-    {
-      "name": "Msci Inc",
-      "ticker": "MSCI",
-      "weight_pct": 0.0731,
-      "return_pct": 0.8487,
-      "contribution_bps": 0.062
-    },
-    {
-      "name": "Genuine Parts Co",
-      "ticker": "GPC",
-      "weight_pct": 0.0267,
-      "return_pct": 2.3208,
-      "contribution_bps": 0.062
-    },
-    {
-      "name": "Sempra",
-      "ticker": "SRE",
-      "weight_pct": 0.0806,
-      "return_pct": 0.7676,
-      "contribution_bps": 0.062
-    },
-    {
-      "name": "F5 Inc",
-      "ticker": "FFIV",
-      "weight_pct": 0.0276,
-      "return_pct": 2.223,
-      "contribution_bps": 0.061
-    },
-    {
-      "name": "Leidos Holdings Inc",
-      "ticker": "LDOS",
-      "weight_pct": 0.0263,
-      "return_pct": 2.3214,
-      "contribution_bps": 0.061
-    },
-    {
-      "name": "Darden Restaurants Inc",
-      "ticker": "DRI",
-      "weight_pct": 0.0404,
-      "return_pct": 1.5109,
-      "contribution_bps": 0.061
-    },
-    {
-      "name": "Incyte Corp",
-      "ticker": "INCY",
-      "weight_pct": 0.0321,
-      "return_pct": 1.8721,
-      "contribution_bps": 0.06
-    },
-    {
-      "name": "Ventas Inc",
-      "ticker": "VTR",
-      "weight_pct": 0.0716,
-      "return_pct": 0.8338,
-      "contribution_bps": 0.06
-    },
-    {
-      "name": "Skydance Corp",
-      "ticker": "SKYD",
-      "weight_pct": 0.0069,
-      "return_pct": 8.6142,
-      "contribution_bps": 0.059
-    },
-    {
-      "name": "P G + E Corp",
-      "ticker": "PCG",
-      "weight_pct": 0.0451,
-      "return_pct": 1.3107,
-      "contribution_bps": 0.059
-    },
-    {
-      "name": "Globe Life Inc",
-      "ticker": "GL",
-      "weight_pct": 0.0192,
-      "return_pct": 2.9584,
-      "contribution_bps": 0.057
+      "name": "Hilton Worldwide Holdings In",
+      "ticker": "HLT",
+      "weight_pct": 0.1289,
+      "return_pct": 1.7496,
+      "contribution_bps": 0.225
     },
     {
       "name": "Charter Communications Inc A",
       "ticker": "CHTR",
       "weight_pct": 0.0208,
-      "return_pct": 2.651,
-      "contribution_bps": 0.055
+      "return_pct": 10.6106,
+      "contribution_bps": 0.221
     },
     {
-      "name": "Texas Pacific Land Corp",
-      "ticker": "TPL",
-      "weight_pct": 0.0251,
-      "return_pct": 2.1736,
-      "contribution_bps": 0.055
+      "name": "Visa Inc Class A Shares",
+      "ticker": "V",
+      "weight_pct": 1.1054,
+      "return_pct": 0.199,
+      "contribution_bps": 0.22
     },
     {
-      "name": "Autodesk Inc",
-      "ticker": "ADSK",
-      "weight_pct": 0.0872,
-      "return_pct": 0.6228,
-      "contribution_bps": 0.054
+      "name": "American International Group",
+      "ticker": "AIG",
+      "weight_pct": 0.064,
+      "return_pct": 3.3781,
+      "contribution_bps": 0.216
     },
     {
-      "name": "Snap On Inc",
-      "ticker": "SNA",
-      "weight_pct": 0.03,
-      "return_pct": 1.7973,
-      "contribution_bps": 0.054
+      "name": "General Dynamics Corp",
+      "ticker": "GD",
+      "weight_pct": 0.1411,
+      "return_pct": 1.4831,
+      "contribution_bps": 0.209
     },
     {
-      "name": "Fiserv Inc",
-      "ticker": "FISV",
-      "weight_pct": 0.0529,
-      "return_pct": 1.0178,
-      "contribution_bps": 0.054
+      "name": "Lam Research Corp",
+      "ticker": "LRCX",
+      "weight_pct": 0.4254,
+      "return_pct": 0.488,
+      "contribution_bps": 0.208
     },
     {
-      "name": "Pentair Plc",
-      "ticker": "PNR",
-      "weight_pct": 0.0174,
-      "return_pct": 3.0534,
-      "contribution_bps": 0.053
+      "name": "Bristol Myers Squibb Co",
+      "ticker": "BMY",
+      "weight_pct": 0.1952,
+      "return_pct": 1.0621,
+      "contribution_bps": 0.207
     },
     {
-      "name": "Xylem Inc",
-      "ticker": "XYL",
-      "weight_pct": 0.0359,
-      "return_pct": 1.4617,
-      "contribution_bps": 0.053
+      "name": "Conocophillips",
+      "ticker": "COP",
+      "weight_pct": 0.2483,
+      "return_pct": 0.8329,
+      "contribution_bps": 0.207
     },
     {
-      "name": "Bunge Global Sa",
-      "ticker": "BG",
-      "weight_pct": 0.0246,
-      "return_pct": 2.0989,
-      "contribution_bps": 0.052
-    },
-    {
-      "name": "Textron Inc",
-      "ticker": "TXT",
-      "weight_pct": 0.0229,
-      "return_pct": 2.2385,
-      "contribution_bps": 0.051
-    },
-    {
-      "name": "Ameren Corporation",
-      "ticker": "AEE",
-      "weight_pct": 0.0493,
-      "return_pct": 1.0368,
-      "contribution_bps": 0.051
-    },
-    {
-      "name": "Baxter International Inc",
-      "ticker": "BAX",
-      "weight_pct": 0.0211,
-      "return_pct": 2.404,
-      "contribution_bps": 0.051
+      "name": "Automatic Data Processing",
+      "ticker": "ADP",
+      "weight_pct": 0.1845,
+      "return_pct": 1.119,
+      "contribution_bps": 0.206
     },
     {
       "name": "Eqt Corp",
       "ticker": "EQT",
-      "weight_pct": 0.0488,
-      "return_pct": 1.0324,
-      "contribution_bps": 0.05
+      "weight_pct": 0.0481,
+      "return_pct": 4.1875,
+      "contribution_bps": 0.202
     },
     {
-      "name": "Xcel Energy Inc",
-      "ticker": "XEL",
-      "weight_pct": 0.0785,
-      "return_pct": 0.6276,
-      "contribution_bps": 0.049
+      "name": "Intercontinental Exchange In",
+      "ticker": "ICE",
+      "weight_pct": 0.1502,
+      "return_pct": 1.3389,
+      "contribution_bps": 0.201
     },
     {
-      "name": "Expand Energy Corp",
-      "ticker": "EXE",
-      "weight_pct": 0.0306,
-      "return_pct": 1.6076,
-      "contribution_bps": 0.049
+      "name": "Nxp Semiconductors Nv",
+      "ticker": "NXPI",
+      "weight_pct": 0.0994,
+      "return_pct": 2.0045,
+      "contribution_bps": 0.199
     },
     {
-      "name": "Ford Motor Co",
-      "ticker": "F",
-      "weight_pct": 0.0759,
-      "return_pct": 0.6431,
-      "contribution_bps": 0.049
+      "name": "Northrop Grumman Corp",
+      "ticker": "NOC",
+      "weight_pct": 0.1104,
+      "return_pct": 1.7697,
+      "contribution_bps": 0.195
     },
     {
-      "name": "Cooper Cos Inc/The",
-      "ticker": "COO",
-      "weight_pct": 0.0192,
-      "return_pct": 2.5176,
-      "contribution_bps": 0.048
+      "name": "Cboe Global Markets Inc",
+      "ticker": "CBOE",
+      "weight_pct": 0.0564,
+      "return_pct": 3.4101,
+      "contribution_bps": 0.192
+    },
+    {
+      "name": "Williams Cos Inc",
+      "ticker": "WMB",
+      "weight_pct": 0.1251,
+      "return_pct": 1.5199,
+      "contribution_bps": 0.19
+    },
+    {
+      "name": "Marsh + Mclennan Cos",
+      "ticker": "MRSH",
+      "weight_pct": 0.1499,
+      "return_pct": 1.2575,
+      "contribution_bps": 0.189
+    },
+    {
+      "name": "Kinder Morgan Inc",
+      "ticker": "KMI",
+      "weight_pct": 0.0923,
+      "return_pct": 2.0281,
+      "contribution_bps": 0.187
+    },
+    {
+      "name": "Travelers Cos Inc/The",
+      "ticker": "TRV",
+      "weight_pct": 0.1265,
+      "return_pct": 1.4119,
+      "contribution_bps": 0.179
+    },
+    {
+      "name": "Twilio Inc   A",
+      "ticker": "TWLO",
+      "weight_pct": 0.0486,
+      "return_pct": 3.6634,
+      "contribution_bps": 0.178
+    },
+    {
+      "name": "Goldman Sachs Group Inc",
+      "ticker": "GS",
+      "weight_pct": 0.4056,
+      "return_pct": 0.4381,
+      "contribution_bps": 0.178
+    },
+    {
+      "name": "Steel Dynamics Inc",
+      "ticker": "STLD",
+      "weight_pct": 0.0471,
+      "return_pct": 3.7616,
+      "contribution_bps": 0.177
+    },
+    {
+      "name": "Howmet Aerospace Inc",
+      "ticker": "HWM",
+      "weight_pct": 0.1324,
+      "return_pct": 1.2995,
+      "contribution_bps": 0.172
+    },
+    {
+      "name": "Csx Corp",
+      "ticker": "CSX",
+      "weight_pct": 0.1435,
+      "return_pct": 1.1886,
+      "contribution_bps": 0.171
+    },
+    {
+      "name": "Devon Energy Corp",
+      "ticker": "DVN",
+      "weight_pct": 0.0715,
+      "return_pct": 2.3821,
+      "contribution_bps": 0.17
     },
     {
       "name": "Ww Grainger Inc",
       "ticker": "GWW",
-      "weight_pct": 0.0982,
-      "return_pct": 0.4838,
-      "contribution_bps": 0.048
+      "weight_pct": 0.0964,
+      "return_pct": 1.7435,
+      "contribution_bps": 0.168
     },
     {
-      "name": "Coinbase Global Inc  Class A",
-      "ticker": "COIN",
-      "weight_pct": 0.0473,
-      "return_pct": 0.9944,
-      "contribution_bps": 0.047
+      "name": "Parker Hannifin Corp",
+      "ticker": "PH",
+      "weight_pct": 0.1856,
+      "return_pct": 0.8969,
+      "contribution_bps": 0.166
     },
     {
-      "name": "Edison International",
-      "ticker": "EIX",
-      "weight_pct": 0.036,
-      "return_pct": 1.297,
-      "contribution_bps": 0.047
+      "name": "Blackrock Inc",
+      "ticker": "BLK",
+      "weight_pct": 0.2689,
+      "return_pct": 0.6125,
+      "contribution_bps": 0.165
     },
     {
-      "name": "Jm Smucker Co/The",
-      "ticker": "SJM",
-      "weight_pct": 0.022,
-      "return_pct": 2.0758,
-      "contribution_bps": 0.046
+      "name": "Abbvie Inc",
+      "ticker": "ABBV",
+      "weight_pct": 0.7967,
+      "return_pct": 0.2012,
+      "contribution_bps": 0.16
     },
     {
-      "name": "Arch Capital Group Ltd",
-      "ticker": "ACGL",
-      "weight_pct": 0.0571,
-      "return_pct": 0.783,
-      "contribution_bps": 0.045
+      "name": "Verizon Communications Inc",
+      "ticker": "VZ",
+      "weight_pct": 0.2939,
+      "return_pct": 0.5428,
+      "contribution_bps": 0.16
     },
     {
-      "name": "Hasbro Inc",
-      "ticker": "HAS",
-      "weight_pct": 0.0264,
-      "return_pct": 1.6903,
-      "contribution_bps": 0.045
+      "name": "Ebay Inc",
+      "ticker": "EBAY",
+      "weight_pct": 0.0745,
+      "return_pct": 2.108,
+      "contribution_bps": 0.157
     },
     {
-      "name": "Costar Group Inc",
-      "ticker": "CSGP",
-      "weight_pct": 0.0197,
-      "return_pct": 2.2586,
-      "contribution_bps": 0.044
+      "name": "Boston Scientific Corp",
+      "ticker": "BSX",
+      "weight_pct": 0.0979,
+      "return_pct": 1.5448,
+      "contribution_bps": 0.151
+    },
+    {
+      "name": "At+T Inc",
+      "ticker": "T",
+      "weight_pct": 0.2294,
+      "return_pct": 0.6422,
+      "contribution_bps": 0.147
+    },
+    {
+      "name": "Wabtec Corp",
+      "ticker": "WAB",
+      "weight_pct": 0.0772,
+      "return_pct": 1.7774,
+      "contribution_bps": 0.137
+    },
+    {
+      "name": "Keurig Dr Pepper Inc",
+      "ticker": "KDP",
+      "weight_pct": 0.0775,
+      "return_pct": 1.7596,
+      "contribution_bps": 0.136
+    },
+    {
+      "name": "Altria Group Inc",
+      "ticker": "MO",
+      "weight_pct": 0.1947,
+      "return_pct": 0.6991,
+      "contribution_bps": 0.136
+    },
+    {
+      "name": "Oneok Inc",
+      "ticker": "OKE",
+      "weight_pct": 0.0835,
+      "return_pct": 1.6167,
+      "contribution_bps": 0.135
+    },
+    {
+      "name": "Chevron Corp",
+      "ticker": "CVX",
+      "weight_pct": 0.6401,
+      "return_pct": 0.2087,
+      "contribution_bps": 0.134
+    },
+    {
+      "name": "Rockwell Automation Inc",
+      "ticker": "ROK",
+      "weight_pct": 0.0663,
+      "return_pct": 2.0033,
+      "contribution_bps": 0.133
+    },
+    {
+      "name": "Global Payments Inc",
+      "ticker": "GPN",
+      "weight_pct": 0.0334,
+      "return_pct": 3.9071,
+      "contribution_bps": 0.131
+    },
+    {
+      "name": "Comcast Corp Class A",
+      "ticker": "CMCSA",
+      "weight_pct": 0.1331,
+      "return_pct": 0.9792,
+      "contribution_bps": 0.13
+    },
+    {
+      "name": "Bank Of America Corp",
+      "ticker": "BAC",
+      "weight_pct": 0.5052,
+      "return_pct": 0.2572,
+      "contribution_bps": 0.13
+    },
+    {
+      "name": "L3Harris Technologies Inc",
+      "ticker": "LHX",
+      "weight_pct": 0.0775,
+      "return_pct": 1.6727,
+      "contribution_bps": 0.13
+    },
+    {
+      "name": "Occidental Petroleum Corp",
+      "ticker": "OXY",
+      "weight_pct": 0.0624,
+      "return_pct": 2.0445,
+      "contribution_bps": 0.128
+    },
+    {
+      "name": "Wells Fargo + Co",
+      "ticker": "WFC",
+      "weight_pct": 0.3973,
+      "return_pct": 0.3158,
+      "contribution_bps": 0.125
+    },
+    {
+      "name": "Centene Corp",
+      "ticker": "CNC",
+      "weight_pct": 0.052,
+      "return_pct": 2.4074,
+      "contribution_bps": 0.125
+    },
+    {
+      "name": "Hartford Insurance Group Inc",
+      "ticker": "HIG",
+      "weight_pct": 0.056,
+      "return_pct": 2.18,
+      "contribution_bps": 0.122
+    },
+    {
+      "name": "Boeing Co/The",
+      "ticker": "BA",
+      "weight_pct": 0.2094,
+      "return_pct": 0.5801,
+      "contribution_bps": 0.121
+    },
+    {
+      "name": "Procter + Gamble Co/The",
+      "ticker": "PG",
+      "weight_pct": 0.6013,
+      "return_pct": 0.202,
+      "contribution_bps": 0.121
+    },
+    {
+      "name": "Msci Inc",
+      "ticker": "MSCI",
+      "weight_pct": 0.072,
+      "return_pct": 1.6103,
+      "contribution_bps": 0.116
+    },
+    {
+      "name": "Pfizer Inc",
+      "ticker": "PFE",
+      "weight_pct": 0.2558,
+      "return_pct": 0.4448,
+      "contribution_bps": 0.114
     },
     {
       "name": "Cintas Corp",
       "ticker": "CTAS",
-      "weight_pct": 0.1204,
-      "return_pct": 0.3598,
-      "contribution_bps": 0.043
+      "weight_pct": 0.1181,
+      "return_pct": 0.95,
+      "contribution_bps": 0.112
     },
     {
-      "name": "Wynn Resorts Ltd",
-      "ticker": "WYNN",
-      "weight_pct": 0.0093,
-      "return_pct": 4.3196,
-      "contribution_bps": 0.04
+      "name": "Royal Caribbean Cruises Ltd",
+      "ticker": "RCL",
+      "weight_pct": 0.1286,
+      "return_pct": 0.8517,
+      "contribution_bps": 0.11
     },
     {
-      "name": "Healthpeak Properties Inc",
-      "ticker": "DOC",
-      "weight_pct": 0.0221,
-      "return_pct": 1.7769,
-      "contribution_bps": 0.039
+      "name": "Dollar Tree Inc",
+      "ticker": "DLTR",
+      "weight_pct": 0.0405,
+      "return_pct": 2.6233,
+      "contribution_bps": 0.106
+    },
+    {
+      "name": "S+P Global Inc",
+      "ticker": "SPGI",
+      "weight_pct": 0.2187,
+      "return_pct": 0.4861,
+      "contribution_bps": 0.106
+    },
+    {
+      "name": "Fortinet Inc",
+      "ticker": "FTNT",
+      "weight_pct": 0.116,
+      "return_pct": 0.8982,
+      "contribution_bps": 0.104
+    },
+    {
+      "name": "Nasdaq Inc",
+      "ticker": "NDAQ",
+      "weight_pct": 0.0736,
+      "return_pct": 1.4009,
+      "contribution_bps": 0.103
+    },
+    {
+      "name": "Linde Plc",
+      "ticker": "LIN",
+      "weight_pct": 0.3686,
+      "return_pct": 0.2787,
+      "contribution_bps": 0.103
     },
     {
       "name": "Duke Energy Corp",
       "ticker": "DUK",
-      "weight_pct": 0.1568,
-      "return_pct": 0.2504,
+      "weight_pct": 0.1536,
+      "return_pct": 0.6557,
+      "contribution_bps": 0.101
+    },
+    {
+      "name": "Crown Castle Inc",
+      "ticker": "CCI",
+      "weight_pct": 0.0574,
+      "return_pct": 1.7306,
+      "contribution_bps": 0.099
+    },
+    {
+      "name": "American Tower Corp",
+      "ticker": "AMT",
+      "weight_pct": 0.1351,
+      "return_pct": 0.7249,
+      "contribution_bps": 0.098
+    },
+    {
+      "name": "Aflac Inc",
+      "ticker": "AFL",
+      "weight_pct": 0.0859,
+      "return_pct": 1.134,
+      "contribution_bps": 0.097
+    },
+    {
+      "name": "Cognizant Tech Solutions A",
+      "ticker": "CTSH",
+      "weight_pct": 0.044,
+      "return_pct": 2.2013,
+      "contribution_bps": 0.097
+    },
+    {
+      "name": "Ross Stores Inc",
+      "ticker": "ROST",
+      "weight_pct": 0.1167,
+      "return_pct": 0.8228,
+      "contribution_bps": 0.096
+    },
+    {
+      "name": "Danaher Corp",
+      "ticker": "DHR",
+      "weight_pct": 0.2261,
+      "return_pct": 0.4211,
+      "contribution_bps": 0.095
+    },
+    {
+      "name": "Intuit Inc",
+      "ticker": "INTU",
+      "weight_pct": 0.142,
+      "return_pct": 0.6534,
+      "contribution_bps": 0.093
+    },
+    {
+      "name": "Cdw Corp/De",
+      "ticker": "CDW",
+      "weight_pct": 0.0314,
+      "return_pct": 2.8856,
+      "contribution_bps": 0.091
+    },
+    {
+      "name": "Starbucks Corp",
+      "ticker": "SBUX",
+      "weight_pct": 0.1919,
+      "return_pct": 0.466,
+      "contribution_bps": 0.089
+    },
+    {
+      "name": "Cardinal Health Inc",
+      "ticker": "CAH",
+      "weight_pct": 0.0978,
+      "return_pct": 0.9114,
+      "contribution_bps": 0.089
+    },
+    {
+      "name": "Cincinnati Financial Corp",
+      "ticker": "CINF",
+      "weight_pct": 0.0439,
+      "return_pct": 1.9927,
+      "contribution_bps": 0.088
+    },
+    {
+      "name": "Cencora Inc",
+      "ticker": "COR",
+      "weight_pct": 0.1014,
+      "return_pct": 0.8532,
+      "contribution_bps": 0.087
+    },
+    {
+      "name": "Morgan Stanley",
+      "ticker": "MS",
+      "weight_pct": 0.343,
+      "return_pct": 0.2459,
+      "contribution_bps": 0.084
+    },
+    {
+      "name": "Willis Towers Watson Plc",
+      "ticker": "WTW",
+      "weight_pct": 0.0467,
+      "return_pct": 1.792,
+      "contribution_bps": 0.084
+    },
+    {
+      "name": "Honeywell Aerospace Inc",
+      "ticker": "HONA",
+      "weight_pct": 0.0805,
+      "return_pct": 1.0317,
+      "contribution_bps": 0.083
+    },
+    {
+      "name": "Arthur J Gallagher + Co",
+      "ticker": "AJG",
+      "weight_pct": 0.1105,
+      "return_pct": 0.7306,
+      "contribution_bps": 0.081
+    },
+    {
+      "name": "Hewlett Packard Enterprise",
+      "ticker": "HPE",
+      "weight_pct": 0.097,
+      "return_pct": 0.8204,
+      "contribution_bps": 0.08
+    },
+    {
+      "name": "Mcdonald S Corp",
+      "ticker": "MCD",
+      "weight_pct": 0.3059,
+      "return_pct": 0.2594,
+      "contribution_bps": 0.079
+    },
+    {
+      "name": "Citigroup Inc",
+      "ticker": "C",
+      "weight_pct": 0.3142,
+      "return_pct": 0.246,
+      "contribution_bps": 0.077
+    },
+    {
+      "name": "Akamai Technologies Inc",
+      "ticker": "AKAM",
+      "weight_pct": 0.018,
+      "return_pct": 4.2596,
+      "contribution_bps": 0.077
+    },
+    {
+      "name": "Schwab (Charles) Corp",
+      "ticker": "SCHW",
+      "weight_pct": 0.2314,
+      "return_pct": 0.3235,
+      "contribution_bps": 0.075
+    },
+    {
+      "name": "Simon Property Group Inc",
+      "ticker": "SPG",
+      "weight_pct": 0.1159,
+      "return_pct": 0.6309,
+      "contribution_bps": 0.073
+    },
+    {
+      "name": "Norfolk Southern Corp",
+      "ticker": "NSC",
+      "weight_pct": 0.1125,
+      "return_pct": 0.6476,
+      "contribution_bps": 0.073
+    },
+    {
+      "name": "Cf Industries Holdings Inc",
+      "ticker": "CF",
+      "weight_pct": 0.0278,
+      "return_pct": 2.5822,
+      "contribution_bps": 0.072
+    },
+    {
+      "name": "Paychex Inc",
+      "ticker": "PAYX",
+      "weight_pct": 0.0563,
+      "return_pct": 1.2548,
+      "contribution_bps": 0.071
+    },
+    {
+      "name": "Expand Energy Corp",
+      "ticker": "EXE",
+      "weight_pct": 0.0304,
+      "return_pct": 2.3034,
+      "contribution_bps": 0.07
+    },
+    {
+      "name": "Host Hotels + Resorts Inc",
+      "ticker": "HST",
+      "weight_pct": 0.0266,
+      "return_pct": 2.5712,
+      "contribution_bps": 0.068
+    },
+    {
+      "name": "Verisk Analytics Inc",
+      "ticker": "VRSK",
+      "weight_pct": 0.0399,
+      "return_pct": 1.7049,
+      "contribution_bps": 0.068
+    },
+    {
+      "name": "Ventas Inc",
+      "ticker": "VTR",
+      "weight_pct": 0.0706,
+      "return_pct": 0.9498,
+      "contribution_bps": 0.067
+    },
+    {
+      "name": "Prudential Financial Inc",
+      "ticker": "PRU",
+      "weight_pct": 0.0645,
+      "return_pct": 1.0242,
+      "contribution_bps": 0.066
+    },
+    {
+      "name": "Verisign Inc",
+      "ticker": "VRSN",
+      "weight_pct": 0.0382,
+      "return_pct": 1.7264,
+      "contribution_bps": 0.066
+    },
+    {
+      "name": "Keysight Technologies In",
+      "ticker": "KEYS",
+      "weight_pct": 0.0757,
+      "return_pct": 0.8617,
+      "contribution_bps": 0.065
+    },
+    {
+      "name": "Viatris Inc",
+      "ticker": "VTRS",
+      "weight_pct": 0.0362,
+      "return_pct": 1.757,
+      "contribution_bps": 0.064
+    },
+    {
+      "name": "Echostar Corp A",
+      "ticker": "ECHO",
+      "weight_pct": 0.0215,
+      "return_pct": 2.9351,
+      "contribution_bps": 0.063
+    },
+    {
+      "name": "Metlife Inc",
+      "ticker": "MET",
+      "weight_pct": 0.0832,
+      "return_pct": 0.7574,
+      "contribution_bps": 0.063
+    },
+    {
+      "name": "Ciena Corp",
+      "ticker": "CIEN",
+      "weight_pct": 0.0586,
+      "return_pct": 1.0285,
+      "contribution_bps": 0.06
+    },
+    {
+      "name": "3M Co",
+      "ticker": "MMM",
+      "weight_pct": 0.1493,
+      "return_pct": 0.3923,
+      "contribution_bps": 0.059
+    },
+    {
+      "name": "Dow Inc",
+      "ticker": "DOW",
+      "weight_pct": 0.0343,
+      "return_pct": 1.6796,
+      "contribution_bps": 0.058
+    },
+    {
+      "name": "Transdigm Group Inc",
+      "ticker": "TDG",
+      "weight_pct": 0.1033,
+      "return_pct": 0.5489,
+      "contribution_bps": 0.057
+    },
+    {
+      "name": "Huntington Ingalls Industrie",
+      "ticker": "HII",
+      "weight_pct": 0.0184,
+      "return_pct": 3.026,
+      "contribution_bps": 0.056
+    },
+    {
+      "name": "Arch Capital Group Ltd",
+      "ticker": "ACGL",
+      "weight_pct": 0.0563,
+      "return_pct": 0.9434,
+      "contribution_bps": 0.053
+    },
+    {
+      "name": "Illinois Tool Works",
+      "ticker": "ITW",
+      "weight_pct": 0.1142,
+      "return_pct": 0.4604,
+      "contribution_bps": 0.053
+    },
+    {
+      "name": "Everest Group Ltd",
+      "ticker": "EG",
+      "weight_pct": 0.0226,
+      "return_pct": 2.3186,
+      "contribution_bps": 0.052
+    },
+    {
+      "name": "Atmos Energy Corp",
+      "ticker": "ATO",
+      "weight_pct": 0.045,
+      "return_pct": 1.1653,
+      "contribution_bps": 0.052
+    },
+    {
+      "name": "Kroger Co",
+      "ticker": "KR",
+      "weight_pct": 0.0595,
+      "return_pct": 0.8675,
+      "contribution_bps": 0.052
+    },
+    {
+      "name": "Consolidated Edison Inc",
+      "ticker": "ED",
+      "weight_pct": 0.0673,
+      "return_pct": 0.7518,
+      "contribution_bps": 0.051
+    },
+    {
+      "name": "Fastenal Co",
+      "ticker": "FAST",
+      "weight_pct": 0.096,
+      "return_pct": 0.4948,
+      "contribution_bps": 0.048
+    },
+    {
+      "name": "Waste Management Inc",
+      "ticker": "WM",
+      "weight_pct": 0.1352,
+      "return_pct": 0.3254,
+      "contribution_bps": 0.044
+    },
+    {
+      "name": "Lyondellbasell Indu Cl A",
+      "ticker": "LYB",
+      "weight_pct": 0.0238,
+      "return_pct": 1.8487,
+      "contribution_bps": 0.044
+    },
+    {
+      "name": "Jack Henry + Associates Inc",
+      "ticker": "JKHY",
+      "weight_pct": 0.0187,
+      "return_pct": 2.3306,
+      "contribution_bps": 0.044
+    },
+    {
+      "name": "Centerpoint Energy Inc",
+      "ticker": "CNP",
+      "weight_pct": 0.0411,
+      "return_pct": 1.0537,
+      "contribution_bps": 0.043
+    },
+    {
+      "name": "Roper Technologies Inc",
+      "ticker": "ROP",
+      "weight_pct": 0.0717,
+      "return_pct": 0.6,
+      "contribution_bps": 0.043
+    },
+    {
+      "name": "Digital Realty Trust Inc",
+      "ticker": "DLR",
+      "weight_pct": 0.0973,
+      "return_pct": 0.4331,
+      "contribution_bps": 0.042
+    },
+    {
+      "name": "Air Products + Chemicals Inc",
+      "ticker": "APD",
+      "weight_pct": 0.1063,
+      "return_pct": 0.3761,
+      "contribution_bps": 0.04
+    },
+    {
+      "name": "Brown + Brown Inc",
+      "ticker": "BRO",
+      "weight_pct": 0.0314,
+      "return_pct": 1.2535,
       "contribution_bps": 0.039
     },
     {
-      "name": "Lennox International Inc",
-      "ticker": "LII",
-      "weight_pct": 0.0171,
-      "return_pct": 2.1932,
-      "contribution_bps": 0.037
+      "name": "Live Nation Entertainment In",
+      "ticker": "LYV",
+      "weight_pct": 0.0431,
+      "return_pct": 0.9115,
+      "contribution_bps": 0.039
     },
     {
-      "name": "Ball Corp",
-      "ticker": "BALL",
-      "weight_pct": 0.0277,
-      "return_pct": 1.3501,
-      "contribution_bps": 0.037
+      "name": "Apollo Global Management Inc",
+      "ticker": "APO",
+      "weight_pct": 0.0887,
+      "return_pct": 0.4419,
+      "contribution_bps": 0.039
     },
     {
-      "name": "Veralto Corp",
-      "ticker": "VLTO",
+      "name": "Assurant Inc",
+      "ticker": "AIZ",
+      "weight_pct": 0.0242,
+      "return_pct": 1.5605,
+      "contribution_bps": 0.038
+    },
+    {
+      "name": "Textron Inc",
+      "ticker": "TXT",
+      "weight_pct": 0.0228,
+      "return_pct": 1.6509,
+      "contribution_bps": 0.038
+    },
+    {
+      "name": "Delta Air Lines Inc",
+      "ticker": "DAL",
+      "weight_pct": 0.0838,
+      "return_pct": 0.4357,
+      "contribution_bps": 0.036
+    },
+    {
+      "name": "Dupont De Nemours Inc",
+      "ticker": "DD",
+      "weight_pct": 0.0324,
+      "return_pct": 1.1216,
+      "contribution_bps": 0.036
+    },
+    {
+      "name": "Casey S General Stores Inc",
+      "ticker": "CASY",
+      "weight_pct": 0.0395,
+      "return_pct": 0.9175,
+      "contribution_bps": 0.036
+    },
+    {
+      "name": "Chipotle Mexican Grill Inc",
+      "ticker": "CMG",
+      "weight_pct": 0.0693,
+      "return_pct": 0.5036,
+      "contribution_bps": 0.035
+    },
+    {
+      "name": "American Water Works Co Inc",
+      "ticker": "AWK",
+      "weight_pct": 0.0456,
+      "return_pct": 0.764,
+      "contribution_bps": 0.035
+    },
+    {
+      "name": "Welltower Inc",
+      "ticker": "WELL",
+      "weight_pct": 0.2741,
+      "return_pct": 0.1253,
+      "contribution_bps": 0.034
+    },
+    {
+      "name": "Wr Berkley Corp",
+      "ticker": "WRB",
+      "weight_pct": 0.0264,
+      "return_pct": 1.1986,
+      "contribution_bps": 0.032
+    },
+    {
+      "name": "State Street Corp",
+      "ticker": "STT",
+      "weight_pct": 0.072,
+      "return_pct": 0.433,
+      "contribution_bps": 0.031
+    },
+    {
+      "name": "P G + E Corp",
+      "ticker": "PCG",
+      "weight_pct": 0.0446,
+      "return_pct": 0.6849,
+      "contribution_bps": 0.031
+    },
+    {
+      "name": "Apa Corp",
+      "ticker": "APA",
+      "weight_pct": 0.0238,
+      "return_pct": 1.2795,
+      "contribution_bps": 0.03
+    },
+    {
+      "name": "On Semiconductor",
+      "ticker": "ON",
+      "weight_pct": 0.0414,
+      "return_pct": 0.7235,
+      "contribution_bps": 0.03
+    },
+    {
+      "name": "Fortive Corp",
+      "ticker": "FTV",
+      "weight_pct": 0.031,
+      "return_pct": 0.9389,
+      "contribution_bps": 0.029
+    },
+    {
+      "name": "Leidos Holdings Inc",
+      "ticker": "LDOS",
+      "weight_pct": 0.0263,
+      "return_pct": 1.0902,
+      "contribution_bps": 0.029
+    },
+    {
+      "name": "Godaddy Inc   Class A",
+      "ticker": "GDDY",
+      "weight_pct": 0.0217,
+      "return_pct": 1.2711,
+      "contribution_bps": 0.028
+    },
+    {
+      "name": "T Mobile Us Inc",
+      "ticker": "TMUS",
+      "weight_pct": 0.1252,
+      "return_pct": 0.2193,
+      "contribution_bps": 0.027
+    },
+    {
+      "name": "Republic Services Inc",
+      "ticker": "RSG",
+      "weight_pct": 0.0741,
+      "return_pct": 0.3404,
+      "contribution_bps": 0.025
+    },
+    {
+      "name": "Las Vegas Sands Corp",
+      "ticker": "LVS",
+      "weight_pct": 0.0158,
+      "return_pct": 1.5928,
+      "contribution_bps": 0.025
+    },
+    {
+      "name": "Loews Corp",
+      "ticker": "L",
+      "weight_pct": 0.0278,
+      "return_pct": 0.9005,
+      "contribution_bps": 0.025
+    },
+    {
+      "name": "Hp Inc",
+      "ticker": "HPQ",
+      "weight_pct": 0.0399,
+      "return_pct": 0.6018,
+      "contribution_bps": 0.024
+    },
+    {
+      "name": "Walt Disney Co/The",
+      "ticker": "DIS",
+      "weight_pct": 0.3159,
+      "return_pct": 0.0756,
+      "contribution_bps": 0.024
+    },
+    {
+      "name": "Fair Isaac Corp",
+      "ticker": "FICO",
+      "weight_pct": 0.024,
+      "return_pct": 0.9533,
+      "contribution_bps": 0.023
+    },
+    {
+      "name": "Ameriprise Financial Inc",
+      "ticker": "AMP",
+      "weight_pct": 0.0702,
+      "return_pct": 0.3203,
+      "contribution_bps": 0.022
+    },
+    {
+      "name": "Hunt (Jb) Transprt Svcs Inc",
+      "ticker": "JBHT",
+      "weight_pct": 0.0257,
+      "return_pct": 0.8693,
+      "contribution_bps": 0.022
+    },
+    {
+      "name": "Fedex Corp",
+      "ticker": "FDX",
+      "weight_pct": 0.1079,
+      "return_pct": 0.2007,
+      "contribution_bps": 0.022
+    },
+    {
+      "name": "Dollar General Corp",
+      "ticker": "DG",
+      "weight_pct": 0.0465,
+      "return_pct": 0.4609,
+      "contribution_bps": 0.021
+    },
+    {
+      "name": "Dte Energy Company",
+      "ticker": "DTE",
+      "weight_pct": 0.0444,
+      "return_pct": 0.4626,
+      "contribution_bps": 0.021
+    },
+    {
+      "name": "Tyler Technologies Inc",
+      "ticker": "TYL",
+      "weight_pct": 0.0245,
+      "return_pct": 0.8322,
+      "contribution_bps": 0.02
+    },
+    {
+      "name": "Okta Inc",
+      "ticker": "OKTA",
+      "weight_pct": 0.0453,
+      "return_pct": 0.4449,
+      "contribution_bps": 0.02
+    },
+    {
+      "name": "Clorox Company",
+      "ticker": "CLX",
+      "weight_pct": 0.0198,
+      "return_pct": 1.0139,
+      "contribution_bps": 0.02
+    },
+    {
+      "name": "Teledyne Technologies Inc",
+      "ticker": "TDY",
+      "weight_pct": 0.046,
+      "return_pct": 0.4337,
+      "contribution_bps": 0.02
+    },
+    {
+      "name": "Mondelez International Inc A",
+      "ticker": "MDLZ",
+      "weight_pct": 0.1301,
+      "return_pct": 0.1505,
+      "contribution_bps": 0.02
+    },
+    {
+      "name": "Hasbro Inc",
+      "ticker": "HAS",
+      "weight_pct": 0.0262,
+      "return_pct": 0.7443,
+      "contribution_bps": 0.02
+    },
+    {
+      "name": "Globe Life Inc",
+      "ticker": "GL",
+      "weight_pct": 0.0194,
+      "return_pct": 1.0072,
+      "contribution_bps": 0.019
+    },
+    {
+      "name": "Franklin Templeton Inc",
+      "ticker": "BEN",
+      "weight_pct": 0.016,
+      "return_pct": 1.1709,
+      "contribution_bps": 0.019
+    },
+    {
+      "name": "Aon Plc Class A",
+      "ticker": "AON",
+      "weight_pct": 0.1093,
+      "return_pct": 0.1698,
+      "contribution_bps": 0.019
+    },
+    {
+      "name": "Colgate Palmolive Co",
+      "ticker": "CL",
+      "weight_pct": 0.12,
+      "return_pct": 0.1531,
+      "contribution_bps": 0.018
+    },
+    {
+      "name": "Tyson Foods Inc Cl A",
+      "ticker": "TSN",
+      "weight_pct": 0.026,
+      "return_pct": 0.7015,
+      "contribution_bps": 0.018
+    },
+    {
+      "name": "Principal Financial Group",
+      "ticker": "PFG",
+      "weight_pct": 0.0346,
+      "return_pct": 0.52,
+      "contribution_bps": 0.018
+    },
+    {
+      "name": "Sba Communications Corp",
+      "ticker": "SBAC",
+      "weight_pct": 0.0311,
+      "return_pct": 0.5674,
+      "contribution_bps": 0.018
+    },
+    {
+      "name": "Dominion Energy Inc",
+      "ticker": "D",
+      "weight_pct": 0.092,
+      "return_pct": 0.1905,
+      "contribution_bps": 0.018
+    },
+    {
+      "name": "Gen Digital Inc",
+      "ticker": "GEN",
+      "weight_pct": 0.0247,
+      "return_pct": 0.7047,
+      "contribution_bps": 0.017
+    },
+    {
+      "name": "Nisource Inc",
+      "ticker": "NI",
+      "weight_pct": 0.0332,
+      "return_pct": 0.5104,
+      "contribution_bps": 0.017
+    },
+    {
+      "name": "Corpay Inc",
+      "ticker": "CPAY",
+      "weight_pct": 0.0462,
+      "return_pct": 0.3647,
+      "contribution_bps": 0.017
+    },
+    {
+      "name": "Church + Dwight Co Inc",
+      "ticker": "CHD",
+      "weight_pct": 0.0406,
+      "return_pct": 0.4043,
+      "contribution_bps": 0.016
+    },
+    {
+      "name": "Evergy Inc",
+      "ticker": "EVRG",
+      "weight_pct": 0.0313,
+      "return_pct": 0.5114,
+      "contribution_bps": 0.016
+    },
+    {
+      "name": "Fedex Freight Holding Co",
+      "ticker": "FDXF",
+      "weight_pct": 0.0237,
+      "return_pct": 0.6044,
+      "contribution_bps": 0.014
+    },
+    {
+      "name": "Omnicom Group",
+      "ticker": "OMC",
+      "weight_pct": 0.0373,
+      "return_pct": 0.3842,
+      "contribution_bps": 0.014
+    },
+    {
+      "name": "Southern Co/The",
+      "ticker": "SO",
+      "weight_pct": 0.1655,
+      "return_pct": 0.0855,
+      "contribution_bps": 0.014
+    },
+    {
+      "name": "Smurfit Westrock Plc",
+      "ticker": "SW",
+      "weight_pct": 0.0357,
+      "return_pct": 0.3847,
+      "contribution_bps": 0.014
+    },
+    {
+      "name": "Pinnacle West Capital",
+      "ticker": "PNW",
+      "weight_pct": 0.0197,
+      "return_pct": 0.665,
+      "contribution_bps": 0.013
+    },
+    {
+      "name": "Jacobs Solutions Inc",
+      "ticker": "J",
+      "weight_pct": 0.0279,
+      "return_pct": 0.4604,
+      "contribution_bps": 0.013
+    },
+    {
+      "name": "Brown Forman Corp Class B",
+      "ticker": "BF.B",
+      "weight_pct": 0.0083,
+      "return_pct": 1.4817,
+      "contribution_bps": 0.012
+    },
+    {
+      "name": "Avery Dennison Corp",
+      "ticker": "AVY",
+      "weight_pct": 0.0222,
+      "return_pct": 0.5265,
+      "contribution_bps": 0.012
+    },
+    {
+      "name": "Ptc Inc",
+      "ticker": "PTC",
+      "weight_pct": 0.0324,
+      "return_pct": 0.3472,
+      "contribution_bps": 0.011
+    },
+    {
+      "name": "Cms Energy Corp",
+      "ticker": "CMS",
+      "weight_pct": 0.0335,
+      "return_pct": 0.3307,
+      "contribution_bps": 0.011
+    },
+    {
+      "name": "Idex Corp",
+      "ticker": "IEX",
+      "weight_pct": 0.0269,
+      "return_pct": 0.4111,
+      "contribution_bps": 0.011
+    },
+    {
+      "name": "Regency Centers Corp",
+      "ticker": "REG",
+      "weight_pct": 0.0193,
+      "return_pct": 0.565,
+      "contribution_bps": 0.011
+    },
+    {
+      "name": "Broadridge Financial Solutio",
+      "ticker": "BR",
+      "weight_pct": 0.0337,
+      "return_pct": 0.3224,
+      "contribution_bps": 0.011
+    },
+    {
+      "name": "Mosaic Co/The",
+      "ticker": "MOS",
+      "weight_pct": 0.0112,
+      "return_pct": 0.9662,
+      "contribution_bps": 0.011
+    },
+    {
+      "name": "Hershey Co/The",
+      "ticker": "HSY",
+      "weight_pct": 0.0388,
+      "return_pct": 0.2709,
+      "contribution_bps": 0.011
+    },
+    {
+      "name": "United Parcel Service Cl B",
+      "ticker": "UPS",
+      "weight_pct": 0.1277,
+      "return_pct": 0.0811,
+      "contribution_bps": 0.01
+    },
+    {
+      "name": "Nordson Corp",
+      "ticker": "NDSN",
+      "weight_pct": 0.0265,
+      "return_pct": 0.3891,
+      "contribution_bps": 0.01
+    },
+    {
+      "name": "Estee Lauder Companies Cl A",
+      "ticker": "EL",
+      "weight_pct": 0.043,
+      "return_pct": 0.2386,
+      "contribution_bps": 0.01
+    },
+    {
+      "name": "News Corp  Class B",
+      "ticker": "NWS",
+      "weight_pct": 0.0055,
+      "return_pct": 1.6365,
+      "contribution_bps": 0.009
+    },
+    {
+      "name": "United Airlines Holdings Inc",
+      "ticker": "UAL",
+      "weight_pct": 0.0602,
+      "return_pct": 0.1495,
+      "contribution_bps": 0.009
+    },
+    {
+      "name": "Zoetis Inc",
+      "ticker": "ZTS",
+      "weight_pct": 0.0523,
+      "return_pct": 0.1701,
+      "contribution_bps": 0.009
+    },
+    {
+      "name": "Trane Technologies Plc",
+      "ticker": "TT",
+      "weight_pct": 0.142,
+      "return_pct": 0.0618,
+      "contribution_bps": 0.009
+    },
+    {
+      "name": "Raymond James Financial Inc",
+      "ticker": "RJF",
       "weight_pct": 0.0449,
-      "return_pct": 0.8284,
-      "contribution_bps": 0.037
+      "return_pct": 0.1847,
+      "contribution_bps": 0.008
+    },
+    {
+      "name": "Tractor Supply Company",
+      "ticker": "TSCO",
+      "weight_pct": 0.0297,
+      "return_pct": 0.2674,
+      "contribution_bps": 0.008
+    },
+    {
+      "name": "Eversource Energy",
+      "ticker": "ES",
+      "weight_pct": 0.0402,
+      "return_pct": 0.1871,
+      "contribution_bps": 0.008
+    },
+    {
+      "name": "Meta Platforms Inc Class A",
+      "ticker": "META",
+      "weight_pct": 2.1733,
+      "return_pct": 0.0031,
+      "contribution_bps": 0.007
+    },
+    {
+      "name": "Northern Trust Corp",
+      "ticker": "NTRS",
+      "weight_pct": 0.05,
+      "return_pct": 0.1351,
+      "contribution_bps": 0.007
+    },
+    {
+      "name": "Wynn Resorts Ltd",
+      "ticker": "WYNN",
+      "weight_pct": 0.0095,
+      "return_pct": 0.692,
+      "contribution_bps": 0.007
+    },
+    {
+      "name": "Ralph Lauren Corp",
+      "ticker": "RL",
+      "weight_pct": 0.0231,
+      "return_pct": 0.2735,
+      "contribution_bps": 0.006
+    },
+    {
+      "name": "Erie Indemnity Company Cl A",
+      "ticker": "ERIE",
+      "weight_pct": 0.0106,
+      "return_pct": 0.5804,
+      "contribution_bps": 0.006
+    },
+    {
+      "name": "Realty Income Corp",
+      "ticker": "O",
+      "weight_pct": 0.0865,
+      "return_pct": 0.0672,
+      "contribution_bps": 0.006
     },
     {
       "name": "Norwegian Cruise Line Holdin",
       "ticker": "NCLH",
       "weight_pct": 0.0131,
-      "return_pct": 2.846,
-      "contribution_bps": 0.037
+      "return_pct": 0.4341,
+      "contribution_bps": 0.006
     },
     {
-      "name": "Hartford Insurance Group Inc",
-      "ticker": "HIG",
-      "weight_pct": 0.0569,
-      "return_pct": 0.6493,
-      "contribution_bps": 0.037
+      "name": "Veralto Corp",
+      "ticker": "VLTO",
+      "weight_pct": 0.0442,
+      "return_pct": 0.1271,
+      "contribution_bps": 0.006
+    },
+    {
+      "name": "Jm Smucker Co/The",
+      "ticker": "SJM",
+      "weight_pct": 0.0219,
+      "return_pct": 0.2551,
+      "contribution_bps": 0.006
+    },
+    {
+      "name": "Henry Schein Inc",
+      "ticker": "HSIC",
+      "weight_pct": 0.0132,
+      "return_pct": 0.3733,
+      "contribution_bps": 0.005
+    },
+    {
+      "name": "Mgm Resorts International",
+      "ticker": "MGM",
+      "weight_pct": 0.0089,
+      "return_pct": 0.4558,
+      "contribution_bps": 0.004
+    },
+    {
+      "name": "Edison International",
+      "ticker": "EIX",
+      "weight_pct": 0.0357,
+      "return_pct": 0.0998,
+      "contribution_bps": 0.004
+    },
+    {
+      "name": "Amcor Plc",
+      "ticker": "AMCR",
+      "weight_pct": 0.0319,
+      "return_pct": 0.1108,
+      "contribution_bps": 0.004
+    },
+    {
+      "name": "Steris Plc",
+      "ticker": "STE",
+      "weight_pct": 0.0383,
+      "return_pct": 0.0701,
+      "contribution_bps": 0.003
+    },
+    {
+      "name": "T Rowe Price Group Inc",
+      "ticker": "TROW",
+      "weight_pct": 0.0366,
+      "return_pct": 0.0722,
+      "contribution_bps": 0.003
+    },
+    {
+      "name": "Trimble Inc",
+      "ticker": "TRMB",
+      "weight_pct": 0.0196,
+      "return_pct": 0.128,
+      "contribution_bps": 0.003
+    },
+    {
+      "name": "Ametek Inc",
+      "ticker": "AME",
+      "weight_pct": 0.0842,
+      "return_pct": 0.0294,
+      "contribution_bps": 0.002
+    },
+    {
+      "name": "Ppl Corp",
+      "ticker": "PPL",
+      "weight_pct": 0.0414,
+      "return_pct": 0.056,
+      "contribution_bps": 0.002
+    },
+    {
+      "name": "News Corp  Class A",
+      "ticker": "NWSA",
+      "weight_pct": 0.0149,
+      "return_pct": 0.1505,
+      "contribution_bps": 0.002
+    },
+    {
+      "name": "Aes Corp",
+      "ticker": "AES",
+      "weight_pct": 0.0164,
+      "return_pct": 0.1342,
+      "contribution_bps": 0.002
+    },
+    {
+      "name": "Essex Property Trust Inc",
+      "ticker": "ESS",
+      "weight_pct": 0.0273,
+      "return_pct": 0.0762,
+      "contribution_bps": 0.002
+    },
+    {
+      "name": "Southwest Airlines Co",
+      "ticker": "LUV",
+      "weight_pct": 0.0349,
+      "return_pct": 0.0432,
+      "contribution_bps": 0.002
+    },
+    {
+      "name": "Interactive Brokers Gro Cl A",
+      "ticker": "IBKR",
+      "weight_pct": 0.054,
+      "return_pct": 0.0258,
+      "contribution_bps": 0.001
+    },
+    {
+      "name": "Baxter International Inc",
+      "ticker": "BAX",
+      "weight_pct": 0.0211,
+      "return_pct": 0.0379,
+      "contribution_bps": 0.001
+    },
+    {
+      "name": "Amgen Inc",
+      "ticker": "AMGN",
+      "weight_pct": 0.3867,
+      "return_pct": 0.0,
+      "contribution_bps": 0.0
+    },
+    {
+      "name": "Pnc Financial Services Group",
+      "ticker": "PNC",
+      "weight_pct": 0.1419,
+      "return_pct": 0.0,
+      "contribution_bps": 0.0
+    },
+    {
+      "name": "Vylor Inc",
+      "ticker": "VYLR",
+      "weight_pct": 0.0742,
+      "return_pct": 0.0,
+      "contribution_bps": 0.0
+    },
+    {
+      "name": "Constellation Brands Inc A",
+      "ticker": "STZ",
+      "weight_pct": 0.0336,
+      "return_pct": 0.0,
+      "contribution_bps": 0.0
+    },
+    {
+      "name": "C.H. Robinson Worldwide Inc",
+      "ticker": "CHRW",
+      "weight_pct": 0.0234,
+      "return_pct": 0.0,
+      "contribution_bps": 0.0
+    },
+    {
+      "name": "Align Technology Inc",
+      "ticker": "ALGN",
+      "weight_pct": 0.0177,
+      "return_pct": 0.0,
+      "contribution_bps": 0.0
+    },
+    {
+      "name": "Bio Techne Corp",
+      "ticker": "TECH",
+      "weight_pct": 0.0176,
+      "return_pct": -0.0137,
+      "contribution_bps": -0.0
+    },
+    {
+      "name": "Federal Realty Invs Trust",
+      "ticker": "FRT",
+      "weight_pct": 0.0138,
+      "return_pct": -0.0351,
+      "contribution_bps": -0.0
+    },
+    {
+      "name": "Ball Corp",
+      "ticker": "BALL",
+      "weight_pct": 0.0274,
+      "return_pct": -0.0299,
+      "contribution_bps": -0.001
+    },
+    {
+      "name": "Equifax Inc",
+      "ticker": "EFX",
+      "weight_pct": 0.034,
+      "return_pct": -0.0531,
+      "contribution_bps": -0.002
+    },
+    {
+      "name": "Hormel Foods Corp",
+      "ticker": "HRL",
+      "weight_pct": 0.01,
+      "return_pct": -0.2246,
+      "contribution_bps": -0.002
+    },
+    {
+      "name": "Udr Inc",
+      "ticker": "UDR",
+      "weight_pct": 0.0167,
+      "return_pct": -0.1362,
+      "contribution_bps": -0.002
+    },
+    {
+      "name": "Williams Sonoma Inc",
+      "ticker": "WSM",
+      "weight_pct": 0.0475,
+      "return_pct": -0.0497,
+      "contribution_bps": -0.002
+    },
+    {
+      "name": "Fidelity National Info Serv",
+      "ticker": "FIS",
+      "weight_pct": 0.0226,
+      "return_pct": -0.1059,
+      "contribution_bps": -0.002
+    },
+    {
+      "name": "Netapp Inc",
+      "ticker": "NTAP",
+      "weight_pct": 0.0531,
+      "return_pct": -0.0454,
+      "contribution_bps": -0.002
+    },
+    {
+      "name": "Packaging Corp Of America",
+      "ticker": "PKG",
+      "weight_pct": 0.0347,
+      "return_pct": -0.0708,
+      "contribution_bps": -0.002
+    },
+    {
+      "name": "Halliburton Co",
+      "ticker": "HAL",
+      "weight_pct": 0.041,
+      "return_pct": -0.0627,
+      "contribution_bps": -0.003
+    },
+    {
+      "name": "Costco Wholesale Corp",
+      "ticker": "COST",
+      "weight_pct": 0.7268,
+      "return_pct": -0.0038,
+      "contribution_bps": -0.003
+    },
+    {
+      "name": "Invesco Ltd",
+      "ticker": "IVZ",
+      "weight_pct": 0.0198,
+      "return_pct": -0.1384,
+      "contribution_bps": -0.003
+    },
+    {
+      "name": "Diamondback Energy Inc",
+      "ticker": "FANG",
+      "weight_pct": 0.056,
+      "return_pct": -0.0505,
+      "contribution_bps": -0.003
+    },
+    {
+      "name": "Iron Mountain Inc",
+      "ticker": "IRM",
+      "weight_pct": 0.0508,
+      "return_pct": -0.0631,
+      "contribution_bps": -0.003
+    },
+    {
+      "name": "F5 Inc",
+      "ticker": "FFIV",
+      "weight_pct": 0.0276,
+      "return_pct": -0.1385,
+      "contribution_bps": -0.004
+    },
+    {
+      "name": "Tko Group Holdings Inc",
+      "ticker": "TKO",
+      "weight_pct": 0.0182,
+      "return_pct": -0.2154,
+      "contribution_bps": -0.004
+    },
+    {
+      "name": "Factset Research Systems Inc",
+      "ticker": "FDS",
+      "weight_pct": 0.0179,
+      "return_pct": -0.2265,
+      "contribution_bps": -0.004
+    },
+    {
+      "name": "Jpmorgan Chase + Co",
+      "ticker": "JPM",
+      "weight_pct": 1.3972,
+      "return_pct": -0.0029,
+      "contribution_bps": -0.004
+    },
+    {
+      "name": "Skyworks Solutions Inc",
+      "ticker": "SWKS",
+      "weight_pct": 0.0291,
+      "return_pct": -0.1449,
+      "contribution_bps": -0.004
+    },
+    {
+      "name": "Snap On Inc",
+      "ticker": "SNA",
+      "weight_pct": 0.0299,
+      "return_pct": -0.1445,
+      "contribution_bps": -0.004
+    },
+    {
+      "name": "Ulta Beauty Inc",
+      "ticker": "ULTA",
+      "weight_pct": 0.0437,
+      "return_pct": -0.1083,
+      "contribution_bps": -0.005
+    },
+    {
+      "name": "Xcel Energy Inc",
+      "ticker": "XEL",
+      "weight_pct": 0.0772,
+      "return_pct": -0.0624,
+      "contribution_bps": -0.005
+    },
+    {
+      "name": "Fox Corp   Class B",
+      "ticker": "FOX",
+      "weight_pct": 0.0125,
+      "return_pct": -0.4297,
+      "contribution_bps": -0.005
+    },
+    {
+      "name": "Entergy Corp",
+      "ticker": "ETR",
+      "weight_pct": 0.0802,
+      "return_pct": -0.0716,
+      "contribution_bps": -0.006
+    },
+    {
+      "name": "West Pharmaceutical Services",
+      "ticker": "WST",
+      "weight_pct": 0.0445,
+      "return_pct": -0.1307,
+      "contribution_bps": -0.006
+    },
+    {
+      "name": "Ares Management Corp   A",
+      "ticker": "ARES",
+      "weight_pct": 0.0481,
+      "return_pct": -0.1218,
+      "contribution_bps": -0.006
+    },
+    {
+      "name": "Camden Property Trust",
+      "ticker": "CPT",
+      "weight_pct": 0.0155,
+      "return_pct": -0.3889,
+      "contribution_bps": -0.006
+    },
+    {
+      "name": "Wec Energy Group Inc",
+      "ticker": "WEC",
+      "weight_pct": 0.0588,
+      "return_pct": -0.1195,
+      "contribution_bps": -0.007
+    },
+    {
+      "name": "Lennox International Inc",
+      "ticker": "LII",
+      "weight_pct": 0.017,
+      "return_pct": -0.4407,
+      "contribution_bps": -0.008
+    },
+    {
+      "name": "Solventum Corp",
+      "ticker": "SOLV",
+      "weight_pct": 0.0201,
+      "return_pct": -0.387,
+      "contribution_bps": -0.008
+    },
+    {
+      "name": "Expeditors Intl Wash Inc",
+      "ticker": "EXPD",
+      "weight_pct": 0.0377,
+      "return_pct": -0.211,
+      "contribution_bps": -0.008
+    },
+    {
+      "name": "Axon Enterprise Inc",
+      "ticker": "AXON",
+      "weight_pct": 0.0379,
+      "return_pct": -0.2111,
+      "contribution_bps": -0.008
+    },
+    {
+      "name": "Moody S Corp",
+      "ticker": "MCO",
+      "weight_pct": 0.117,
+      "return_pct": -0.0724,
+      "contribution_bps": -0.008
+    },
+    {
+      "name": "Alliant Energy Corp",
+      "ticker": "LNT",
+      "weight_pct": 0.0291,
+      "return_pct": -0.2995,
+      "contribution_bps": -0.009
+    },
+    {
+      "name": "Invitation Homes Inc",
+      "ticker": "INVH",
+      "weight_pct": 0.0225,
+      "return_pct": -0.4044,
+      "contribution_bps": -0.009
+    },
+    {
+      "name": "Bank Of New York Mellon Corp",
+      "ticker": "BNY",
+      "weight_pct": 0.1575,
+      "return_pct": -0.0595,
+      "contribution_bps": -0.009
+    },
+    {
+      "name": "Nrg Energy Inc",
+      "ticker": "NRG",
+      "weight_pct": 0.0317,
+      "return_pct": -0.2977,
+      "contribution_bps": -0.009
+    },
+    {
+      "name": "Mid America Apartment Comm",
+      "ticker": "MAA",
+      "weight_pct": 0.0214,
+      "return_pct": -0.4523,
+      "contribution_bps": -0.01
+    },
+    {
+      "name": "Keycorp",
+      "ticker": "KEY",
+      "weight_pct": 0.0299,
+      "return_pct": -0.3269,
+      "contribution_bps": -0.01
+    },
+    {
+      "name": "Kimco Realty Corp",
+      "ticker": "KIM",
+      "weight_pct": 0.0268,
+      "return_pct": -0.3879,
+      "contribution_bps": -0.01
+    },
+    {
+      "name": "Hca Healthcare Inc",
+      "ticker": "HCA",
+      "weight_pct": 0.1143,
+      "return_pct": -0.0931,
+      "contribution_bps": -0.011
+    },
+    {
+      "name": "Aptiv Plc",
+      "ticker": "APTV",
+      "weight_pct": 0.0125,
+      "return_pct": -0.8519,
+      "contribution_bps": -0.011
+    },
+    {
+      "name": "Cooper Cos Inc/The",
+      "ticker": "COO",
+      "weight_pct": 0.0192,
+      "return_pct": -0.5631,
+      "contribution_bps": -0.011
+    },
+    {
+      "name": "Firstenergy Corp",
+      "ticker": "FE",
+      "weight_pct": 0.0374,
+      "return_pct": -0.3003,
+      "contribution_bps": -0.011
+    },
+    {
+      "name": "Labcorp Holdings Inc",
+      "ticker": "LH",
+      "weight_pct": 0.0461,
+      "return_pct": -0.2555,
+      "contribution_bps": -0.012
+    },
+    {
+      "name": "Paccar Inc",
+      "ticker": "PCAR",
+      "weight_pct": 0.0858,
+      "return_pct": -0.1513,
+      "contribution_bps": -0.013
+    },
+    {
+      "name": "Truist Financial Corp",
+      "ticker": "TFC",
+      "weight_pct": 0.0943,
+      "return_pct": -0.1391,
+      "contribution_bps": -0.013
+    },
+    {
+      "name": "Deckers Outdoor Corp",
+      "ticker": "DECK",
+      "weight_pct": 0.0187,
+      "return_pct": -0.7077,
+      "contribution_bps": -0.013
+    },
+    {
+      "name": "Abbott Laboratories",
+      "ticker": "ABT",
+      "weight_pct": 0.2939,
+      "return_pct": -0.0452,
+      "contribution_bps": -0.013
+    },
+    {
+      "name": "Allegion Plc",
+      "ticker": "ALLE",
+      "weight_pct": 0.0249,
+      "return_pct": -0.5406,
+      "contribution_bps": -0.013
+    },
+    {
+      "name": "Carnival Corp Ltd",
+      "ticker": "CCL",
+      "weight_pct": 0.0603,
+      "return_pct": -0.2272,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Tapestry Inc",
+      "ticker": "TPR",
+      "weight_pct": 0.0415,
+      "return_pct": -0.3307,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Universal Health Services B",
+      "ticker": "UHS",
+      "weight_pct": 0.0157,
+      "return_pct": -0.8876,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Pentair Plc",
+      "ticker": "PNR",
+      "weight_pct": 0.0175,
+      "return_pct": -0.812,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Marathon Petroleum Corp",
+      "ticker": "MPC",
+      "weight_pct": 0.1681,
+      "return_pct": -0.0846,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Teradyne Inc",
+      "ticker": "TER",
+      "weight_pct": 0.0593,
+      "return_pct": -0.2439,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Smith (A.O.) Corp",
+      "ticker": "AOS",
+      "weight_pct": 0.0112,
+      "return_pct": -1.2883,
+      "contribution_bps": -0.014
     },
     {
       "name": "Rollins Inc",
       "ticker": "ROL",
       "weight_pct": 0.0175,
-      "return_pct": 2.0817,
-      "contribution_bps": 0.036
+      "return_pct": -0.826,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Ameren Corporation",
+      "ticker": "AEE",
+      "weight_pct": 0.0486,
+      "return_pct": -0.2982,
+      "contribution_bps": -0.014
+    },
+    {
+      "name": "Ferguson Enterprises Inc",
+      "ticker": "FERG",
+      "weight_pct": 0.0773,
+      "return_pct": -0.1885,
+      "contribution_bps": -0.015
+    },
+    {
+      "name": "Motorola Solutions Inc",
+      "ticker": "MSI",
+      "weight_pct": 0.1341,
+      "return_pct": -0.1117,
+      "contribution_bps": -0.015
+    },
+    {
+      "name": "Fox Corp   Class A",
+      "ticker": "FOXA",
+      "weight_pct": 0.0342,
+      "return_pct": -0.4727,
+      "contribution_bps": -0.016
+    },
+    {
+      "name": "Fiserv Inc",
+      "ticker": "FISV",
+      "weight_pct": 0.0517,
+      "return_pct": -0.3149,
+      "contribution_bps": -0.016
+    },
+    {
+      "name": "Waters Corp",
+      "ticker": "WAT",
+      "weight_pct": 0.0721,
+      "return_pct": -0.2475,
+      "contribution_bps": -0.018
+    },
+    {
+      "name": "Citizens Financial Group",
+      "ticker": "CFG",
+      "weight_pct": 0.0419,
+      "return_pct": -0.4301,
+      "contribution_bps": -0.018
     },
     {
       "name": "Insulet Corp",
       "ticker": "PODD",
       "weight_pct": 0.016,
-      "return_pct": 2.2524,
-      "contribution_bps": 0.036
-    },
-    {
-      "name": "Henry Schein Inc",
-      "ticker": "HSIC",
-      "weight_pct": 0.0131,
-      "return_pct": 2.7426,
-      "contribution_bps": 0.036
-    },
-    {
-      "name": "Zebra Technologies Corp Cl A",
-      "ticker": "ZBRA",
-      "weight_pct": 0.0242,
-      "return_pct": 1.4564,
-      "contribution_bps": 0.035
-    },
-    {
-      "name": "Broadridge Financial Solutio",
-      "ticker": "BR",
-      "weight_pct": 0.0342,
-      "return_pct": 1.0189,
-      "contribution_bps": 0.035
-    },
-    {
-      "name": "Live Nation Entertainment In",
-      "ticker": "LYV",
-      "weight_pct": 0.0438,
-      "return_pct": 0.7932,
-      "contribution_bps": 0.035
-    },
-    {
-      "name": "Essex Property Trust Inc",
-      "ticker": "ESS",
-      "weight_pct": 0.0276,
-      "return_pct": 1.2345,
-      "contribution_bps": 0.034
-    },
-    {
-      "name": "Fox Corp   Class A",
-      "ticker": "FOXA",
-      "weight_pct": 0.021,
-      "return_pct": 1.5756,
-      "contribution_bps": 0.033
-    },
-    {
-      "name": "Regency Centers Corp",
-      "ticker": "REG",
-      "weight_pct": 0.0195,
-      "return_pct": 1.697,
-      "contribution_bps": 0.033
-    },
-    {
-      "name": "Devon Energy Corp",
-      "ticker": "DVN",
-      "weight_pct": 0.0729,
-      "return_pct": 0.4501,
-      "contribution_bps": 0.033
-    },
-    {
-      "name": "Extra Space Storage Inc",
-      "ticker": "EXR",
-      "weight_pct": 0.0531,
-      "return_pct": 0.6093,
-      "contribution_bps": 0.032
-    },
-    {
-      "name": "Alliant Energy Corp",
-      "ticker": "LNT",
-      "weight_pct": 0.0294,
-      "return_pct": 1.0871,
-      "contribution_bps": 0.032
-    },
-    {
-      "name": "Aon Plc Class A",
-      "ticker": "AON",
-      "weight_pct": 0.1115,
-      "return_pct": 0.2867,
-      "contribution_bps": 0.032
-    },
-    {
-      "name": "Datadog Inc   Class A",
-      "ticker": "DDOG",
-      "weight_pct": 0.0943,
-      "return_pct": 0.324,
-      "contribution_bps": 0.031
-    },
-    {
-      "name": "Bxp Inc",
-      "ticker": "BXP",
-      "weight_pct": 0.0163,
-      "return_pct": 1.8151,
-      "contribution_bps": 0.03
-    },
-    {
-      "name": "Corpay Inc",
-      "ticker": "CPAY",
-      "weight_pct": 0.0469,
-      "return_pct": 0.6174,
-      "contribution_bps": 0.029
-    },
-    {
-      "name": "Lululemon Athletica Inc",
-      "ticker": "LULU",
-      "weight_pct": 0.0183,
-      "return_pct": 1.5705,
-      "contribution_bps": 0.029
-    },
-    {
-      "name": "Kroger Co",
-      "ticker": "KR",
-      "weight_pct": 0.0606,
-      "return_pct": 0.4579,
-      "contribution_bps": 0.028
-    },
-    {
-      "name": "Kimco Realty Corp",
-      "ticker": "KIM",
-      "weight_pct": 0.0272,
-      "return_pct": 1.0188,
-      "contribution_bps": 0.028
-    },
-    {
-      "name": "Alexandria Real Estate Equit",
-      "ticker": "ARE",
-      "weight_pct": 0.011,
-      "return_pct": 2.4107,
-      "contribution_bps": 0.027
-    },
-    {
-      "name": "Casey S General Stores Inc",
-      "ticker": "CASY",
-      "weight_pct": 0.0402,
-      "return_pct": 0.653,
-      "contribution_bps": 0.026
-    },
-    {
-      "name": "Wr Berkley Corp",
-      "ticker": "WRB",
-      "weight_pct": 0.0268,
-      "return_pct": 0.9172,
-      "contribution_bps": 0.025
-    },
-    {
-      "name": "Marriott International  Cl A",
-      "ticker": "MAR",
-      "weight_pct": 0.1399,
-      "return_pct": 0.1657,
-      "contribution_bps": 0.023
-    },
-    {
-      "name": "Skyworks Solutions Inc",
-      "ticker": "SWKS",
-      "weight_pct": 0.0296,
-      "return_pct": 0.7787,
-      "contribution_bps": 0.023
-    },
-    {
-      "name": "Fox Corp   Class B",
-      "ticker": "FOX",
-      "weight_pct": 0.0126,
-      "return_pct": 1.6975,
-      "contribution_bps": 0.021
-    },
-    {
-      "name": "Trimble Inc",
-      "ticker": "TRMB",
-      "weight_pct": 0.0199,
-      "return_pct": 1.0534,
-      "contribution_bps": 0.021
-    },
-    {
-      "name": "Mosaic Co/The",
-      "ticker": "MOS",
-      "weight_pct": 0.0113,
-      "return_pct": 1.8336,
-      "contribution_bps": 0.021
-    },
-    {
-      "name": "Waste Management Inc",
-      "ticker": "WM",
-      "weight_pct": 0.1382,
-      "return_pct": 0.1481,
-      "contribution_bps": 0.02
-    },
-    {
-      "name": "Pinnacle West Capital",
-      "ticker": "PNW",
-      "weight_pct": 0.0199,
-      "return_pct": 0.9979,
-      "contribution_bps": 0.02
-    },
-    {
-      "name": "Airbnb Inc Class A",
-      "ticker": "ABNB",
-      "weight_pct": 0.1253,
-      "return_pct": 0.1579,
-      "contribution_bps": 0.02
-    },
-    {
-      "name": "Amcor Plc",
-      "ticker": "AMCR",
-      "weight_pct": 0.0325,
-      "return_pct": 0.6017,
-      "contribution_bps": 0.02
-    },
-    {
-      "name": "Public Storage",
-      "ticker": "PSA",
-      "weight_pct": 0.0893,
-      "return_pct": 0.2045,
-      "contribution_bps": 0.018
-    },
-    {
-      "name": "Cms Energy Corp",
-      "ticker": "CMS",
-      "weight_pct": 0.0341,
-      "return_pct": 0.5348,
-      "contribution_bps": 0.018
-    },
-    {
-      "name": "Weyerhaeuser Co",
-      "ticker": "WY",
-      "weight_pct": 0.0237,
-      "return_pct": 0.715,
-      "contribution_bps": 0.017
-    },
-    {
-      "name": "Cincinnati Financial Corp",
-      "ticker": "CINF",
-      "weight_pct": 0.0448,
-      "return_pct": 0.3774,
-      "contribution_bps": 0.017
-    },
-    {
-      "name": "Evergy Inc",
-      "ticker": "EVRG",
-      "weight_pct": 0.0318,
-      "return_pct": 0.514,
-      "contribution_bps": 0.016
-    },
-    {
-      "name": "Nvr Inc",
-      "ticker": "NVR",
-      "weight_pct": 0.0253,
-      "return_pct": 0.6365,
-      "contribution_bps": 0.016
-    },
-    {
-      "name": "Mgm Resorts International",
-      "ticker": "MGM",
-      "weight_pct": 0.009,
-      "return_pct": 1.7625,
-      "contribution_bps": 0.016
-    },
-    {
-      "name": "Firstenergy Corp",
-      "ticker": "FE",
-      "weight_pct": 0.0381,
-      "return_pct": 0.4092,
-      "contribution_bps": 0.016
-    },
-    {
-      "name": "Sba Communications Corp",
-      "ticker": "SBAC",
-      "weight_pct": 0.0317,
-      "return_pct": 0.491,
-      "contribution_bps": 0.016
-    },
-    {
-      "name": "Centerpoint Energy Inc",
-      "ticker": "CNP",
-      "weight_pct": 0.042,
-      "return_pct": 0.3689,
-      "contribution_bps": 0.015
-    },
-    {
-      "name": "American Tower Corp",
-      "ticker": "AMT",
-      "weight_pct": 0.1382,
-      "return_pct": 0.1112,
-      "contribution_bps": 0.015
-    },
-    {
-      "name": "Avery Dennison Corp",
-      "ticker": "AVY",
-      "weight_pct": 0.0225,
-      "return_pct": 0.6799,
-      "contribution_bps": 0.015
-    },
-    {
-      "name": "Federal Realty Invs Trust",
-      "ticker": "FRT",
-      "weight_pct": 0.014,
-      "return_pct": 1.0926,
-      "contribution_bps": 0.015
-    },
-    {
-      "name": "Aptiv Plc",
-      "ticker": "APTV",
-      "weight_pct": 0.0127,
-      "return_pct": 1.1917,
-      "contribution_bps": 0.015
-    },
-    {
-      "name": "Hormel Foods Corp",
-      "ticker": "HRL",
-      "weight_pct": 0.0101,
-      "return_pct": 1.4123,
-      "contribution_bps": 0.014
-    },
-    {
-      "name": "Ptc Inc",
-      "ticker": "PTC",
-      "weight_pct": 0.033,
-      "return_pct": 0.4101,
-      "contribution_bps": 0.014
-    },
-    {
-      "name": "Universal Health Services B",
-      "ticker": "UHS",
-      "weight_pct": 0.0159,
-      "return_pct": 0.8491,
-      "contribution_bps": 0.014
-    },
-    {
-      "name": "Camden Property Trust",
-      "ticker": "CPT",
-      "weight_pct": 0.0158,
-      "return_pct": 0.8447,
-      "contribution_bps": 0.013
-    },
-    {
-      "name": "Global Payments Inc",
-      "ticker": "GPN",
-      "weight_pct": 0.0341,
-      "return_pct": 0.3799,
-      "contribution_bps": 0.013
-    },
-    {
-      "name": "Smith (A.O.) Corp",
-      "ticker": "AOS",
-      "weight_pct": 0.0114,
-      "return_pct": 1.007,
-      "contribution_bps": 0.011
-    },
-    {
-      "name": "News Corp   Class A",
-      "ticker": "NWSA",
-      "weight_pct": 0.0152,
-      "return_pct": 0.6821,
-      "contribution_bps": 0.01
-    },
-    {
-      "name": "Resmed Inc",
-      "ticker": "RMD",
-      "weight_pct": 0.0534,
-      "return_pct": 0.187,
-      "contribution_bps": 0.01
-    },
-    {
-      "name": "Everest Group Ltd",
-      "ticker": "EG",
-      "weight_pct": 0.0231,
-      "return_pct": 0.3989,
-      "contribution_bps": 0.009
-    },
-    {
-      "name": "Gartner Inc",
-      "ticker": "IT",
-      "weight_pct": 0.0187,
-      "return_pct": 0.484,
-      "contribution_bps": 0.009
-    },
-    {
-      "name": "Mid America Apartment Comm",
-      "ticker": "MAA",
-      "weight_pct": 0.0218,
-      "return_pct": 0.3952,
-      "contribution_bps": 0.009
-    },
-    {
-      "name": "Tyson Foods Inc Cl A",
-      "ticker": "TSN",
-      "weight_pct": 0.0266,
-      "return_pct": 0.3184,
-      "contribution_bps": 0.008
-    },
-    {
-      "name": "Invitation Homes Inc",
-      "ticker": "INVH",
-      "weight_pct": 0.0229,
-      "return_pct": 0.369,
-      "contribution_bps": 0.008
-    },
-    {
-      "name": "Smurfit Westrock Plc",
-      "ticker": "SW",
-      "weight_pct": 0.0365,
-      "return_pct": 0.2268,
-      "contribution_bps": 0.008
-    },
-    {
-      "name": "News Corp   Class B",
-      "ticker": "NWS",
-      "weight_pct": 0.0056,
-      "return_pct": 1.2776,
-      "contribution_bps": 0.007
-    },
-    {
-      "name": "Udr Inc",
-      "ticker": "UDR",
-      "weight_pct": 0.0171,
-      "return_pct": 0.3554,
-      "contribution_bps": 0.006
-    },
-    {
-      "name": "Loews Corp",
-      "ticker": "L",
-      "weight_pct": 0.0284,
-      "return_pct": 0.2096,
-      "contribution_bps": 0.006
-    },
-    {
-      "name": "Halliburton Co",
-      "ticker": "HAL",
-      "weight_pct": 0.042,
-      "return_pct": 0.1256,
-      "contribution_bps": 0.005
+      "return_pct": -1.1681,
+      "contribution_bps": -0.019
     },
     {
       "name": "Exelon Corp",
       "ticker": "EXC",
-      "weight_pct": 0.0741,
-      "return_pct": 0.0658,
-      "contribution_bps": 0.005
+      "weight_pct": 0.0724,
+      "return_pct": -0.2629,
+      "contribution_bps": -0.019
     },
     {
-      "name": "Atmos Energy Corp",
-      "ticker": "ATO",
-      "weight_pct": 0.0461,
-      "return_pct": 0.0751,
-      "contribution_bps": 0.003
+      "name": "Copart Inc",
+      "ticker": "CPRT",
+      "weight_pct": 0.0418,
+      "return_pct": -0.4623,
+      "contribution_bps": -0.019
     },
     {
-      "name": "Aes Corp",
-      "ticker": "AES",
-      "weight_pct": 0.0167,
-      "return_pct": 0.2017,
-      "contribution_bps": 0.003
+      "name": "Darden Restaurants Inc",
+      "ticker": "DRI",
+      "weight_pct": 0.0401,
+      "return_pct": -0.4831,
+      "contribution_bps": -0.019
     },
     {
-      "name": "Bio Techne Corp",
-      "ticker": "TECH",
-      "weight_pct": 0.018,
-      "return_pct": 0.0687,
-      "contribution_bps": 0.001
+      "name": "Veeva Systems Inc Class A",
+      "ticker": "VEEV",
+      "weight_pct": 0.0704,
+      "return_pct": -0.2774,
+      "contribution_bps": -0.02
     },
     {
-      "name": "Solventum Corp",
-      "ticker": "SOLV",
-      "weight_pct": 0.0206,
-      "return_pct": 0.0553,
-      "contribution_bps": 0.001
+      "name": "Lowe S Cos Inc",
+      "ticker": "LOW",
+      "weight_pct": 0.2,
+      "return_pct": -0.0991,
+      "contribution_bps": -0.02
     },
     {
-      "name": "Gen Digital Inc",
-      "ticker": "GEN",
-      "weight_pct": 0.0253,
-      "return_pct": 0.0336,
-      "contribution_bps": 0.001
+      "name": "Genuine Parts Co",
+      "ticker": "GPC",
+      "weight_pct": 0.0267,
+      "return_pct": -0.7481,
+      "contribution_bps": -0.02
     },
     {
-      "name": "Bristol Myers Squibb Co",
-      "ticker": "BMY",
-      "weight_pct": 0.1998,
-      "return_pct": 0.0,
-      "contribution_bps": 0.0
+      "name": "Gartner Inc",
+      "ticker": "IT",
+      "weight_pct": 0.0183,
+      "return_pct": -1.0994,
+      "contribution_bps": -0.02
     },
     {
-      "name": "Travelers Cos Inc/The",
-      "ticker": "TRV",
-      "weight_pct": 0.1295,
-      "return_pct": 0.0,
-      "contribution_bps": 0.0
+      "name": "Dover Corp",
+      "ticker": "DOV",
+      "weight_pct": 0.0442,
+      "return_pct": -0.4601,
+      "contribution_bps": -0.02
     },
     {
       "name": "Domino S Pizza Inc",
       "ticker": "DPZ",
-      "weight_pct": 0.0174,
-      "return_pct": -0.0299,
-      "contribution_bps": -0.001
-    },
-    {
-      "name": "Expedia Group Inc",
-      "ticker": "EXPE",
-      "weight_pct": 0.0468,
-      "return_pct": -0.0309,
-      "contribution_bps": -0.001
-    },
-    {
-      "name": "Republic Services Inc",
-      "ticker": "RSG",
-      "weight_pct": 0.0759,
-      "return_pct": -0.0284,
-      "contribution_bps": -0.002
-    },
-    {
-      "name": "Albemarle Corp",
-      "ticker": "ALB",
-      "weight_pct": 0.0184,
-      "return_pct": -0.131,
-      "contribution_bps": -0.002
-    },
-    {
-      "name": "Cf Industries Holdings Inc",
-      "ticker": "CF",
-      "weight_pct": 0.0284,
-      "return_pct": -0.0921,
-      "contribution_bps": -0.003
-    },
-    {
-      "name": "Apa Corp",
-      "ticker": "APA",
-      "weight_pct": 0.0249,
-      "return_pct": -0.1793,
-      "contribution_bps": -0.004
-    },
-    {
-      "name": "Brown Forman Corp Class B",
-      "ticker": "BF.B",
-      "weight_pct": 0.0085,
-      "return_pct": -0.6867,
-      "contribution_bps": -0.006
-    },
-    {
-      "name": "Factset Research Systems Inc",
-      "ticker": "FDS",
-      "weight_pct": 0.0184,
-      "return_pct": -0.3568,
-      "contribution_bps": -0.007
-    },
-    {
-      "name": "Stryker Corp",
-      "ticker": "SYK",
-      "weight_pct": 0.179,
-      "return_pct": -0.043,
-      "contribution_bps": -0.008
-    },
-    {
-      "name": "Cboe Global Markets Inc",
-      "ticker": "CBOE",
-      "weight_pct": 0.0579,
-      "return_pct": -0.1387,
-      "contribution_bps": -0.008
-    },
-    {
-      "name": "Archer Daniels Midland Co",
-      "ticker": "ADM",
-      "weight_pct": 0.0532,
-      "return_pct": -0.1858,
-      "contribution_bps": -0.01
-    },
-    {
-      "name": "Consolidated Edison Inc",
-      "ticker": "ED",
-      "weight_pct": 0.069,
-      "return_pct": -0.1434,
-      "contribution_bps": -0.01
-    },
-    {
-      "name": "Erie Indemnity Company Cl A",
-      "ticker": "ERIE",
-      "weight_pct": 0.0109,
-      "return_pct": -0.9338,
-      "contribution_bps": -0.01
-    },
-    {
-      "name": "Yum  Brands Inc",
-      "ticker": "YUM",
-      "weight_pct": 0.0692,
-      "return_pct": -0.1613,
-      "contribution_bps": -0.011
-    },
-    {
-      "name": "Otis Worldwide Corp",
-      "ticker": "OTIS",
-      "weight_pct": 0.0473,
-      "return_pct": -0.2406,
-      "contribution_bps": -0.011
-    },
-    {
-      "name": "Ppl Corp",
-      "ticker": "PPL",
-      "weight_pct": 0.0425,
-      "return_pct": -0.2793,
-      "contribution_bps": -0.012
-    },
-    {
-      "name": "O Reilly Automotive Inc",
-      "ticker": "ORLY",
-      "weight_pct": 0.1144,
-      "return_pct": -0.1112,
-      "contribution_bps": -0.013
-    },
-    {
-      "name": "Super Micro Computer Inc",
-      "ticker": "SMCI",
-      "weight_pct": 0.0255,
-      "return_pct": -0.5563,
-      "contribution_bps": -0.014
-    },
-    {
-      "name": "Tyler Technologies Inc",
-      "ticker": "TYL",
-      "weight_pct": 0.0252,
-      "return_pct": -0.5659,
-      "contribution_bps": -0.014
-    },
-    {
-      "name": "Monster Beverage Corp",
-      "ticker": "MNST",
-      "weight_pct": 0.103,
-      "return_pct": -0.175,
-      "contribution_bps": -0.018
-    },
-    {
-      "name": "Eversource Energy",
-      "ticker": "ES",
-      "weight_pct": 0.0414,
-      "return_pct": -0.5011,
+      "weight_pct": 0.017,
+      "return_pct": -1.2329,
       "contribution_bps": -0.021
     },
     {
-      "name": "Mccormick + Co Non Vtg Shrs",
-      "ticker": "MKC",
-      "weight_pct": 0.0195,
-      "return_pct": -1.0744,
+      "name": "Quest Diagnostics Inc",
+      "ticker": "DGX",
+      "weight_pct": 0.0443,
+      "return_pct": -0.4737,
       "contribution_bps": -0.021
     },
     {
-      "name": "Las Vegas Sands Corp",
-      "ticker": "LVS",
-      "weight_pct": 0.0164,
-      "return_pct": -1.3504,
+      "name": "Healthpeak Properties Inc",
+      "ticker": "DOC",
+      "weight_pct": 0.022,
+      "return_pct": -1.0184,
       "contribution_bps": -0.022
-    },
-    {
-      "name": "Jack Henry + Associates Inc",
-      "ticker": "JKHY",
-      "weight_pct": 0.0194,
-      "return_pct": -1.1719,
-      "contribution_bps": -0.023
-    },
-    {
-      "name": "Progressive Corp",
-      "ticker": "PGR",
-      "weight_pct": 0.2083,
-      "return_pct": -0.1098,
-      "contribution_bps": -0.023
-    },
-    {
-      "name": "Equifax Inc",
-      "ticker": "EFX",
-      "weight_pct": 0.035,
-      "return_pct": -0.6646,
-      "contribution_bps": -0.023
-    },
-    {
-      "name": "Diamondback Energy Inc",
-      "ticker": "FANG",
-      "weight_pct": 0.0576,
-      "return_pct": -0.4414,
-      "contribution_bps": -0.025
-    },
-    {
-      "name": "Kraft Heinz Co/The",
-      "ticker": "KHC",
-      "weight_pct": 0.0335,
-      "return_pct": -0.772,
-      "contribution_bps": -0.026
-    },
-    {
-      "name": "Synchrony Financial",
-      "ticker": "SYF",
-      "weight_pct": 0.0376,
-      "return_pct": -0.7052,
-      "contribution_bps": -0.026
-    },
-    {
-      "name": "Mckesson Corp",
-      "ticker": "MCK",
-      "weight_pct": 0.1943,
-      "return_pct": -0.1386,
-      "contribution_bps": -0.027
-    },
-    {
-      "name": "Willis Towers Watson Plc",
-      "ticker": "WTW",
-      "weight_pct": 0.0481,
-      "return_pct": -0.5625,
-      "contribution_bps": -0.027
-    },
-    {
-      "name": "Nextera Energy Inc",
-      "ticker": "NEE",
-      "weight_pct": 0.2851,
-      "return_pct": -0.1035,
-      "contribution_bps": -0.03
-    },
-    {
-      "name": "Hp Inc",
-      "ticker": "HPQ",
-      "weight_pct": 0.0411,
-      "return_pct": -0.7379,
-      "contribution_bps": -0.03
-    },
-    {
-      "name": "Davita Inc",
-      "ticker": "DVA",
-      "weight_pct": 0.0102,
-      "return_pct": -3.0363,
-      "contribution_bps": -0.031
-    },
-    {
-      "name": "Fidelity National Info Serv",
-      "ticker": "FIS",
-      "weight_pct": 0.0234,
-      "return_pct": -1.3575,
-      "contribution_bps": -0.032
-    },
-    {
-      "name": "American Water Works Co Inc",
-      "ticker": "AWK",
-      "weight_pct": 0.047,
-      "return_pct": -0.712,
-      "contribution_bps": -0.033
-    },
-    {
-      "name": "Marsh + Mclennan Cos",
-      "ticker": "MRSH",
-      "weight_pct": 0.1538,
-      "return_pct": -0.2197,
-      "contribution_bps": -0.034
-    },
-    {
-      "name": "Verisign Inc",
-      "ticker": "VRSN",
-      "weight_pct": 0.0395,
-      "return_pct": -0.9168,
-      "contribution_bps": -0.036
-    },
-    {
-      "name": "Allstate Corp",
-      "ticker": "ALL",
-      "weight_pct": 0.1012,
-      "return_pct": -0.4003,
-      "contribution_bps": -0.04
-    },
-    {
-      "name": "Arthur J Gallagher + Co",
-      "ticker": "AJG",
-      "weight_pct": 0.1136,
-      "return_pct": -0.3586,
-      "contribution_bps": -0.041
-    },
-    {
-      "name": "Dow Inc",
-      "ticker": "DOW",
-      "weight_pct": 0.0356,
-      "return_pct": -1.4013,
-      "contribution_bps": -0.05
-    },
-    {
-      "name": "Lyondellbasell Indu Cl A",
-      "ticker": "LYB",
-      "weight_pct": 0.0248,
-      "return_pct": -2.0092,
-      "contribution_bps": -0.05
-    },
-    {
-      "name": "Dominion Energy Inc",
-      "ticker": "D",
-      "weight_pct": 0.0952,
-      "return_pct": -0.5248,
-      "contribution_bps": -0.05
-    },
-    {
-      "name": "Brown + Brown Inc",
-      "ticker": "BRO",
-      "weight_pct": 0.0327,
-      "return_pct": -1.553,
-      "contribution_bps": -0.051
-    },
-    {
-      "name": "Crown Castle Inc",
-      "ticker": "CCI",
-      "weight_pct": 0.0593,
-      "return_pct": -0.8691,
-      "contribution_bps": -0.052
     },
     {
       "name": "General Mills Inc",
       "ticker": "GIS",
-      "weight_pct": 0.0299,
-      "return_pct": -1.7741,
-      "contribution_bps": -0.053
+      "weight_pct": 0.0287,
+      "return_pct": -0.8028,
+      "contribution_bps": -0.023
     },
     {
-      "name": "Godaddy Inc   Class A",
-      "ticker": "GDDY",
-      "weight_pct": 0.0228,
-      "return_pct": -2.3343,
-      "contribution_bps": -0.053
+      "name": "Fifth Third Bancorp",
+      "ticker": "FITB",
+      "weight_pct": 0.0758,
+      "return_pct": -0.3127,
+      "contribution_bps": -0.024
     },
     {
-      "name": "Ebay Inc",
-      "ticker": "EBAY",
-      "weight_pct": 0.0769,
-      "return_pct": -0.8117,
-      "contribution_bps": -0.062
+      "name": "Kraft Heinz Co/The",
+      "ticker": "KHC",
+      "weight_pct": 0.0325,
+      "return_pct": -0.7371,
+      "contribution_bps": -0.024
     },
     {
-      "name": "Akamai Technologies Inc",
-      "ticker": "AKAM",
-      "weight_pct": 0.0191,
-      "return_pct": -3.3698,
-      "contribution_bps": -0.064
+      "name": "Huntington Bancshares Inc",
+      "ticker": "HBAN",
+      "weight_pct": 0.0492,
+      "return_pct": -0.5025,
+      "contribution_bps": -0.025
     },
     {
-      "name": "Occidental Petroleum Corp",
-      "ticker": "OXY",
-      "weight_pct": 0.0646,
-      "return_pct": -1.0997,
-      "contribution_bps": -0.071
+      "name": "Martin Marietta Materials",
+      "ticker": "MLM",
+      "weight_pct": 0.0492,
+      "return_pct": -0.5198,
+      "contribution_bps": -0.026
     },
     {
-      "name": "Roper Technologies Inc",
-      "ticker": "ROP",
-      "weight_pct": 0.0742,
-      "return_pct": -1.0407,
-      "contribution_bps": -0.077
+      "name": "Ge Healthcare Technology",
+      "ticker": "GEHC",
+      "weight_pct": 0.0583,
+      "return_pct": -0.4522,
+      "contribution_bps": -0.026
     },
     {
-      "name": "Cme Group Inc",
-      "ticker": "CME",
-      "weight_pct": 0.1728,
-      "return_pct": -0.4479,
-      "contribution_bps": -0.077
+      "name": "Public Service Enterprise Gp",
+      "ticker": "PEG",
+      "weight_pct": 0.0576,
+      "return_pct": -0.4665,
+      "contribution_bps": -0.027
     },
     {
-      "name": "Cognizant Tech Solutions A",
-      "ticker": "CTSH",
-      "weight_pct": 0.0459,
-      "return_pct": -1.7305,
-      "contribution_bps": -0.079
+      "name": "Ecolab Inc",
+      "ticker": "ECL",
+      "weight_pct": 0.1187,
+      "return_pct": -0.2315,
+      "contribution_bps": -0.027
     },
     {
-      "name": "Automatic Data Processing",
-      "ticker": "ADP",
-      "weight_pct": 0.1896,
-      "return_pct": -0.4253,
-      "contribution_bps": -0.081
+      "name": "Revvity Inc",
+      "ticker": "RVTY",
+      "weight_pct": 0.0276,
+      "return_pct": -1.008,
+      "contribution_bps": -0.028
     },
     {
-      "name": "Verisk Analytics Inc",
-      "ticker": "VRSK",
-      "weight_pct": 0.0417,
-      "return_pct": -1.9502,
-      "contribution_bps": -0.081
+      "name": "Yum  Brands Inc",
+      "ticker": "YUM",
+      "weight_pct": 0.0675,
+      "return_pct": -0.4165,
+      "contribution_bps": -0.028
     },
     {
-      "name": "Altria Group Inc",
-      "ticker": "MO",
-      "weight_pct": 0.2001,
-      "return_pct": -0.4073,
-      "contribution_bps": -0.082
+      "name": "Marvell Technology Inc",
+      "ticker": "MRVL",
+      "weight_pct": 0.2083,
+      "return_pct": -0.1358,
+      "contribution_bps": -0.028
     },
     {
-      "name": "Workday Inc Class A",
-      "ticker": "WDAY",
-      "weight_pct": 0.0608,
-      "return_pct": -1.3945,
-      "contribution_bps": -0.085
+      "name": "Alexandria Real Estate Equit",
+      "ticker": "ARE",
+      "weight_pct": 0.0111,
+      "return_pct": -2.5719,
+      "contribution_bps": -0.028
     },
     {
-      "name": "Chubb Ltd",
-      "ticker": "CB",
-      "weight_pct": 0.2014,
-      "return_pct": -0.4301,
-      "contribution_bps": -0.087
+      "name": "Vici Properties Inc",
+      "ticker": "VICI",
+      "weight_pct": 0.0426,
+      "return_pct": -0.6757,
+      "contribution_bps": -0.029
     },
     {
-      "name": "Centene Corp",
-      "ticker": "CNC",
-      "weight_pct": 0.0542,
-      "return_pct": -1.7207,
-      "contribution_bps": -0.093
+      "name": "Zimmer Biomet Holdings Inc",
+      "ticker": "ZBH",
+      "weight_pct": 0.0318,
+      "return_pct": -0.9323,
+      "contribution_bps": -0.03
     },
     {
-      "name": "Hershey Co/The",
-      "ticker": "HSY",
-      "weight_pct": 0.0408,
-      "return_pct": -2.5831,
-      "contribution_bps": -0.105
+      "name": "Regions Financial Corp",
+      "ticker": "RF",
+      "weight_pct": 0.0381,
+      "return_pct": -0.795,
+      "contribution_bps": -0.03
     },
     {
-      "name": "Paychex Inc",
-      "ticker": "PAYX",
-      "weight_pct": 0.0588,
-      "return_pct": -1.9648,
-      "contribution_bps": -0.115
+      "name": "Ppg Industries Inc",
+      "ticker": "PPG",
+      "weight_pct": 0.043,
+      "return_pct": -0.7102,
+      "contribution_bps": -0.031
+    },
+    {
+      "name": "Hubbell Inc",
+      "ticker": "HUBB",
+      "weight_pct": 0.036,
+      "return_pct": -0.856,
+      "contribution_bps": -0.031
+    },
+    {
+      "name": "Western Digital Corp",
+      "ticker": "WDC",
+      "weight_pct": 0.1606,
+      "return_pct": -0.2001,
+      "contribution_bps": -0.032
+    },
+    {
+      "name": "Davita Inc",
+      "ticker": "DVA",
+      "weight_pct": 0.0097,
+      "return_pct": -3.3739,
+      "contribution_bps": -0.033
+    },
+    {
+      "name": "International Paper Co",
+      "ticker": "IP",
+      "weight_pct": 0.0289,
+      "return_pct": -1.1258,
+      "contribution_bps": -0.033
+    },
+    {
+      "name": "Texas Pacific Land Corp",
+      "ticker": "TPL",
+      "weight_pct": 0.0251,
+      "return_pct": -1.3116,
+      "contribution_bps": -0.033
+    },
+    {
+      "name": "Mettler Toledo International",
+      "ticker": "MTD",
+      "weight_pct": 0.054,
+      "return_pct": -0.6185,
+      "contribution_bps": -0.033
+    },
+    {
+      "name": "Masco Corp",
+      "ticker": "MAS",
+      "weight_pct": 0.0258,
+      "return_pct": -1.3035,
+      "contribution_bps": -0.034
+    },
+    {
+      "name": "Johnson Controls Internation",
+      "ticker": "JCI",
+      "weight_pct": 0.1315,
+      "return_pct": -0.2615,
+      "contribution_bps": -0.034
+    },
+    {
+      "name": "Lululemon Athletica Inc",
+      "ticker": "LULU",
+      "weight_pct": 0.0182,
+      "return_pct": -1.9195,
+      "contribution_bps": -0.035
+    },
+    {
+      "name": "Resmed Inc",
+      "ticker": "RMD",
+      "weight_pct": 0.0523,
+      "return_pct": -0.6914,
+      "contribution_bps": -0.036
+    },
+    {
+      "name": "Biogen Inc",
+      "ticker": "BIIB",
+      "weight_pct": 0.0581,
+      "return_pct": -0.6356,
+      "contribution_bps": -0.037
+    },
+    {
+      "name": "Otis Worldwide Corp",
+      "ticker": "OTIS",
+      "weight_pct": 0.0461,
+      "return_pct": -0.8125,
+      "contribution_bps": -0.037
     },
     {
       "name": "Adobe Inc",
       "ticker": "ADBE",
-      "weight_pct": 0.1495,
-      "return_pct": -0.8274,
-      "contribution_bps": -0.124
+      "weight_pct": 0.1448,
+      "return_pct": -0.2613,
+      "contribution_bps": -0.038
     },
     {
-      "name": "Axon Enterprise Inc",
-      "ticker": "AXON",
-      "weight_pct": 0.04,
-      "return_pct": -3.1374,
-      "contribution_bps": -0.126
+      "name": "Honeywell International Inc",
+      "ticker": "HON",
+      "weight_pct": 0.1113,
+      "return_pct": -0.3406,
+      "contribution_bps": -0.038
     },
     {
-      "name": "Boeing Co/The",
-      "ticker": "BA",
-      "weight_pct": 0.2156,
-      "return_pct": -0.5882,
-      "contribution_bps": -0.127
+      "name": "Stanley Black + Decker Inc",
+      "ticker": "SWK",
+      "weight_pct": 0.0272,
+      "return_pct": -1.4056,
+      "contribution_bps": -0.038
     },
     {
-      "name": "Visa Inc Class A Shares",
-      "ticker": "V",
-      "weight_pct": 1.1307,
-      "return_pct": -0.1159,
-      "contribution_bps": -0.131
+      "name": "Zebra Technologies Corp Cl A",
+      "ticker": "ZBRA",
+      "weight_pct": 0.024,
+      "return_pct": -1.6314,
+      "contribution_bps": -0.039
     },
     {
-      "name": "Intuit Inc",
-      "ticker": "INTU",
-      "weight_pct": 0.1468,
-      "return_pct": -0.9575,
-      "contribution_bps": -0.141
+      "name": "Sempra",
+      "ticker": "SRE",
+      "weight_pct": 0.0794,
+      "return_pct": -0.4951,
+      "contribution_bps": -0.039
     },
     {
-      "name": "Pfizer Inc",
-      "ticker": "PFE",
-      "weight_pct": 0.2633,
-      "return_pct": -0.5444,
-      "contribution_bps": -0.143
+      "name": "Extra Space Storage Inc",
+      "ticker": "EXR",
+      "weight_pct": 0.0522,
+      "return_pct": -0.7555,
+      "contribution_bps": -0.039
     },
     {
-      "name": "First Solar Inc",
-      "ticker": "FSLR",
-      "weight_pct": 0.0341,
-      "return_pct": -4.738,
-      "contribution_bps": -0.161
+      "name": "Comfort Systems Usa Inc",
+      "ticker": "FIX",
+      "weight_pct": 0.0603,
+      "return_pct": -0.6557,
+      "contribution_bps": -0.04
     },
     {
-      "name": "Humana Inc",
-      "ticker": "HUM",
-      "weight_pct": 0.0822,
-      "return_pct": -2.4254,
-      "contribution_bps": -0.199
+      "name": "Archer Daniels Midland Co",
+      "ticker": "ADM",
+      "weight_pct": 0.0519,
+      "return_pct": -0.7732,
+      "contribution_bps": -0.04
     },
     {
-      "name": "Take Two Interactive Softwre",
-      "ticker": "TTWO",
-      "weight_pct": 0.0594,
-      "return_pct": -3.4765,
-      "contribution_bps": -0.207
+      "name": "Carrier Global Corp",
+      "ticker": "CARR",
+      "weight_pct": 0.0676,
+      "return_pct": -0.6,
+      "contribution_bps": -0.041
     },
     {
-      "name": "Elevance Health Inc",
-      "ticker": "ELV",
-      "weight_pct": 0.145,
-      "return_pct": -1.7316,
-      "contribution_bps": -0.251
+      "name": "Workday Inc Class A",
+      "ticker": "WDAY",
+      "weight_pct": 0.0586,
+      "return_pct": -0.694,
+      "contribution_bps": -0.041
     },
     {
-      "name": "Capital One Financial Corp",
-      "ticker": "COF",
-      "weight_pct": 0.1946,
-      "return_pct": -1.6298,
-      "contribution_bps": -0.317
+      "name": "American Electric Power",
+      "ticker": "AEP",
+      "weight_pct": 0.1076,
+      "return_pct": -0.3818,
+      "contribution_bps": -0.041
     },
     {
-      "name": "Conocophillips",
-      "ticker": "COP",
-      "weight_pct": 0.2576,
-      "return_pct": -1.3209,
-      "contribution_bps": -0.34
+      "name": "Incyte Corp",
+      "ticker": "INCY",
+      "weight_pct": 0.0319,
+      "return_pct": -1.3045,
+      "contribution_bps": -0.042
     },
     {
-      "name": "Chevron Corp",
-      "ticker": "CVX",
-      "weight_pct": 0.6609,
-      "return_pct": -0.8607,
-      "contribution_bps": -0.569
+      "name": "Vulcan Materials Co",
+      "ticker": "VMC",
+      "weight_pct": 0.0579,
+      "return_pct": -0.7359,
+      "contribution_bps": -0.043
     },
     {
-      "name": "Accenture Plc Cl A",
-      "ticker": "ACN",
-      "weight_pct": 0.2507,
-      "return_pct": -2.3532,
-      "contribution_bps": -0.59
+      "name": "Bunge Global Sa",
+      "ticker": "BG",
+      "weight_pct": 0.0245,
+      "return_pct": -1.7395,
+      "contribution_bps": -0.043
+    },
+    {
+      "name": "Vivmark Residential",
+      "ticker": "VMRK",
+      "weight_pct": 0.073,
+      "return_pct": -0.5897,
+      "contribution_bps": -0.043
+    },
+    {
+      "name": "Everpure Inc A",
+      "ticker": "P",
+      "weight_pct": 0.0525,
+      "return_pct": -0.8362,
+      "contribution_bps": -0.044
+    },
+    {
+      "name": "Te Connectivity Plc",
+      "ticker": "TEL",
+      "weight_pct": 0.0973,
+      "return_pct": -0.4526,
+      "contribution_bps": -0.044
+    },
+    {
+      "name": "Jabil Inc",
+      "ticker": "JBL",
+      "weight_pct": 0.0407,
+      "return_pct": -1.0849,
+      "contribution_bps": -0.044
+    },
+    {
+      "name": "Mccormick + Co Non Vtg Shrs",
+      "ticker": "MKC",
+      "weight_pct": 0.0188,
+      "return_pct": -2.4227,
+      "contribution_bps": -0.046
+    },
+    {
+      "name": "Qnity Electronics Inc",
+      "ticker": "Q",
+      "weight_pct": 0.0403,
+      "return_pct": -1.1592,
+      "contribution_bps": -0.047
+    },
+    {
+      "name": "M + T Bank Corp",
+      "ticker": "MTB",
+      "weight_pct": 0.0493,
+      "return_pct": -0.9518,
+      "contribution_bps": -0.047
+    },
+    {
+      "name": "Reddit Inc Cl A",
+      "ticker": "RDDT",
+      "weight_pct": 0.0226,
+      "return_pct": -2.1034,
+      "contribution_bps": -0.048
+    },
+    {
+      "name": "Us Bancorp",
+      "ticker": "USB",
+      "weight_pct": 0.146,
+      "return_pct": -0.3281,
+      "contribution_bps": -0.048
+    },
+    {
+      "name": "Intl Flavors + Fragrances",
+      "ticker": "IFF",
+      "weight_pct": 0.0333,
+      "return_pct": -1.4924,
+      "contribution_bps": -0.05
+    },
+    {
+      "name": "O Reilly Automotive Inc",
+      "ticker": "ORLY",
+      "weight_pct": 0.1117,
+      "return_pct": -0.4455,
+      "contribution_bps": -0.05
+    },
+    {
+      "name": "Emcor Group Inc",
+      "ticker": "EME",
+      "weight_pct": 0.0443,
+      "return_pct": -1.1487,
+      "contribution_bps": -0.051
+    },
+    {
+      "name": "Ingersoll Rand Inc",
+      "ticker": "IR",
+      "weight_pct": 0.0459,
+      "return_pct": -1.174,
+      "contribution_bps": -0.054
+    },
+    {
+      "name": "Charles River Laboratories",
+      "ticker": "CRL",
+      "weight_pct": 0.0257,
+      "return_pct": -2.1339,
+      "contribution_bps": -0.055
+    },
+    {
+      "name": "Weyerhaeuser Co",
+      "ticker": "WY",
+      "weight_pct": 0.0233,
+      "return_pct": -2.3663,
+      "contribution_bps": -0.055
+    },
+    {
+      "name": "Sysco Corp",
+      "ticker": "SYY",
+      "weight_pct": 0.0578,
+      "return_pct": -0.9569,
+      "contribution_bps": -0.055
+    },
+    {
+      "name": "Skydance Corp",
+      "ticker": "SKYD",
+      "weight_pct": 0.0073,
+      "return_pct": -7.5862,
+      "contribution_bps": -0.055
+    },
+    {
+      "name": "Costar Group Inc",
+      "ticker": "CSGP",
+      "weight_pct": 0.0197,
+      "return_pct": -2.9129,
+      "contribution_bps": -0.057
+    },
+    {
+      "name": "Public Storage",
+      "ticker": "PSA",
+      "weight_pct": 0.0874,
+      "return_pct": -0.6565,
+      "contribution_bps": -0.057
+    },
+    {
+      "name": "Regeneron Pharmaceuticals",
+      "ticker": "REGN",
+      "weight_pct": 0.1384,
+      "return_pct": -0.4239,
+      "contribution_bps": -0.059
+    },
+    {
+      "name": "Edwards Lifesciences Corp",
+      "ticker": "EW",
+      "weight_pct": 0.0929,
+      "return_pct": -0.6685,
+      "contribution_bps": -0.062
+    },
+    {
+      "name": "Generac Holdings Inc",
+      "ticker": "GNRC",
+      "weight_pct": 0.017,
+      "return_pct": -3.6927,
+      "contribution_bps": -0.063
+    },
+    {
+      "name": "Datadog Inc   Class A",
+      "ticker": "DDOG",
+      "weight_pct": 0.0925,
+      "return_pct": -0.6792,
+      "contribution_bps": -0.063
+    },
+    {
+      "name": "Bxp Inc",
+      "ticker": "BXP",
+      "weight_pct": 0.0162,
+      "return_pct": -4.0036,
+      "contribution_bps": -0.065
+    },
+    {
+      "name": "Prologis Inc",
+      "ticker": "PLD",
+      "weight_pct": 0.1907,
+      "return_pct": -0.3447,
+      "contribution_bps": -0.066
+    },
+    {
+      "name": "Monster Beverage Corp",
+      "ticker": "MNST",
+      "weight_pct": 0.1004,
+      "return_pct": -0.6573,
+      "contribution_bps": -0.066
+    },
+    {
+      "name": "Best Buy Co Inc",
+      "ticker": "BBY",
+      "weight_pct": 0.0322,
+      "return_pct": -2.0512,
+      "contribution_bps": -0.066
+    },
+    {
+      "name": "Dexcom Inc",
+      "ticker": "DXCM",
+      "weight_pct": 0.0468,
+      "return_pct": -1.4185,
+      "contribution_bps": -0.066
+    },
+    {
+      "name": "Equinix Inc",
+      "ticker": "EQIX",
+      "weight_pct": 0.1602,
+      "return_pct": -0.4267,
+      "contribution_bps": -0.068
+    },
+    {
+      "name": "American Express Co",
+      "ticker": "AXP",
+      "weight_pct": 0.2626,
+      "return_pct": -0.2621,
+      "contribution_bps": -0.069
+    },
+    {
+      "name": "Super Micro Computer Inc",
+      "ticker": "SMCI",
+      "weight_pct": 0.0248,
+      "return_pct": -2.8322,
+      "contribution_bps": -0.07
+    },
+    {
+      "name": "Walmart Inc",
+      "ticker": "WMT",
+      "weight_pct": 0.8603,
+      "return_pct": -0.0875,
+      "contribution_bps": -0.075
+    },
+    {
+      "name": "Synchrony Financial",
+      "ticker": "SYF",
+      "weight_pct": 0.0364,
+      "return_pct": -2.0759,
+      "contribution_bps": -0.076
+    },
+    {
+      "name": "Albemarle Corp",
+      "ticker": "ALB",
+      "weight_pct": 0.018,
+      "return_pct": -4.2272,
+      "contribution_bps": -0.076
+    },
+    {
+      "name": "Stryker Corp",
+      "ticker": "SYK",
+      "weight_pct": 0.1748,
+      "return_pct": -0.4421,
+      "contribution_bps": -0.077
+    },
+    {
+      "name": "Garmin Ltd",
+      "ticker": "GRMN",
+      "weight_pct": 0.0744,
+      "return_pct": -1.0761,
+      "contribution_bps": -0.08
+    },
+    {
+      "name": "Old Dominion Freight Line",
+      "ticker": "ODFL",
+      "weight_pct": 0.049,
+      "return_pct": -1.6794,
+      "contribution_bps": -0.082
+    },
+    {
+      "name": "Autozone Inc",
+      "ticker": "AZO",
+      "weight_pct": 0.0815,
+      "return_pct": -1.0405,
+      "contribution_bps": -0.085
+    },
+    {
+      "name": "Xylem Inc",
+      "ticker": "XYL",
+      "weight_pct": 0.0356,
+      "return_pct": -2.438,
+      "contribution_bps": -0.087
+    },
+    {
+      "name": "Crh Plc",
+      "ticker": "CRH",
+      "weight_pct": 0.0997,
+      "return_pct": -0.8902,
+      "contribution_bps": -0.089
+    },
+    {
+      "name": "Sherwin Williams Co/The",
+      "ticker": "SHW",
+      "weight_pct": 0.1253,
+      "return_pct": -0.7236,
+      "contribution_bps": -0.091
+    },
+    {
+      "name": "Iqvia Holdings Inc",
+      "ticker": "IQV",
+      "weight_pct": 0.0703,
+      "return_pct": -1.3233,
+      "contribution_bps": -0.093
+    },
+    {
+      "name": "Expedia Group Inc",
+      "ticker": "EXPE",
+      "weight_pct": 0.0457,
+      "return_pct": -2.0798,
+      "contribution_bps": -0.095
+    },
+    {
+      "name": "Microchip Technology Inc",
+      "ticker": "MCHP",
+      "weight_pct": 0.0513,
+      "return_pct": -1.9024,
+      "contribution_bps": -0.098
+    },
+    {
+      "name": "Agilent Technologies Inc",
+      "ticker": "A",
+      "weight_pct": 0.078,
+      "return_pct": -1.271,
+      "contribution_bps": -0.099
+    },
+    {
+      "name": "Analog Devices Inc",
+      "ticker": "ADI",
+      "weight_pct": 0.2952,
+      "return_pct": -0.3446,
+      "contribution_bps": -0.102
+    },
+    {
+      "name": "Baker Hughes Co",
+      "ticker": "BKR",
+      "weight_pct": 0.0741,
+      "return_pct": -1.4035,
+      "contribution_bps": -0.104
+    },
+    {
+      "name": "Autodesk Inc",
+      "ticker": "ADSK",
+      "weight_pct": 0.0852,
+      "return_pct": -1.2303,
+      "contribution_bps": -0.105
+    },
+    {
+      "name": "Slb Ltd",
+      "ticker": "SLB",
+      "weight_pct": 0.1147,
+      "return_pct": -0.9528,
+      "contribution_bps": -0.109
+    },
+    {
+      "name": "Kimberly Clark Corp",
+      "ticker": "KMB",
+      "weight_pct": 0.1054,
+      "return_pct": -1.0453,
+      "contribution_bps": -0.11
+    },
+    {
+      "name": "Becton Dickinson And Co",
+      "ticker": "BDX",
+      "weight_pct": 0.0899,
+      "return_pct": -1.2265,
+      "contribution_bps": -0.11
+    },
+    {
+      "name": "Vertex Pharmaceuticals Inc",
+      "ticker": "VRTX",
+      "weight_pct": 0.2146,
+      "return_pct": -0.541,
+      "contribution_bps": -0.116
+    },
+    {
+      "name": "Flex Ltd",
+      "ticker": "FLEX",
+      "weight_pct": 0.0443,
+      "return_pct": -2.6609,
+      "contribution_bps": -0.118
+    },
+    {
+      "name": "Nvr Inc",
+      "ticker": "NVR",
+      "weight_pct": 0.0249,
+      "return_pct": -4.764,
+      "contribution_bps": -0.118
+    },
+    {
+      "name": "Idexx Laboratories Inc",
+      "ticker": "IDXX",
+      "weight_pct": 0.0854,
+      "return_pct": -1.4165,
+      "contribution_bps": -0.121
+    },
+    {
+      "name": "General Motors Co",
+      "ticker": "GM",
+      "weight_pct": 0.1207,
+      "return_pct": -1.0708,
+      "contribution_bps": -0.129
+    },
+    {
+      "name": "Vistra Corp",
+      "ticker": "VST",
+      "weight_pct": 0.0649,
+      "return_pct": -2.046,
+      "contribution_bps": -0.133
+    },
+    {
+      "name": "Palantir Technologies Inc A",
+      "ticker": "PLTR",
+      "weight_pct": 0.5983,
+      "return_pct": -0.2246,
+      "contribution_bps": -0.134
+    },
+    {
+      "name": "Coinbase Global Inc  Class A",
+      "ticker": "COIN",
+      "weight_pct": 0.0467,
+      "return_pct": -2.917,
+      "contribution_bps": -0.136
+    },
+    {
+      "name": "Illumina Inc",
+      "ticker": "ILMN",
+      "weight_pct": 0.0512,
+      "return_pct": -2.6588,
+      "contribution_bps": -0.136
+    },
+    {
+      "name": "Deere + Co",
+      "ticker": "DE",
+      "weight_pct": 0.2665,
+      "return_pct": -0.5266,
+      "contribution_bps": -0.14
+    },
+    {
+      "name": "Phillips 66",
+      "ticker": "PSX",
+      "weight_pct": 0.155,
+      "return_pct": -0.9169,
+      "contribution_bps": -0.142
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "ticker": "LITE",
+      "weight_pct": 0.0812,
+      "return_pct": -1.7764,
+      "contribution_bps": -0.144
+    },
+    {
+      "name": "Ford Motor Co",
+      "ticker": "F",
+      "weight_pct": 0.0755,
+      "return_pct": -1.9169,
+      "contribution_bps": -0.145
+    },
+    {
+      "name": "Lennar Corp A",
+      "ticker": "LEN",
+      "weight_pct": 0.027,
+      "return_pct": -5.3723,
+      "contribution_bps": -0.145
+    },
+    {
+      "name": "Cbre Group Inc   A",
+      "ticker": "CBRE",
+      "weight_pct": 0.0603,
+      "return_pct": -2.4463,
+      "contribution_bps": -0.148
+    },
+    {
+      "name": "Pultegroup Inc",
+      "ticker": "PHM",
+      "weight_pct": 0.0391,
+      "return_pct": -3.8858,
+      "contribution_bps": -0.152
+    },
+    {
+      "name": "Doordash Inc   A",
+      "ticker": "DASH",
+      "weight_pct": 0.1047,
+      "return_pct": -1.4976,
+      "contribution_bps": -0.157
+    },
+    {
+      "name": "Seagate Technology Holdings",
+      "ticker": "STX",
+      "weight_pct": 0.1763,
+      "return_pct": -0.893,
+      "contribution_bps": -0.157
     },
     {
       "name": "Exxonmobil Holdings Corp",
       "ticker": "XOM",
-      "weight_pct": 1.0727,
-      "return_pct": -0.6873,
-      "contribution_bps": -0.737
+      "weight_pct": 1.0408,
+      "return_pct": -0.1578,
+      "contribution_bps": -0.164
     },
     {
-      "name": "Philip Morris International",
-      "ticker": "PM",
-      "weight_pct": 0.4852,
-      "return_pct": -2.4055,
-      "contribution_bps": -1.167
+      "name": "Paypal Holdings Inc",
+      "ticker": "PYPL",
+      "weight_pct": 0.0787,
+      "return_pct": -2.1149,
+      "contribution_bps": -0.167
+    },
+    {
+      "name": "Emerson Electric Co",
+      "ticker": "EMR",
+      "weight_pct": 0.1451,
+      "return_pct": -1.168,
+      "contribution_bps": -0.169
+    },
+    {
+      "name": "Blackstone Inc",
+      "ticker": "BX",
+      "weight_pct": 0.1431,
+      "return_pct": -1.2253,
+      "contribution_bps": -0.175
+    },
+    {
+      "name": "First Solar Inc",
+      "ticker": "FSLR",
+      "weight_pct": 0.0317,
+      "return_pct": -5.5477,
+      "contribution_bps": -0.176
+    },
+    {
+      "name": "Salesforce Inc",
+      "ticker": "CRM",
+      "weight_pct": 0.2707,
+      "return_pct": -0.6793,
+      "contribution_bps": -0.184
+    },
+    {
+      "name": "Arista Networks Inc",
+      "ticker": "ANET",
+      "weight_pct": 0.2996,
+      "return_pct": -0.6177,
+      "contribution_bps": -0.185
+    },
+    {
+      "name": "Nextera Energy Inc",
+      "ticker": "NEE",
+      "weight_pct": 0.2782,
+      "return_pct": -0.6793,
+      "contribution_bps": -0.189
+    },
+    {
+      "name": "Quanta Services Inc",
+      "ticker": "PWR",
+      "weight_pct": 0.1365,
+      "return_pct": -1.41,
+      "contribution_bps": -0.192
+    },
+    {
+      "name": "Thermo Fisher Scientific Inc",
+      "ticker": "TMO",
+      "weight_pct": 0.4098,
+      "return_pct": -0.4753,
+      "contribution_bps": -0.195
+    },
+    {
+      "name": "Tjx Companies Inc",
+      "ticker": "TJX",
+      "weight_pct": 0.2346,
+      "return_pct": -0.876,
+      "contribution_bps": -0.205
+    },
+    {
+      "name": "Synopsys Inc",
+      "ticker": "SNPS",
+      "weight_pct": 0.1375,
+      "return_pct": -1.5033,
+      "contribution_bps": -0.207
+    },
+    {
+      "name": "Cadence Design Sys Inc",
+      "ticker": "CDNS",
+      "weight_pct": 0.1425,
+      "return_pct": -1.4531,
+      "contribution_bps": -0.207
+    },
+    {
+      "name": "Airbnb Inc Class A",
+      "ticker": "ABNB",
+      "weight_pct": 0.1226,
+      "return_pct": -1.7815,
+      "contribution_bps": -0.218
+    },
+    {
+      "name": "United Rentals Inc",
+      "ticker": "URI",
+      "weight_pct": 0.1079,
+      "return_pct": -2.0591,
+      "contribution_bps": -0.222
+    },
+    {
+      "name": "Nike Inc  Cl B",
+      "ticker": "NKE",
+      "weight_pct": 0.0737,
+      "return_pct": -3.0341,
+      "contribution_bps": -0.224
+    },
+    {
+      "name": "Medtronic Plc",
+      "ticker": "MDT",
+      "weight_pct": 0.1932,
+      "return_pct": -1.1674,
+      "contribution_bps": -0.226
+    },
+    {
+      "name": "Intl Business Machines Corp",
+      "ticker": "IBM",
+      "weight_pct": 0.3564,
+      "return_pct": -0.642,
+      "contribution_bps": -0.229
+    },
+    {
+      "name": "Dr Horton Inc",
+      "ticker": "DHI",
+      "weight_pct": 0.0607,
+      "return_pct": -3.798,
+      "contribution_bps": -0.23
+    },
+    {
+      "name": "Monolithic Power Systems Inc",
+      "ticker": "MPWR",
+      "weight_pct": 0.105,
+      "return_pct": -2.1937,
+      "contribution_bps": -0.23
+    },
+    {
+      "name": "Robinhood Markets Inc   A",
+      "ticker": "HOOD",
+      "weight_pct": 0.1014,
+      "return_pct": -2.3884,
+      "contribution_bps": -0.242
+    },
+    {
+      "name": "Block Inc",
+      "ticker": "XYZ",
+      "weight_pct": 0.0736,
+      "return_pct": -3.3649,
+      "contribution_bps": -0.248
+    },
+    {
+      "name": "Capital One Financial Corp",
+      "ticker": "COF",
+      "weight_pct": 0.187,
+      "return_pct": -1.3798,
+      "contribution_bps": -0.258
+    },
+    {
+      "name": "Cummins Inc",
+      "ticker": "CMI",
+      "weight_pct": 0.0986,
+      "return_pct": -2.6347,
+      "contribution_bps": -0.26
+    },
+    {
+      "name": "Valero Energy Corp",
+      "ticker": "VLO",
+      "weight_pct": 0.1579,
+      "return_pct": -1.6931,
+      "contribution_bps": -0.267
+    },
+    {
+      "name": "Merck + Co. Inc.",
+      "ticker": "MRK",
+      "weight_pct": 0.5641,
+      "return_pct": -0.4773,
+      "contribution_bps": -0.269
+    },
+    {
+      "name": "Amphenol Corp Cl A",
+      "ticker": "APH",
+      "weight_pct": 0.3057,
+      "return_pct": -0.9416,
+      "contribution_bps": -0.288
+    },
+    {
+      "name": "Target Corp",
+      "ticker": "TGT",
+      "weight_pct": 0.1159,
+      "return_pct": -2.4834,
+      "contribution_bps": -0.288
+    },
+    {
+      "name": "Cisco Systems Inc",
+      "ticker": "CSCO",
+      "weight_pct": 0.5976,
+      "return_pct": -0.5068,
+      "contribution_bps": -0.303
+    },
+    {
+      "name": "Eaton Corp Plc",
+      "ticker": "ETN",
+      "weight_pct": 0.2143,
+      "return_pct": -1.4139,
+      "contribution_bps": -0.303
+    },
+    {
+      "name": "Coherent Corp",
+      "ticker": "COHR",
+      "weight_pct": 0.0679,
+      "return_pct": -4.6761,
+      "contribution_bps": -0.318
+    },
+    {
+      "name": "Uber Technologies Inc",
+      "ticker": "UBER",
+      "weight_pct": 0.2235,
+      "return_pct": -1.5737,
+      "contribution_bps": -0.352
+    },
+    {
+      "name": "Carvana Co",
+      "ticker": "CVNA",
+      "weight_pct": 0.0842,
+      "return_pct": -4.2486,
+      "contribution_bps": -0.358
+    },
+    {
+      "name": "Vertiv Holdings Co A",
+      "ticker": "VRT",
+      "weight_pct": 0.1186,
+      "return_pct": -3.1177,
+      "contribution_bps": -0.37
+    },
+    {
+      "name": "Home Depot Inc",
+      "ticker": "HD",
+      "weight_pct": 0.5413,
+      "return_pct": -0.6847,
+      "contribution_bps": -0.371
+    },
+    {
+      "name": "Bloom Energy Corp  A",
+      "ticker": "BE",
+      "weight_pct": 0.0878,
+      "return_pct": -4.3635,
+      "contribution_bps": -0.383
+    },
+    {
+      "name": "Constellation Energy",
+      "ticker": "CEG",
+      "weight_pct": 0.1398,
+      "return_pct": -3.0171,
+      "contribution_bps": -0.422
+    },
+    {
+      "name": "Crowdstrike Holdings Inc   A",
+      "ticker": "CRWD",
+      "weight_pct": 0.3575,
+      "return_pct": -1.2337,
+      "contribution_bps": -0.441
+    },
+    {
+      "name": "Netflix Inc",
+      "ticker": "NFLX",
+      "weight_pct": 0.409,
+      "return_pct": -1.079,
+      "contribution_bps": -0.441
+    },
+    {
+      "name": "Freeport Mcmoran Inc",
+      "ticker": "FCX",
+      "weight_pct": 0.1374,
+      "return_pct": -3.2408,
+      "contribution_bps": -0.445
+    },
+    {
+      "name": "Corning Inc",
+      "ticker": "GLW",
+      "weight_pct": 0.1412,
+      "return_pct": -3.2945,
+      "contribution_bps": -0.465
+    },
+    {
+      "name": "Booking Holdings Inc",
+      "ticker": "BKNG",
+      "weight_pct": 0.1886,
+      "return_pct": -2.5873,
+      "contribution_bps": -0.488
+    },
+    {
+      "name": "Johnson + Johnson",
+      "ticker": "JNJ",
+      "weight_pct": 1.0445,
+      "return_pct": -0.4714,
+      "contribution_bps": -0.492
+    },
+    {
+      "name": "Servicenow Inc",
+      "ticker": "NOW",
+      "weight_pct": 0.1633,
+      "return_pct": -3.0654,
+      "contribution_bps": -0.501
+    },
+    {
+      "name": "Oracle Corp",
+      "ticker": "ORCL",
+      "weight_pct": 0.3613,
+      "return_pct": -1.511,
+      "contribution_bps": -0.546
+    },
+    {
+      "name": "Dell Technologies  C",
+      "ticker": "DELL",
+      "weight_pct": 0.1609,
+      "return_pct": -3.4449,
+      "contribution_bps": -0.554
+    },
+    {
+      "name": "Palo Alto Networks Inc",
+      "ticker": "PANW",
+      "weight_pct": 0.4144,
+      "return_pct": -1.369,
+      "contribution_bps": -0.567
+    },
+    {
+      "name": "Intuitive Surgical Inc",
+      "ticker": "ISRG",
+      "weight_pct": 0.2501,
+      "return_pct": -2.2842,
+      "contribution_bps": -0.571
+    },
+    {
+      "name": "Sandisk Corp",
+      "ticker": "SNDK",
+      "weight_pct": 0.1989,
+      "return_pct": -2.9915,
+      "contribution_bps": -0.595
+    },
+    {
+      "name": "Applovin Corp Class A",
+      "ticker": "APP",
+      "weight_pct": 0.1708,
+      "return_pct": -3.5341,
+      "contribution_bps": -0.604
+    },
+    {
+      "name": "Alphabet Inc Cl A",
+      "ticker": "GOOGL",
+      "weight_pct": 2.5983,
+      "return_pct": -0.2672,
+      "contribution_bps": -0.694
+    },
+    {
+      "name": "Alphabet Inc Cl C",
+      "ticker": "GOOG",
+      "weight_pct": 2.089,
+      "return_pct": -0.3811,
+      "contribution_bps": -0.796
+    },
+    {
+      "name": "Newmont Corp",
+      "ticker": "NEM",
+      "weight_pct": 0.2025,
+      "return_pct": -4.1547,
+      "contribution_bps": -0.841
+    },
+    {
+      "name": "Intel Corp",
+      "ticker": "INTC",
+      "weight_pct": 0.4532,
+      "return_pct": -2.0886,
+      "contribution_bps": -0.946
+    },
+    {
+      "name": "Caterpillar Inc",
+      "ticker": "CAT",
+      "weight_pct": 0.4229,
+      "return_pct": -2.3895,
+      "contribution_bps": -1.01
+    },
+    {
+      "name": "Moderna Inc",
+      "ticker": "MRNA",
+      "weight_pct": 0.1535,
+      "return_pct": -6.7546,
+      "contribution_bps": -1.037
+    },
+    {
+      "name": "Ge Vernova Inc",
+      "ticker": "GEV",
+      "weight_pct": 0.3393,
+      "return_pct": -3.8947,
+      "contribution_bps": -1.321
+    },
+    {
+      "name": "Micron Technology Inc",
+      "ticker": "MU",
+      "weight_pct": 1.2723,
+      "return_pct": -1.0966,
+      "contribution_bps": -1.395
+    },
+    {
+      "name": "Apple Inc",
+      "ticker": "AAPL",
+      "weight_pct": 7.8642,
+      "return_pct": -0.6216,
+      "contribution_bps": -4.889
+    },
+    {
+      "name": "Microsoft Corp",
+      "ticker": "MSFT",
+      "weight_pct": 6.2203,
+      "return_pct": -2.2048,
+      "contribution_bps": -13.714
     },
     {
       "name": "Nvidia Corp",
       "ticker": "NVDA",
-      "weight_pct": 7.1046,
-      "return_pct": -4.2703,
-      "contribution_bps": -30.339
+      "weight_pct": 6.6438,
+      "return_pct": -5.4738,
+      "contribution_bps": -36.366
     }
   ],
   "method": {
