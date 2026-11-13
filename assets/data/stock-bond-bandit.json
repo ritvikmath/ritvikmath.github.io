@@ -1,18 +1,18 @@
 {
   "experiment": "stock-bond-contextual-bandit",
   "live_evaluation": true,
-  "generated_at": "2026-11-12T08:43:54+00:00",
+  "generated_at": "2026-11-13T08:36:38+00:00",
   "data_start": "2003-09-29",
   "backtest_start": "2004-10-04",
   "backtest_end": "2026-10-01",
-  "market_date": "2026-11-11",
+  "market_date": "2026-11-12",
   "last_completed_quarter": "2026-10-01",
   "starting_value": 1000.0,
   "base_quarterly_contribution": 1000.0,
   "final_quarterly_contribution": 0.0,
   "total_contributed": 116078.43291404609,
   "starting_age": 22.0,
-  "ending_age": 44.1,
+  "ending_age": 44.11,
   "assets": [
     {
       "symbol": "SPY",
@@ -121,10 +121,10 @@
       "quarterly_contribution": 1021.49,
       "contributed": 4040.88,
       "bandit": 4159.22,
-      "allocation": 4141.9,
-      "spy": 4151.56,
-      "agg": 4127.06,
-      "balanced": 4141.9
+      "allocation": 4141.89,
+      "spy": 4151.55,
+      "agg": 4127.05,
+      "balanced": 4141.89
     },
     {
       "date": "2005-10-03",
@@ -142,42 +142,42 @@
       "age": 23.25,
       "quarterly_contribution": 1044.55,
       "contributed": 6128.93,
-      "bandit": 6606.76,
-      "allocation": 6452.52,
-      "spy": 6598.53,
+      "bandit": 6606.75,
+      "allocation": 6452.51,
+      "spy": 6598.52,
       "agg": 6236.96,
-      "balanced": 6452.52
+      "balanced": 6452.51
     },
     {
       "date": "2006-04-03",
       "age": 23.49,
       "quarterly_contribution": 1051.89,
       "contributed": 7180.82,
-      "bandit": 7811.54,
-      "allocation": 7564.32,
-      "spy": 7803.12,
+      "bandit": 7811.52,
+      "allocation": 7564.31,
+      "spy": 7803.11,
       "agg": 7217.13,
-      "balanced": 7564.32
+      "balanced": 7564.31
     },
     {
       "date": "2006-07-03",
       "age": 23.74,
       "quarterly_contribution": 1063.42,
       "contributed": 8244.23,
-      "bandit": 8743.62,
-      "allocation": 8536.31,
-      "spy": 8735.34,
+      "bandit": 8743.6,
+      "allocation": 8536.3,
+      "spy": 8735.33,
       "agg": 8252.46,
-      "balanced": 8539.66
+      "balanced": 8539.65
     },
     {
       "date": "2006-10-02",
       "age": 23.99,
       "quarterly_contribution": 1058.18,
       "contributed": 9302.41,
-      "bandit": 10168.17,
-      "allocation": 10009.39,
-      "spy": 10246.91,
+      "bandit": 10168.16,
+      "allocation": 10009.38,
+      "spy": 10246.89,
       "agg": 9665.04,
       "balanced": 10010.46
     },
@@ -187,9 +187,9 @@
       "quarterly_contribution": 1066.23,
       "contributed": 10368.64,
       "bandit": 11364.73,
-      "allocation": 11540.07,
-      "spy": 11989.12,
-      "agg": 10855.15,
+      "allocation": 11540.06,
+      "spy": 11989.1,
+      "agg": 10855.16,
       "balanced": 11524.25
     },
     {
@@ -198,9 +198,9 @@
       "quarterly_contribution": 1079.16,
       "contributed": 11447.8,
       "bandit": 12516.99,
-      "allocation": 12718.55,
-      "spy": 13157.47,
-      "agg": 12049.49,
+      "allocation": 12718.54,
+      "spy": 13157.45,
+      "agg": 12049.51,
       "balanced": 12703.76
     },
     {
@@ -208,10 +208,10 @@
       "age": 24.74,
       "quarterly_contribution": 1088.07,
       "contributed": 12535.87,
-      "bandit": 14367.63,
+      "bandit": 14367.65,
       "allocation": 14274.07,
-      "spy": 15047.14,
-      "agg": 13080.58,
+      "spy": 15047.13,
+      "agg": 13080.6,
       "balanced": 14232.18
     },
     {
@@ -219,66 +219,66 @@
       "age": 24.99,
       "quarterly_contribution": 1096.38,
       "contributed": 13632.25,
-      "bandit": 15809.7,
-      "allocation": 15661.65,
-      "spy": 16409.42,
-      "agg": 14505.09,
-      "balanced": 15622.26
+      "bandit": 15809.74,
+      "allocation": 15661.66,
+      "spy": 16409.41,
+      "agg": 14505.13,
+      "balanced": 15622.28
     },
     {
       "date": "2008-01-02",
       "age": 25.24,
       "quarterly_contribution": 1112.02,
       "contributed": 14744.28,
-      "bandit": 16045.87,
-      "allocation": 16422.91,
-      "spy": 16627.88,
-      "agg": 16090.31,
-      "balanced": 16427.72
+      "bandit": 16045.92,
+      "allocation": 16422.93,
+      "spy": 16627.89,
+      "agg": 16090.37,
+      "balanced": 16427.75
     },
     {
       "date": "2008-04-01",
       "age": 25.49,
       "quarterly_contribution": 1121.29,
       "contributed": 15865.57,
-      "bandit": 17285.6,
-      "allocation": 17052.4,
-      "spy": 16879.81,
-      "agg": 17346.6,
-      "balanced": 17088.81
+      "bandit": 17285.65,
+      "allocation": 17052.42,
+      "spy": 16879.82,
+      "agg": 17346.65,
+      "balanced": 17088.84
     },
     {
       "date": "2008-07-01",
       "age": 25.74,
       "quarterly_contribution": 1147.88,
       "contributed": 17013.45,
-      "bandit": 17446.32,
-      "allocation": 17607.59,
+      "bandit": 17446.35,
+      "allocation": 17607.62,
       "spy": 17079.63,
-      "agg": 18348.48,
-      "balanced": 17603.28
+      "agg": 18348.55,
+      "balanced": 17603.31
     },
     {
       "date": "2008-10-01",
       "age": 25.99,
       "quarterly_contribution": 1137.29,
       "contributed": 18150.74,
-      "bandit": 18411.49,
-      "allocation": 17949.43,
-      "spy": 16938.02,
-      "agg": 19322.94,
-      "balanced": 17887.21
+      "bandit": 18411.52,
+      "allocation": 17949.45,
+      "spy": 16938.01,
+      "agg": 19323.0,
+      "balanced": 17887.23
     },
     {
       "date": "2009-01-02",
       "age": 26.25,
       "quarterly_contribution": 1110.76,
       "contributed": 19261.5,
-      "bandit": 20822.2,
-      "allocation": 18494.54,
+      "bandit": 20822.22,
+      "allocation": 18494.56,
       "spy": 15302.44,
-      "agg": 21798.0,
-      "balanced": 17763.0
+      "agg": 21798.06,
+      "balanced": 17763.02
     },
     {
       "date": "2009-04-01",
@@ -287,8 +287,8 @@
       "contributed": 20376.33,
       "bandit": 21326.87,
       "allocation": 18567.53,
-      "spy": 14569.81,
-      "agg": 22274.07,
+      "spy": 14569.8,
+      "agg": 22274.11,
       "balanced": 17382.91
     },
     {
@@ -296,33 +296,33 @@
       "age": 26.74,
       "quarterly_contribution": 1125.4,
       "contributed": 21501.72,
-      "bandit": 24836.92,
-      "allocation": 20570.34,
-      "spy": 17340.55,
-      "agg": 23842.45,
-      "balanced": 19824.4
+      "bandit": 24836.91,
+      "allocation": 20570.33,
+      "spy": 17340.52,
+      "agg": 23842.49,
+      "balanced": 19824.39
     },
     {
       "date": "2009-10-01",
       "age": 26.99,
       "quarterly_contribution": 1134.74,
       "contributed": 22636.47,
-      "bandit": 29746.7,
-      "allocation": 23358.25,
-      "spy": 21110.93,
-      "agg": 25872.94,
-      "balanced": 23064.96
+      "bandit": 29746.68,
+      "allocation": 23358.23,
+      "spy": 21110.9,
+      "agg": 25872.97,
+      "balanced": 23064.95
     },
     {
       "date": "2010-01-04",
       "age": 27.25,
       "quarterly_contribution": 1139.87,
       "contributed": 23776.34,
-      "bandit": 34209.88,
-      "allocation": 25793.11,
-      "spy": 24609.32,
-      "agg": 26929.27,
-      "balanced": 25721.13
+      "bandit": 34209.84,
+      "allocation": 25793.09,
+      "spy": 24609.27,
+      "agg": 26929.32,
+      "balanced": 25721.12
     },
     {
       "date": "2010-04-01",
@@ -330,9 +330,9 @@
       "quarterly_contribution": 1139.43,
       "contributed": 24915.77,
       "bandit": 35654.67,
-      "allocation": 27646.58,
-      "spy": 26756.93,
-      "agg": 28336.27,
+      "allocation": 27646.57,
+      "spy": 26756.88,
+      "agg": 28336.35,
       "balanced": 27595.03
     },
     {
@@ -340,187 +340,187 @@
       "age": 27.74,
       "quarterly_contribution": 1140.49,
       "contributed": 26056.26,
-      "bandit": 38399.71,
-      "allocation": 27244.55,
-      "spy": 24402.72,
-      "agg": 30751.96,
-      "balanced": 27069.76
+      "bandit": 38399.7,
+      "allocation": 27244.54,
+      "spy": 24402.68,
+      "agg": 30752.04,
+      "balanced": 27069.75
     },
     {
       "date": "2010-10-01",
       "age": 27.99,
       "quarterly_contribution": 1147.98,
       "contributed": 27204.24,
-      "bandit": 40407.53,
-      "allocation": 30345.95,
-      "spy": 28660.4,
-      "agg": 32588.53,
-      "balanced": 30529.94
+      "bandit": 40407.51,
+      "allocation": 30345.94,
+      "spy": 28660.36,
+      "agg": 32588.61,
+      "balanced": 30529.93
     },
     {
       "date": "2011-01-03",
       "age": 28.25,
       "quarterly_contribution": 1159.26,
       "contributed": 28363.5,
-      "bandit": 46483.32,
-      "allocation": 33204.05,
-      "spy": 33339.06,
-      "agg": 33253.52,
-      "balanced": 33753.36
+      "bandit": 46483.33,
+      "allocation": 33204.07,
+      "spy": 33339.03,
+      "agg": 33253.64,
+      "balanced": 33753.38
     },
     {
       "date": "2011-04-01",
       "age": 28.49,
       "quarterly_contribution": 1174.49,
       "contributed": 29537.99,
-      "bandit": 50128.19,
-      "allocation": 35474.26,
-      "spy": 36285.37,
-      "agg": 34495.63,
-      "balanced": 36031.61
+      "bandit": 50128.22,
+      "allocation": 35474.29,
+      "spy": 36285.35,
+      "agg": 34495.74,
+      "balanced": 36031.63
     },
     {
       "date": "2011-07-01",
       "age": 28.74,
       "quarterly_contribution": 1181.32,
       "contributed": 30719.31,
-      "bandit": 51807.54,
-      "allocation": 37161.57,
-      "spy": 37827.19,
-      "agg": 36400.27,
-      "balanced": 37729.92
+      "bandit": 51807.55,
+      "allocation": 37161.58,
+      "spy": 37827.16,
+      "agg": 36400.37,
+      "balanced": 37729.94
     },
     {
       "date": "2011-10-03",
       "age": 29.0,
       "quarterly_contribution": 1188.42,
       "contributed": 31907.73,
-      "bandit": 55024.25,
-      "allocation": 35411.23,
-      "spy": 32425.66,
-      "agg": 39051.63,
-      "balanced": 35581.1
+      "bandit": 55024.26,
+      "allocation": 35411.24,
+      "spy": 32425.64,
+      "agg": 39051.74,
+      "balanced": 35581.12
     },
     {
       "date": "2012-01-03",
       "age": 29.25,
       "quarterly_contribution": 1194.14,
       "contributed": 33101.87,
-      "bandit": 63976.99,
-      "allocation": 38871.62,
-      "spy": 38228.97,
-      "agg": 40576.64,
-      "balanced": 39930.44
+      "bandit": 63977.03,
+      "allocation": 38871.67,
+      "spy": 38228.96,
+      "agg": 40576.81,
+      "balanced": 39930.49
     },
     {
       "date": "2012-04-02",
       "age": 29.49,
       "quarterly_contribution": 1201.19,
       "contributed": 34303.06,
-      "bandit": 72573.71,
-      "allocation": 42271.13,
-      "spy": 43849.3,
-      "agg": 41974.25,
-      "balanced": 43978.44
+      "bandit": 72573.7,
+      "allocation": 42271.17,
+      "spy": 43849.26,
+      "agg": 41974.41,
+      "balanced": 43978.47
     },
     {
       "date": "2012-07-02",
       "age": 29.74,
       "quarterly_contribution": 1198.06,
       "contributed": 35501.12,
-      "bandit": 71694.78,
-      "allocation": 43228.77,
-      "spy": 43792.43,
-      "agg": 44262.37,
-      "balanced": 44878.17
+      "bandit": 71694.76,
+      "allocation": 43228.82,
+      "spy": 43792.39,
+      "agg": 44262.58,
+      "balanced": 44878.22
     },
     {
       "date": "2012-10-01",
       "age": 29.99,
       "quarterly_contribution": 1214.04,
       "contributed": 36715.15,
-      "bandit": 76931.88,
-      "allocation": 46113.23,
-      "spy": 47463.83,
-      "agg": 46127.91,
-      "balanced": 47867.4
+      "bandit": 76931.83,
+      "allocation": 46113.28,
+      "spy": 47463.76,
+      "agg": 46128.13,
+      "balanced": 47867.45
     },
     {
       "date": "2013-01-02",
       "age": 30.25,
       "quarterly_contribution": 1214.25,
       "contributed": 37929.4,
-      "bandit": 77929.9,
-      "allocation": 47770.95,
-      "spy": 49530.74,
-      "agg": 47258.55,
-      "balanced": 49562.9
+      "bandit": 77929.87,
+      "allocation": 47771.0,
+      "spy": 49530.68,
+      "agg": 47258.79,
+      "balanced": 49562.95
     },
     {
       "date": "2013-04-01",
       "age": 30.49,
       "quarterly_contribution": 1214.87,
       "contributed": 39144.27,
-      "bandit": 84950.79,
-      "allocation": 51178.43,
-      "spy": 54489.08,
-      "agg": 48722.07,
-      "balanced": 53129.62
+      "bandit": 84950.77,
+      "allocation": 51178.51,
+      "spy": 54489.02,
+      "agg": 48722.33,
+      "balanced": 53129.69
     },
     {
       "date": "2013-07-01",
       "age": 30.74,
       "quarterly_contribution": 1220.65,
       "contributed": 40364.92,
-      "bandit": 89093.28,
-      "allocation": 53005.31,
-      "spy": 57583.85,
-      "agg": 48749.71,
-      "balanced": 54926.31
+      "bandit": 89093.32,
+      "allocation": 53005.43,
+      "spy": 57583.83,
+      "agg": 48750.01,
+      "balanced": 54926.43
     },
     {
       "date": "2013-10-01",
       "age": 30.99,
       "quarterly_contribution": 1224.68,
       "contributed": 41589.6,
-      "bandit": 95267.21,
-      "allocation": 56118.16,
-      "spy": 62007.39,
-      "agg": 50141.09,
-      "balanced": 58056.86
+      "bandit": 95267.2,
+      "allocation": 56118.27,
+      "spy": 62007.34,
+      "agg": 50141.38,
+      "balanced": 58056.95
     },
     {
       "date": "2014-01-02",
       "age": 31.25,
       "quarterly_contribution": 1233.17,
       "contributed": 42822.77,
-      "bandit": 96432.34,
-      "allocation": 60376.32,
-      "spy": 68640.5,
-      "agg": 51388.6,
-      "balanced": 62330.21
+      "bandit": 96432.37,
+      "allocation": 60376.44,
+      "spy": 68640.44,
+      "agg": 51388.91,
+      "balanced": 62330.32
     },
     {
       "date": "2014-04-01",
       "age": 31.49,
       "quarterly_contribution": 1239.35,
       "contributed": 44062.12,
-      "bandit": 100836.21,
-      "allocation": 63226.97,
-      "spy": 72203.32,
-      "agg": 53404.66,
-      "balanced": 65212.31
+      "bandit": 100836.3,
+      "allocation": 63227.13,
+      "spy": 72203.3,
+      "agg": 53404.97,
+      "balanced": 65212.45
     },
     {
       "date": "2014-07-01",
       "age": 31.74,
       "quarterly_contribution": 1244.75,
       "contributed": 45306.87,
-      "bandit": 106936.02,
-      "allocation": 66872.8,
-      "spy": 76924.51,
-      "agg": 55799.65,
-      "balanced": 68902.79
+      "bandit": 106936.07,
+      "allocation": 66872.96,
+      "spy": 76924.46,
+      "agg": 55800.01,
+      "balanced": 68902.93
     },
     {
       "date": "2014-10-01",
@@ -528,549 +528,549 @@
       "quarterly_contribution": 1244.39,
       "contributed": 46551.26,
       "bandit": 107111.46,
-      "allocation": 68039.93,
-      "spy": 77399.95,
-      "agg": 57776.72,
-      "balanced": 70095.82
+      "allocation": 68040.06,
+      "spy": 77399.86,
+      "agg": 57777.06,
+      "balanced": 70095.92
     },
     {
       "date": "2015-01-02",
       "age": 32.25,
       "quarterly_contribution": 1230.33,
       "contributed": 47781.59,
-      "bandit": 115055.57,
-      "allocation": 72363.59,
-      "spy": 83481.74,
-      "agg": 60026.38,
-      "balanced": 74456.99
+      "bandit": 115055.56,
+      "allocation": 72363.71,
+      "spy": 83481.63,
+      "agg": 60026.69,
+      "balanced": 74457.09
     },
     {
       "date": "2015-04-01",
       "age": 32.49,
       "quarterly_contribution": 1238.06,
       "contributed": 49019.65,
-      "bandit": 119087.45,
-      "allocation": 75058.18,
-      "spy": 86746.93,
-      "agg": 62069.7,
-      "balanced": 77179.38
+      "bandit": 119087.36,
+      "allocation": 75058.28,
+      "spy": 86746.77,
+      "agg": 62070.03,
+      "balanced": 77179.46
     },
     {
       "date": "2015-07-01",
       "age": 32.74,
       "quarterly_contribution": 1247.56,
       "contributed": 50267.21,
-      "bandit": 121528.67,
-      "allocation": 76121.88,
-      "spy": 88863.98,
-      "agg": 61914.19,
-      "balanced": 78193.25
+      "bandit": 121528.65,
+      "allocation": 76121.98,
+      "spy": 88863.87,
+      "agg": 61914.46,
+      "balanced": 78193.33
     },
     {
       "date": "2015-10-01",
       "age": 32.99,
       "quarterly_contribution": 1245.98,
       "contributed": 51513.19,
-      "bandit": 114461.44,
-      "allocation": 74376.64,
-      "spy": 84031.2,
-      "agg": 64109.86,
-      "balanced": 76709.69
+      "bandit": 114461.39,
+      "allocation": 74376.73,
+      "spy": 84031.06,
+      "agg": 64110.14,
+      "balanced": 76709.75
     },
     {
       "date": "2016-01-04",
       "age": 33.25,
       "quarterly_contribution": 1245.56,
       "contributed": 52758.74,
-      "bandit": 119942.87,
-      "allocation": 76989.87,
-      "spy": 88386.49,
-      "agg": 64762.61,
-      "balanced": 79374.8
+      "bandit": 119942.83,
+      "allocation": 76989.98,
+      "spy": 88386.37,
+      "agg": 64762.93,
+      "balanced": 79374.89
     },
     {
       "date": "2016-04-01",
       "age": 33.49,
       "quarterly_contribution": 1252.58,
       "contributed": 54011.32,
-      "bandit": 125143.06,
-      "allocation": 80674.21,
-      "spy": 92548.09,
-      "agg": 67913.53,
-      "balanced": 83125.49
+      "bandit": 125142.97,
+      "allocation": 80674.31,
+      "spy": 92547.92,
+      "agg": 67913.88,
+      "balanced": 83125.57
     },
     {
       "date": "2016-07-01",
       "age": 33.74,
       "quarterly_contribution": 1258.39,
       "contributed": 55269.71,
-      "bandit": 129290.6,
-      "allocation": 83826.43,
-      "spy": 95943.12,
-      "agg": 70814.01,
-      "balanced": 86339.3
+      "bandit": 129290.52,
+      "allocation": 83826.53,
+      "spy": 95942.95,
+      "agg": 70814.34,
+      "balanced": 86339.38
     },
     {
       "date": "2016-10-03",
       "age": 34.0,
       "quarterly_contribution": 1266.99,
       "contributed": 56536.7,
-      "bandit": 135805.87,
-      "allocation": 87222.57,
-      "spy": 101104.71,
-      "agg": 71928.67,
-      "balanced": 89634.86
+      "bandit": 135805.79,
+      "allocation": 87222.7,
+      "spy": 101104.55,
+      "agg": 71929.05,
+      "balanced": 89634.96
     },
     {
       "date": "2017-01-03",
       "age": 34.25,
       "quarterly_contribution": 1276.82,
       "contributed": 57813.52,
-      "bandit": 144602.72,
-      "allocation": 90813.41,
-      "spy": 107980.04,
-      "agg": 71351.64,
-      "balanced": 92965.63
+      "bandit": 144602.71,
+      "allocation": 90813.55,
+      "spy": 107979.93,
+      "agg": 71351.98,
+      "balanced": 92965.75
     },
     {
       "date": "2017-04-03",
       "age": 34.5,
       "quarterly_contribution": 1279.84,
       "contributed": 59093.36,
-      "bandit": 147251.52,
-      "allocation": 94956.39,
-      "spy": 113917.72,
-      "agg": 73379.07,
-      "balanced": 97041.2
+      "bandit": 147251.43,
+      "allocation": 94956.51,
+      "spy": 113917.6,
+      "agg": 73379.37,
+      "balanced": 97041.3
     },
     {
       "date": "2017-07-03",
       "age": 34.74,
       "quarterly_contribution": 1280.1,
       "contributed": 60373.46,
-      "bandit": 150178.56,
-      "allocation": 98670.2,
-      "spy": 119024.98,
-      "agg": 75479.88,
-      "balanced": 100711.55
+      "bandit": 150178.47,
+      "allocation": 98670.32,
+      "spy": 119024.86,
+      "agg": 75480.19,
+      "balanced": 100711.65
     },
     {
       "date": "2017-10-02",
       "age": 34.99,
       "quarterly_contribution": 1292.59,
       "contributed": 61666.05,
-      "bandit": 152801.59,
-      "allocation": 103103.34,
-      "spy": 125613.67,
-      "agg": 77441.15,
-      "balanced": 105049.76
+      "bandit": 152801.49,
+      "allocation": 103103.45,
+      "spy": 125613.52,
+      "agg": 77441.45,
+      "balanced": 105049.86
     },
     {
       "date": "2018-01-02",
       "age": 35.25,
       "quarterly_contribution": 1304.29,
       "contributed": 62970.34,
-      "bandit": 154310.03,
-      "allocation": 108999.03,
-      "spy": 135504.04,
-      "agg": 78848.91,
-      "balanced": 110718.47
+      "bandit": 154309.95,
+      "allocation": 108999.17,
+      "spy": 135503.93,
+      "agg": 78849.22,
+      "balanced": 110718.61
     },
     {
       "date": "2018-04-02",
       "age": 35.49,
       "quarterly_contribution": 1311.46,
       "contributed": 64281.8,
-      "bandit": 153416.69,
-      "allocation": 106647.97,
-      "spy": 130819.18,
-      "agg": 79033.77,
-      "balanced": 108457.45
+      "bandit": 153416.55,
+      "allocation": 106648.09,
+      "spy": 130819.06,
+      "agg": 79034.04,
+      "balanced": 108457.54
     },
     {
       "date": "2018-07-02",
       "age": 35.74,
       "quarterly_contribution": 1316.64,
       "contributed": 65598.44,
-      "bandit": 161815.4,
-      "allocation": 111184.74,
-      "spy": 138311.73,
-      "agg": 80298.15,
-      "balanced": 112817.54
+      "bandit": 161815.19,
+      "allocation": 111184.82,
+      "spy": 138311.55,
+      "agg": 80298.41,
+      "balanced": 112817.6
     },
     {
       "date": "2018-10-01",
       "age": 35.99,
       "quarterly_contribution": 1324.8,
       "contributed": 66923.24,
-      "bandit": 176371.33,
-      "allocation": 118281.22,
-      "spy": 150945.84,
-      "agg": 81443.95,
-      "balanced": 119576.58
+      "bandit": 176371.16,
+      "allocation": 118281.33,
+      "spy": 150945.7,
+      "agg": 81444.24,
+      "balanced": 119576.69
     },
     {
       "date": "2019-01-02",
       "age": 36.25,
       "quarterly_contribution": 1323.69,
       "contributed": 68246.93,
-      "bandit": 153547.14,
-      "allocation": 110046.94,
-      "spy": 131602.78,
-      "agg": 84472.79,
-      "balanced": 112078.57
+      "bandit": 153546.93,
+      "allocation": 110047.01,
+      "spy": 131602.6,
+      "agg": 84473.04,
+      "balanced": 112078.62
     },
     {
       "date": "2019-04-01",
       "age": 36.49,
       "quarterly_contribution": 1337.7,
       "contributed": 69584.63,
-      "bandit": 181844.96,
-      "allocation": 123184.46,
-      "spy": 156047.57,
-      "agg": 87471.6,
-      "balanced": 126105.25
+      "bandit": 181844.78,
+      "allocation": 123184.6,
+      "spy": 156047.41,
+      "agg": 87471.91,
+      "balanced": 126105.37
     },
     {
       "date": "2019-07-01",
       "age": 36.74,
       "quarterly_contribution": 1340.68,
       "contributed": 70925.31,
-      "bandit": 190261.85,
-      "allocation": 129024.32,
-      "spy": 163460.59,
-      "agg": 91662.68,
-      "balanced": 132033.98
+      "bandit": 190261.62,
+      "allocation": 129024.44,
+      "spy": 163460.4,
+      "agg": 91663.0,
+      "balanced": 132034.08
     },
     {
       "date": "2019-10-01",
       "age": 36.99,
       "quarterly_contribution": 1347.77,
       "contributed": 72273.09,
-      "bandit": 190431.29,
-      "allocation": 130934.99,
-      "spy": 163796.02,
-      "agg": 95087.2,
-      "balanced": 134087.69
+      "bandit": 190431.08,
+      "allocation": 130935.1,
+      "spy": 163795.84,
+      "agg": 95087.48,
+      "balanced": 134087.77
     },
     {
       "date": "2020-01-02",
       "age": 37.24,
       "quarterly_contribution": 1358.11,
       "contributed": 73631.19,
-      "bandit": 217179.81,
-      "allocation": 143434.98,
-      "spy": 186993.23,
-      "agg": 96588.01,
-      "balanced": 146253.12
+      "bandit": 217179.48,
+      "allocation": 143435.07,
+      "spy": 186992.95,
+      "agg": 96588.3,
+      "balanced": 146253.18
     },
     {
       "date": "2020-04-01",
       "age": 37.49,
       "quarterly_contribution": 1341.89,
       "contributed": 74973.08,
-      "bandit": 223007.78,
-      "allocation": 124809.8,
-      "spy": 144944.93,
-      "agg": 100023.71,
-      "balanced": 128501.11
+      "bandit": 223007.61,
+      "allocation": 124809.87,
+      "spy": 144944.64,
+      "agg": 100024.08,
+      "balanced": 128501.18
     },
     {
       "date": "2020-07-01",
       "age": 37.74,
       "quarterly_contribution": 1354.05,
       "contributed": 76327.13,
-      "bandit": 277268.59,
-      "allocation": 141565.28,
-      "spy": 180865.47,
-      "agg": 104710.07,
-      "balanced": 149954.56
+      "bandit": 277268.35,
+      "allocation": 141565.4,
+      "spy": 180865.1,
+      "agg": 104710.54,
+      "balanced": 149954.67
     },
     {
       "date": "2020-10-01",
       "age": 37.99,
       "quarterly_contribution": 1364.36,
       "contributed": 77691.48,
-      "bandit": 301862.95,
-      "allocation": 148440.13,
-      "spy": 197383.03,
-      "agg": 106457.76,
-      "balanced": 159076.57
+      "bandit": 301862.78,
+      "allocation": 148440.33,
+      "spy": 197382.68,
+      "agg": 106458.3,
+      "balanced": 159076.75
     },
     {
       "date": "2021-01-04",
       "age": 38.25,
       "quarterly_contribution": 1376.77,
       "contributed": 79068.25,
-      "bandit": 336263.42,
-      "allocation": 159308.24,
-      "spy": 220353.43,
-      "agg": 108435.25,
-      "balanced": 171254.14
+      "bandit": 336263.33,
+      "allocation": 159308.51,
+      "spy": 220353.11,
+      "agg": 108435.83,
+      "balanced": 171254.39
     },
     {
       "date": "2021-04-01",
       "age": 38.49,
       "quarterly_contribution": 1397.35,
       "contributed": 80465.6,
-      "bandit": 365363.85,
-      "allocation": 167337.96,
-      "spy": 239904.61,
-      "agg": 106769.1,
-      "balanced": 179181.46
+      "bandit": 365363.66,
+      "allocation": 167338.25,
+      "spy": 239904.2,
+      "agg": 106769.68,
+      "balanced": 179181.7
     },
     {
       "date": "2021-07-01",
       "age": 38.74,
       "quarterly_contribution": 1425.07,
       "contributed": 81890.67,
-      "bandit": 372192.66,
-      "allocation": 176045.9,
-      "spy": 256371.34,
-      "agg": 109881.74,
-      "balanced": 188480.02
+      "bandit": 372192.5,
+      "allocation": 176046.21,
+      "spy": 256370.89,
+      "agg": 109882.34,
+      "balanced": 188480.27
     },
     {
       "date": "2021-10-01",
       "age": 38.99,
       "quarterly_contribution": 1449.42,
       "contributed": 83340.09,
-      "bandit": 374908.21,
-      "allocation": 178061.89,
-      "spy": 258950.39,
-      "agg": 111476.06,
-      "balanced": 190527.15
+      "bandit": 374908.19,
+      "allocation": 178062.26,
+      "spy": 258950.03,
+      "agg": 111476.69,
+      "balanced": 190527.46
     },
     {
       "date": "2022-01-03",
       "age": 39.25,
       "quarterly_contribution": 1480.83,
       "contributed": 84820.92,
-      "bandit": 420775.82,
-      "allocation": 192075.73,
-      "spy": 291089.32,
-      "agg": 111826.81,
-      "balanced": 204769.73
+      "bandit": 420775.73,
+      "allocation": 192076.09,
+      "spy": 291088.88,
+      "agg": 111827.42,
+      "balanced": 204770.03
     },
     {
       "date": "2022-04-01",
       "age": 39.49,
       "quarterly_contribution": 1512.37,
       "contributed": 86333.3,
-      "bandit": 401826.17,
-      "allocation": 183892.66,
-      "spy": 278446.23,
-      "agg": 107347.88,
-      "balanced": 195919.07
+      "bandit": 401826.09,
+      "allocation": 183893.03,
+      "spy": 278445.82,
+      "agg": 107348.5,
+      "balanced": 195919.39
     },
     {
       "date": "2022-07-01",
       "age": 39.74,
       "quarterly_contribution": 1545.67,
       "contributed": 87878.96,
-      "bandit": 338353.8,
-      "allocation": 164259.86,
-      "spy": 234937.52,
-      "agg": 104928.01,
-      "balanced": 175549.19
+      "bandit": 338353.79,
+      "allocation": 164260.22,
+      "spy": 234937.21,
+      "agg": 104928.61,
+      "balanced": 175549.49
     },
     {
       "date": "2022-10-03",
       "age": 40.0,
       "quarterly_contribution": 1561.88,
       "contributed": 89440.84,
-      "bandit": 327652.14,
-      "allocation": 158956.49,
-      "spy": 227984.16,
-      "agg": 101349.68,
-      "balanced": 169853.51
+      "bandit": 327652.13,
+      "allocation": 158956.77,
+      "spy": 227983.86,
+      "agg": 101350.17,
+      "balanced": 169853.74
     },
     {
       "date": "2023-01-03",
       "age": 40.25,
       "quarterly_contribution": 1574.53,
       "contributed": 91015.37,
-      "bandit": 333213.2,
-      "allocation": 162380.65,
-      "spy": 232332.56,
-      "agg": 104030.42,
-      "balanced": 173409.56
+      "bandit": 333213.19,
+      "allocation": 162380.95,
+      "spy": 232332.26,
+      "agg": 104030.92,
+      "balanced": 173409.81
     },
     {
       "date": "2023-04-03",
       "age": 40.49,
       "quarterly_contribution": 1587.24,
       "contributed": 92602.61,
-      "bandit": 359770.88,
-      "allocation": 172952.22,
-      "spy": 251330.41,
-      "agg": 108226.5,
-      "balanced": 184533.3
+      "bandit": 359770.93,
+      "allocation": 172952.56,
+      "spy": 251330.13,
+      "agg": 108227.04,
+      "balanced": 184533.59
     },
     {
       "date": "2023-07-03",
       "age": 40.74,
       "quarterly_contribution": 1596.48,
       "contributed": 94199.09,
-      "bandit": 393736.25,
-      "allocation": 183964.08,
-      "spy": 275539.3,
-      "agg": 107820.72,
-      "balanced": 194725.76
+      "bandit": 393736.39,
+      "allocation": 183964.47,
+      "spy": 275539.06,
+      "agg": 107821.27,
+      "balanced": 194726.1
     },
     {
       "date": "2023-10-02",
       "age": 40.99,
       "quarterly_contribution": 1612.66,
       "contributed": 95811.76,
-      "bandit": 381800.93,
-      "allocation": 179566.12,
-      "spy": 268252.3,
-      "agg": 105827.62,
-      "balanced": 189959.92
+      "bandit": 381800.97,
+      "allocation": 179566.48,
+      "spy": 268252.04,
+      "agg": 105828.12,
+      "balanced": 189960.22
     },
     {
       "date": "2024-01-02",
       "age": 41.24,
       "quarterly_contribution": 1623.16,
       "contributed": 97434.91,
-      "bandit": 413363.59,
-      "allocation": 200979.98,
-      "spy": 303583.62,
-      "agg": 115749.41,
-      "balanced": 211863.51
+      "bandit": 413363.6,
+      "allocation": 200980.38,
+      "spy": 303583.33,
+      "agg": 115749.94,
+      "balanced": 211863.84
     },
     {
       "date": "2024-04-01",
       "age": 41.49,
       "quarterly_contribution": 1640.58,
       "contributed": 99075.49,
-      "bandit": 410710.97,
-      "allocation": 217806.88,
-      "spy": 340836.68,
-      "agg": 116187.81,
-      "balanced": 227535.77
+      "bandit": 410710.76,
+      "allocation": 217807.25,
+      "spy": 340836.3,
+      "agg": 116188.28,
+      "balanced": 227536.05
     },
     {
       "date": "2024-07-01",
       "age": 41.74,
       "quarterly_contribution": 1643.44,
       "contributed": 100718.94,
-      "bandit": 413555.87,
-      "allocation": 227643.44,
-      "spy": 361044.24,
-      "agg": 118171.14,
-      "balanced": 236881.28
+      "bandit": 413555.81,
+      "allocation": 227643.84,
+      "spy": 361043.82,
+      "agg": 118171.65,
+      "balanced": 236881.59
     },
     {
       "date": "2024-10-01",
       "age": 41.99,
       "quarterly_contribution": 1654.25,
       "contributed": 102373.19,
-      "bandit": 439184.06,
-      "allocation": 239571.59,
-      "spy": 376741.54,
-      "agg": 126675.81,
-      "balanced": 249556.55
+      "bandit": 439183.99,
+      "allocation": 239572.0,
+      "spy": 376741.06,
+      "agg": 126676.34,
+      "balanced": 249556.86
     },
     {
       "date": "2025-01-02",
       "age": 42.25,
       "quarterly_contribution": 1671.7,
       "contributed": 104044.89,
-      "bandit": 454104.89,
-      "allocation": 243807.41,
-      "spy": 390167.13,
-      "agg": 124357.89,
-      "balanced": 252755.88
+      "bandit": 454104.77,
+      "allocation": 243807.78,
+      "spy": 390166.59,
+      "agg": 124358.38,
+      "balanced": 252756.16
     },
     {
       "date": "2025-04-01",
       "age": 42.49,
       "quarterly_contribution": 1678.73,
       "contributed": 105723.62,
-      "bandit": 469910.25,
-      "allocation": 239927.44,
-      "spy": 372538.52,
-      "agg": 130033.59,
-      "balanced": 250179.59
+      "bandit": 469910.29,
+      "allocation": 239927.83,
+      "spy": 372538.0,
+      "agg": 130034.14,
+      "balanced": 250179.89
     },
     {
       "date": "2025-07-01",
       "age": 42.74,
       "quarterly_contribution": 1688.52,
       "contributed": 107412.14,
-      "bandit": 516828.89,
-      "allocation": 258058.7,
-      "spy": 410493.66,
-      "agg": 132918.54,
-      "balanced": 267401.86
+      "bandit": 516828.81,
+      "allocation": 258059.06,
+      "spy": 410493.02,
+      "agg": 132919.06,
+      "balanced": 267402.12
     },
     {
       "date": "2025-10-01",
       "age": 42.99,
       "quarterly_contribution": 1699.4,
       "contributed": 109111.54,
-      "bandit": 560055.54,
-      "allocation": 274314.18,
-      "spy": 445176.27,
-      "agg": 137993.64,
-      "balanced": 284709.17
+      "bandit": 560055.51,
+      "allocation": 274314.57,
+      "spy": 445175.61,
+      "agg": 137994.18,
+      "balanced": 284709.46
     },
     {
       "date": "2026-01-02",
       "age": 43.25,
       "quarterly_contribution": 1711.68,
       "contributed": 110823.21,
-      "bandit": 564255.97,
-      "allocation": 280753.02,
-      "spy": 457510.65,
-      "agg": 140457.28,
-      "balanced": 291117.62
+      "bandit": 564255.9,
+      "allocation": 280753.41,
+      "spy": 457509.97,
+      "agg": 140457.8,
+      "balanced": 291117.92
     },
     {
       "date": "2026-04-01",
       "age": 43.49,
       "quarterly_contribution": 1742.18,
       "contributed": 112565.39,
-      "bandit": 540278.29,
-      "allocation": 273768.22,
-      "spy": 438835.71,
-      "agg": 142104.34,
-      "balanced": 284986.0
+      "bandit": 540278.22,
+      "allocation": 273768.59,
+      "spy": 438835.07,
+      "agg": 142104.85,
+      "balanced": 284986.28
     },
     {
       "date": "2026-07-01",
       "age": 43.74,
       "quarterly_contribution": 1744.3,
       "contributed": 114309.69,
-      "bandit": 617690.44,
-      "allocation": 302225.22,
-      "spy": 502040.48,
-      "agg": 144225.5,
-      "balanced": 310980.58
+      "bandit": 617690.3,
+      "allocation": 302225.62,
+      "spy": 502039.7,
+      "agg": 144226.02,
+      "balanced": 310980.87
     },
     {
       "date": "2026-10-01",
       "age": 43.99,
       "quarterly_contribution": 1768.74,
       "contributed": 116078.43,
-      "bandit": 636964.55,
-      "allocation": 307434.19,
-      "spy": 518037.07,
-      "agg": 141321.18,
-      "balanced": 314006.81
+      "bandit": 636964.41,
+      "allocation": 307434.59,
+      "spy": 518036.26,
+      "agg": 141321.69,
+      "balanced": 314007.1
     },
     {
-      "date": "2026-11-11",
-      "age": 44.1,
+      "date": "2026-11-12",
+      "age": 44.11,
       "quarterly_contribution": 0.0,
       "contributed": 116078.43,
-      "bandit": 628829.09,
-      "allocation": 306357.31,
-      "spy": 511420.58,
-      "agg": 144217.12,
-      "balanced": 314174.31
+      "bandit": 626602.67,
+      "allocation": 305017.05,
+      "spy": 509609.17,
+      "agg": 143284.69,
+      "balanced": 312686.91
     }
   ],
   "decisions": [
@@ -1203,7 +1203,7 @@
         "relative_volatility_3m": 0.2768,
         "stock_drawdown_12m": -0.133,
         "stock_bond_correlation_6m": 0.0126,
-        "relative_trend_10m": 0.0797
+        "relative_trend_10m": 0.0798
       }
     },
     {
@@ -1322,7 +1322,7 @@
         "AGG": 0.0555
       },
       "estimates": {
-        "SPY": 0.03262,
+        "SPY": 0.03261,
         "AGG": -0.00092
       },
       "bonuses": {
@@ -1334,8 +1334,8 @@
         "relative_momentum_12m": 0.0972,
         "relative_volatility_3m": 0.3182,
         "stock_drawdown_12m": -0.0114,
-        "stock_bond_correlation_6m": 0.0069,
-        "relative_trend_10m": 0.1793
+        "stock_bond_correlation_6m": 0.007,
+        "relative_trend_10m": 0.1794
       }
     },
     {
@@ -1379,7 +1379,7 @@
         "relative_volatility_3m": 0.2448,
         "stock_drawdown_12m": -0.0227,
         "stock_bond_correlation_6m": 0.0041,
-        "relative_trend_10m": 0.2183
+        "relative_trend_10m": 0.2182
       }
     },
     {
@@ -1454,8 +1454,8 @@
         "AGG": 0.06425
       },
       "estimates": {
-        "SPY": 0.02355,
-        "AGG": 0.0164
+        "SPY": 0.02354,
+        "AGG": 0.01641
       },
       "bonuses": {
         "SPY": 0.03318,
@@ -1465,7 +1465,7 @@
         "relative_momentum_3m": 0.0242,
         "relative_momentum_12m": 0.1358,
         "relative_volatility_3m": 0.2795,
-        "stock_drawdown_12m": -0.0165,
+        "stock_drawdown_12m": -0.0164,
         "stock_bond_correlation_6m": 0.2261,
         "relative_trend_10m": 0.0621
       }
@@ -1510,7 +1510,7 @@
         "relative_momentum_12m": 0.2305,
         "relative_volatility_3m": 0.1587,
         "stock_drawdown_12m": -0.0267,
-        "stock_bond_correlation_6m": 0.0878,
+        "stock_bond_correlation_6m": 0.0879,
         "relative_trend_10m": 0.2025
       }
     },
@@ -1596,9 +1596,9 @@
       "context": {
         "relative_momentum_3m": 0.3123,
         "relative_momentum_12m": 0.3056,
-        "relative_volatility_3m": 0.3016,
+        "relative_volatility_3m": 0.3017,
         "stock_drawdown_12m": -0.0358,
-        "stock_bond_correlation_6m": 0.015,
+        "stock_bond_correlation_6m": 0.0149,
         "relative_trend_10m": 0.2573
       }
     },
@@ -1686,7 +1686,7 @@
         "relative_momentum_12m": -0.0575,
         "relative_volatility_3m": 0.5781,
         "stock_drawdown_12m": -0.2297,
-        "stock_bond_correlation_6m": -0.5008,
+        "stock_bond_correlation_6m": -0.5009,
         "relative_trend_10m": -0.2437
       }
     },
@@ -1705,7 +1705,7 @@
         "AGG": 45.0
       },
       "allocation_return": -3.48,
-      "allocation_turnover": 8.19,
+      "allocation_turnover": 8.18,
       "allocation_target": 46.81,
       "allocation_confidence": 39.83,
       "predicted_excess_return": -2.03,
@@ -1723,14 +1723,14 @@
       },
       "bonuses": {
         "SPY": 0.07271,
-        "AGG": 0.06172
+        "AGG": 0.06171
       },
       "context": {
         "relative_momentum_3m": -0.3366,
         "relative_momentum_12m": -0.1752,
         "relative_volatility_3m": 0.6921,
         "stock_drawdown_12m": -0.3933,
-        "stock_bond_correlation_6m": -0.5325,
+        "stock_bond_correlation_6m": -0.5324,
         "relative_trend_10m": -0.3212
       }
     },
@@ -1762,7 +1762,7 @@
         "AGG": 0.07627
       },
       "estimates": {
-        "SPY": -0.01077,
+        "SPY": -0.01076,
         "AGG": 0.00893
       },
       "bonuses": {
@@ -1850,7 +1850,7 @@
         "AGG": 0.18585
       },
       "estimates": {
-        "SPY": -0.04204,
+        "SPY": -0.04205,
         "AGG": 0.06901
       },
       "bonuses": {
@@ -1982,7 +1982,7 @@
         "AGG": 0.08587
       },
       "estimates": {
-        "SPY": 0.05165,
+        "SPY": 0.05166,
         "AGG": 0.02318
       },
       "bonuses": {
@@ -2279,7 +2279,7 @@
       "allocation_return": -7.91,
       "allocation_turnover": 5.16,
       "allocation_target": 50.44,
-      "allocation_confidence": 54.55,
+      "allocation_confidence": 54.56,
       "predicted_excess_return": -3.34,
       "spy_return": -17.42,
       "agg_return": 4.02,
@@ -2294,7 +2294,7 @@
         "AGG": 0.02351
       },
       "bonuses": {
-        "SPY": 0.04222,
+        "SPY": 0.04221,
         "AGG": 0.03762
       },
       "context": {
@@ -2330,7 +2330,7 @@
       "best_action": "SPY",
       "correct_choice": true,
       "scores": {
-        "SPY": 0.06744,
+        "SPY": 0.06745,
         "AGG": 0.05628
       },
       "estimates": {
@@ -2344,7 +2344,7 @@
       "context": {
         "relative_momentum_3m": -0.8576,
         "relative_momentum_12m": -0.1369,
-        "relative_volatility_3m": 1.1249,
+        "relative_volatility_3m": 1.1248,
         "stock_drawdown_12m": -0.6202,
         "stock_bond_correlation_6m": -0.4451,
         "relative_trend_10m": -0.7189
@@ -2435,7 +2435,7 @@
         "relative_volatility_3m": 0.2679,
         "stock_drawdown_12m": 0.0,
         "stock_bond_correlation_6m": -0.5636,
-        "relative_trend_10m": 0.456
+        "relative_trend_10m": 0.4559
       }
     },
     {
@@ -2474,7 +2474,7 @@
         "AGG": 0.03518
       },
       "context": {
-        "relative_momentum_3m": -0.2167,
+        "relative_momentum_3m": -0.2166,
         "relative_momentum_12m": -0.0703,
         "relative_volatility_3m": 0.5479,
         "stock_drawdown_12m": -0.1086,
@@ -2522,7 +2522,7 @@
         "relative_momentum_12m": 0.5075,
         "relative_volatility_3m": 0.3571,
         "stock_drawdown_12m": -0.048,
-        "stock_bond_correlation_6m": -0.4637,
+        "stock_bond_correlation_6m": -0.4636,
         "relative_trend_10m": 0.192
       }
     },
@@ -2555,7 +2555,7 @@
       },
       "estimates": {
         "SPY": 0.02678,
-        "AGG": 0.01866
+        "AGG": 0.01867
       },
       "bonuses": {
         "SPY": 0.0257,
@@ -2710,7 +2710,7 @@
       "action": "SPY",
       "reason": "LinUCB",
       "switched": true,
-      "return": 3.38,
+      "return": 3.39,
       "net_return": 3.28,
       "allocation": {
         "SPY": 61.77,
@@ -2721,7 +2721,7 @@
       "allocation_target": 63.49,
       "allocation_confidence": 57.17,
       "predicted_excess_return": 1.03,
-      "spy_return": 3.38,
+      "spy_return": 3.39,
       "agg_return": 1.51,
       "best_action": "SPY",
       "correct_choice": true,
@@ -2742,7 +2742,7 @@
         "relative_momentum_12m": 0.5913,
         "relative_volatility_3m": 0.3078,
         "stock_drawdown_12m": -0.0319,
-        "stock_bond_correlation_6m": 0.158,
+        "stock_bond_correlation_6m": 0.1579,
         "relative_trend_10m": 0.4083
       }
     },
@@ -2947,7 +2947,7 @@
       "correct_choice": true,
       "scores": {
         "SPY": 0.05128,
-        "AGG": 0.03734
+        "AGG": 0.03735
       },
       "estimates": {
         "SPY": 0.03382,
@@ -3094,7 +3094,7 @@
         "relative_momentum_12m": -0.0058,
         "relative_volatility_3m": 0.462,
         "stock_drawdown_12m": -0.1462,
-        "stock_bond_correlation_6m": -0.3349,
+        "stock_bond_correlation_6m": -0.335,
         "relative_trend_10m": -0.0528
       }
     },
@@ -3138,7 +3138,7 @@
         "relative_momentum_12m": 0.0236,
         "relative_volatility_3m": 0.6234,
         "stock_drawdown_12m": -0.0357,
-        "stock_bond_correlation_6m": -0.2267,
+        "stock_bond_correlation_6m": -0.2268,
         "relative_trend_10m": 0.0495
       }
     },
@@ -3166,7 +3166,7 @@
       "best_action": "SPY",
       "correct_choice": true,
       "scores": {
-        "SPY": 0.05126,
+        "SPY": 0.05127,
         "AGG": 0.04171
       },
       "estimates": {
@@ -3175,7 +3175,7 @@
       },
       "bonuses": {
         "SPY": 0.01904,
-        "AGG": 0.02904
+        "AGG": 0.02905
       },
       "context": {
         "relative_momentum_3m": -0.0044,
@@ -3247,7 +3247,7 @@
       "allocation_return": 3.15,
       "allocation_turnover": 0.0,
       "allocation_target": 69.59,
-      "allocation_confidence": 66.23,
+      "allocation_confidence": 66.22,
       "predicted_excess_return": 2.63,
       "spy_return": 4.31,
       "agg_return": 1.05,
@@ -3358,7 +3358,7 @@
         "relative_momentum_12m": 0.3707,
         "relative_volatility_3m": 0.1875,
         "stock_drawdown_12m": -0.0334,
-        "stock_bond_correlation_6m": -0.3195,
+        "stock_bond_correlation_6m": -0.3196,
         "relative_trend_10m": 0.2225
       }
     },
@@ -3434,7 +3434,7 @@
         "AGG": 0.03851
       },
       "estimates": {
-        "SPY": 0.01757,
+        "SPY": 0.01756,
         "AGG": 0.01643
       },
       "bonuses": {
@@ -3522,7 +3522,7 @@
         "AGG": 0.03286
       },
       "estimates": {
-        "SPY": 0.03304,
+        "SPY": 0.03303,
         "AGG": 0.01355
       },
       "bonuses": {
@@ -3622,7 +3622,7 @@
         "relative_momentum_12m": -0.0977,
         "relative_volatility_3m": 0.8457,
         "stock_drawdown_12m": -0.4632,
-        "stock_bond_correlation_6m": -0.1374,
+        "stock_bond_correlation_6m": -0.1373,
         "relative_trend_10m": -0.4023
       }
     },
@@ -3752,7 +3752,7 @@
       "context": {
         "relative_momentum_3m": -0.1154,
         "relative_momentum_12m": -0.1586,
-        "relative_volatility_3m": 0.4459,
+        "relative_volatility_3m": 0.446,
         "stock_drawdown_12m": -0.0818,
         "stock_bond_correlation_6m": -0.3003,
         "relative_trend_10m": -0.0037
@@ -3930,7 +3930,7 @@
         "relative_momentum_12m": 0.2511,
         "relative_volatility_3m": 0.578,
         "stock_drawdown_12m": -0.18,
-        "stock_bond_correlation_6m": 0.1381,
+        "stock_bond_correlation_6m": 0.1382,
         "relative_trend_10m": 0.2835
       }
     },
@@ -4018,7 +4018,7 @@
         "relative_momentum_12m": 1.279,
         "relative_volatility_3m": 0.4634,
         "stock_drawdown_12m": 0.0,
-        "stock_bond_correlation_6m": 0.1665,
+        "stock_bond_correlation_6m": 0.1666,
         "relative_trend_10m": 0.6342
       }
     },
@@ -4127,7 +4127,7 @@
       "allocation_return": -5.05,
       "allocation_turnover": 0.0,
       "allocation_target": 60.34,
-      "allocation_confidence": 65.91,
+      "allocation_confidence": 65.92,
       "predicted_excess_return": 0.09,
       "spy_return": -4.86,
       "agg_return": -5.36,
@@ -4311,7 +4311,7 @@
       "correct_choice": true,
       "scores": {
         "SPY": 0.10027,
-        "AGG": 0.05681
+        "AGG": 0.05682
       },
       "estimates": {
         "SPY": 0.07027,
@@ -4454,7 +4454,7 @@
         "AGG": 0.02721
       },
       "context": {
-        "relative_momentum_3m": 0.0162,
+        "relative_momentum_3m": 0.0163,
         "relative_momentum_12m": 0.4007,
         "relative_volatility_3m": 0.1733,
         "stock_drawdown_12m": -0.211,
@@ -4690,7 +4690,7 @@
       "action": "SPY",
       "reason": "LinUCB",
       "switched": true,
-      "return": 9.74,
+      "return": 9.73,
       "net_return": 9.63,
       "allocation": {
         "SPY": 67.31,
@@ -4701,7 +4701,7 @@
       "allocation_target": 71.84,
       "allocation_confidence": 70.4,
       "predicted_excess_return": 3.17,
-      "spy_return": 9.74,
+      "spy_return": 9.73,
       "agg_return": 0.92,
       "best_action": "SPY",
       "correct_choice": true,
@@ -4750,7 +4750,7 @@
       "best_action": "SPY",
       "correct_choice": true,
       "scores": {
-        "SPY": 0.11291,
+        "SPY": 0.11292,
         "AGG": 0.05151
       },
       "estimates": {
@@ -4759,7 +4759,7 @@
       },
       "bonuses": {
         "SPY": 0.03519,
-        "AGG": 0.04606
+        "AGG": 0.04605
       },
       "context": {
         "relative_momentum_3m": 0.3824,
@@ -4854,7 +4854,7 @@
         "relative_momentum_12m": 0.2096,
         "relative_volatility_3m": 0.3865,
         "stock_drawdown_12m": -0.0348,
-        "stock_bond_correlation_6m": 0.0917,
+        "stock_bond_correlation_6m": 0.0918,
         "relative_trend_10m": 0.2827
       }
     },
@@ -4949,45 +4949,45 @@
   ],
   "summary": {
     "bandit": {
-      "terminal_value": 628829.09,
+      "terminal_value": 626602.67,
       "contributed": 116078.43,
-      "investment_gain": 512750.66,
+      "investment_gain": 510524.24,
       "annualized_return": 13.81,
       "annualized_volatility": 12.29,
       "max_drawdown": -23.15,
       "worst_quarter": -16.18
     },
     "allocation": {
-      "terminal_value": 306357.31,
+      "terminal_value": 305017.05,
       "contributed": 116078.43,
-      "investment_gain": 190278.88,
+      "investment_gain": 188938.62,
       "annualized_return": 7.76,
       "annualized_volatility": 9.36,
       "max_drawdown": -20.12,
       "worst_quarter": -13.92
     },
     "spy": {
-      "terminal_value": 511420.58,
+      "terminal_value": 509609.17,
       "contributed": 116078.43,
-      "investment_gain": 395342.15,
+      "investment_gain": 393530.74,
       "annualized_return": 10.91,
       "annualized_volatility": 16.2,
       "max_drawdown": -42.36,
       "worst_quarter": -23.2
     },
     "agg": {
-      "terminal_value": 144217.12,
+      "terminal_value": 143284.69,
       "contributed": 116078.43,
-      "investment_gain": 28138.69,
+      "investment_gain": 27206.26,
       "annualized_return": 2.74,
       "annualized_volatility": 4.66,
       "max_drawdown": -16.63,
       "worst_quarter": -5.36
     },
     "balanced": {
-      "terminal_value": 314174.31,
+      "terminal_value": 312686.91,
       "contributed": 116078.43,
-      "investment_gain": 198095.88,
+      "investment_gain": 196608.48,
       "annualized_return": 7.95,
       "annualized_volatility": 9.95,
       "max_drawdown": -25.56,
@@ -5003,7 +5003,7 @@
     "average_stock_allocation": 59.93,
     "minimum_stock_allocation": 29.41,
     "maximum_stock_allocation": 72.13,
-    "allocation_turnover": 245.51
+    "allocation_turnover": 245.5
   },
   "inflation": {
     "series": "CPIAUCSL",
