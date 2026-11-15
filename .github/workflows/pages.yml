@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master
+  workflow_run:
+    workflows:
+      - Update experiments
+    types:
+      - completed
   workflow_dispatch:
 
 concurrency:
@@ -17,6 +22,9 @@ permissions:
 
 jobs:
   build:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
