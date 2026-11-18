@@ -1,8 +1,8 @@
 {
   "experiment": "stock-direction-xgboost",
   "live_evaluation": true,
-  "generated_at": "2026-11-17T09:39:13+00:00",
-  "market_date": "2026-11-16",
+  "generated_at": "2026-11-18T08:58:43+00:00",
+  "market_date": "2026-11-17",
   "history_start": "2020-10-30",
   "test_start": "2025-06-24",
   "train_target_end": "2025-06-23",
@@ -96,77 +96,77 @@
   "model": {
     "name": "XGBoost multiclass classifier",
     "training_samples": 11640,
-    "test_samples": 3520,
+    "test_samples": 3530,
     "training_dates": 1164,
-    "test_dates": 352,
+    "test_dates": 353,
     "trees": 260,
     "max_depth": 3,
     "learning_rate": 0.04
   },
   "metrics": {
     "accuracy": 28.78,
-    "balanced_accuracy": 28.96,
+    "balanced_accuracy": 28.91,
     "macro_f1": 28.6,
-    "direction_accuracy": 49.83,
+    "direction_accuracy": 49.8,
     "majority_accuracy": 28.41,
     "majority_balanced_accuracy": 25.0
   },
   "class_distribution": [
-    755,
-    894,
-    1000,
+    761,
+    895,
+    1003,
     871
   ],
   "confusion_matrix": [
     [
-      233,
+      222,
       128,
-      139,
-      255
+      141,
+      270
     ],
     [
-      181,
-      198,
-      253,
-      262
+      185,
+      210,
+      240,
+      260
     ],
     [
-      208,
-      252,
+      204,
+      260,
       268,
-      272
+      271
     ],
     [
-      233,
-      164,
-      160,
-      314
+      236,
+      161,
+      158,
+      316
     ]
   ],
   "confusion_matrix_percent": [
     [
-      30.9,
-      17.0,
-      18.4,
-      33.8
+      29.2,
+      16.8,
+      18.5,
+      35.5
     ],
     [
-      20.2,
-      22.1,
-      28.3,
-      29.3
-    ],
-    [
-      20.8,
-      25.2,
+      20.7,
+      23.5,
       26.8,
-      27.2
+      29.1
     ],
     [
-      26.8,
-      18.8,
-      18.4,
-      36.1
+      20.3,
+      25.9,
+      26.7,
+      27.0
+    ],
+    [
+      27.1,
+      18.5,
+      18.1,
+      36.3
     ]
   ],
   "per_stock": [
@@ -174,223 +174,223 @@
       "id": "msft",
       "symbol": "MSFT",
       "name": "Microsoft",
-      "accuracy": 29.26,
-      "direction_accuracy": 47.16,
-      "samples": 352
+      "accuracy": 29.75,
+      "direction_accuracy": 48.44,
+      "samples": 353
     },
     {
       "id": "google",
       "symbol": "GOOGL",
       "name": "Google",
-      "accuracy": 24.15,
-      "direction_accuracy": 48.58,
-      "samples": 352
+      "accuracy": 24.08,
+      "direction_accuracy": 48.16,
+      "samples": 353
     },
     {
       "id": "amazon",
       "symbol": "AMZN",
       "name": "Amazon",
-      "accuracy": 27.84,
-      "direction_accuracy": 48.3,
-      "samples": 352
+      "accuracy": 28.61,
+      "direction_accuracy": 47.88,
+      "samples": 353
     },
     {
       "id": "pg",
       "symbol": "PG",
       "name": "Procter & Gamble",
-      "accuracy": 27.56,
-      "direction_accuracy": 50.28,
-      "samples": 352
+      "accuracy": 28.9,
+      "direction_accuracy": 51.84,
+      "samples": 353
     },
     {
       "id": "jpm",
       "symbol": "JPM",
       "name": "JPMorgan",
-      "accuracy": 27.84,
-      "direction_accuracy": 48.3,
-      "samples": 352
+      "accuracy": 28.05,
+      "direction_accuracy": 48.73,
+      "samples": 353
     },
     {
       "id": "jnj",
       "symbol": "JNJ",
       "name": "Johnson & Johnson",
-      "accuracy": 33.52,
-      "direction_accuracy": 53.41,
-      "samples": 352
+      "accuracy": 32.29,
+      "direction_accuracy": 51.84,
+      "samples": 353
     },
     {
       "id": "xom",
       "symbol": "XOM",
       "name": "Exxon Mobil",
-      "accuracy": 26.99,
-      "direction_accuracy": 49.43,
-      "samples": 352
+      "accuracy": 24.65,
+      "direction_accuracy": 47.31,
+      "samples": 353
     },
     {
       "id": "cat",
       "symbol": "CAT",
       "name": "Caterpillar",
-      "accuracy": 35.23,
-      "direction_accuracy": 53.98,
-      "samples": 352
+      "accuracy": 35.69,
+      "direction_accuracy": 54.11,
+      "samples": 353
     },
     {
       "id": "nee",
       "symbol": "NEE",
       "name": "NextEra Energy",
-      "accuracy": 24.72,
-      "direction_accuracy": 51.7,
-      "samples": 352
+      "accuracy": 26.06,
+      "direction_accuracy": 52.97,
+      "samples": 353
     },
     {
       "id": "lin",
       "symbol": "LIN",
       "name": "Linde",
-      "accuracy": 30.68,
-      "direction_accuracy": 47.16,
-      "samples": 352
+      "accuracy": 29.75,
+      "direction_accuracy": 46.74,
+      "samples": 353
     }
   ],
   "accuracy_history": [
     {
       "date": "2025-07-22",
-      "accuracy": 33.0,
-      "direction_accuracy": 54.0
-    },
-    {
-      "date": "2025-07-23",
-      "accuracy": 33.81,
-      "direction_accuracy": 53.81
-    },
-    {
-      "date": "2025-07-24",
-      "accuracy": 34.09,
-      "direction_accuracy": 53.64
-    },
-    {
-      "date": "2025-07-25",
-      "accuracy": 33.91,
-      "direction_accuracy": 53.48
-    },
-    {
-      "date": "2025-07-28",
-      "accuracy": 33.33,
-      "direction_accuracy": 53.75
-    },
-    {
-      "date": "2025-07-29",
-      "accuracy": 32.8,
-      "direction_accuracy": 52.4
-    },
-    {
-      "date": "2025-07-30",
-      "accuracy": 31.92,
-      "direction_accuracy": 51.92
-    },
-    {
-      "date": "2025-07-31",
-      "accuracy": 31.85,
-      "direction_accuracy": 52.22
-    },
-    {
-      "date": "2025-08-01",
-      "accuracy": 32.86,
-      "direction_accuracy": 52.86
-    },
-    {
-      "date": "2025-08-04",
-      "accuracy": 32.07,
-      "direction_accuracy": 52.41
-    },
-    {
-      "date": "2025-08-05",
-      "accuracy": 31.33,
+      "accuracy": 32.0,
       "direction_accuracy": 52.0
     },
     {
-      "date": "2025-08-06",
-      "accuracy": 31.61,
-      "direction_accuracy": 52.26
+      "date": "2025-07-23",
+      "accuracy": 32.38,
+      "direction_accuracy": 51.43
     },
     {
-      "date": "2025-08-07",
-      "accuracy": 31.56,
-      "direction_accuracy": 52.19
-    },
-    {
-      "date": "2025-08-08",
-      "accuracy": 31.82,
-      "direction_accuracy": 52.12
-    },
-    {
-      "date": "2025-08-11",
-      "accuracy": 31.47,
-      "direction_accuracy": 52.06
-    },
-    {
-      "date": "2025-08-12",
-      "accuracy": 31.71,
-      "direction_accuracy": 51.71
-    },
-    {
-      "date": "2025-08-13",
-      "accuracy": 31.39,
-      "direction_accuracy": 51.39
-    },
-    {
-      "date": "2025-08-14",
-      "accuracy": 30.81,
-      "direction_accuracy": 50.81
-    },
-    {
-      "date": "2025-08-15",
-      "accuracy": 30.79,
-      "direction_accuracy": 51.05
-    },
-    {
-      "date": "2025-08-18",
-      "accuracy": 31.03,
-      "direction_accuracy": 51.54
-    },
-    {
-      "date": "2025-08-19",
-      "accuracy": 31.0,
-      "direction_accuracy": 51.0
-    },
-    {
-      "date": "2025-08-20",
-      "accuracy": 30.49,
-      "direction_accuracy": 50.73
-    },
-    {
-      "date": "2025-08-21",
-      "accuracy": 30.95,
-      "direction_accuracy": 51.19
-    },
-    {
-      "date": "2025-08-22",
-      "accuracy": 31.4,
-      "direction_accuracy": 51.63
-    },
-    {
-      "date": "2025-08-25",
-      "accuracy": 31.59,
+      "date": "2025-07-24",
+      "accuracy": 32.73,
       "direction_accuracy": 51.36
     },
     {
+      "date": "2025-07-25",
+      "accuracy": 32.61,
+      "direction_accuracy": 51.3
+    },
+    {
+      "date": "2025-07-28",
+      "accuracy": 32.5,
+      "direction_accuracy": 51.25
+    },
+    {
+      "date": "2025-07-29",
+      "accuracy": 32.0,
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2025-07-30",
+      "accuracy": 31.15,
+      "direction_accuracy": 50.38
+    },
+    {
+      "date": "2025-07-31",
+      "accuracy": 31.11,
+      "direction_accuracy": 50.74
+    },
+    {
+      "date": "2025-08-01",
+      "accuracy": 32.14,
+      "direction_accuracy": 51.43
+    },
+    {
+      "date": "2025-08-04",
+      "accuracy": 31.38,
+      "direction_accuracy": 50.69
+    },
+    {
+      "date": "2025-08-05",
+      "accuracy": 31.0,
+      "direction_accuracy": 50.33
+    },
+    {
+      "date": "2025-08-06",
+      "accuracy": 31.29,
+      "direction_accuracy": 50.65
+    },
+    {
+      "date": "2025-08-07",
+      "accuracy": 31.25,
+      "direction_accuracy": 50.31
+    },
+    {
+      "date": "2025-08-08",
+      "accuracy": 31.52,
+      "direction_accuracy": 50.3
+    },
+    {
+      "date": "2025-08-11",
+      "accuracy": 30.88,
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2025-08-12",
+      "accuracy": 31.14,
+      "direction_accuracy": 49.71
+    },
+    {
+      "date": "2025-08-13",
+      "accuracy": 30.83,
+      "direction_accuracy": 49.17
+    },
+    {
+      "date": "2025-08-14",
+      "accuracy": 30.27,
+      "direction_accuracy": 48.92
+    },
+    {
+      "date": "2025-08-15",
+      "accuracy": 30.26,
+      "direction_accuracy": 49.47
+    },
+    {
+      "date": "2025-08-18",
+      "accuracy": 30.51,
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2025-08-19",
+      "accuracy": 30.5,
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2025-08-20",
+      "accuracy": 30.0,
+      "direction_accuracy": 49.76
+    },
+    {
+      "date": "2025-08-21",
+      "accuracy": 30.48,
+      "direction_accuracy": 50.48
+    },
+    {
+      "date": "2025-08-22",
+      "accuracy": 30.93,
+      "direction_accuracy": 50.93
+    },
+    {
+      "date": "2025-08-25",
+      "accuracy": 30.91,
+      "direction_accuracy": 50.45
+    },
+    {
       "date": "2025-08-26",
-      "accuracy": 31.78,
-      "direction_accuracy": 51.33
+      "accuracy": 31.11,
+      "direction_accuracy": 50.44
     },
     {
       "date": "2025-08-27",
-      "accuracy": 31.96,
-      "direction_accuracy": 51.3
+      "accuracy": 31.3,
+      "direction_accuracy": 50.43
     },
     {
       "date": "2025-08-28",
       "accuracy": 31.7,
-      "direction_accuracy": 51.06
+      "direction_accuracy": 50.85
     },
     {
       "date": "2025-08-29",
@@ -399,8 +399,8 @@
     },
     {
       "date": "2025-09-02",
-      "accuracy": 32.45,
-      "direction_accuracy": 51.84
+      "accuracy": 32.24,
+      "direction_accuracy": 51.63
     },
     {
       "date": "2025-09-03",
@@ -424,83 +424,83 @@
     },
     {
       "date": "2025-09-09",
-      "accuracy": 32.22,
-      "direction_accuracy": 51.48
+      "accuracy": 32.04,
+      "direction_accuracy": 51.3
     },
     {
       "date": "2025-09-10",
-      "accuracy": 32.18,
-      "direction_accuracy": 52.0
+      "accuracy": 32.0,
+      "direction_accuracy": 51.64
     },
     {
       "date": "2025-09-11",
-      "accuracy": 31.79,
-      "direction_accuracy": 51.61
+      "accuracy": 31.61,
+      "direction_accuracy": 51.43
     },
     {
       "date": "2025-09-12",
-      "accuracy": 31.4,
-      "direction_accuracy": 51.23
+      "accuracy": 31.23,
+      "direction_accuracy": 51.05
     },
     {
       "date": "2025-09-15",
-      "accuracy": 31.21,
-      "direction_accuracy": 51.21
+      "accuracy": 31.03,
+      "direction_accuracy": 51.03
     },
     {
       "date": "2025-09-16",
-      "accuracy": 31.19,
-      "direction_accuracy": 51.19
+      "accuracy": 30.68,
+      "direction_accuracy": 50.51
     },
     {
       "date": "2025-09-17",
-      "accuracy": 30.83,
-      "direction_accuracy": 50.83
+      "accuracy": 30.5,
+      "direction_accuracy": 50.33
     },
     {
       "date": "2025-09-18",
-      "accuracy": 30.33,
-      "direction_accuracy": 50.67
+      "accuracy": 30.0,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2025-09-19",
-      "accuracy": 30.5,
-      "direction_accuracy": 50.67
+      "accuracy": 29.83,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2025-09-22",
-      "accuracy": 30.33,
-      "direction_accuracy": 50.67
+      "accuracy": 29.67,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2025-09-23",
-      "accuracy": 29.83,
-      "direction_accuracy": 50.33
+      "accuracy": 29.33,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2025-09-24",
-      "accuracy": 30.17,
-      "direction_accuracy": 50.33
+      "accuracy": 29.67,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2025-09-25",
-      "accuracy": 29.5,
-      "direction_accuracy": 50.0
+      "accuracy": 29.33,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2025-09-26",
-      "accuracy": 30.0,
-      "direction_accuracy": 50.17
+      "accuracy": 29.83,
+      "direction_accuracy": 50.0
     },
     {
       "date": "2025-09-29",
-      "accuracy": 30.5,
-      "direction_accuracy": 50.5
+      "accuracy": 30.17,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2025-09-30",
-      "accuracy": 30.33,
-      "direction_accuracy": 50.17
+      "accuracy": 30.17,
+      "direction_accuracy": 50.0
     },
     {
       "date": "2025-10-01",
@@ -509,468 +509,468 @@
     },
     {
       "date": "2025-10-02",
-      "accuracy": 29.67,
-      "direction_accuracy": 49.17
+      "accuracy": 29.83,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2025-10-03",
-      "accuracy": 29.17,
-      "direction_accuracy": 48.83
+      "accuracy": 29.5,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2025-10-06",
-      "accuracy": 29.17,
-      "direction_accuracy": 48.33
+      "accuracy": 29.83,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2025-10-07",
-      "accuracy": 29.5,
-      "direction_accuracy": 48.67
+      "accuracy": 30.0,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2025-10-08",
-      "accuracy": 29.0,
-      "direction_accuracy": 48.33
+      "accuracy": 29.67,
+      "direction_accuracy": 49.17
     },
     {
       "date": "2025-10-09",
-      "accuracy": 29.33,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2025-10-10",
-      "accuracy": 29.33,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2025-10-13",
-      "accuracy": 29.5,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2025-10-14",
-      "accuracy": 29.33,
-      "direction_accuracy": 48.5
-    },
-    {
-      "date": "2025-10-15",
-      "accuracy": 29.67,
-      "direction_accuracy": 49.0
-    },
-    {
-      "date": "2025-10-16",
-      "accuracy": 29.17,
-      "direction_accuracy": 49.0
-    },
-    {
-      "date": "2025-10-17",
-      "accuracy": 29.0,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2025-10-20",
-      "accuracy": 29.33,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2025-10-21",
-      "accuracy": 29.67,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2025-10-22",
-      "accuracy": 29.67,
-      "direction_accuracy": 49.0
-    },
-    {
-      "date": "2025-10-23",
       "accuracy": 30.17,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-10-24",
-      "accuracy": 30.33,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-10-27",
-      "accuracy": 30.0,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-10-28",
-      "accuracy": 30.5,
       "direction_accuracy": 49.83
     },
     {
-      "date": "2025-10-29",
+      "date": "2025-10-10",
+      "accuracy": 30.5,
+      "direction_accuracy": 50.17
+    },
+    {
+      "date": "2025-10-13",
       "accuracy": 30.67,
-      "direction_accuracy": 49.67
+      "direction_accuracy": 50.33
+    },
+    {
+      "date": "2025-10-14",
+      "accuracy": 30.33,
+      "direction_accuracy": 49.83
+    },
+    {
+      "date": "2025-10-15",
+      "accuracy": 30.5,
+      "direction_accuracy": 50.33
+    },
+    {
+      "date": "2025-10-16",
+      "accuracy": 30.17,
+      "direction_accuracy": 50.67
+    },
+    {
+      "date": "2025-10-17",
+      "accuracy": 29.83,
+      "direction_accuracy": 50.17
+    },
+    {
+      "date": "2025-10-20",
+      "accuracy": 30.17,
+      "direction_accuracy": 50.17
+    },
+    {
+      "date": "2025-10-21",
+      "accuracy": 30.5,
+      "direction_accuracy": 50.33
+    },
+    {
+      "date": "2025-10-22",
+      "accuracy": 30.5,
+      "direction_accuracy": 50.67
+    },
+    {
+      "date": "2025-10-23",
+      "accuracy": 31.33,
+      "direction_accuracy": 51.0
+    },
+    {
+      "date": "2025-10-24",
+      "accuracy": 31.67,
+      "direction_accuracy": 51.17
+    },
+    {
+      "date": "2025-10-27",
+      "accuracy": 31.33,
+      "direction_accuracy": 51.0
+    },
+    {
+      "date": "2025-10-28",
+      "accuracy": 31.83,
+      "direction_accuracy": 51.67
+    },
+    {
+      "date": "2025-10-29",
+      "accuracy": 31.83,
+      "direction_accuracy": 51.67
     },
     {
       "date": "2025-10-30",
-      "accuracy": 30.33,
-      "direction_accuracy": 49.17
+      "accuracy": 31.5,
+      "direction_accuracy": 51.17
     },
     {
       "date": "2025-10-31",
-      "accuracy": 30.0,
-      "direction_accuracy": 49.0
-    },
-    {
-      "date": "2025-11-03",
-      "accuracy": 30.33,
-      "direction_accuracy": 49.17
-    },
-    {
-      "date": "2025-11-04",
-      "accuracy": 30.5,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-11-05",
-      "accuracy": 30.33,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-11-06",
-      "accuracy": 30.67,
-      "direction_accuracy": 50.0
-    },
-    {
-      "date": "2025-11-07",
-      "accuracy": 31.5,
-      "direction_accuracy": 50.67
-    },
-    {
-      "date": "2025-11-10",
-      "accuracy": 31.5,
-      "direction_accuracy": 50.5
-    },
-    {
-      "date": "2025-11-11",
-      "accuracy": 31.5,
-      "direction_accuracy": 50.17
-    },
-    {
-      "date": "2025-11-12",
-      "accuracy": 31.67,
-      "direction_accuracy": 50.33
-    },
-    {
-      "date": "2025-11-13",
-      "accuracy": 31.83,
-      "direction_accuracy": 50.33
-    },
-    {
-      "date": "2025-11-14",
-      "accuracy": 31.33,
-      "direction_accuracy": 49.67
-    },
-    {
-      "date": "2025-11-17",
-      "accuracy": 31.0,
-      "direction_accuracy": 49.17
-    },
-    {
-      "date": "2025-11-18",
-      "accuracy": 31.0,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-11-19",
-      "accuracy": 30.83,
-      "direction_accuracy": 49.17
-    },
-    {
-      "date": "2025-11-20",
-      "accuracy": 30.83,
-      "direction_accuracy": 49.5
-    },
-    {
-      "date": "2025-11-21",
-      "accuracy": 30.67,
-      "direction_accuracy": 49.5
-    },
-    {
-      "date": "2025-11-24",
-      "accuracy": 30.5,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-11-25",
-      "accuracy": 30.83,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-11-26",
-      "accuracy": 30.67,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-11-28",
-      "accuracy": 30.17,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2025-12-01",
-      "accuracy": 29.83,
-      "direction_accuracy": 48.33
-    },
-    {
-      "date": "2025-12-02",
-      "accuracy": 30.0,
-      "direction_accuracy": 48.5
-    },
-    {
-      "date": "2025-12-03",
-      "accuracy": 30.33,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2025-12-04",
-      "accuracy": 30.0,
-      "direction_accuracy": 48.17
-    },
-    {
-      "date": "2025-12-05",
-      "accuracy": 30.5,
-      "direction_accuracy": 48.5
-    },
-    {
-      "date": "2025-12-08",
-      "accuracy": 30.67,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2025-12-09",
-      "accuracy": 30.83,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2025-12-10",
-      "accuracy": 31.33,
-      "direction_accuracy": 49.33
-    },
-    {
-      "date": "2025-12-11",
-      "accuracy": 31.83,
-      "direction_accuracy": 50.0
-    },
-    {
-      "date": "2025-12-12",
-      "accuracy": 32.17,
-      "direction_accuracy": 50.33
-    },
-    {
-      "date": "2025-12-15",
-      "accuracy": 32.33,
-      "direction_accuracy": 50.17
-    },
-    {
-      "date": "2025-12-16",
-      "accuracy": 32.5,
-      "direction_accuracy": 50.33
-    },
-    {
-      "date": "2025-12-17",
-      "accuracy": 32.17,
-      "direction_accuracy": 50.17
-    },
-    {
-      "date": "2025-12-18",
-      "accuracy": 32.0,
-      "direction_accuracy": 50.17
-    },
-    {
-      "date": "2025-12-19",
-      "accuracy": 32.5,
-      "direction_accuracy": 51.17
-    },
-    {
-      "date": "2025-12-22",
-      "accuracy": 32.17,
-      "direction_accuracy": 50.83
-    },
-    {
-      "date": "2025-12-23",
-      "accuracy": 32.33,
-      "direction_accuracy": 50.67
-    },
-    {
-      "date": "2025-12-24",
-      "accuracy": 32.5,
-      "direction_accuracy": 50.5
-    },
-    {
-      "date": "2025-12-26",
-      "accuracy": 32.5,
-      "direction_accuracy": 50.5
-    },
-    {
-      "date": "2025-12-29",
-      "accuracy": 32.33,
-      "direction_accuracy": 50.17
-    },
-    {
-      "date": "2025-12-30",
-      "accuracy": 32.83,
-      "direction_accuracy": 50.33
-    },
-    {
-      "date": "2025-12-31",
-      "accuracy": 33.0,
-      "direction_accuracy": 50.83
-    },
-    {
-      "date": "2026-01-02",
-      "accuracy": 33.17,
-      "direction_accuracy": 51.33
-    },
-    {
-      "date": "2026-01-05",
-      "accuracy": 33.67,
-      "direction_accuracy": 51.33
-    },
-    {
-      "date": "2026-01-06",
-      "accuracy": 33.33,
-      "direction_accuracy": 51.0
-    },
-    {
-      "date": "2026-01-07",
-      "accuracy": 32.83,
-      "direction_accuracy": 50.5
-    },
-    {
-      "date": "2026-01-08",
-      "accuracy": 33.17,
-      "direction_accuracy": 50.67
-    },
-    {
-      "date": "2026-01-09",
-      "accuracy": 32.83,
-      "direction_accuracy": 50.83
-    },
-    {
-      "date": "2026-01-12",
-      "accuracy": 33.17,
-      "direction_accuracy": 51.0
-    },
-    {
-      "date": "2026-01-13",
-      "accuracy": 33.17,
-      "direction_accuracy": 51.33
-    },
-    {
-      "date": "2026-01-14",
-      "accuracy": 33.0,
-      "direction_accuracy": 51.67
-    },
-    {
-      "date": "2026-01-15",
-      "accuracy": 32.67,
-      "direction_accuracy": 51.83
-    },
-    {
-      "date": "2026-01-16",
-      "accuracy": 32.0,
-      "direction_accuracy": 51.5
-    },
-    {
-      "date": "2026-01-20",
-      "accuracy": 32.17,
-      "direction_accuracy": 51.67
-    },
-    {
-      "date": "2026-01-21",
-      "accuracy": 32.0,
-      "direction_accuracy": 51.83
-    },
-    {
-      "date": "2026-01-22",
-      "accuracy": 32.17,
-      "direction_accuracy": 51.83
-    },
-    {
-      "date": "2026-01-23",
-      "accuracy": 31.83,
-      "direction_accuracy": 51.33
-    },
-    {
-      "date": "2026-01-26",
-      "accuracy": 31.83,
-      "direction_accuracy": 51.17
-    },
-    {
-      "date": "2026-01-27",
-      "accuracy": 31.67,
-      "direction_accuracy": 51.33
-    },
-    {
-      "date": "2026-01-28",
-      "accuracy": 31.5,
-      "direction_accuracy": 51.33
-    },
-    {
-      "date": "2026-01-29",
-      "accuracy": 31.5,
-      "direction_accuracy": 51.5
-    },
-    {
-      "date": "2026-01-30",
       "accuracy": 31.17,
       "direction_accuracy": 51.17
     },
     {
-      "date": "2026-02-02",
-      "accuracy": 30.83,
+      "date": "2025-11-03",
+      "accuracy": 31.0,
+      "direction_accuracy": 51.0
+    },
+    {
+      "date": "2025-11-04",
+      "accuracy": 31.33,
+      "direction_accuracy": 51.33
+    },
+    {
+      "date": "2025-11-05",
+      "accuracy": 31.0,
+      "direction_accuracy": 51.33
+    },
+    {
+      "date": "2025-11-06",
+      "accuracy": 31.33,
+      "direction_accuracy": 52.17
+    },
+    {
+      "date": "2025-11-07",
+      "accuracy": 32.17,
+      "direction_accuracy": 52.67
+    },
+    {
+      "date": "2025-11-10",
+      "accuracy": 32.0,
+      "direction_accuracy": 52.5
+    },
+    {
+      "date": "2025-11-11",
+      "accuracy": 32.17,
+      "direction_accuracy": 52.17
+    },
+    {
+      "date": "2025-11-12",
+      "accuracy": 32.5,
+      "direction_accuracy": 52.17
+    },
+    {
+      "date": "2025-11-13",
+      "accuracy": 32.83,
+      "direction_accuracy": 52.33
+    },
+    {
+      "date": "2025-11-14",
+      "accuracy": 32.33,
+      "direction_accuracy": 51.67
+    },
+    {
+      "date": "2025-11-17",
+      "accuracy": 32.0,
+      "direction_accuracy": 51.0
+    },
+    {
+      "date": "2025-11-18",
+      "accuracy": 32.17,
+      "direction_accuracy": 51.33
+    },
+    {
+      "date": "2025-11-19",
+      "accuracy": 32.0,
+      "direction_accuracy": 51.17
+    },
+    {
+      "date": "2025-11-20",
+      "accuracy": 32.0,
+      "direction_accuracy": 51.5
+    },
+    {
+      "date": "2025-11-21",
+      "accuracy": 31.33,
+      "direction_accuracy": 51.0
+    },
+    {
+      "date": "2025-11-24",
+      "accuracy": 31.0,
       "direction_accuracy": 50.5
     },
     {
-      "date": "2026-02-03",
-      "accuracy": 30.67,
-      "direction_accuracy": 50.67
+      "date": "2025-11-25",
+      "accuracy": 31.17,
+      "direction_accuracy": 50.33
     },
     {
-      "date": "2026-02-04",
-      "accuracy": 30.33,
+      "date": "2025-11-26",
+      "accuracy": 30.83,
+      "direction_accuracy": 50.17
+    },
+    {
+      "date": "2025-11-28",
+      "accuracy": 30.17,
       "direction_accuracy": 49.83
     },
     {
-      "date": "2026-02-05",
+      "date": "2025-12-01",
+      "accuracy": 30.0,
+      "direction_accuracy": 49.83
+    },
+    {
+      "date": "2025-12-02",
       "accuracy": 30.17,
-      "direction_accuracy": 49.67
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2025-12-03",
+      "accuracy": 30.67,
+      "direction_accuracy": 50.5
+    },
+    {
+      "date": "2025-12-04",
+      "accuracy": 30.5,
+      "direction_accuracy": 50.17
+    },
+    {
+      "date": "2025-12-05",
+      "accuracy": 31.0,
+      "direction_accuracy": 50.5
+    },
+    {
+      "date": "2025-12-08",
+      "accuracy": 31.17,
+      "direction_accuracy": 50.83
+    },
+    {
+      "date": "2025-12-09",
+      "accuracy": 31.33,
+      "direction_accuracy": 50.83
+    },
+    {
+      "date": "2025-12-10",
+      "accuracy": 32.0,
+      "direction_accuracy": 51.83
+    },
+    {
+      "date": "2025-12-11",
+      "accuracy": 32.17,
+      "direction_accuracy": 52.17
+    },
+    {
+      "date": "2025-12-12",
+      "accuracy": 32.5,
+      "direction_accuracy": 52.83
+    },
+    {
+      "date": "2025-12-15",
+      "accuracy": 32.83,
+      "direction_accuracy": 52.83
+    },
+    {
+      "date": "2025-12-16",
+      "accuracy": 33.17,
+      "direction_accuracy": 53.0
+    },
+    {
+      "date": "2025-12-17",
+      "accuracy": 32.83,
+      "direction_accuracy": 52.67
+    },
+    {
+      "date": "2025-12-18",
+      "accuracy": 32.83,
+      "direction_accuracy": 52.67
+    },
+    {
+      "date": "2025-12-19",
+      "accuracy": 33.17,
+      "direction_accuracy": 53.5
+    },
+    {
+      "date": "2025-12-22",
+      "accuracy": 32.67,
+      "direction_accuracy": 53.0
+    },
+    {
+      "date": "2025-12-23",
+      "accuracy": 33.17,
+      "direction_accuracy": 53.17
+    },
+    {
+      "date": "2025-12-24",
+      "accuracy": 33.17,
+      "direction_accuracy": 52.83
+    },
+    {
+      "date": "2025-12-26",
+      "accuracy": 33.17,
+      "direction_accuracy": 52.83
+    },
+    {
+      "date": "2025-12-29",
+      "accuracy": 33.0,
+      "direction_accuracy": 52.33
+    },
+    {
+      "date": "2025-12-30",
+      "accuracy": 33.67,
+      "direction_accuracy": 52.83
+    },
+    {
+      "date": "2025-12-31",
+      "accuracy": 33.5,
+      "direction_accuracy": 52.83
+    },
+    {
+      "date": "2026-01-02",
+      "accuracy": 33.67,
+      "direction_accuracy": 53.33
+    },
+    {
+      "date": "2026-01-05",
+      "accuracy": 34.0,
+      "direction_accuracy": 53.33
+    },
+    {
+      "date": "2026-01-06",
+      "accuracy": 33.33,
+      "direction_accuracy": 52.67
+    },
+    {
+      "date": "2026-01-07",
+      "accuracy": 32.67,
+      "direction_accuracy": 52.0
+    },
+    {
+      "date": "2026-01-08",
+      "accuracy": 32.83,
+      "direction_accuracy": 52.0
+    },
+    {
+      "date": "2026-01-09",
+      "accuracy": 32.5,
+      "direction_accuracy": 52.0
+    },
+    {
+      "date": "2026-01-12",
+      "accuracy": 33.0,
+      "direction_accuracy": 52.5
+    },
+    {
+      "date": "2026-01-13",
+      "accuracy": 33.0,
+      "direction_accuracy": 52.67
+    },
+    {
+      "date": "2026-01-14",
+      "accuracy": 33.0,
+      "direction_accuracy": 53.17
+    },
+    {
+      "date": "2026-01-15",
+      "accuracy": 32.5,
+      "direction_accuracy": 53.0
+    },
+    {
+      "date": "2026-01-16",
+      "accuracy": 31.67,
+      "direction_accuracy": 52.5
+    },
+    {
+      "date": "2026-01-20",
+      "accuracy": 32.0,
+      "direction_accuracy": 52.83
+    },
+    {
+      "date": "2026-01-21",
+      "accuracy": 31.5,
+      "direction_accuracy": 52.67
+    },
+    {
+      "date": "2026-01-22",
+      "accuracy": 31.5,
+      "direction_accuracy": 52.5
+    },
+    {
+      "date": "2026-01-23",
+      "accuracy": 31.33,
+      "direction_accuracy": 52.33
+    },
+    {
+      "date": "2026-01-26",
+      "accuracy": 31.17,
+      "direction_accuracy": 52.0
+    },
+    {
+      "date": "2026-01-27",
+      "accuracy": 31.33,
+      "direction_accuracy": 52.17
+    },
+    {
+      "date": "2026-01-28",
+      "accuracy": 31.33,
+      "direction_accuracy": 52.33
+    },
+    {
+      "date": "2026-01-29",
+      "accuracy": 31.5,
+      "direction_accuracy": 52.67
+    },
+    {
+      "date": "2026-01-30",
+      "accuracy": 31.5,
+      "direction_accuracy": 52.5
+    },
+    {
+      "date": "2026-02-02",
+      "accuracy": 31.17,
+      "direction_accuracy": 51.83
+    },
+    {
+      "date": "2026-02-03",
+      "accuracy": 31.17,
+      "direction_accuracy": 52.0
+    },
+    {
+      "date": "2026-02-04",
+      "accuracy": 30.67,
+      "direction_accuracy": 51.0
+    },
+    {
+      "date": "2026-02-05",
+      "accuracy": 30.5,
+      "direction_accuracy": 50.83
     },
     {
       "date": "2026-02-06",
-      "accuracy": 30.0,
-      "direction_accuracy": 49.67
+      "accuracy": 30.5,
+      "direction_accuracy": 50.5
     },
     {
       "date": "2026-02-09",
-      "accuracy": 29.5,
-      "direction_accuracy": 49.33
+      "accuracy": 30.0,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-02-10",
-      "accuracy": 29.33,
-      "direction_accuracy": 49.33
+      "accuracy": 29.5,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-02-11",
-      "accuracy": 29.67,
+      "accuracy": 29.5,
       "direction_accuracy": 49.5
     },
     {
       "date": "2026-02-12",
-      "accuracy": 29.5,
-      "direction_accuracy": 49.83
+      "accuracy": 29.33,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-02-13",
-      "accuracy": 29.83,
-      "direction_accuracy": 50.33
+      "accuracy": 29.67,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-02-17",
@@ -984,488 +984,488 @@
     },
     {
       "date": "2026-02-19",
-      "accuracy": 29.0,
-      "direction_accuracy": 50.0
+      "accuracy": 28.83,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-02-20",
-      "accuracy": 29.33,
-      "direction_accuracy": 50.5
+      "accuracy": 29.0,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-02-23",
-      "accuracy": 29.17,
-      "direction_accuracy": 50.17
+      "accuracy": 29.0,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-02-24",
-      "accuracy": 28.5,
-      "direction_accuracy": 50.17
+      "accuracy": 28.67,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-02-25",
       "accuracy": 29.33,
-      "direction_accuracy": 50.83
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-02-26",
-      "accuracy": 29.83,
-      "direction_accuracy": 51.0
+      "accuracy": 30.0,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-02-27",
-      "accuracy": 29.83,
-      "direction_accuracy": 51.33
+      "accuracy": 30.17,
+      "direction_accuracy": 50.33
     },
     {
       "date": "2026-03-02",
-      "accuracy": 29.83,
-      "direction_accuracy": 51.33
+      "accuracy": 30.0,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-03-03",
-      "accuracy": 29.5,
-      "direction_accuracy": 51.67
+      "accuracy": 29.67,
+      "direction_accuracy": 50.5
     },
     {
       "date": "2026-03-04",
       "accuracy": 29.83,
-      "direction_accuracy": 51.83
+      "direction_accuracy": 50.33
     },
     {
       "date": "2026-03-05",
       "accuracy": 29.67,
-      "direction_accuracy": 52.0
+      "direction_accuracy": 50.33
     },
     {
       "date": "2026-03-06",
       "accuracy": 30.0,
-      "direction_accuracy": 52.0
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-03-09",
       "accuracy": 29.83,
-      "direction_accuracy": 51.83
+      "direction_accuracy": 50.0
     },
     {
       "date": "2026-03-10",
-      "accuracy": 29.33,
-      "direction_accuracy": 51.33
+      "accuracy": 29.5,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-03-11",
-      "accuracy": 29.33,
-      "direction_accuracy": 51.0
+      "accuracy": 29.67,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-03-12",
-      "accuracy": 29.5,
-      "direction_accuracy": 51.33
+      "accuracy": 29.83,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-03-13",
-      "accuracy": 29.33,
-      "direction_accuracy": 52.0
-    },
-    {
-      "date": "2026-03-16",
-      "accuracy": 29.0,
-      "direction_accuracy": 51.67
-    },
-    {
-      "date": "2026-03-17",
-      "accuracy": 28.5,
-      "direction_accuracy": 51.0
-    },
-    {
-      "date": "2026-03-18",
-      "accuracy": 28.5,
-      "direction_accuracy": 51.17
-    },
-    {
-      "date": "2026-03-19",
-      "accuracy": 28.33,
+      "accuracy": 29.67,
       "direction_accuracy": 50.33
     },
     {
+      "date": "2026-03-16",
+      "accuracy": 29.17,
+      "direction_accuracy": 49.83
+    },
+    {
+      "date": "2026-03-17",
+      "accuracy": 28.83,
+      "direction_accuracy": 49.33
+    },
+    {
+      "date": "2026-03-18",
+      "accuracy": 28.67,
+      "direction_accuracy": 49.67
+    },
+    {
+      "date": "2026-03-19",
+      "accuracy": 28.67,
+      "direction_accuracy": 49.0
+    },
+    {
       "date": "2026-03-20",
-      "accuracy": 28.17,
-      "direction_accuracy": 51.0
+      "accuracy": 28.5,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-03-23",
-      "accuracy": 27.67,
-      "direction_accuracy": 50.67
+      "accuracy": 27.83,
+      "direction_accuracy": 49.0
     },
     {
       "date": "2026-03-24",
-      "accuracy": 27.67,
-      "direction_accuracy": 51.0
+      "accuracy": 28.17,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-03-25",
-      "accuracy": 27.67,
-      "direction_accuracy": 51.17
+      "accuracy": 28.0,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-03-26",
-      "accuracy": 27.83,
-      "direction_accuracy": 51.5
+      "accuracy": 28.0,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-03-27",
       "accuracy": 27.5,
-      "direction_accuracy": 51.67
+      "direction_accuracy": 49.33
     },
     {
       "date": "2026-03-30",
       "accuracy": 27.83,
-      "direction_accuracy": 51.67
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-03-31",
-      "accuracy": 27.67,
-      "direction_accuracy": 51.17
-    },
-    {
-      "date": "2026-04-01",
-      "accuracy": 27.33,
-      "direction_accuracy": 51.17
-    },
-    {
-      "date": "2026-04-02",
-      "accuracy": 27.5,
-      "direction_accuracy": 50.83
-    },
-    {
-      "date": "2026-04-06",
-      "accuracy": 27.33,
-      "direction_accuracy": 50.83
-    },
-    {
-      "date": "2026-04-07",
-      "accuracy": 26.83,
-      "direction_accuracy": 50.5
-    },
-    {
-      "date": "2026-04-08",
-      "accuracy": 27.17,
-      "direction_accuracy": 50.17
-    },
-    {
-      "date": "2026-04-09",
-      "accuracy": 26.67,
+      "accuracy": 27.83,
       "direction_accuracy": 49.17
     },
     {
+      "date": "2026-04-01",
+      "accuracy": 27.5,
+      "direction_accuracy": 49.0
+    },
+    {
+      "date": "2026-04-02",
+      "accuracy": 27.67,
+      "direction_accuracy": 48.83
+    },
+    {
+      "date": "2026-04-06",
+      "accuracy": 27.67,
+      "direction_accuracy": 49.0
+    },
+    {
+      "date": "2026-04-07",
+      "accuracy": 27.17,
+      "direction_accuracy": 48.67
+    },
+    {
+      "date": "2026-04-08",
+      "accuracy": 27.5,
+      "direction_accuracy": 48.67
+    },
+    {
+      "date": "2026-04-09",
+      "accuracy": 27.0,
+      "direction_accuracy": 47.5
+    },
+    {
       "date": "2026-04-10",
-      "accuracy": 26.67,
-      "direction_accuracy": 48.5
+      "accuracy": 27.0,
+      "direction_accuracy": 46.83
     },
     {
       "date": "2026-04-13",
-      "accuracy": 26.83,
-      "direction_accuracy": 48.17
+      "accuracy": 27.17,
+      "direction_accuracy": 46.67
     },
     {
       "date": "2026-04-14",
-      "accuracy": 27.0,
-      "direction_accuracy": 48.0
+      "accuracy": 27.67,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-04-15",
-      "accuracy": 27.33,
-      "direction_accuracy": 48.0
+      "accuracy": 28.0,
+      "direction_accuracy": 47.33
     },
     {
       "date": "2026-04-16",
-      "accuracy": 27.67,
-      "direction_accuracy": 48.5
+      "accuracy": 27.83,
+      "direction_accuracy": 47.33
     },
     {
       "date": "2026-04-17",
-      "accuracy": 27.33,
-      "direction_accuracy": 48.67
+      "accuracy": 27.5,
+      "direction_accuracy": 47.67
     },
     {
       "date": "2026-04-20",
       "accuracy": 26.67,
-      "direction_accuracy": 48.17
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-04-21",
-      "accuracy": 27.0,
-      "direction_accuracy": 48.33
+      "accuracy": 26.67,
+      "direction_accuracy": 46.83
     },
     {
       "date": "2026-04-22",
       "accuracy": 26.83,
-      "direction_accuracy": 48.33
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-04-23",
-      "accuracy": 26.83,
-      "direction_accuracy": 48.17
+      "accuracy": 26.5,
+      "direction_accuracy": 46.67
     },
     {
       "date": "2026-04-24",
-      "accuracy": 26.83,
-      "direction_accuracy": 48.33
+      "accuracy": 26.33,
+      "direction_accuracy": 46.5
     },
     {
       "date": "2026-04-27",
-      "accuracy": 27.0,
-      "direction_accuracy": 48.5
+      "accuracy": 26.33,
+      "direction_accuracy": 46.5
     },
     {
       "date": "2026-04-28",
-      "accuracy": 26.33,
-      "direction_accuracy": 48.5
+      "accuracy": 25.83,
+      "direction_accuracy": 46.5
     },
     {
       "date": "2026-04-29",
-      "accuracy": 26.67,
-      "direction_accuracy": 49.17
+      "accuracy": 26.33,
+      "direction_accuracy": 47.17
     },
     {
       "date": "2026-04-30",
-      "accuracy": 26.5,
-      "direction_accuracy": 49.0
+      "accuracy": 26.17,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-05-01",
-      "accuracy": 26.5,
-      "direction_accuracy": 49.17
+      "accuracy": 26.33,
+      "direction_accuracy": 47.5
     },
     {
       "date": "2026-05-04",
-      "accuracy": 25.83,
-      "direction_accuracy": 48.67
+      "accuracy": 25.67,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-05-05",
-      "accuracy": 25.67,
-      "direction_accuracy": 48.33
+      "accuracy": 25.5,
+      "direction_accuracy": 46.83
     },
     {
       "date": "2026-05-06",
-      "accuracy": 25.83,
-      "direction_accuracy": 48.5
+      "accuracy": 25.67,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-05-07",
       "accuracy": 25.5,
-      "direction_accuracy": 48.33
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-05-08",
-      "accuracy": 25.5,
-      "direction_accuracy": 48.67
+      "accuracy": 25.67,
+      "direction_accuracy": 47.67
     },
     {
       "date": "2026-05-11",
-      "accuracy": 26.17,
-      "direction_accuracy": 49.17
+      "accuracy": 26.33,
+      "direction_accuracy": 48.33
     },
     {
       "date": "2026-05-12",
-      "accuracy": 25.5,
-      "direction_accuracy": 48.83
+      "accuracy": 25.67,
+      "direction_accuracy": 47.83
     },
     {
       "date": "2026-05-13",
       "accuracy": 25.67,
-      "direction_accuracy": 48.83
+      "direction_accuracy": 47.83
     },
     {
       "date": "2026-05-14",
       "accuracy": 25.67,
-      "direction_accuracy": 49.33
+      "direction_accuracy": 48.33
     },
     {
       "date": "2026-05-15",
       "accuracy": 25.83,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2026-05-18",
-      "accuracy": 25.33,
-      "direction_accuracy": 47.67
-    },
-    {
-      "date": "2026-05-19",
-      "accuracy": 25.83,
-      "direction_accuracy": 48.33
-    },
-    {
-      "date": "2026-05-20",
-      "accuracy": 25.83,
-      "direction_accuracy": 48.17
-    },
-    {
-      "date": "2026-05-21",
-      "accuracy": 25.5,
       "direction_accuracy": 47.83
     },
     {
+      "date": "2026-05-18",
+      "accuracy": 25.67,
+      "direction_accuracy": 47.5
+    },
+    {
+      "date": "2026-05-19",
+      "accuracy": 26.0,
+      "direction_accuracy": 48.0
+    },
+    {
+      "date": "2026-05-20",
+      "accuracy": 26.0,
+      "direction_accuracy": 47.83
+    },
+    {
+      "date": "2026-05-21",
+      "accuracy": 25.83,
+      "direction_accuracy": 47.67
+    },
+    {
       "date": "2026-05-22",
-      "accuracy": 25.5,
+      "accuracy": 26.0,
       "direction_accuracy": 48.0
     },
     {
       "date": "2026-05-26",
-      "accuracy": 25.17,
-      "direction_accuracy": 48.0
+      "accuracy": 25.33,
+      "direction_accuracy": 47.67
     },
     {
       "date": "2026-05-27",
-      "accuracy": 24.83,
-      "direction_accuracy": 48.0
+      "accuracy": 25.0,
+      "direction_accuracy": 47.67
     },
     {
       "date": "2026-05-28",
-      "accuracy": 25.33,
-      "direction_accuracy": 47.83
+      "accuracy": 25.67,
+      "direction_accuracy": 47.67
     },
     {
       "date": "2026-05-29",
-      "accuracy": 25.67,
-      "direction_accuracy": 47.83
+      "accuracy": 25.5,
+      "direction_accuracy": 47.33
     },
     {
       "date": "2026-06-01",
-      "accuracy": 25.83,
-      "direction_accuracy": 47.5
+      "accuracy": 25.67,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-06-02",
-      "accuracy": 25.5,
-      "direction_accuracy": 47.17
+      "accuracy": 25.33,
+      "direction_accuracy": 46.83
     },
     {
       "date": "2026-06-03",
-      "accuracy": 25.5,
+      "accuracy": 25.67,
       "direction_accuracy": 47.17
     },
     {
       "date": "2026-06-04",
-      "accuracy": 25.33,
+      "accuracy": 25.67,
       "direction_accuracy": 47.0
     },
     {
       "date": "2026-06-05",
-      "accuracy": 25.0,
+      "accuracy": 25.33,
       "direction_accuracy": 46.5
     },
     {
       "date": "2026-06-08",
-      "accuracy": 25.0,
-      "direction_accuracy": 46.17
+      "accuracy": 25.33,
+      "direction_accuracy": 46.5
     },
     {
       "date": "2026-06-09",
-      "accuracy": 24.83,
-      "direction_accuracy": 45.5
+      "accuracy": 25.17,
+      "direction_accuracy": 45.83
     },
     {
       "date": "2026-06-10",
-      "accuracy": 25.33,
-      "direction_accuracy": 46.0
+      "accuracy": 25.67,
+      "direction_accuracy": 46.33
     },
     {
       "date": "2026-06-11",
-      "accuracy": 26.17,
-      "direction_accuracy": 47.17
+      "accuracy": 26.33,
+      "direction_accuracy": 47.33
     },
     {
       "date": "2026-06-12",
-      "accuracy": 26.67,
-      "direction_accuracy": 47.17
+      "accuracy": 27.17,
+      "direction_accuracy": 47.33
     },
     {
       "date": "2026-06-15",
-      "accuracy": 26.83,
+      "accuracy": 27.17,
       "direction_accuracy": 47.5
     },
     {
       "date": "2026-06-16",
-      "accuracy": 27.0,
-      "direction_accuracy": 46.83
-    },
-    {
-      "date": "2026-06-17",
-      "accuracy": 27.17,
+      "accuracy": 27.33,
       "direction_accuracy": 47.0
     },
     {
+      "date": "2026-06-17",
+      "accuracy": 27.5,
+      "direction_accuracy": 47.17
+    },
+    {
       "date": "2026-06-18",
-      "accuracy": 26.83,
+      "accuracy": 27.0,
       "direction_accuracy": 46.5
     },
     {
       "date": "2026-06-22",
-      "accuracy": 26.83,
-      "direction_accuracy": 46.67
+      "accuracy": 27.0,
+      "direction_accuracy": 46.83
     },
     {
       "date": "2026-06-23",
-      "accuracy": 26.33,
-      "direction_accuracy": 46.5
+      "accuracy": 26.67,
+      "direction_accuracy": 47.17
     },
     {
       "date": "2026-06-24",
       "accuracy": 26.83,
-      "direction_accuracy": 46.83
+      "direction_accuracy": 47.33
     },
     {
       "date": "2026-06-25",
       "accuracy": 26.33,
-      "direction_accuracy": 46.17
+      "direction_accuracy": 46.67
     },
     {
       "date": "2026-06-26",
-      "accuracy": 26.33,
-      "direction_accuracy": 46.33
+      "accuracy": 26.0,
+      "direction_accuracy": 46.5
     },
     {
       "date": "2026-06-29",
-      "accuracy": 26.83,
-      "direction_accuracy": 46.83
-    },
-    {
-      "date": "2026-06-30",
-      "accuracy": 26.67,
-      "direction_accuracy": 46.83
-    },
-    {
-      "date": "2026-07-01",
-      "accuracy": 26.67,
-      "direction_accuracy": 46.83
-    },
-    {
-      "date": "2026-07-02",
-      "accuracy": 26.83,
+      "accuracy": 26.5,
       "direction_accuracy": 47.17
     },
     {
-      "date": "2026-07-06",
+      "date": "2026-06-30",
       "accuracy": 26.5,
+      "direction_accuracy": 47.0
+    },
+    {
+      "date": "2026-07-01",
+      "accuracy": 26.5,
+      "direction_accuracy": 47.0
+    },
+    {
+      "date": "2026-07-02",
+      "accuracy": 26.67,
+      "direction_accuracy": 47.33
+    },
+    {
+      "date": "2026-07-06",
+      "accuracy": 26.33,
       "direction_accuracy": 47.33
     },
     {
       "date": "2026-07-07",
       "accuracy": 26.83,
-      "direction_accuracy": 47.67
-    },
-    {
-      "date": "2026-07-08",
-      "accuracy": 26.83,
       "direction_accuracy": 47.83
     },
     {
+      "date": "2026-07-08",
+      "accuracy": 27.0,
+      "direction_accuracy": 48.0
+    },
+    {
       "date": "2026-07-09",
-      "accuracy": 26.33,
-      "direction_accuracy": 47.67
+      "accuracy": 26.5,
+      "direction_accuracy": 47.83
     },
     {
       "date": "2026-07-10",
@@ -1479,499 +1479,494 @@
     },
     {
       "date": "2026-07-14",
-      "accuracy": 25.67,
-      "direction_accuracy": 47.0
+      "accuracy": 26.0,
+      "direction_accuracy": 47.33
     },
     {
       "date": "2026-07-15",
-      "accuracy": 26.17,
-      "direction_accuracy": 46.33
+      "accuracy": 26.5,
+      "direction_accuracy": 46.5
     },
     {
       "date": "2026-07-16",
-      "accuracy": 26.5,
-      "direction_accuracy": 46.67
+      "accuracy": 27.0,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-07-17",
-      "accuracy": 26.33,
-      "direction_accuracy": 46.67
+      "accuracy": 26.83,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-07-20",
-      "accuracy": 26.33,
-      "direction_accuracy": 46.33
+      "accuracy": 26.67,
+      "direction_accuracy": 46.67
     },
     {
       "date": "2026-07-21",
-      "accuracy": 26.5,
-      "direction_accuracy": 46.67
-    },
-    {
-      "date": "2026-07-22",
-      "accuracy": 26.83,
+      "accuracy": 26.67,
       "direction_accuracy": 46.83
     },
     {
-      "date": "2026-07-23",
+      "date": "2026-07-22",
       "accuracy": 27.0,
-      "direction_accuracy": 46.67
+      "direction_accuracy": 47.17
+    },
+    {
+      "date": "2026-07-23",
+      "accuracy": 27.17,
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-07-24",
-      "accuracy": 27.83,
-      "direction_accuracy": 47.33
+      "accuracy": 28.0,
+      "direction_accuracy": 48.0
     },
     {
       "date": "2026-07-27",
       "accuracy": 27.83,
-      "direction_accuracy": 47.0
+      "direction_accuracy": 47.83
     },
     {
       "date": "2026-07-28",
       "accuracy": 27.67,
-      "direction_accuracy": 46.67
+      "direction_accuracy": 47.17
     },
     {
       "date": "2026-07-29",
       "accuracy": 28.0,
-      "direction_accuracy": 46.83
+      "direction_accuracy": 47.0
     },
     {
       "date": "2026-07-30",
-      "accuracy": 28.17,
-      "direction_accuracy": 47.33
+      "accuracy": 28.33,
+      "direction_accuracy": 47.67
     },
     {
       "date": "2026-07-31",
-      "accuracy": 28.5,
-      "direction_accuracy": 47.67
-    },
-    {
-      "date": "2026-08-03",
-      "accuracy": 28.5,
-      "direction_accuracy": 48.0
-    },
-    {
-      "date": "2026-08-04",
-      "accuracy": 29.0,
-      "direction_accuracy": 48.5
-    },
-    {
-      "date": "2026-08-05",
-      "accuracy": 29.0,
-      "direction_accuracy": 48.33
-    },
-    {
-      "date": "2026-08-06",
       "accuracy": 28.67,
-      "direction_accuracy": 47.83
-    },
-    {
-      "date": "2026-08-07",
-      "accuracy": 29.0,
-      "direction_accuracy": 47.67
-    },
-    {
-      "date": "2026-08-10",
-      "accuracy": 29.0,
-      "direction_accuracy": 47.67
-    },
-    {
-      "date": "2026-08-11",
-      "accuracy": 29.17,
-      "direction_accuracy": 47.5
-    },
-    {
-      "date": "2026-08-12",
-      "accuracy": 28.83,
-      "direction_accuracy": 47.83
-    },
-    {
-      "date": "2026-08-13",
-      "accuracy": 29.17,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2026-08-14",
-      "accuracy": 28.67,
-      "direction_accuracy": 48.33
-    },
-    {
-      "date": "2026-08-17",
-      "accuracy": 28.5,
       "direction_accuracy": 48.17
     },
     {
-      "date": "2026-08-18",
-      "accuracy": 28.33,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2026-08-19",
-      "accuracy": 27.67,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2026-08-20",
-      "accuracy": 27.67,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2026-08-21",
-      "accuracy": 27.83,
-      "direction_accuracy": 48.83
-    },
-    {
-      "date": "2026-08-24",
-      "accuracy": 27.67,
+      "date": "2026-08-03",
+      "accuracy": 28.67,
       "direction_accuracy": 48.67
     },
     {
-      "date": "2026-08-25",
-      "accuracy": 27.33,
-      "direction_accuracy": 48.67
-    },
-    {
-      "date": "2026-08-26",
-      "accuracy": 27.17,
+      "date": "2026-08-04",
+      "accuracy": 29.17,
       "direction_accuracy": 48.83
     },
     {
-      "date": "2026-08-27",
-      "accuracy": 27.5,
+      "date": "2026-08-05",
+      "accuracy": 29.17,
+      "direction_accuracy": 48.67
+    },
+    {
+      "date": "2026-08-06",
+      "accuracy": 29.0,
+      "direction_accuracy": 48.33
+    },
+    {
+      "date": "2026-08-07",
+      "accuracy": 29.33,
+      "direction_accuracy": 48.33
+    },
+    {
+      "date": "2026-08-10",
+      "accuracy": 29.33,
+      "direction_accuracy": 48.17
+    },
+    {
+      "date": "2026-08-11",
+      "accuracy": 29.67,
+      "direction_accuracy": 48.17
+    },
+    {
+      "date": "2026-08-12",
+      "accuracy": 29.5,
+      "direction_accuracy": 48.67
+    },
+    {
+      "date": "2026-08-13",
+      "accuracy": 29.67,
+      "direction_accuracy": 49.5
+    },
+    {
+      "date": "2026-08-14",
+      "accuracy": 29.33,
       "direction_accuracy": 49.33
     },
     {
-      "date": "2026-08-28",
-      "accuracy": 27.67,
+      "date": "2026-08-17",
+      "accuracy": 29.33,
+      "direction_accuracy": 49.33
+    },
+    {
+      "date": "2026-08-18",
+      "accuracy": 29.33,
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2026-08-19",
+      "accuracy": 28.5,
+      "direction_accuracy": 49.83
+    },
+    {
+      "date": "2026-08-20",
+      "accuracy": 28.5,
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2026-08-21",
+      "accuracy": 28.5,
+      "direction_accuracy": 49.83
+    },
+    {
+      "date": "2026-08-24",
+      "accuracy": 28.17,
       "direction_accuracy": 49.5
+    },
+    {
+      "date": "2026-08-25",
+      "accuracy": 28.33,
+      "direction_accuracy": 50.0
+    },
+    {
+      "date": "2026-08-26",
+      "accuracy": 28.17,
+      "direction_accuracy": 50.33
+    },
+    {
+      "date": "2026-08-27",
+      "accuracy": 28.33,
+      "direction_accuracy": 50.5
+    },
+    {
+      "date": "2026-08-28",
+      "accuracy": 28.17,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-08-31",
-      "accuracy": 28.0,
-      "direction_accuracy": 49.5
+      "accuracy": 28.5,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-09-01",
-      "accuracy": 27.67,
-      "direction_accuracy": 49.17
-    },
-    {
-      "date": "2026-09-02",
-      "accuracy": 27.5,
-      "direction_accuracy": 49.17
-    },
-    {
-      "date": "2026-09-03",
       "accuracy": 28.17,
       "direction_accuracy": 49.83
     },
     {
+      "date": "2026-09-02",
+      "accuracy": 28.17,
+      "direction_accuracy": 49.67
+    },
+    {
+      "date": "2026-09-03",
+      "accuracy": 29.0,
+      "direction_accuracy": 50.5
+    },
+    {
       "date": "2026-09-04",
-      "accuracy": 27.83,
-      "direction_accuracy": 49.83
+      "accuracy": 28.67,
+      "direction_accuracy": 50.67
     },
     {
       "date": "2026-09-08",
-      "accuracy": 27.5,
-      "direction_accuracy": 49.33
+      "accuracy": 28.33,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-09-09",
-      "accuracy": 27.0,
-      "direction_accuracy": 49.17
+      "accuracy": 27.33,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-09-10",
-      "accuracy": 27.17,
-      "direction_accuracy": 49.5
-    },
-    {
-      "date": "2026-09-11",
       "accuracy": 27.5,
       "direction_accuracy": 50.0
     },
     {
+      "date": "2026-09-11",
+      "accuracy": 27.67,
+      "direction_accuracy": 50.33
+    },
+    {
       "date": "2026-09-14",
       "accuracy": 27.83,
-      "direction_accuracy": 50.5
+      "direction_accuracy": 50.83
     },
     {
       "date": "2026-09-15",
       "accuracy": 28.17,
-      "direction_accuracy": 51.33
+      "direction_accuracy": 51.67
     },
     {
       "date": "2026-09-16",
       "accuracy": 28.67,
-      "direction_accuracy": 51.83
+      "direction_accuracy": 52.0
     },
     {
       "date": "2026-09-17",
-      "accuracy": 29.17,
-      "direction_accuracy": 51.83
+      "accuracy": 29.0,
+      "direction_accuracy": 51.67
     },
     {
       "date": "2026-09-18",
       "accuracy": 28.67,
-      "direction_accuracy": 51.33
+      "direction_accuracy": 51.0
     },
     {
       "date": "2026-09-21",
       "accuracy": 28.33,
-      "direction_accuracy": 51.67
+      "direction_accuracy": 51.17
     },
     {
       "date": "2026-09-22",
-      "accuracy": 28.0,
-      "direction_accuracy": 51.83
+      "accuracy": 28.17,
+      "direction_accuracy": 51.33
     },
     {
       "date": "2026-09-23",
-      "accuracy": 27.5,
-      "direction_accuracy": 51.0
+      "accuracy": 27.67,
+      "direction_accuracy": 50.5
     },
     {
       "date": "2026-09-24",
       "accuracy": 27.83,
-      "direction_accuracy": 51.17
+      "direction_accuracy": 50.83
     },
     {
       "date": "2026-09-25",
       "accuracy": 28.0,
-      "direction_accuracy": 51.17
+      "direction_accuracy": 50.67
     },
     {
       "date": "2026-09-28",
       "accuracy": 27.67,
-      "direction_accuracy": 50.5
+      "direction_accuracy": 50.0
     },
     {
       "date": "2026-09-29",
-      "accuracy": 27.83,
-      "direction_accuracy": 50.5
+      "accuracy": 27.67,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-09-30",
-      "accuracy": 27.67,
-      "direction_accuracy": 51.0
+      "accuracy": 27.5,
+      "direction_accuracy": 50.33
     },
     {
       "date": "2026-10-01",
-      "accuracy": 27.83,
-      "direction_accuracy": 51.33
+      "accuracy": 27.17,
+      "direction_accuracy": 50.5
     },
     {
       "date": "2026-10-02",
-      "accuracy": 28.17,
-      "direction_accuracy": 51.67
+      "accuracy": 27.67,
+      "direction_accuracy": 50.83
     },
     {
       "date": "2026-10-05",
-      "accuracy": 27.83,
-      "direction_accuracy": 51.83
+      "accuracy": 27.33,
+      "direction_accuracy": 51.0
     },
     {
       "date": "2026-10-06",
-      "accuracy": 28.17,
-      "direction_accuracy": 51.83
+      "accuracy": 27.67,
+      "direction_accuracy": 50.83
     },
     {
       "date": "2026-10-07",
-      "accuracy": 28.0,
-      "direction_accuracy": 52.0
+      "accuracy": 27.67,
+      "direction_accuracy": 51.17
     },
     {
       "date": "2026-10-08",
-      "accuracy": 28.0,
-      "direction_accuracy": 52.33
+      "accuracy": 27.5,
+      "direction_accuracy": 51.33
     },
     {
       "date": "2026-10-09",
-      "accuracy": 27.67,
-      "direction_accuracy": 52.0
+      "accuracy": 27.17,
+      "direction_accuracy": 51.0
     },
     {
       "date": "2026-10-12",
-      "accuracy": 27.5,
-      "direction_accuracy": 51.83
+      "accuracy": 27.17,
+      "direction_accuracy": 51.0
     },
     {
       "date": "2026-10-13",
-      "accuracy": 27.17,
-      "direction_accuracy": 51.5
+      "accuracy": 26.83,
+      "direction_accuracy": 50.83
     },
     {
       "date": "2026-10-14",
-      "accuracy": 27.67,
-      "direction_accuracy": 51.67
+      "accuracy": 27.5,
+      "direction_accuracy": 51.0
     },
     {
       "date": "2026-10-15",
-      "accuracy": 27.33,
-      "direction_accuracy": 51.33
+      "accuracy": 27.17,
+      "direction_accuracy": 50.83
     },
     {
       "date": "2026-10-16",
       "accuracy": 26.83,
-      "direction_accuracy": 51.0
-    },
-    {
-      "date": "2026-10-19",
-      "accuracy": 26.33,
       "direction_accuracy": 50.5
     },
     {
+      "date": "2026-10-19",
+      "accuracy": 26.5,
+      "direction_accuracy": 50.0
+    },
+    {
       "date": "2026-10-20",
+      "accuracy": 26.33,
+      "direction_accuracy": 49.67
+    },
+    {
+      "date": "2026-10-21",
+      "accuracy": 26.67,
+      "direction_accuracy": 50.33
+    },
+    {
+      "date": "2026-10-22",
       "accuracy": 26.17,
       "direction_accuracy": 50.33
     },
     {
-      "date": "2026-10-21",
-      "accuracy": 26.33,
-      "direction_accuracy": 50.67
-    },
-    {
-      "date": "2026-10-22",
-      "accuracy": 25.83,
-      "direction_accuracy": 50.5
-    },
-    {
       "date": "2026-10-23",
-      "accuracy": 26.0,
-      "direction_accuracy": 50.67
+      "accuracy": 26.17,
+      "direction_accuracy": 50.33
     },
     {
       "date": "2026-10-26",
-      "accuracy": 26.0,
-      "direction_accuracy": 50.67
+      "accuracy": 26.17,
+      "direction_accuracy": 50.0
     },
     {
       "date": "2026-10-27",
       "accuracy": 26.0,
-      "direction_accuracy": 50.67
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-10-28",
       "accuracy": 25.83,
-      "direction_accuracy": 50.33
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-10-29",
-      "accuracy": 25.67,
-      "direction_accuracy": 50.33
+      "accuracy": 25.5,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-10-30",
-      "accuracy": 25.83,
-      "direction_accuracy": 50.17
+      "accuracy": 25.33,
+      "direction_accuracy": 49.17
     },
     {
       "date": "2026-11-02",
-      "accuracy": 26.0,
-      "direction_accuracy": 50.67
+      "accuracy": 25.5,
+      "direction_accuracy": 49.67
     },
     {
       "date": "2026-11-03",
-      "accuracy": 26.17,
-      "direction_accuracy": 50.67
+      "accuracy": 25.67,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-11-04",
-      "accuracy": 26.5,
-      "direction_accuracy": 51.0
+      "accuracy": 25.67,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-11-05",
-      "accuracy": 26.67,
-      "direction_accuracy": 51.17
+      "accuracy": 25.83,
+      "direction_accuracy": 50.0
     },
     {
       "date": "2026-11-06",
-      "accuracy": 27.17,
-      "direction_accuracy": 51.5
+      "accuracy": 26.33,
+      "direction_accuracy": 50.17
     },
     {
       "date": "2026-11-09",
-      "accuracy": 27.0,
-      "direction_accuracy": 50.83
+      "accuracy": 26.0,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-11-10",
-      "accuracy": 27.17,
-      "direction_accuracy": 51.0
+      "accuracy": 26.0,
+      "direction_accuracy": 49.83
     },
     {
       "date": "2026-11-11",
-      "accuracy": 27.33,
-      "direction_accuracy": 50.83
+      "accuracy": 25.83,
+      "direction_accuracy": 49.5
     },
     {
       "date": "2026-11-12",
-      "accuracy": 27.5,
-      "direction_accuracy": 50.67
+      "accuracy": 26.0,
+      "direction_accuracy": 49.33
     },
     {
       "date": "2026-11-13",
-      "accuracy": 28.0,
-      "direction_accuracy": 50.83
+      "accuracy": 26.5,
+      "direction_accuracy": 49.33
+    },
+    {
+      "date": "2026-11-16",
+      "accuracy": 26.83,
+      "direction_accuracy": 49.5
     }
   ],
   "feature_importance": [
     {
       "id": "atr_14_pct",
       "label": "ATR (14 days)",
-      "importance": 1.264
-    },
-    {
-      "id": "drawdown_21d",
-      "label": "21-day drawdown",
-      "importance": 0.444
-    },
-    {
-      "id": "market_return_5d",
-      "label": "S&P 500 1-week return",
-      "importance": 0.388
-    },
-    {
-      "id": "volatility_21d",
-      "label": "21-day volatility",
-      "importance": 0.338
-    },
-    {
-      "id": "price_vs_sma20",
-      "label": "Price vs. 20-day average",
-      "importance": 0.252
-    },
-    {
-      "id": "volume_vs_20d",
-      "label": "Volume vs. 20-day average",
-      "importance": 0.252
-    },
-    {
-      "id": "return_21d",
-      "label": "1-month return",
-      "importance": 0.139
+      "importance": 1.021
     },
     {
       "id": "return_63d",
       "label": "3-month return",
-      "importance": 0.139
+      "importance": 0.356
+    },
+    {
+      "id": "volatility_21d",
+      "label": "21-day volatility",
+      "importance": 0.344
+    },
+    {
+      "id": "price_vs_sma20",
+      "label": "Price vs. 20-day average",
+      "importance": 0.225
     },
     {
       "id": "relative_strength_21d",
       "label": "1-month relative strength",
-      "importance": 0.091
-    },
-    {
-      "id": "return_5d",
-      "label": "1-week return",
-      "importance": 0.043
+      "importance": 0.006
     },
     {
       "id": "return_1d",
       "label": "1-day return",
+      "importance": 0.0
+    },
+    {
+      "id": "return_5d",
+      "label": "1-week return",
+      "importance": 0.0
+    },
+    {
+      "id": "return_21d",
+      "label": "1-month return",
+      "importance": 0.0
+    },
+    {
+      "id": "drawdown_21d",
+      "label": "21-day drawdown",
       "importance": 0.0
     },
     {
@@ -1987,6 +1982,16 @@
     {
       "id": "price_vs_sma50",
       "label": "Price vs. 50-day average",
+      "importance": 0.0
+    },
+    {
+      "id": "volume_vs_20d",
+      "label": "Volume vs. 20-day average",
+      "importance": 0.0
+    },
+    {
+      "id": "market_return_5d",
+      "label": "S&P 500 1-week return",
       "importance": 0.0
     }
   ]
