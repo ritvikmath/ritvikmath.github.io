@@ -519,12 +519,32 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.field-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 1.45rem;
+}
+.housing-field-grid label:has(> .help-button) {
+  display: grid;
+  grid-template-columns: max-content 1.45rem 1fr;
+  align-items: center;
+  justify-content: start;
+  column-gap: 0.4rem;
+}
+.housing-field-grid label:has(> .help-button) > .field-help,
+.housing-field-grid label:has(> .help-button) > input,
+.housing-field-grid label:has(> .help-button) > select {
+  grid-column: 1 / -1;
+  width: 100%;
+}
 .help-button {
   display: inline-grid;
   place-items: center;
   width: 1.45rem;
   height: 1.45rem;
-  margin-left: 0.2rem;
+  flex: 0 0 auto;
+  margin-left: 0;
   border: 1px solid #93a1b8;
   border-radius: 50%;
   background: #fff;

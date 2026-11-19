@@ -95,7 +95,7 @@
     retirementReturn: 6,
     childPhases: [],
     downPayment: 20,
-    mortgageSource: "manual",
+    mortgageSource: "benchmark",
     mortgageRate: 6.4,
     mortgageYears: 30,
     closingMode: "auto",
@@ -1392,6 +1392,7 @@
     input("housing-house-profile").value = "moderate";
     input("housing-financial-profile").value = "moderate";
     clearOutput();
+    input("housing-live-refresh").click();
   });
   input("housing-save").addEventListener("click", () => {
     try {
@@ -1595,6 +1596,10 @@
         )
         .join("<br>");
     } catch (e) {
+      if (input("mortgageSource").value === "benchmark") {
+        input("mortgageSource").value = "manual";
+        syncConditional();
+      }
       status.textContent =
         "Current benchmark data could not be validated. Manual assumptions remain active. " +
         e.message;
@@ -1602,4 +1607,5 @@
   });
   setValues(PUBLIC_DEFAULTS);
   renderSaves();
+  input("housing-live-refresh").click();
 })();
