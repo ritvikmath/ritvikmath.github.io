@@ -96,7 +96,7 @@
     childPhases: [],
     downPayment: 20,
     mortgageSource: "benchmark",
-    mortgageRate: 6.4,
+    mortgageRate: 7.11,
     mortgageYears: 30,
     closingMode: "auto",
     closingFraction: 3.5,
@@ -154,7 +154,18 @@
     chartKey = "netWorth",
     chartPoints = [],
     deletedSave = null,
-    marketReferences = {};
+    marketReferences = {
+      mortgage: {
+        series: "MORTGAGE30US",
+        rate: 0.0711,
+        observationDate: "2026-11-12",
+        latestAvailableObservation: "2026-11-12",
+        ageDays: 7,
+        status: "Bundled latest complete observation",
+        applied: true,
+        source: "https://fred.stlouisfed.org/series/MORTGAGE30US",
+      },
+    };
   function input(id) {
     return typeof document === "undefined" ? null : document.getElementById(id);
   }
@@ -1596,12 +1607,8 @@
         )
         .join("<br>");
     } catch (e) {
-      if (input("mortgageSource").value === "benchmark") {
-        input("mortgageSource").value = "manual";
-        syncConditional();
-      }
       status.textContent =
-        "Current benchmark data could not be validated. Manual assumptions remain active. " +
+        "Live refresh was unavailable. The validated FRED mortgage snapshot dated November 12, 2026 remains active; other market readings remain manual. " +
         e.message;
     }
   });
