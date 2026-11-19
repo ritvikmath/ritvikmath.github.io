@@ -18,6 +18,8 @@ The calculator in `assets/housing-calculator.js` is a separate public implementa
 
 ## Keeping implementations aligned
 
-The public model deliberately implements a reviewed subset of the research model: fixed-rate amortization, equity, accessible assets, effective investment-sale tax, home-sale proceeds, inflation, recurring ownership costs, household cash flow, reserve funding, holding periods, and synthetic stresses. Changes to those concepts should be made in the private Python engine first, then ported deliberately to the public JavaScript model and checked with `python scripts/test_housing_public_model.py`.
+The public model deliberately ports reviewed calculation behavior without importing private configuration: plain fixed-rate amortization, automatic or manual closing costs, equity, accessible assets, effective investment-sale tax, home-sale proceeds, inflation, recurring ownership costs, household cash flow, reserve funding, holding periods, dependent-cost phases, simplified ownership-tax scenarios, retirement timing, distribution tax drag, budget windows, reference-data validation, and synthetic stresses. Changes to those concepts should be reviewed in the private Python engine first, then ported deliberately to the public JavaScript model and checked with `python scripts/test_housing_public_model.py`.
+
+Saved comparisons use a versioned browser-local schema. The version-2 migration preserves a one-time backup under `ritvikmath.housing.public.v1.pre-v2-backup`, switches legacy saves to the public automatic closing-cost estimate, and recalculates with the rates already stored in each save. It never requests fresh market data during migration.
 
 The test compares the browser mortgage formula with an independent Python calculation and uses only the public synthetic fixture. It also covers amortization/equity identities, taxable withdrawals, sale proceeds, infeasibility, stresses, and sensitivity direction.
