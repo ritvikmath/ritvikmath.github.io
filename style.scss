@@ -119,8 +119,18 @@ button, input { font: inherit; }
 .post-card[data-category="mathematics"]:before { background: #315fba; }
 .post-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(26,37,50,.11); }
 .post-card[hidden] { display: none; }
-.card-image { position: relative; height: 210px; overflow: hidden; background: #dfe3e4; }
-.card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
+.post-card > .card-image,
+.post-card > .experiment-card-visual {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.card-image { background: #dfe3e4; }
+.card-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
 .card-image--contain { background: #f8f3e8; }
 .card-image--contain img { object-fit: contain; }
 .post-card:hover .card-image img { transform: scale(1.035); }
@@ -263,7 +273,6 @@ button, input { font: inherit; }
   .search-field input { min-width: 0; font-size: 16px; }
   .search-field kbd { display: none; }
   .post-grid { grid-template-columns: 1fr; }
-  .card-image { height: 235px; }
   .about-band-grid { grid-template-columns: 1fr; gap: 30px; }
   .about-band-grid > div { grid-column: auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 45px 30px; }
@@ -353,7 +362,7 @@ body {
 .experiment-archive-header h1 { margin: 0; font: 500 clamp(52px, 6vw, 72px)/1 var(--serif); letter-spacing: -.035em; }
 .experiment-archive-header > p:last-child { max-width: 610px; margin: 18px 0 0; color: var(--muted); font-size: 15px; }
 .experiment-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
-.experiment-card-visual { position: relative; height: 230px; overflow: hidden; padding: 24px; background-color: #e9eef2; background-image: linear-gradient(rgba(49,95,186,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(49,95,186,.1) 1px, transparent 1px); background-size: 22px 22px; }
+.experiment-card-visual { padding: 24px; background-color: #e9eef2; background-image: linear-gradient(rgba(49,95,186,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(49,95,186,.1) 1px, transparent 1px); background-size: 22px 22px; }
 .comparison-sketch { position: absolute; inset: 25px 18px; width: calc(100% - 36px); height: calc(100% - 50px); overflow: visible; }
 .comparison-baseline { stroke: rgba(39,47,59,.25); stroke-width: 1; stroke-dasharray: 4 5; }
 .comparison-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
@@ -682,7 +691,6 @@ body {
   .primary-nav a { padding-inline: 6px; font-size: 11px; }
   .experiment-archive { padding-block: 70px 85px; }
   .experiment-grid { grid-template-columns: 1fr; max-width: none; }
-  .experiment-card-visual { height: 215px; }
   .experiment-shell { width: min(100% - 30px, 1060px); padding-block: 58px 85px; }
   .experiment-header { margin-bottom: 42px; }
   .experiment-header h1 { font-size: clamp(43px, 14vw, 58px); }
