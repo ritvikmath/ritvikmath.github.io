@@ -1043,33 +1043,495 @@
   "rankings": [
     {
       "label": "1 month",
-      "best": "IBB +5.7%, ITB +5.5%, XLP +4.1%",
-      "worst": "SOXX -19.3%, XLK -14.3%, IGV -13.8%"
+      "best": [
+        {
+          "name": "Biotechnology",
+          "ticker": "IBB",
+          "value": 5.65610845,
+          "label": "+5.7%",
+          "close": 207.74000549316406,
+          "color": "#dee8df",
+          "ink": "#000"
+        },
+        {
+          "name": "Housing and homebuilders",
+          "ticker": "ITB",
+          "value": 5.50954828,
+          "label": "+5.5%",
+          "close": 90.56999969482422,
+          "color": "#dee8df",
+          "ink": "#000"
+        },
+        {
+          "name": "Consumer staples",
+          "ticker": "XLP",
+          "value": 4.10151261,
+          "label": "+4.1%",
+          "close": 88.26000213623047,
+          "color": "#e3ebe3",
+          "ink": "#000"
+        }
+      ],
+      "worst": [
+        {
+          "name": "Semiconductors",
+          "ticker": "SOXX",
+          "value": -19.30991214,
+          "label": "-19.3%",
+          "close": 159.39999389648438,
+          "color": "#e3c5c2",
+          "ink": "#000"
+        },
+        {
+          "name": "Information technology",
+          "ticker": "XLK",
+          "value": -14.26622278,
+          "label": "-14.3%",
+          "close": 183.22999572753906,
+          "color": "#e7cfca",
+          "ink": "#000"
+        },
+        {
+          "name": "Software",
+          "ticker": "IGV",
+          "value": -13.78062968,
+          "label": "-13.8%",
+          "close": 110.58999633789062,
+          "color": "#e7cfcb",
+          "ink": "#000"
+        }
+      ],
+      "scale": 19.30991214,
+      "ahead": 12,
+      "eligible": 19
     },
     {
       "label": "3 months",
-      "best": "XLV +6.1%, XLP +5.8%, IBB +3.3%",
-      "worst": "SOXX -23.7%, ICLN -19.3%, AIQ -13.7%"
+      "best": [
+        {
+          "name": "Health care",
+          "ticker": "XLV",
+          "value": 6.14021021,
+          "label": "+6.1%",
+          "close": 174.03395080566406,
+          "color": "#dce7de",
+          "ink": "#000"
+        },
+        {
+          "name": "Consumer staples",
+          "ticker": "XLP",
+          "value": 5.7567456,
+          "label": "+5.8%",
+          "close": 86.87861633300781,
+          "color": "#dde7df",
+          "ink": "#000"
+        },
+        {
+          "name": "Biotechnology",
+          "ticker": "IBB",
+          "value": 3.28038888,
+          "label": "+3.3%",
+          "close": 212.51856994628906,
+          "color": "#e6ede5",
+          "ink": "#000"
+        }
+      ],
+      "worst": [
+        {
+          "name": "Semiconductors",
+          "ticker": "SOXX",
+          "value": -23.72036387,
+          "label": "-23.7%",
+          "close": 168.61642456054688,
+          "color": "#dfbebb",
+          "ink": "#000"
+        },
+        {
+          "name": "Clean energy",
+          "ticker": "ICLN",
+          "value": -19.33447979,
+          "label": "-19.3%",
+          "close": 17.43000030517578,
+          "color": "#e3c5c2",
+          "ink": "#000"
+        },
+        {
+          "name": "Artificial intelligence",
+          "ticker": "AIQ",
+          "value": -13.73996415,
+          "label": "-13.7%",
+          "close": 62.29999923706055,
+          "color": "#e7d0cb",
+          "ink": "#000"
+        }
+      ],
+      "scale": 23.72036387,
+      "ahead": 10,
+      "eligible": 19
     },
     {
       "label": "6 months",
-      "best": "IBB +30.1%, XLV +24.3%, CIBR +12.1%",
-      "worst": "ICLN -37.1%, SOXX -28.1%, AIQ -14.4%"
+      "best": [
+        {
+          "name": "Biotechnology",
+          "ticker": "IBB",
+          "value": 30.06261217,
+          "label": "+30.1%",
+          "close": 168.75718688964844,
+          "color": "#a8c5b7",
+          "ink": "#000"
+        },
+        {
+          "name": "Health care",
+          "ticker": "XLV",
+          "value": 24.25428043,
+          "label": "+24.3%",
+          "close": 148.6628875732422,
+          "color": "#b3ccbf",
+          "ink": "#000"
+        },
+        {
+          "name": "Cybersecurity",
+          "ticker": "CIBR",
+          "value": 12.05964915,
+          "label": "+12.1%",
+          "close": 84.20515441894531,
+          "color": "#ccdcd2",
+          "ink": "#000"
+        }
+      ],
+      "worst": [
+        {
+          "name": "Clean energy",
+          "ticker": "ICLN",
+          "value": -37.091754,
+          "label": "-37.1%",
+          "close": 22.350011825561523,
+          "color": "#d7aaa8",
+          "ink": "#000"
+        },
+        {
+          "name": "Semiconductors",
+          "ticker": "SOXX",
+          "value": -28.10830612,
+          "label": "-28.1%",
+          "close": 178.9080047607422,
+          "color": "#dcb7b4",
+          "ink": "#000"
+        },
+        {
+          "name": "Artificial intelligence",
+          "ticker": "AIQ",
+          "value": -14.44037493,
+          "label": "-14.4%",
+          "close": 62.810001373291016,
+          "color": "#e6ceca",
+          "ink": "#000"
+        }
+      ],
+      "scale": 37.091754,
+      "ahead": 12,
+      "eligible": 19
     },
     {
       "label": "1 year",
-      "best": "XLE +39.4%, SOXX +36.9%, CIBR +30.9%",
-      "worst": "ICLN -12.8%, IGV -6.7%, XLC -6.4%"
+      "best": [
+        {
+          "name": "Energy",
+          "ticker": "XLE",
+          "value": 39.4494658,
+          "label": "+39.4%",
+          "close": 43.349037170410156,
+          "color": "#98bbac",
+          "ink": "#000"
+        },
+        {
+          "name": "Semiconductors",
+          "ticker": "SOXX",
+          "value": 36.92959438,
+          "label": "+36.9%",
+          "close": 93.93148040771484,
+          "color": "#9dbeaf",
+          "ink": "#000"
+        },
+        {
+          "name": "Cybersecurity",
+          "ticker": "CIBR",
+          "value": 30.94348584,
+          "label": "+30.9%",
+          "close": 72.0616226196289,
+          "color": "#a7c4b6",
+          "ink": "#000"
+        }
+      ],
+      "worst": [
+        {
+          "name": "Clean energy",
+          "ticker": "ICLN",
+          "value": -12.78440058,
+          "label": "-12.8%",
+          "close": 16.120969772338867,
+          "color": "#e8d1cd",
+          "ink": "#000"
+        },
+        {
+          "name": "Software",
+          "ticker": "IGV",
+          "value": -6.71243868,
+          "label": "-6.7%",
+          "close": 102.2108383178711,
+          "color": "#eedfda",
+          "ink": "#000"
+        },
+        {
+          "name": "Communication services",
+          "ticker": "XLC",
+          "value": -6.43007022,
+          "label": "-6.4%",
+          "close": 111.62773895263672,
+          "color": "#eee0db",
+          "ink": "#000"
+        }
+      ],
+      "scale": 39.4494658,
+      "ahead": 12,
+      "eligible": 19
     },
     {
       "label": "2 years",
-      "best": "SOXX +80.4%, IBB +59.7%, CIBR +49.5%",
-      "worst": "ITB -18.2%, IGV -10.1%, XLRE +5.5%"
+      "best": [
+        {
+          "name": "Semiconductors",
+          "ticker": "SOXX",
+          "value": 80.35548425,
+          "label": "+80.4%",
+          "close": 71.31471252441406,
+          "color": "#609782",
+          "ink": "#000"
+        },
+        {
+          "name": "Biotechnology",
+          "ticker": "IBB",
+          "value": 59.72438502,
+          "label": "+59.7%",
+          "close": 137.41796875,
+          "color": "#7ba896",
+          "ink": "#000"
+        },
+        {
+          "name": "Cybersecurity",
+          "ticker": "CIBR",
+          "value": 49.51946384,
+          "label": "+49.5%",
+          "close": 63.10884094238281,
+          "color": "#89b1a0",
+          "ink": "#000"
+        }
+      ],
+      "worst": [
+        {
+          "name": "Housing and homebuilders",
+          "ticker": "ITB",
+          "value": -18.15360154,
+          "label": "-18.2%",
+          "close": 116.75528717041016,
+          "color": "#e3c7c4",
+          "ink": "#000"
+        },
+        {
+          "name": "Software",
+          "ticker": "IGV",
+          "value": -10.06424746,
+          "label": "-10.1%",
+          "close": 106.02012634277344,
+          "color": "#ead7d3",
+          "ink": "#000"
+        },
+        {
+          "name": "Real estate",
+          "ticker": "XLRE",
+          "value": 5.54521051,
+          "label": "+5.5%",
+          "close": 41.176666259765625,
+          "color": "#dee8df",
+          "ink": "#000"
+        }
+      ],
+      "scale": 80.35548425,
+      "ahead": 8,
+      "eligible": 19
     },
     {
       "label": "5 years",
-      "best": "XLE +148.9%, SOXX +125.3%, ITA +103.4%",
-      "worst": "ICLN -37.2%, XLRE +4.9%, IGV +12.9%"
+      "best": [
+        {
+          "name": "Energy",
+          "ticker": "XLE",
+          "value": 148.89774362,
+          "label": "+148.9%",
+          "close": 24.28708267211914,
+          "color": "#14674a",
+          "ink": "#fff"
+        },
+        {
+          "name": "Semiconductors",
+          "ticker": "SOXX",
+          "value": 125.33855793,
+          "label": "+125.3%",
+          "close": 57.078556060791016,
+          "color": "#2c765c",
+          "ink": "#fff"
+        },
+        {
+          "name": "Aerospace and defense",
+          "ticker": "ITA",
+          "value": 103.41071839,
+          "label": "+103.4%",
+          "close": 33.488895416259766,
+          "color": "#44866e",
+          "ink": "#000"
+        }
+      ],
+      "worst": [
+        {
+          "name": "Clean energy",
+          "ticker": "ICLN",
+          "value": -37.17321331,
+          "label": "-37.2%",
+          "close": 22.378990173339844,
+          "color": "#d7aaa7",
+          "ink": "#000"
+        },
+        {
+          "name": "Real estate",
+          "ticker": "XLRE",
+          "value": 4.85429727,
+          "label": "+4.9%",
+          "close": 41.44799041748047,
+          "color": "#e0e9e1",
+          "ink": "#000"
+        },
+        {
+          "name": "Software",
+          "ticker": "IGV",
+          "value": 12.94811887,
+          "label": "+12.9%",
+          "close": 84.4192886352539,
+          "color": "#cadbd0",
+          "ink": "#000"
+        }
+      ],
+      "scale": 148.89774362,
+      "ahead": 7,
+      "eligible": 19
     }
-  ]
+  ],
+  "growth": [
+    {
+      "name": "Energy",
+      "ticker": "XLE",
+      "amount": 24889.774362,
+      "label": "$24,890"
+    },
+    {
+      "name": "Semiconductors",
+      "ticker": "SOXX",
+      "amount": 22533.855793,
+      "label": "$22,534"
+    },
+    {
+      "name": "Aerospace and defense",
+      "ticker": "ITA",
+      "amount": 20341.071838999997,
+      "label": "$20,341"
+    },
+    {
+      "name": "Information technology",
+      "ticker": "XLK",
+      "amount": 19149.698014999998,
+      "label": "$19,150"
+    },
+    {
+      "name": "Cybersecurity",
+      "ticker": "CIBR",
+      "amount": 18164.548392,
+      "label": "$18,165"
+    },
+    {
+      "name": "Artificial intelligence",
+      "ticker": "AIQ",
+      "amount": 16755.78309,
+      "label": "$16,756"
+    },
+    {
+      "name": "S&P 500",
+      "ticker": "SPY",
+      "amount": 16370.571097,
+      "label": "$16,371"
+    },
+    {
+      "name": "Real estate",
+      "ticker": "XLRE",
+      "amount": 10485.429726999999,
+      "label": "$10,485"
+    },
+    {
+      "name": "Clean energy",
+      "ticker": "ICLN",
+      "amount": 6282.678668999999,
+      "label": "$6,283"
+    }
+  ],
+  "growth_scale": 25000,
+  "rotation": [
+    {
+      "ticker": "SPY",
+      "name": "S&P 500",
+      "moves": [
+        2.4381507152082538,
+        -5.41994329
+      ]
+    },
+    {
+      "ticker": "SOXX",
+      "name": "Semiconductors",
+      "moves": [
+        -10.903934058370568,
+        -19.30991214
+      ]
+    },
+    {
+      "ticker": "XLE",
+      "name": "Energy",
+      "moves": [
+        18.078773913063806,
+        -12.80830929
+      ]
+    },
+    {
+      "ticker": "IBB",
+      "name": "Biotechnology",
+      "moves": [
+        23.09994573979641,
+        5.65610845
+      ]
+    },
+    {
+      "ticker": "XLV",
+      "name": "Health care",
+      "moves": [
+        20.594992943999202,
+        3.03436104
+      ]
+    },
+    {
+      "ticker": "ITB",
+      "name": "Housing and homebuilders",
+      "moves": [
+        0.5658911162803815,
+        5.50954828
+      ]
+    }
+  ],
+  "rotation_scale": 30
 }

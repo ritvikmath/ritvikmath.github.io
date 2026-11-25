@@ -39,18 +39,19 @@ jobs:
           python scripts/build_stock_bond_bandit.py
           python scripts/build_two_sector_bandit.py
           python scripts/build_market_attribution.py
+          python scripts/build_sector_heatmap.py
 
       - name: Validate generated data
         run: python scripts/validate_experiment_data.py
 
       - name: Commit changed results
         run: |
-          if git diff --quiet -- assets/data; then
+          if git diff --quiet -- assets/data _data/sector_returns.json; then
             echo "No new completed market data."
             exit 0
           fi
           git config user.name "ritvikmath experiment bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data
+          git add assets/data _data/sector_returns.json
           git commit -m "Update experiment results"
           git push

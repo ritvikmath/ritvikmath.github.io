@@ -1,8 +1,7 @@
 """Refresh the sector study with an explicitly selected completed session."""
 from calendar import monthrange
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, datetime, timedelta
-from functools import partial
+from datetime import date, datetime
 import json
 import math
 from pathlib import Path
@@ -35,6 +34,16 @@ ASSETS = [
 WINDOWS = [("1 month", 1), ("3 months", 3), ("6 months", 6),
            ("1 year", 12), ("2 years", 24), ("5 years", 60)]
 NY = ZoneInfo("America/New_York")
+
+
+def latest_completed_session(now=None):
+    import exchange_calendars as xcals
+    now = datetime.now(NY) if now is None else now.astimezone(NY)
+    calendar = xcals.get_calendar("XNYS")
+    session = calendar.date_to_session(now.date().isoformat(), direction="previous")
+    if now < calendar.session_close(session):
+        session = calendar.previous_session(session)
+    return session.date()
 
 
 def fetch(ticker):
@@ -97,15 +106,40 @@ def build(end, prices):
     for i, (label, _) in enumerate(WINDOWS):
         eligible = sorted((r for r in rows[1:] if r["cells"][i]["value"] is not None),
                           key=lambda r: r["cells"][i]["value"])
-        fmt = lambda selected: ", ".join(f"{r['ticker']} {r['cells'][i]['label']}" for r in selected)
-        rankings.append(dict(label=label, best=fmt(eligible[:-4:-1]), worst=fmt(eligible[:3])))
+        def summarize(selected):
+            return [dict(name=r["name"], ticker=r["ticker"], **r["cells"][i]) for r in selected]
+        benchmark = rows[0]["cells"][i]["value"]
+        rankings.append(dict(
+            label=label, best=summarize(eligible[:-4:-1]), worst=summarize(eligible[:3]),
+            scale=max(abs(r["cells"][i]["value"]) for r in eligible) or 1,
+            ahead=sum(r["cells"][i]["value"] > benchmark for r in eligible) if benchmark is not None else None,
+            eligible=len(eligible),
+        ))
     legend = ", ".join("#%02x%02x%02x" % shade(cap * (i - 10) / 10, cap) for i in range(21))
+    selected = {"XLE", "SOXX", "ITA", "XLK", "CIBR", "AIQ", "SPY", "XLRE", "ICLN"}
+    growth = []
+    for row in rows:
+        value = row["cells"][-1]["value"]
+        if row["ticker"] in selected and value is not None:
+            amount = 10000 * (1 + value / 100)
+            growth.append(dict(name=row["name"], ticker=row["ticker"], amount=amount, label=f"${amount:,.0f}"))
+    growth.sort(key=lambda entry: entry["amount"], reverse=True)
+    growth_scale = max(10000, math.ceil(max((e["amount"] for e in growth), default=0) / 5000) * 5000)
+    rotation = []
+    for ticker in ("SPY", "SOXX", "XLE", "IBB", "XLV", "ITB"):
+        row = next(r for r in rows if r["ticker"] == ticker)
+        recent, earlier = row["cells"][0], row["cells"][2]
+        if recent["close"] is not None and earlier["close"] is not None:
+            before = 100 * (recent["close"] / earlier["close"] - 1)
+            rotation.append(dict(ticker=ticker, name=row["name"], moves=[before, recent["value"]]))
+    rotation_scale = max(10, math.ceil(max((abs(v) for r in rotation for v in r["moves"]), default=0) / 10) * 10)
     return dict(end=end.isoformat(), starts=[x.isoformat() for x in starts], windows=[x[0] for x in WINDOWS],
-                cap=cap, legend=legend, rows=rows, rankings=rankings)
+                cap=cap, legend=legend, rows=rows, rankings=rankings, growth=growth,
+                growth_scale=growth_scale, rotation=rotation, rotation_scale=rotation_scale)
 
 
 if __name__ == "__main__":
-    end = date.fromisoformat(sys.argv[1])
+    end = date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else latest_completed_session()
     with ThreadPoolExecutor(max_workers=5) as pool:
         tickers = [a[2] for a in ASSETS]
         prices = dict(zip(tickers, pool.map(fetch, tickers)))
