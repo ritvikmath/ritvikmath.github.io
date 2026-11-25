@@ -1,5 +1,6 @@
 ---
 layout: post
+site_section: tools
 comments: false
 title: "Buying vs. Renting: Compare the Numbers"
 image: /images/header_buy_vs_rent.svg

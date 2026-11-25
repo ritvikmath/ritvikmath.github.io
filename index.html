@@ -21,7 +21,8 @@ title:
 <section class="archive shell" id="analyses">
   <div class="section-heading">
     <div><p class="notebook-kicker">a running notebook of curious questions</p><h2>Ideas, investigated with data.</h2><p>From meal swipes and second dates to heartbeats and Harry Potter - every analysis starts in the real world, then follows the data wherever it leads.</p></div>
-    <div class="archive-tally"><div class="archive-count"><strong id="result-count">{{ site.posts | size }}</strong><span>analyses</span></div></div>
+    {% assign analyses = site.posts | where_exp: "post", "post.site_section != 'tools'" %}
+    <div class="archive-tally"><div class="archive-count"><strong id="result-count">{{ analyses | size }}</strong><span>analyses</span></div></div>
   </div>
 
   <div class="archive-tools">
@@ -44,7 +45,7 @@ title:
   </div>
 
   <div class="post-grid" id="post-grid">
-    {% for post in site.posts %}
+    {% for post in analyses %}
     <article class="post-card" data-category="{{ post.category | downcase }}" data-authors-choice="{{ post.authors_choice | default: false }}" data-methods="{{ post.methods | join: '|' | downcase }}" data-search="{{ post.title | strip_html | downcase }} {{ post.category | downcase }} {{ post.methods | join: ' ' | downcase }} {{ post.summary | downcase }} {{ post.search_terms | downcase }}">
       <a class="card-image{% if post.thumbnail_fit == 'contain' %} card-image--contain{% endif %}" href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.image }}" alt="" loading="lazy"><span>{{ post.category | default: 'Analysis' }}</span></a>
       <div class="card-body">

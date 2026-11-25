@@ -1,0 +1,30 @@
+---
+layout: default
+title: Tools
+permalink: /tools/
+---
+<section class="experiment-archive shell">
+  <header class="experiment-archive-header">
+    <p class="notebook-kicker">try your own numbers</p>
+    <h1>Tools</h1>
+    <p>Interactive calculators that let you change the inputs and see what happens.</p>
+  </header>
+
+  <div class="post-grid experiment-grid">
+    {% assign tools = site.posts | where: "site_section", "tools" %}
+    {% for tool in tools %}
+      <article class="post-card">
+        <a class="card-image{% if tool.thumbnail_fit == 'contain' %} card-image--contain{% endif %}" href="{{ tool.url | relative_url }}" aria-label="Open {{ tool.title | escape }}">
+          <img src="{{ tool.image | relative_url }}" alt="" loading="lazy">
+          <span>Tool</span>
+        </a>
+        <div class="card-body">
+          <div class="card-meta"><span>Interactive calculator</span></div>
+          <h2><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a></h2>
+          <p>{{ tool.summary }}</p>
+          <a class="card-link" href="{{ tool.url | relative_url }}" aria-label="Open {{ tool.title | escape }}">Open the tool <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

@@ -2,15 +2,22 @@
 layout: default
 ---
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+{% assign section_url = '/#analyses' %}
+{% assign section_name = 'analyses' %}
+{% if page.site_section == 'tools' %}
+  {% assign section_url = '/tools/' %}
+  {% assign section_name = 'tools' %}
+{% endif %}
 <article class="article-shell">
   <header class="article-header">
-    <a class="back-link" href="{{ site.baseurl }}/#analyses">← All analyses</a>
-    <p class="eyebrow"><span></span> {{ page.category | default: 'Analysis' }}</p>
+    <a class="back-link" href="{{ section_url | relative_url }}">← All {{ section_name }}</a>
+    <p class="eyebrow"><span></span> {% if page.site_section == 'tools' %}Tool{% else %}{{ page.category | default: 'Analysis' }}{% endif %}</p>
     <h1>{{ page.title }}</h1>
     <div class="article-meta"><span>By Ritvik Kharkar</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %e, %Y' }}</time><span>{{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</span></div>
   </header>
   <div class="article-content entry">{{ content }}</div>
-  {% assign related_posts = site.posts | where: "category", page.category %}
+  {% assign analysis_posts = site.posts | where_exp: "post", "post.site_section != 'tools'" %}
+  {% assign related_posts = analysis_posts | where: "category", page.category %}
   {% assign related_count = 0 %}
   <aside class="article-related" aria-labelledby="related-heading">
     <p class="eyebrow"><span></span> Keep exploring</p>
@@ -24,7 +31,7 @@ layout: default
           {% assign related_count = related_count | plus: 1 %}
         {% endif %}
       {% endfor %}
-      {% for post in site.posts %}
+      {% for post in analysis_posts %}
         {% if post.category != page.category %}
           <a class="related-pill random-related-candidate" href="{{ site.baseurl }}{{ post.url }}" data-related-category="{{ post.category }}" hidden>
             <span>{{ post.title }}</span><b aria-hidden="true">↗</b>
@@ -34,6 +41,6 @@ layout: default
     </div>
   </aside>
   <footer class="article-return">
-    <a href="{{ site.baseurl }}/#analyses"><span aria-hidden="true">←</span> Browse all analyses</a>
+    <a href="{{ section_url | relative_url }}"><span aria-hidden="true">←</span> Browse all {{ section_name }}</a>
   </footer>
 </article>

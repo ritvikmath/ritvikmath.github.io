@@ -19,7 +19,8 @@
         </a>
         <nav class="primary-nav" aria-label="Primary navigation">
           <a href="{{ site.baseurl }}/#analyses">Analyses</a>
-          <a href="{{ site.baseurl }}/experiments/">Experiments</a>
+          <a href="{{ '/experiments/' | relative_url }}"{% if page.url contains '/experiments/' %} aria-current="{% if page.url == '/experiments/' %}page{% else %}location{% endif %}"{% endif %}>Experiments</a>
+          <a href="{{ '/tools/' | relative_url }}"{% if page.url == '/tools/' %} aria-current="page"{% elsif page.site_section == 'tools' %} aria-current="location"{% endif %}>Tools</a>
           <a href="{{ site.baseurl }}/#about">About</a>
         </nav>
       </div>
@@ -36,6 +37,7 @@
           <span>Explore</span>
           <a href="{{ site.baseurl }}/#analyses">All analyses</a>
           <a href="{{ site.baseurl }}/experiments/">Experiments</a>
+          <a href="{{ '/tools/' | relative_url }}">Tools</a>
           <a href="{{ site.baseurl }}/#about">About</a>
         </div>
         <div class="footer-links">
