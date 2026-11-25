@@ -735,3 +735,10 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+.housing-guide-preview {
+  display: block;
+  width: 100%;
+  height: clamp(440px, 75vh, 820px);
+  border: 1px solid #cfc7b9;
+  background: #fbf8f0;
+}

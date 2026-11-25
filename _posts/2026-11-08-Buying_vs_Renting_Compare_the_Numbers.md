@@ -95,6 +95,15 @@ where $A$ is accessible financial assets, $P$ is the home value, $C$ is selling 
 
 The precision of those equations should not be mistaken for certainty in their inputs. Appreciation, rent growth, investment returns, repairs, taxes, and the eventual selling date are unknown. The sensitivity table is therefore as important as the headline result.
 
+## Documentation {#documentation}
+
+Follow one fictional household as they compare renting with buying a $1 million home. The guide walks through closing day, the first mortgage payment, and what they would have left if they sold after ten years.
+
+{% assign housing_guide = '/assets/docs/buying-vs-renting-guide.pdf' | relative_url %}
+
+<p><a href="{{ housing_guide }}">Open or download the buying versus renting guide (PDF, 9 pages)</a></p>
+<iframe class="housing-guide-preview" src="{{ housing_guide }}" title="Buying versus renting: worked example and calculator guide" loading="lazy"></iframe>
+
 <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/housing-calculator.css?v=20261119-2">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/housing-calculator.css?v=20261125-1">
 <script src="{{ site.baseurl }}/assets/housing-calculator.js?v=20261119-2" defer></script>
