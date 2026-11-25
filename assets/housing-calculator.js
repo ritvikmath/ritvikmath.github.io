@@ -8,7 +8,7 @@
     STORAGE_KEY = "ritvikmath.housing.public.v1";
   const HOUSE_PROFILES = Object.freeze({
     lower: {
-      name: "Lower-priced West Hills-area home",
+      name: "Lower-priced home",
       price: 750000,
       rent: 3500,
       comparableRent: 3500,
@@ -21,7 +21,7 @@
       repairAmount: 10000,
     },
     moderate: {
-      name: "Moderately priced West Hills-area home",
+      name: "Moderately priced home",
       price: 1000000,
       rent: 4500,
       comparableRent: 4500,
@@ -34,7 +34,7 @@
       repairAmount: 15000,
     },
     higher: {
-      name: "Higher-priced West Hills-area home",
+      name: "Higher-priced home",
       price: 1400000,
       rent: 6000,
       comparableRent: 6000,
@@ -408,7 +408,7 @@
     });
     if (c.jurisdiction !== "CA" && Math.abs(c.propertyTax - 1.15) < 0.0001)
       fail(
-        "The 1.15% property-tax starting point is California-specific. Enter a jurisdiction-appropriate estimate.",
+        "The 1.15% property tax rate is an example. Enter an estimate for the property.",
         "property",
       );
     try {
