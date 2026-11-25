@@ -1,0 +1,43 @@
+#housing-calculator .field-label-row {
+  min-width: 0;
+  gap: 0.35rem;
+}
+
+#housing-calculator .housing-help-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #93a1b8;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--hc-blue);
+  line-height: 1;
+}
+
+.housing-help-icon svg {
+  display: block;
+}
+
+#housing-calculator label[data-help-ready] > .field-help {
+  display: block;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+#housing-calculator label[data-help-ready] > .field-help[hidden] {
+  display: none;
+}
+
+#housing-calculator .market-choices label[data-help-ready],
+#housing-calculator .check-label[data-help-ready] {
+  flex-wrap: wrap;
+}
+
+#housing-calculator .market-choices .field-help,
+#housing-calculator .check-label .field-help {
+  flex: 0 0 100%;
+}
