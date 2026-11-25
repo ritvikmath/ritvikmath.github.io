@@ -139,9 +139,24 @@
         note.hidden = !show;
         button.setAttribute("aria-expanded", String(show));
       };
+      let touch = false;
+      button.addEventListener("pointerdown", (event) => {
+        touch = event.pointerType === "touch";
+      });
+      button.addEventListener("pointerenter", (event) => {
+        if (event.pointerType !== "touch") toggle(true);
+      });
+      button.addEventListener("pointerleave", (event) => {
+        if (event.pointerType !== "touch" && !button.matches(":focus-visible")) toggle(false);
+      });
+      button.addEventListener("focus", () => {
+        if (!touch && button.matches(":focus-visible")) toggle(true);
+      });
+      button.addEventListener("blur", () => toggle(false));
       button.addEventListener("click", (event) => {
         event.preventDefault();
-        toggle(note.hidden);
+        if (touch) toggle(note.hidden);
+        else if (event.detail === 0) toggle(true);
       });
       button.addEventListener("keydown", (event) => {
         if (event.key === "Escape") toggle(false);
