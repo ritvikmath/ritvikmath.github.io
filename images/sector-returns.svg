@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440">
+  <defs><pattern id="paper" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0v24" fill="none" stroke="#e0e4e9"/></pattern></defs>
+  <rect width="800" height="440" fill="#f7f2e6"/><rect width="800" height="440" fill="url(#paper)"/>
+  <text x="400" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="42" fill="#172741">Where the market moved</text>
+  <g transform="translate(156 133)">
+    <path fill="#a43538" d="M0 0h70v48H0z M84 62h70v48H84z M0 186h70v48H0z"/>
+    <path fill="#d28c88" d="M84 0h70v48H84z M168 62h70v48h-70z M252 186h70v48h-70z"/>
+    <path fill="#e9c7c0" d="M168 0h70v48h-70z M0 62h70v48H0z M336 186h70v48h-70z"/>
+    <path fill="#e1ebdc" d="M252 0h70v48h-70z M0 124h70v48H0z M84 186h70v48H84z"/>
+    <path fill="#a3c8ad" d="M336 0h70v48h-70z M252 62h70v48h-70z M84 124h70v48H84z M168 186h70v48h-70z"/>
+    <path fill="#5c9c7b" d="M420 0h70v48h-70z M336 62h70v48h-70z M168 124h70v48h-70z M252 124h70v48h-70z M420 186h70v48h-70z"/>
+    <path fill="#136649" d="M420 62h70v48h-70z M336 124h70v48h-70z M420 124h70v48h-70z"/>
+  </g>
+  <text x="400" y="406" text-anchor="middle" font-family="monospace" font-size="19" fill="#3d506d">ONE MONTH TO FIVE YEARS</text>
+</svg>

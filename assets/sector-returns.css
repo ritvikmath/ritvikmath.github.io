@@ -1,0 +1,97 @@
+.sector-figure {
+  margin: 1.8rem 0;
+  padding: clamp(0.7rem, 2.5vw, 1.6rem);
+  background: #fffdf7;
+  border: 1px solid #ded8ca;
+}
+.sector-figure figcaption {
+  display: grid;
+  gap: 0.15rem;
+  color: #263650;
+  text-align: left;
+}
+.sector-figure figcaption strong { font: 600 1.6rem Newsreader, Georgia, serif; }
+.sector-figure figcaption span, .sector-note { font-size: 0.84rem; }
+.sector-sort {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.sector-sort[hidden] { display: none; }
+.sector-sort select {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #9a9fad;
+  border-radius: 0.4rem;
+  background: #fff;
+  color: #172841;
+  font: inherit;
+}
+.sector-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 280px;
+  margin-top: 1rem;
+  font: 0.75rem "DM Mono", monospace;
+}
+.sector-gradient {
+  flex: 1;
+  height: 0.75rem;
+  border: 1px solid #ddd7cb;
+  background: linear-gradient(90deg, #a43538, #f9f9f3 50%, #136649);
+}
+.sector-scroll { max-width: 100%; overflow-x: auto; }
+.sector-scroll:focus-visible { outline: 2px solid #345a9e; outline-offset: 2px; }
+.article-content .sector-table,
+.article-content .sector-rankings { display: table; width: 100%; margin: 0; border-collapse: separate; border-spacing: 2px; }
+.sector-table { min-width: 620px; }
+.sector-rankings { min-width: 520px; }
+.article-content :is(.sector-table, .sector-rankings) :is(th, td) {
+  padding: 0.46rem 0.48rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+.sector-table th, .sector-rankings th { background: #eeeade; color: #172841; }
+.sector-table thead th, .sector-table td { text-align: right; }
+.sector-table thead th:first-child, .sector-table th[scope="row"] {
+  position: sticky;
+  left: 0;
+  text-align: left;
+  z-index: 1;
+}
+.sector-table th small { font: 0.7rem "DM Mono", monospace; display: block; color: #4a5667; }
+.sector-table td { font: 0.8rem "DM Mono", monospace; white-space: nowrap; }
+.sector-table .sector-group th { background: #233653; color: white; text-align: left; }
+.sector-rankings td { background: #fffdf7; }
+.sector-rotation-head, .sector-rotation-row {
+  display: grid;
+  grid-template-columns: 3rem repeat(2, minmax(0, 1fr));
+  gap: clamp(0.4rem, 2vw, 1rem);
+  align-items: center;
+  font-size: 0.79rem;
+  padding-block: 0.45rem;
+  border-bottom: 1px solid #e5decf;
+}
+.sector-rotation-head { margin-top: 0.8rem; font-weight: 700; }
+.sector-move { min-width: 0; display: grid; gap: 0.15rem; font-variant-numeric: tabular-nums; }
+.sector-track {
+  display: block;
+  position: relative;
+  height: 0.65rem;
+  background: linear-gradient(90deg, #eeeade 49.5%, #7d8796 50%, #eeeade 50.5%);
+}
+.sector-track i { position: absolute; height: 100%; max-width: 50%; }
+.sector-track .negative { right: 50%; background: #a43538; }
+.sector-track .positive { left: 50%; background: #136649; }
+.sector-proxies summary { cursor: pointer; font-weight: 700; }
+.sector-proxies dt { font-weight: 700; }
+.sector-proxies dd { margin: 0 0 0.75rem; }
+@media (max-width: 600px) {
+  .sector-table th[scope="row"] { max-width: 108px; }
+}
