@@ -56,7 +56,7 @@
   line-height: 1.35;
 }
 .sector-table th { background: #eeeade; color: #172841; }
-.sector-table thead th, .sector-table td { text-align: right; }
+.sector-table thead th { text-align: center; }
 .sector-table thead th:first-child, .sector-table th[scope="row"] {
   position: sticky;
   left: 0;
@@ -64,7 +64,12 @@
   z-index: 1;
 }
 .sector-table th small { font: 0.7rem "DM Mono", monospace; display: block; color: #4a5667; }
-.sector-table td { font: 0.8rem "DM Mono", monospace; white-space: nowrap; }
+.article-content .sector-table td {
+  text-align: center;
+  vertical-align: middle;
+  font: 700 0.8rem "DM Mono", monospace;
+  white-space: nowrap;
+}
 .sector-table .sector-group th { background: #233653; color: white; text-align: left; }
 .sector-rank-grid { display: grid; gap: 1rem; }
 .sector-rank-card {
