@@ -2,8 +2,8 @@
   "experiment": "five-sector-behavioral-bandit",
   "data_source": "Yahoo Finance adjusted daily prices",
   "start_date": "2024-11-25",
-  "market_date": "2026-11-23",
-  "generated_at": "2026-11-24T11:29:10+00:00",
+  "market_date": "2026-11-24",
+  "generated_at": "2026-11-25T10:15:48+00:00",
   "live_evaluation": true,
   "starting_value": 1000.0,
   "assets": [
@@ -60,23 +60,23 @@
   "summary": {
     "bandit": {
       "label": "Contextual allocator",
-      "final_value": 1282.69,
-      "return_percent": 28.27
+      "final_value": 1286.45,
+      "return_percent": 28.65
     },
     "panic": {
       "label": "Panic seller",
-      "final_value": 1226.3,
-      "return_percent": 22.63
+      "final_value": 1248.12,
+      "return_percent": 24.81
     },
     "fomo": {
       "label": "Performance chaser",
-      "final_value": 1262.23,
-      "return_percent": 26.22
+      "final_value": 1245.28,
+      "return_percent": 24.53
     },
     "dip": {
       "label": "Dip buyer",
-      "final_value": 1190.96,
-      "return_percent": 19.1
+      "final_value": 1174.97,
+      "return_percent": 17.5
     }
   },
   "average_weights": {
@@ -386,7 +386,7 @@
     {
       "date": "2025-01-28",
       "bandit": 988.34,
-      "panic": 987.76,
+      "panic": 987.75,
       "fomo": 978.79,
       "dip": 956.12
     },
@@ -429,7 +429,7 @@
       "date": "2025-02-05",
       "bandit": 995.27,
       "panic": 997.73,
-      "fomo": 988.68,
+      "fomo": 988.67,
       "dip": 963.42
     },
     {
@@ -703,7 +703,7 @@
       "bandit": 982.43,
       "panic": 979.6,
       "fomo": 992.84,
-      "dip": 935.88
+      "dip": 935.89
     },
     {
       "date": "2025-04-03",
@@ -745,7 +745,7 @@
       "bandit": 900.26,
       "panic": 905.61,
       "fomo": 936.45,
-      "dip": 831.15
+      "dip": 831.16
     },
     {
       "date": "2025-04-11",
@@ -861,7 +861,7 @@
     },
     {
       "date": "2025-05-06",
-      "bandit": 943.87,
+      "bandit": 943.86,
       "panic": 925.26,
       "fomo": 964.44,
       "dip": 870.21
@@ -1109,7 +1109,7 @@
       "bandit": 1001.84,
       "panic": 980.22,
       "fomo": 1058.17,
-      "dip": 927.89
+      "dip": 927.9
     },
     {
       "date": "2025-06-27",
@@ -1163,7 +1163,7 @@
     {
       "date": "2025-07-09",
       "bandit": 1018.82,
-      "panic": 992.43,
+      "panic": 992.42,
       "fomo": 1081.37,
       "dip": 949.18
     },
@@ -1547,7 +1547,7 @@
     },
     {
       "date": "2025-09-25",
-      "bandit": 1042.87,
+      "bandit": 1042.86,
       "panic": 988.24,
       "fomo": 1081.71,
       "dip": 981.39
@@ -1793,7 +1793,7 @@
     {
       "date": "2025-11-13",
       "bandit": 1072.79,
-      "panic": 1009.08,
+      "panic": 1009.07,
       "fomo": 1070.48,
       "dip": 991.81
     },
@@ -1855,7 +1855,7 @@
     },
     {
       "date": "2025-11-26",
-      "bandit": 1080.02,
+      "bandit": 1080.01,
       "panic": 1000.72,
       "fomo": 1079.76,
       "dip": 1003.85
@@ -1981,7 +1981,7 @@
     },
     {
       "date": "2025-12-23",
-      "bandit": 1095.93,
+      "bandit": 1095.92,
       "panic": 973.85,
       "fomo": 1055.82,
       "dip": 1043.97
@@ -2018,13 +2018,13 @@
       "date": "2025-12-31",
       "bandit": 1091.3,
       "panic": 972.96,
-      "fomo": 1046.56,
+      "fomo": 1046.55,
       "dip": 1034.81
     },
     {
       "date": "2026-01-02",
       "bandit": 1098.31,
-      "panic": 976.06,
+      "panic": 976.05,
       "fomo": 1050.51,
       "dip": 1039.24
     },
@@ -2100,7 +2100,7 @@
     },
     {
       "date": "2026-01-20",
-      "bandit": 1108.73,
+      "bandit": 1108.72,
       "panic": 1010.33,
       "fomo": 1078.34,
       "dip": 1036.9
@@ -2220,7 +2220,7 @@
     {
       "date": "2026-02-12",
       "bandit": 1140.59,
-      "panic": 1069.31,
+      "panic": 1069.3,
       "fomo": 1168.1,
       "dip": 1039.51
     },
@@ -2472,7 +2472,7 @@
     {
       "date": "2026-04-07",
       "bandit": 1127.65,
-      "panic": 1090.62,
+      "panic": 1090.61,
       "fomo": 1196.56,
       "dip": 1019.07
     },
@@ -2793,7 +2793,7 @@
     },
     {
       "date": "2026-06-11",
-      "bandit": 1220.06,
+      "bandit": 1220.05,
       "panic": 1270.39,
       "fomo": 1256.33,
       "dip": 1133.39
@@ -3060,7 +3060,7 @@
     {
       "date": "2026-08-06",
       "bandit": 1270.05,
-      "panic": 1265.05,
+      "panic": 1265.04,
       "fomo": 1255.01,
       "dip": 1203.15
     },
@@ -3094,7 +3094,7 @@
     },
     {
       "date": "2026-08-13",
-      "bandit": 1303.73,
+      "bandit": 1303.72,
       "panic": 1295.52,
       "fomo": 1301.31,
       "dip": 1235.32
@@ -3123,7 +3123,7 @@
     {
       "date": "2026-08-19",
       "bandit": 1310.66,
-      "panic": 1328.94,
+      "panic": 1328.93,
       "fomo": 1333.4,
       "dip": 1217.23
     },
@@ -3340,7 +3340,7 @@
     {
       "date": "2026-10-02",
       "bandit": 1300.89,
-      "panic": 1259.69,
+      "panic": 1259.68,
       "fomo": 1372.1,
       "dip": 1258.23
     },
@@ -3465,7 +3465,7 @@
     },
     {
       "date": "2026-10-28",
-      "bandit": 1360.68,
+      "bandit": 1360.67,
       "panic": 1291.49,
       "fomo": 1403.48,
       "dip": 1291.27
@@ -3595,6 +3595,13 @@
       "panic": 1226.3,
       "fomo": 1262.23,
       "dip": 1190.96
+    },
+    {
+      "date": "2026-11-24",
+      "bandit": 1286.45,
+      "panic": 1248.12,
+      "fomo": 1245.28,
+      "dip": 1174.97
     }
   ],
   "decisions": [
@@ -7164,7 +7171,7 @@
     },
     {
       "date": "2026-11-17",
-      "week_ending": "2026-11-23",
+      "week_ending": "2026-11-24",
       "weights": {
         "xlk": 26.1,
         "xlv": 17.7,
@@ -7193,7 +7200,7 @@
         "xlf": 0.081,
         "xlp": 0.086
       },
-      "weekly_return": -2.46,
+      "weekly_return": -2.17,
       "turnover": 0.66,
       "cost": 0.01,
       "reason": "continuous contextual estimate"
