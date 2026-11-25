@@ -735,6 +735,31 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+.housing-save-control {
+  position: relative;
+  display: inline-flex;
+}
+.housing-save-tooltip {
+  position: absolute;
+  z-index: 2;
+  bottom: 100%;
+  left: 0;
+  width: min(16rem, 72vw);
+  box-sizing: border-box;
+  padding: 0.6rem 0.75rem;
+  background: #182338;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+}
+.housing-save-control:hover .housing-save-tooltip,
+.housing-save-control:focus-within .housing-save-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
 .housing-guide-preview {
   display: block;
   width: 100%;
