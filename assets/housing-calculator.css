@@ -247,6 +247,30 @@
   white-space: nowrap;
   padding: 0.55rem 0.7rem;
 }
+.housing-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0.65rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.housing-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.housing-chart-legend span::before {
+  content: "";
+  width: 1.25rem;
+  height: 3px;
+  background: var(--hc-blue);
+  border-radius: 2px;
+}
+.housing-chart-legend .housing-chart-rent::before { background: var(--hc-coral); }
+.housing-chart-legend .housing-chart-equity { display: none; }
+.housing-chart-tabs:has([data-chart="equity"].active) + .housing-chart-legend span { display: none; }
+.housing-chart-tabs:has([data-chart="equity"].active) + .housing-chart-legend .housing-chart-equity { display: inline-flex; }
 .housing-chart-wrap {
   position: relative;
   margin: 1rem 0 2rem;
