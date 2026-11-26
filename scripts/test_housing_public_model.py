@@ -74,6 +74,9 @@ def main():
     # exists in the public schema.
     defaults = browser("ritvikmathHousingPublic.defaults")
     assert defaults["mortgageYears"] == 30
+    assert defaults["repairYear"] == defaults["repairAmount"] == 0
+    assert defaults["homeGainTax"] == defaults["homeGainEligible"] == 0
+    assert defaults["affordabilityYears"] == defaults["horizon"]
     assert "buydownRates" not in defaults
 
     # Exact year-over-year pairs may fall back from an incomplete newest row.

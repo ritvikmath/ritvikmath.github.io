@@ -17,6 +17,8 @@ Buying a home turns cash into a down payment and, over time, mortgage principal 
 
 The calculator below follows both choices month by month from the same starting resources. It is not a recommendation or a forecast. It is a way to make the assumptions visible and see which ones matter.
 
+The example starts with a fixed mortgage, routine upkeep, and no scheduled repairs, renovations, or refinancing. It leaves home sale tax and any extra tax benefit from owning out of the comparison. Add those assumptions if they apply to your scenario. The ten year comparison also checks the budget over those ten years; the chart can show a longer forecast.
+
 <section class="housing-calculator" id="housing-calculator" aria-labelledby="housing-calculator-title">
   <header class="housing-tool-header"><div><p class="lab-kicker">Runs entirely in your browser</p><h2 id="housing-calculator-title">Buying versus renting calculator</h2><p>Your entries and saved comparisons stay on this device. They are not sent to ritvikmath or placed in the page URL.</p></div><button class="housing-secondary" id="housing-reset" type="button">Reset fictional example</button></header>
   <section class="housing-presets" aria-labelledby="housing-presets-title"><div><p class="lab-kicker">Start with a scenario</p><h3 id="housing-presets-title">Choose two profiles</h3><p>These fictional profiles give you a starting point. Change any field.</p></div><label>House profile<select id="housing-house-profile"><option value="lower">Lower-priced home</option><option value="moderate" selected>Moderately priced home</option><option value="higher">Higher-priced home</option><option value="custom">Custom values</option></select></label><label>Financial profile<select id="housing-financial-profile"><option value="lower">Lower income and savings</option><option value="moderate" selected>Moderate income and savings</option><option value="higher">Higher income and savings</option><option value="custom">Custom values</option></select></label></section>
@@ -107,6 +109,6 @@ Follow one fictional household as they compare renting with buying a $1 million 
 
 <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},svg:{fontCache:'global'}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/housing-calculator.css?v=20261126-1">
-<script src="{{ site.baseurl }}/assets/housing-calculator.js?v=20261119-2" defer></script>
+<script src="{{ site.baseurl }}/assets/housing-calculator.js?v=20261126-2" defer></script>
 <link rel="stylesheet" href="{{ '/assets/housing-help.css' | relative_url }}">
 <script src="{{ '/assets/housing-help.js' | relative_url }}" defer></script>
