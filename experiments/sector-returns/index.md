@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Where the Market Moved"
-search_terms: sector returns market performance ETF heatmap sector rotation
 permalink: /experiments/sector-returns/
 image: /images/sector-returns.svg
 methods: [Data visualization, Time series]
