@@ -119,6 +119,26 @@ button, input { font: inherit; }
 .post-card[data-category="mathematics"]:before { background: #315fba; }
 .post-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(26,37,50,.11); }
 .post-card[hidden] { display: none; }
+.home-explore { padding-block: clamp(2rem, 5vw, 4rem); }
+.home-explore h1 { margin: 0.25rem 0 1.4rem; font: 500 clamp(2.4rem, 6vw, 4rem)/1 var(--serif); color: var(--ink); }
+.home-explore-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.home-explore-grid article { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.2rem; border: 1px solid var(--line); background: rgba(255,253,248,.82); }
+.home-explore-grid h2 { margin: 0; font: 600 1.6rem var(--serif); color: var(--ink); }
+.home-explore-grid p { margin: 0 0 0.3rem; color: var(--muted); }
+.home-explore a { color: var(--blue); text-decoration: underline; text-underline-offset: 0.2em; }
+.home-explore .home-explore-all { margin-top: auto; padding-block: 0.55rem 0.15rem; font-size: 0.88rem; }
+#site-search { margin-top: 1.4rem; max-width: 46rem; }
+#site-search label { display: block; font-weight: 700; margin-bottom: 0.4rem; }
+#site-search-input { width: 100%; box-sizing: border-box; min-height: 44px; border: 1px solid var(--line); background: #fffdf8; color: var(--ink); padding: 0.65rem 0.8rem; font: inherit; }
+#site-search-status { margin: 0.45rem 0 0; font-size: 0.88rem; }
+#site-search-status:empty { margin: 0; }
+#site-search-results { list-style: none; padding: 0; margin: 0.4rem 0 0; border: 1px solid var(--line); background: #fffdf8; }
+#site-search-results li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.15rem 1rem; padding: 0.65rem 0.8rem; }
+#site-search-results li + li { border-top: 1px solid var(--line); }
+#site-search-results span { color: var(--muted); font-size: 0.8rem; }
+@media (max-width: 700px) {
+  .home-explore-grid { grid-template-columns: 1fr; gap: 0.65rem; }
+}
 .post-card > .card-image,
 .post-card > .experiment-card-visual {
   position: relative;

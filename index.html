@@ -2,6 +2,42 @@
 layout: default
 title:
 ---
+{% assign analyses = site.posts | where_exp: "post", "post.site_section != 'tools'" %}
+{% assign tools = site.posts | where: "site_section", "tools" %}
+{% assign experiments = site.pages | where_exp: "item", "item.url contains '/experiments/'" | where_exp: "item", "item.url != '/experiments/'" | sort: "title" %}
+{% assign featured_analysis = analyses | first %}
+{% assign featured_tool = tools | first %}
+{% assign featured_experiment = experiments | where: "url", "/experiments/sector-returns/" | first %}
+
+<section class="home-explore shell" aria-labelledby="explore-heading">
+  <p class="notebook-kicker">the ritvikmath notebook</p>
+  <h1 id="explore-heading">Explore ritvikmath</h1>
+  <div class="home-explore-grid">
+    <article><h2>Analyses</h2><p>Read a question through to the answer.</p><a href="{{ featured_analysis.url | relative_url }}">{{ featured_analysis.title | escape }}</a><a class="home-explore-all" href="#analyses">Browse all analyses <span aria-hidden="true">→</span></a></article>
+    <article><h2>Experiments</h2><p>See how models behave as new data comes in.</p><a href="{{ featured_experiment.url | relative_url }}">{{ featured_experiment.title | escape }}</a><a class="home-explore-all" href="{{ '/experiments/' | relative_url }}">Browse all experiments <span aria-hidden="true">→</span></a></article>
+    <article><h2>Tools</h2><p>Change the inputs and try your own scenario.</p><a href="{{ featured_tool.url | relative_url }}">{{ featured_tool.title | escape }}</a><a class="home-explore-all" href="{{ '/tools/' | relative_url }}">Browse all tools <span aria-hidden="true">→</span></a></article>
+  </div>
+  <div id="site-search" hidden>
+    <label for="site-search-input">Search the whole site</label>
+    <input id="site-search-input" type="search" placeholder="Try mortgage, sector returns, or probability" autocomplete="off" aria-controls="site-search-results">
+    <p id="site-search-status" role="status"></p>
+    <ul id="site-search-results" hidden></ul>
+    <template id="site-search-index">
+      {% assign search_groups = 'Analysis,Experiment,Tool' | split: ',' %}
+      {% for group in search_groups %}
+        {% case group %}
+          {% when 'Analysis' %}{% assign entries = analyses %}
+          {% when 'Experiment' %}{% assign entries = experiments %}
+          {% when 'Tool' %}{% assign entries = tools %}
+        {% endcase %}
+        {% for entry in entries %}
+          <li data-keywords="{{ entry.search_terms | escape }} {{ entry.category | escape }} {{ entry.methods | join: ' ' | escape }} {{ entry.summary | escape }}"><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a><span>{{ group }}</span></li>
+        {% endfor %}
+      {% endfor %}
+    </template>
+  </div>
+</section>
+
 <section class="topic-strip" id="topics" aria-label="Topics covered">
   <div class="shell">
     <span class="strip-label">Browse by topic</span>
@@ -21,12 +57,11 @@ title:
 <section class="archive shell" id="analyses">
   <div class="section-heading">
     <div><p class="notebook-kicker">a running notebook of curious questions</p><h2>Ideas, investigated with data.</h2><p>From meal swipes and second dates to heartbeats and Harry Potter - every analysis starts in the real world, then follows the data wherever it leads.</p></div>
-    {% assign analyses = site.posts | where_exp: "post", "post.site_section != 'tools'" %}
     <div class="archive-tally"><div class="archive-count"><strong id="result-count">{{ analyses | size }}</strong><span>analyses</span></div></div>
   </div>
 
   <div class="archive-tools">
-    <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search analyses</span><input id="archive-search" type="search" placeholder='search by keyword or idea (e.g. "probability" or "dating")' autocomplete="off"><kbd>⌘ K</kbd></label>
+    <label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search analyses</span><input id="archive-search" type="search" placeholder='search by keyword or idea (e.g. "probability" or "dating")' autocomplete="off"></label>
     <label class="method-select" for="method-filter"><span>Browse by method</span><select id="method-filter">
       <option value="all">All methods</option>
       <option value="statistical analysis">Statistical analysis</option>

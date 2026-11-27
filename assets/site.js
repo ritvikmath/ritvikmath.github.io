@@ -1,7 +1,7 @@
 (function () {
   const search = document.querySelector('#archive-search');
-  const cards = Array.from(document.querySelectorAll('.post-card'));
-  const filters = Array.from(document.querySelectorAll('.filter'));
+  const cards = Array.from(document.querySelectorAll('#post-grid .post-card'));
+  const filters = Array.from(document.querySelectorAll('#topics .topic-filter'));
   const methodFilter = document.querySelector('#method-filter');
   const count = document.querySelector('#result-count');
   const empty = document.querySelector('#no-results');
@@ -46,12 +46,46 @@
     if (empty) empty.hidden = visible !== 0;
   }
 
-  if (search) {
-    search.addEventListener('input', updateArchive);
+  if (search) search.addEventListener('input', updateArchive);
+
+  const siteSearch = document.querySelector('#site-search-input');
+  if (siteSearch) {
+    const results = document.querySelector('#site-search-results');
+    const status = document.querySelector('#site-search-status');
+    const entries = Array.from(document.querySelector('#site-search-index').content.children)
+      .map(function (node) {
+        return { node: node, title: normalize(node.firstElementChild.textContent),
+          text: normalize(node.textContent + ' ' + node.dataset.keywords) };
+      });
+    function updateSiteSearch() {
+      const query = normalize(siteSearch.value);
+      const terms = query ? query.split(/\s+/) : [];
+      const matches = terms.length ? entries.filter(function (entry) {
+        return terms.every(function (term) { return entry.text.includes(term); });
+      }).sort(function (a, b) {
+        return Number(b.title.includes(query)) - Number(a.title.includes(query));
+      }) : [];
+      results.replaceChildren(...matches.map(function (entry) { return entry.node.cloneNode(true); }));
+      results.hidden = !matches.length;
+      status.textContent = !query ? '' : !matches.length ? 'No results. Try another keyword.' :
+        matches.length + (matches.length === 1 ? ' result' : ' results');
+    }
+    siteSearch.addEventListener('input', updateSiteSearch);
+    siteSearch.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        siteSearch.value = '';
+        updateSiteSearch();
+      }
+    });
+    document.querySelector('#site-search').hidden = false;
+    updateSiteSearch();
+  }
+
+  if (siteSearch || search) {
     document.addEventListener('keydown', function (event) {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
-        search.focus();
+        (siteSearch || search).focus();
       }
     });
   }
