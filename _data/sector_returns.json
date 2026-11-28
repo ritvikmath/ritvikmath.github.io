@@ -1,12 +1,12 @@
 {
-  "end": "2026-11-25",
+  "end": "2026-11-27",
   "starts": [
-    "2026-10-23",
-    "2026-08-25",
-    "2026-05-22",
-    "2025-11-25",
-    "2024-11-25",
-    "2021-11-24"
+    "2026-10-27",
+    "2026-08-27",
+    "2026-05-27",
+    "2025-11-26",
+    "2024-11-27",
+    "2021-11-26"
   ],
   "windows": [
     "1 month",
@@ -16,7 +16,7 @@
     "2 years",
     "5 years"
   ],
-  "cap": 160,
+  "cap": 170,
   "legend": "#a43538, #aa4244, #af4f51, #b65e5f, #bc6c6d, #c37c7c, #ca8d8c, #d29f9d, #dbb4b1, #e6cdc9, #f9f9f3, #c6d8cd, #a8c5b7, #90b6a5, #7aa895, #669b87, #549079, #43846c, #327a60, #227054, #136649",
   "rows": [
     {
@@ -26,49 +26,49 @@
       "reason": "Large US companies in the S&P 500.",
       "cells": [
         {
-          "value": -5.69364056,
-          "label": "-5.7%",
-          "close": 759.969970703125,
-          "color": "#efe3de",
+          "value": -5.37119862,
+          "label": "-5.4%",
+          "close": 769.6599731445312,
+          "color": "#f0e4df",
           "ink": "#000"
         },
         {
-          "value": -6.19266416,
-          "label": "-6.2%",
-          "close": 764.0127563476562,
-          "color": "#efe1dc",
+          "value": -5.31337344,
+          "label": "-5.3%",
+          "close": 769.18994140625,
+          "color": "#f0e4df",
           "ink": "#000"
         },
         {
-          "value": -3.39430938,
-          "label": "-3.4%",
-          "close": 741.8817749023438,
-          "color": "#f2e9e4",
+          "value": -2.45854785,
+          "label": "-2.5%",
+          "close": 746.6774291992188,
+          "color": "#f4ede7",
           "ink": "#000"
         },
         {
-          "value": 7.32010326,
-          "label": "+7.3%",
-          "close": 667.8152465820312,
-          "color": "#dae5dc",
+          "value": 8.31237561,
+          "label": "+8.3%",
+          "close": 672.4254760742188,
+          "color": "#d9e4db",
           "ink": "#000"
         },
         {
-          "value": 22.71174216,
-          "label": "+22.7%",
-          "close": 584.0516967773438,
-          "color": "#b8d0c3",
+          "value": 24.4305741,
+          "label": "+24.4%",
+          "close": 585.3223876953125,
+          "color": "#b8cfc3",
           "ink": "#000"
         },
         {
-          "value": 63.23197677,
-          "label": "+63.2%",
-          "close": 439.0683898925781,
-          "color": "#7ba996",
+          "value": 69.66248202,
+          "label": "+69.7%",
+          "close": 429.27581787109375,
+          "color": "#78a794",
           "ink": "#000"
         }
       ],
-      "close": 716.7000122070312
+      "close": 728.3200073242188
     },
     {
       "group": "Sectors",
@@ -77,49 +77,49 @@
       "reason": "S&P 500 companies classified as information technology.",
       "cells": [
         {
-          "value": -14.97571527,
-          "label": "-15.0%",
-          "close": 183.22999572753906,
-          "color": "#e7cfcb",
-          "ink": "#000"
-        },
-        {
-          "value": -14.17861193,
-          "label": "-14.2%",
-          "close": 181.52816772460938,
+          "value": -15.48367236,
+          "label": "-15.5%",
+          "close": 189.49000549316406,
           "color": "#e7d0cc",
           "ink": "#000"
         },
         {
-          "value": -13.43324293,
-          "label": "-13.4%",
-          "close": 179.96514892578125,
-          "color": "#e8d2ce",
+          "value": -14.99025176,
+          "label": "-15.0%",
+          "close": 188.39015197753906,
+          "color": "#e7d1cc",
           "ink": "#000"
         },
         {
-          "value": 11.66589651,
-          "label": "+11.7%",
-          "close": 139.51438903808594,
-          "color": "#cfded4",
+          "value": -12.95988825,
+          "label": "-13.0%",
+          "close": 183.99562072753906,
+          "color": "#e9d4d0",
           "ink": "#000"
         },
         {
-          "value": 34.92333278,
-          "label": "+34.9%",
-          "close": 115.46556854248047,
-          "color": "#a3c2b4",
+          "value": 13.44806635,
+          "label": "+13.4%",
+          "close": 141.16590881347656,
+          "color": "#cdddd2",
           "ink": "#000"
         },
         {
-          "value": 89.91222339,
-          "label": "+89.9%",
-          "close": 82.03263092041016,
-          "color": "#5b947e",
+          "value": 39.90320229,
+          "label": "+39.9%",
+          "close": 114.47200012207031,
+          "color": "#9fc0b1",
+          "ink": "#000"
+        },
+        {
+          "value": 100.22581608,
+          "label": "+100.2%",
+          "close": 79.98468780517578,
+          "color": "#56917a",
           "ink": "#000"
         }
       ],
-      "close": 155.7899932861328
+      "close": 160.14999389648438
     },
     {
       "group": "Sectors",
@@ -128,49 +128,49 @@
       "reason": "S&P 500 drugmakers, health insurers, equipment makers and other health businesses.",
       "cells": [
         {
-          "value": 2.4542581,
-          "label": "+2.5%",
-          "close": 179.27999877929688,
-          "color": "#eaefe8",
+          "value": 2.80165447,
+          "label": "+2.8%",
+          "close": 179.17999267578125,
+          "color": "#e9efe7",
           "ink": "#000"
         },
         {
-          "value": 5.1873876,
-          "label": "+5.2%",
-          "close": 174.62168884277344,
-          "color": "#e0e9e1",
+          "value": 7.76603145,
+          "label": "+7.8%",
+          "close": 170.92584228515625,
+          "color": "#dae5dc",
           "ink": "#000"
         },
         {
-          "value": 23.55469265,
-          "label": "+23.6%",
-          "close": 148.66290283203125,
+          "value": 24.82052256,
+          "label": "+24.8%",
+          "close": 147.57188415527344,
           "color": "#b7cfc2",
           "ink": "#000"
         },
         {
-          "value": 17.6225641,
-          "label": "+17.6%",
-          "close": 156.16050720214844,
-          "color": "#c2d6ca",
+          "value": 18.21616335,
+          "label": "+18.2%",
+          "close": 155.81625366210938,
+          "color": "#c3d7cb",
           "ink": "#000"
         },
         {
-          "value": 30.74146827,
-          "label": "+30.7%",
-          "close": 140.49099731445312,
-          "color": "#aac7b9",
+          "value": 29.71975739,
+          "label": "+29.7%",
+          "close": 141.9984130859375,
+          "color": "#afcabc",
           "ink": "#000"
         },
         {
-          "value": 50.41708272,
-          "label": "+50.4%",
-          "close": 122.11378479003906,
-          "color": "#8cb4a3",
+          "value": 51.40303333,
+          "label": "+51.4%",
+          "close": 121.66202545166016,
+          "color": "#8fb5a5",
           "ink": "#000"
         }
       ],
-      "close": 183.67999267578125
+      "close": 184.1999969482422
     },
     {
       "group": "Sectors",
@@ -179,49 +179,49 @@
       "reason": "S&P 500 banks, insurers and other financial companies.",
       "cells": [
         {
-          "value": 1.09122858,
-          "label": "+1.1%",
-          "close": 55.900001525878906,
-          "color": "#f0f3ec",
+          "value": 2.29062053,
+          "label": "+2.3%",
+          "close": 55.880001068115234,
+          "color": "#ebf0e9",
           "ink": "#000"
         },
         {
-          "value": -2.74395999,
-          "label": "-2.7%",
-          "close": 58.1043586730957,
-          "color": "#f3ebe6",
+          "value": -0.89444114,
+          "label": "-0.9%",
+          "close": 57.67587661743164,
+          "color": "#f6f3ed",
           "ink": "#000"
         },
         {
-          "value": 9.56613716,
-          "label": "+9.6%",
-          "close": 51.57615280151367,
-          "color": "#d4e1d8",
+          "value": 11.94717766,
+          "label": "+11.9%",
+          "close": 51.05979537963867,
+          "color": "#d0dfd5",
           "ink": "#000"
         },
         {
-          "value": 9.25218331,
-          "label": "+9.3%",
-          "close": 51.724365234375,
-          "color": "#d5e2d8",
+          "value": 9.65316462,
+          "label": "+9.7%",
+          "close": 52.12799835205078,
+          "color": "#d5e2d9",
           "ink": "#000"
         },
         {
-          "value": 14.07101441,
-          "label": "+14.1%",
-          "close": 49.53931427001953,
+          "value": 14.9329309,
+          "label": "+14.9%",
+          "close": 49.73335266113281,
           "color": "#cadbd0",
           "ink": "#000"
         },
         {
-          "value": 53.5615004,
-          "label": "+53.6%",
-          "close": 36.79958724975586,
-          "color": "#88b1a0",
+          "value": 60.65633197,
+          "label": "+60.7%",
+          "close": 35.57905197143555,
+          "color": "#83ae9c",
           "ink": "#000"
         }
       ],
-      "close": 56.5099983215332
+      "close": 57.15999984741211
     },
     {
       "group": "Sectors",
@@ -230,49 +230,49 @@
       "reason": "S&P 500 oil, gas and energy services companies.",
       "cells": [
         {
-          "value": -12.15923854,
-          "label": "-12.2%",
-          "close": 69.33000183105469,
-          "color": "#e9d4d0",
+          "value": -9.58803842,
+          "label": "-9.6%",
+          "close": 68.20999908447266,
+          "color": "#ecdbd6",
           "ink": "#000"
         },
         {
-          "value": -1.28586584,
-          "label": "-1.3%",
-          "close": 61.693294525146484,
-          "color": "#f5f0eb",
+          "value": -0.40686368,
+          "label": "-0.4%",
+          "close": 61.92193603515625,
+          "color": "#f7f5ef",
           "ink": "#000"
         },
         {
-          "value": 3.72129412,
-          "label": "+3.7%",
-          "close": 58.71504211425781,
-          "color": "#e5ece4",
+          "value": 9.64021433,
+          "label": "+9.6%",
+          "close": 56.24760818481445,
+          "color": "#d5e2d9",
           "ink": "#000"
         },
         {
-          "value": 41.37541572,
-          "label": "+41.4%",
-          "close": 43.07679748535156,
-          "color": "#9abcac",
+          "value": 42.08854718,
+          "label": "+42.1%",
+          "close": 43.40251159667969,
+          "color": "#9cbeae",
           "ink": "#000"
         },
         {
-          "value": 35.75230358,
-          "label": "+35.8%",
-          "close": 44.86111831665039,
+          "value": 37.80110071,
+          "label": "+37.8%",
+          "close": 44.752906799316406,
           "color": "#a2c2b3",
           "ink": "#000"
         },
         {
-          "value": 150.75062293,
-          "label": "+150.8%",
-          "close": 24.287078857421875,
-          "color": "#1c6c4f",
+          "value": 164.56577507,
+          "label": "+164.6%",
+          "close": 23.309892654418945,
+          "color": "#18694d",
           "ink": "#fff"
         }
       ],
-      "close": 60.900001525878906
+      "close": 61.66999816894531
     },
     {
       "group": "Sectors",
@@ -281,49 +281,49 @@
       "reason": "S&P 500 manufacturers, transport and industrial service firms.",
       "cells": [
         {
-          "value": -1.01445646,
-          "label": "-1.0%",
-          "close": 164.6199951171875,
-          "color": "#f6f2ec",
+          "value": -1.40543154,
+          "label": "-1.4%",
+          "close": 167.9199981689453,
+          "color": "#f5f0eb",
           "ink": "#000"
         },
         {
-          "value": -8.41482935,
-          "label": "-8.4%",
-          "close": 177.92181396484375,
-          "color": "#ecdcd7",
+          "value": -7.15606172,
+          "label": "-7.2%",
+          "close": 178.32073974609375,
+          "color": "#eee0db",
           "ink": "#000"
         },
         {
-          "value": -4.64578833,
-          "label": "-4.6%",
-          "close": 170.88914489746094,
-          "color": "#f0e5e0",
+          "value": -4.52473864,
+          "label": "-4.5%",
+          "close": 173.4061737060547,
+          "color": "#f1e6e1",
           "ink": "#000"
         },
         {
-          "value": 8.48653281,
-          "label": "+8.5%",
-          "close": 150.20297241210938,
-          "color": "#d7e3da",
+          "value": 9.58937039,
+          "label": "+9.6%",
+          "close": 151.0730438232422,
+          "color": "#d6e2d9",
           "ink": "#000"
         },
         {
-          "value": 16.5842938,
-          "label": "+16.6%",
-          "close": 139.77011108398438,
-          "color": "#c4d7cc",
+          "value": 18.74949313,
+          "label": "+18.7%",
+          "close": 139.41954040527344,
+          "color": "#c2d6ca",
           "ink": "#000"
         },
         {
-          "value": 65.5714737,
-          "label": "+65.6%",
-          "close": 98.41670989990234,
-          "color": "#78a794",
+          "value": 72.90129814,
+          "label": "+72.9%",
+          "close": 95.7540512084961,
+          "color": "#74a491",
           "ink": "#000"
         }
       ],
-      "close": 162.9499969482422
+      "close": 165.55999755859375
     },
     {
       "group": "Sectors",
@@ -332,49 +332,49 @@
       "reason": "S&P 500 companies selling goods and services people can put off buying.",
       "cells": [
         {
-          "value": 3.88152029,
+          "value": 3.91511857,
           "label": "+3.9%",
-          "close": 113.0999984741211,
-          "color": "#e4ece4",
+          "close": 115.44999694824219,
+          "color": "#e5ece4",
           "ink": "#000"
         },
         {
-          "value": -0.17060843,
-          "label": "-0.2%",
-          "close": 117.69078826904297,
-          "color": "#f8f7f1",
+          "value": 3.75753765,
+          "label": "+3.8%",
+          "close": 115.62533569335938,
+          "color": "#e6ede5",
           "ink": "#000"
         },
         {
-          "value": -1.00402846,
-          "label": "-1.0%",
-          "close": 118.68159484863281,
-          "color": "#f6f2ec",
+          "value": -0.8853857,
+          "label": "-0.9%",
+          "close": 121.04168701171875,
+          "color": "#f6f3ed",
           "ink": "#000"
         },
         {
-          "value": 1.50359249,
-          "label": "+1.5%",
-          "close": 115.74959564208984,
-          "color": "#eef2eb",
+          "value": 2.94047985,
+          "label": "+2.9%",
+          "close": 116.54307556152344,
+          "color": "#e9eee7",
           "ink": "#000"
         },
         {
-          "value": 8.44571981,
-          "label": "+8.4%",
-          "close": 108.33991241455078,
-          "color": "#d7e3da",
+          "value": 10.88076004,
+          "label": "+10.9%",
+          "close": 108.19731140136719,
+          "color": "#d2e0d7",
           "ink": "#000"
         },
         {
-          "value": 16.79797131,
-          "label": "+16.8%",
-          "close": 100.59249877929688,
-          "color": "#c4d7cc",
+          "value": 22.60624311,
+          "label": "+22.6%",
+          "close": 97.8498306274414,
+          "color": "#bbd1c5",
           "ink": "#000"
         }
       ],
-      "close": 117.48999786376953
+      "close": 119.97000122070312
     },
     {
       "group": "Sectors",
@@ -383,49 +383,49 @@
       "reason": "S&P 500 producers and sellers of everyday goods.",
       "cells": [
         {
-          "value": 4.57738593,
-          "label": "+4.6%",
-          "close": 88.26000213623047,
-          "color": "#e2eae2",
+          "value": 6.34538001,
+          "label": "+6.3%",
+          "close": 87.1500015258789,
+          "color": "#dee8df",
           "ink": "#000"
         },
         {
-          "value": 7.38216158,
-          "label": "+7.4%",
-          "close": 85.9546890258789,
-          "color": "#dae5dc",
+          "value": 9.64918947,
+          "label": "+9.6%",
+          "close": 84.52410888671875,
+          "color": "#d5e2d9",
           "ink": "#000"
         },
         {
-          "value": 10.32038192,
-          "label": "+10.3%",
-          "close": 83.66541290283203,
+          "value": 11.06269264,
+          "label": "+11.1%",
+          "close": 83.4483642578125,
           "color": "#d2e0d6",
           "ink": "#000"
         },
         {
-          "value": 21.48735002,
-          "label": "+21.5%",
-          "close": 75.97499084472656,
-          "color": "#bbd1c5",
+          "value": 20.6734706,
+          "label": "+20.7%",
+          "close": 76.80229949951172,
+          "color": "#bfd4c8",
           "ink": "#000"
         },
         {
-          "value": 18.33925212,
-          "label": "+18.3%",
-          "close": 77.99610137939453,
-          "color": "#c1d5c9",
+          "value": 18.09455787,
+          "label": "+18.1%",
+          "close": 78.47948455810547,
+          "color": "#c3d7cb",
           "ink": "#000"
         },
         {
-          "value": 44.57336297,
-          "label": "+44.6%",
-          "close": 63.843021392822266,
+          "value": 47.02447303,
+          "label": "+47.0%",
+          "close": 63.03712463378906,
           "color": "#95b9a9",
           "ink": "#000"
         }
       ],
-      "close": 92.30000305175781
+      "close": 92.68000030517578
     },
     {
       "group": "Sectors",
@@ -434,49 +434,49 @@
       "reason": "S&P 500 telecom, media and interactive platform businesses.",
       "cells": [
         {
-          "value": -0.1232157,
-          "label": "-0.1%",
-          "close": 105.51000213623047,
-          "color": "#f8f7f1",
+          "value": 3.76520704,
+          "label": "+3.8%",
+          "close": 103.58000183105469,
+          "color": "#e6ede5",
           "ink": "#000"
         },
         {
-          "value": -6.58481761,
-          "label": "-6.6%",
-          "close": 112.80821228027344,
+          "value": -3.20956102,
+          "label": "-3.2%",
+          "close": 111.04402923583984,
+          "color": "#f3eae5",
+          "ink": "#000"
+        },
+        {
+          "value": -7.00605665,
+          "label": "-7.0%",
+          "close": 115.57742309570312,
           "color": "#eee0db",
           "ink": "#000"
         },
         {
-          "value": -8.19127188,
-          "label": "-8.2%",
-          "close": 114.78211212158203,
-          "color": "#edddd8",
+          "value": -4.93544032,
+          "label": "-4.9%",
+          "close": 113.06001281738281,
+          "color": "#f0e5e0",
           "ink": "#000"
         },
         {
-          "value": -6.66238644,
-          "label": "-6.7%",
-          "close": 112.90196228027344,
-          "color": "#eee0db",
+          "value": 12.46012539,
+          "label": "+12.5%",
+          "close": 95.5716552734375,
+          "color": "#cfded4",
           "ink": "#000"
         },
         {
-          "value": 10.81764755,
-          "label": "+10.8%",
-          "close": 95.09315490722656,
-          "color": "#d1dfd5",
-          "ink": "#000"
-        },
-        {
-          "value": 41.33517259,
-          "label": "+41.3%",
-          "close": 74.56034851074219,
-          "color": "#9abcac",
+          "value": 46.84121801,
+          "label": "+46.8%",
+          "close": 73.19470977783203,
+          "color": "#95b9a9",
           "ink": "#000"
         }
       ],
-      "close": 105.37999725341797
+      "close": 107.4800033569336
     },
     {
       "group": "Sectors",
@@ -485,49 +485,49 @@
       "reason": "S&P 500 real estate companies, including equity REITs.",
       "cells": [
         {
-          "value": 3.0303052,
-          "label": "+3.0%",
-          "close": 42.56999969482422,
-          "color": "#e8eee6",
+          "value": 4.00565697,
+          "label": "+4.0%",
+          "close": 42.439998626708984,
+          "color": "#e5ece4",
           "ink": "#000"
         },
         {
-          "value": -2.49298674,
-          "label": "-2.5%",
-          "close": 44.981380462646484,
-          "color": "#f3ece6",
+          "value": -0.33242234,
+          "label": "-0.3%",
+          "close": 44.2872200012207,
+          "color": "#f8f6f0",
           "ink": "#000"
         },
         {
-          "value": 0.12737079,
-          "label": "+0.1%",
-          "close": 43.80420684814453,
-          "color": "#f7f8f1",
+          "value": 0.6085271,
+          "label": "+0.6%",
+          "close": 43.87302017211914,
+          "color": "#f3f5ef",
           "ink": "#000"
         },
         {
-          "value": 9.97222774,
-          "label": "+10.0%",
-          "close": 39.88279724121094,
-          "color": "#d3e1d7",
+          "value": 10.19389914,
+          "label": "+10.2%",
+          "close": 40.056663513183594,
+          "color": "#d4e1d8",
           "ink": "#000"
         },
         {
-          "value": 5.11007653,
-          "label": "+5.1%",
-          "close": 41.727684020996094,
-          "color": "#e0e9e1",
+          "value": 4.54101029,
+          "label": "+4.5%",
+          "close": 42.22266387939453,
+          "color": "#e3ebe3",
           "ink": "#000"
         },
         {
-          "value": 5.81939505,
-          "label": "+5.8%",
-          "close": 41.44797897338867,
-          "color": "#dee8df",
+          "value": 9.45805048,
+          "label": "+9.5%",
+          "close": 40.325950622558594,
+          "color": "#d6e3d9",
           "ink": "#000"
         }
       ],
-      "close": 43.86000061035156
+      "close": 44.13999938964844
     },
     {
       "group": "Sectors",
@@ -536,49 +536,49 @@
       "reason": "S&P 500 electric, gas and other utilities.",
       "cells": [
         {
-          "value": 2.46710339,
-          "label": "+2.5%",
-          "close": 42.560001373291016,
-          "color": "#eaefe8",
+          "value": 2.05367818,
+          "label": "+2.1%",
+          "close": 42.849998474121094,
+          "color": "#ecf1e9",
           "ink": "#000"
         },
         {
-          "value": 1.4330667,
-          "label": "+1.4%",
-          "close": 42.99386978149414,
-          "color": "#eef2eb",
+          "value": 2.0183941,
+          "label": "+2.0%",
+          "close": 42.86481857299805,
+          "color": "#ecf1e9",
           "ink": "#000"
         },
         {
-          "value": -2.51117654,
-          "label": "-2.5%",
-          "close": 44.733333587646484,
-          "color": "#f3ece6",
+          "value": -1.78814342,
+          "label": "-1.8%",
+          "close": 44.52619171142578,
+          "color": "#f5efe9",
           "ink": "#000"
         },
         {
-          "value": 1.01073468,
-          "label": "+1.0%",
-          "close": 43.17362976074219,
-          "color": "#f0f4ed",
+          "value": -0.03946606,
+          "label": "-0.0%",
+          "close": 43.74726486206055,
+          "color": "#f9f8f2",
           "ink": "#000"
         },
         {
-          "value": 13.16510894,
-          "label": "+13.2%",
-          "close": 38.53661346435547,
-          "color": "#ccdcd1",
+          "value": 11.69700063,
+          "label": "+11.7%",
+          "close": 39.15055847167969,
+          "color": "#d1dfd5",
           "ink": "#000"
         },
         {
-          "value": 49.45455187,
-          "label": "+49.5%",
-          "close": 29.179439544677734,
-          "color": "#8eb4a4",
+          "value": 52.24532685,
+          "label": "+52.2%",
+          "close": 28.723377227783203,
+          "color": "#8eb5a4",
           "ink": "#000"
         }
       ],
-      "close": 43.61000061035156
+      "close": 43.72999954223633
     },
     {
       "group": "Sectors",
@@ -587,49 +587,49 @@
       "reason": "S&P 500 chemicals, packaging, metals and other materials companies.",
       "cells": [
         {
-          "value": -0.19489824,
-          "label": "-0.2%",
-          "close": 51.310001373291016,
-          "color": "#f8f6f1",
+          "value": 0.71456693,
+          "label": "+0.7%",
+          "close": 51.779998779296875,
+          "color": "#f2f5ee",
           "ink": "#000"
         },
         {
-          "value": -3.98345394,
-          "label": "-4.0%",
-          "close": 53.334556579589844,
-          "color": "#f1e7e2",
+          "value": -1.57806301,
+          "label": "-1.6%",
+          "close": 52.98615646362305,
+          "color": "#f5f0ea",
           "ink": "#000"
         },
         {
-          "value": 2.68050671,
+          "value": 2.74694633,
           "label": "+2.7%",
-          "close": 49.873146057128906,
+          "close": 50.755767822265625,
           "color": "#e9efe7",
           "ink": "#000"
         },
         {
-          "value": 18.74596478,
-          "label": "+18.7%",
-          "close": 43.125675201416016,
-          "color": "#c0d5c9",
+          "value": 19.45640855,
+          "label": "+19.5%",
+          "close": 43.65609359741211,
+          "color": "#c1d5c9",
           "ink": "#000"
         },
         {
-          "value": 11.87991664,
-          "label": "+11.9%",
-          "close": 45.77228927612305,
-          "color": "#cfded4",
+          "value": 14.85178277,
+          "label": "+14.9%",
+          "close": 45.406349182128906,
+          "color": "#cadbd0",
           "ink": "#000"
         },
         {
-          "value": 28.66676334,
-          "label": "+28.7%",
-          "close": 39.80048751831055,
-          "color": "#aec9bb",
+          "value": 33.31849071,
+          "label": "+33.3%",
+          "close": 39.11685562133789,
+          "color": "#a9c6b8",
           "ink": "#000"
         }
       ],
-      "close": 51.209999084472656
+      "close": 52.150001525878906
     },
     {
       "group": "Themes and industries",
@@ -638,49 +638,49 @@
       "reason": "Global X fund covering AI developers and businesses that supply enabling hardware or data.",
       "cells": [
         {
-          "value": -14.14352423,
-          "label": "-14.1%",
-          "close": 62.290000915527344,
-          "color": "#e7d1cc",
+          "value": -12.84951355,
+          "label": "-12.8%",
+          "close": 63.65999984741211,
+          "color": "#e9d4d0",
           "ink": "#000"
         },
         {
-          "value": -15.218773,
-          "label": "-15.2%",
-          "close": 63.08000183105469,
-          "color": "#e7cfca",
+          "value": -14.03780794,
+          "label": "-14.0%",
+          "close": 64.54000091552734,
+          "color": "#e8d2ce",
           "ink": "#000"
         },
         {
-          "value": -14.85432515,
-          "label": "-14.9%",
-          "close": 62.810001373291016,
-          "color": "#e7cfcb",
+          "value": -14.77726445,
+          "label": "-14.8%",
+          "close": 65.0999984741211,
+          "color": "#e8d1cd",
           "ink": "#000"
         },
         {
-          "value": 8.68382242,
-          "label": "+8.7%",
-          "close": 49.20695495605469,
-          "color": "#d6e3d9",
+          "value": 11.79491275,
+          "label": "+11.8%",
+          "close": 49.6265869140625,
+          "color": "#d0dfd5",
           "ink": "#000"
         },
         {
-          "value": 38.00754917,
-          "label": "+38.0%",
-          "close": 38.751502990722656,
-          "color": "#9fbfb0",
+          "value": 44.13348553,
+          "label": "+44.1%",
+          "close": 38.492095947265625,
+          "color": "#99bcac",
           "ink": "#000"
         },
         {
-          "value": 66.74712148,
-          "label": "+66.7%",
-          "close": 32.07251739501953,
-          "color": "#77a693",
+          "value": 76.41004934,
+          "label": "+76.4%",
+          "close": 31.44945526123047,
+          "color": "#70a28e",
           "ink": "#000"
         }
       ],
-      "close": 53.47999954223633
+      "close": 55.47999954223633
     },
     {
       "group": "Themes and industries",
@@ -689,49 +689,49 @@
       "reason": "iShares portfolio of US-listed chip companies and equipment makers.",
       "cells": [
         {
-          "value": -19.71141264,
-          "label": "-19.7%",
-          "close": 159.39999389648438,
-          "color": "#e3c7c3",
+          "value": -21.29886434,
+          "label": "-21.3%",
+          "close": 170.35333251953125,
+          "color": "#e3c6c3",
           "ink": "#000"
         },
         {
-          "value": -25.26338887,
-          "label": "-25.3%",
-          "close": 171.2413787841797,
-          "color": "#dfbebb",
+          "value": -23.40121037,
+          "label": "-23.4%",
+          "close": 175.0288848876953,
+          "color": "#e2c3bf",
           "ink": "#000"
         },
         {
-          "value": -28.46602726,
-          "label": "-28.5%",
-          "close": 178.9080047607422,
-          "color": "#ddb9b6",
+          "value": -28.60312046,
+          "label": "-28.6%",
+          "close": 187.7813262939453,
+          "color": "#debbb8",
           "ink": "#000"
         },
         {
-          "value": 35.82545938,
-          "label": "+35.8%",
-          "close": 94.22386932373047,
-          "color": "#a2c1b3",
+          "value": 38.47508976,
+          "label": "+38.5%",
+          "close": 96.81886291503906,
+          "color": "#a1c1b2",
           "ink": "#000"
         },
         {
-          "value": 77.72330055,
-          "label": "+77.7%",
-          "close": 72.01081848144531,
-          "color": "#699d89",
+          "value": 91.19052518,
+          "label": "+91.2%",
+          "close": 70.12377166748047,
+          "color": "#609782",
           "ink": "#000"
         },
         {
-          "value": 124.21731065,
-          "label": "+124.2%",
-          "close": 57.078556060791016,
-          "color": "#367c63",
+          "value": 141.61097411,
+          "label": "+141.6%",
+          "close": 55.49003219604492,
+          "color": "#2d765c",
           "ink": "#fff"
         }
       ],
-      "close": 127.9800033569336
+      "close": 134.07000732421875
     },
     {
       "group": "Themes and industries",
@@ -740,49 +740,49 @@
       "reason": "iShares portfolio focused on North American software and related businesses.",
       "cells": [
         {
-          "value": -14.07903084,
-          "label": "-14.1%",
-          "close": 110.58999633789062,
-          "color": "#e7d1cc",
+          "value": -12.74825564,
+          "label": "-12.7%",
+          "close": 111.77999877929688,
+          "color": "#e9d5d0",
           "ink": "#000"
         },
         {
-          "value": -6.70594201,
-          "label": "-6.7%",
-          "close": 101.8499984741211,
-          "color": "#eee0db",
+          "value": -11.59354691,
+          "label": "-11.6%",
+          "close": 110.31999969482422,
+          "color": "#ead7d2",
           "ink": "#000"
         },
         {
-          "value": 1.09329972,
-          "label": "+1.1%",
-          "close": 93.99237823486328,
-          "color": "#f0f3ec",
+          "value": 4.83426062,
+          "label": "+4.8%",
+          "close": 93.03256225585938,
+          "color": "#e2eae2",
           "ink": "#000"
         },
         {
-          "value": -7.90017737,
-          "label": "-7.9%",
-          "close": 103.17066192626953,
-          "color": "#edddd9",
+          "value": -5.26533587,
+          "label": "-5.3%",
+          "close": 102.95069885253906,
+          "color": "#f0e5df",
           "ink": "#000"
         },
         {
-          "value": -10.16371181,
-          "label": "-10.2%",
-          "close": 105.77017211914062,
-          "color": "#ebd8d4",
+          "value": -6.47336121,
+          "label": "-6.5%",
+          "close": 104.28044891357422,
+          "color": "#efe2dd",
           "ink": "#000"
         },
         {
-          "value": 12.55721077,
-          "label": "+12.6%",
-          "close": 84.4192886352539,
-          "color": "#cdddd2",
+          "value": 16.64934128,
+          "label": "+16.6%",
+          "close": 83.60955810546875,
+          "color": "#c6d9cd",
           "ink": "#000"
         }
       ],
-      "close": 95.0199966430664
+      "close": 97.52999877929688
     },
     {
       "group": "Themes and industries",
@@ -791,49 +791,49 @@
       "reason": "First Trust fund tracking companies in the cybersecurity industry.",
       "cells": [
         {
-          "value": -10.63889995,
-          "label": "-10.6%",
-          "close": 106.12000274658203,
-          "color": "#ead7d3",
+          "value": -10.90743175,
+          "label": "-10.9%",
+          "close": 109.6500015258789,
+          "color": "#ebd8d4",
           "ink": "#000"
         },
         {
-          "value": 2.56623576,
-          "label": "+2.6%",
-          "close": 92.45732879638672,
-          "color": "#e9efe7",
+          "value": -3.07290502,
+          "label": "-3.1%",
+          "close": 100.78709411621094,
+          "color": "#f3ebe5",
           "ink": "#000"
         },
         {
-          "value": 12.617801,
-          "label": "+12.6%",
-          "close": 84.20516204833984,
-          "color": "#cdddd2",
+          "value": 19.18189791,
+          "label": "+19.2%",
+          "close": 81.96714782714844,
+          "color": "#c1d5ca",
           "ink": "#000"
         },
         {
-          "value": 29.52193245,
-          "label": "+29.5%",
-          "close": 73.21540069580078,
-          "color": "#acc8ba",
+          "value": 34.61691066,
+          "label": "+34.6%",
+          "close": 72.56889343261719,
+          "color": "#a7c5b7",
           "ink": "#000"
         },
         {
-          "value": 50.16978065,
-          "label": "+50.2%",
-          "close": 63.14852523803711,
-          "color": "#8db4a3",
+          "value": 56.29488416,
+          "label": "+56.3%",
+          "close": 62.50364685058594,
+          "color": "#89b1a0",
           "ink": "#000"
         },
         {
-          "value": 82.55026204,
-          "label": "+82.6%",
-          "close": 51.94733810424805,
-          "color": "#639984",
+          "value": 90.93074688,
+          "label": "+90.9%",
+          "close": 51.1651496887207,
+          "color": "#609782",
           "ink": "#000"
         }
       ],
-      "close": 94.83000183105469
+      "close": 97.69000244140625
     },
     {
       "group": "Themes and industries",
@@ -842,49 +842,49 @@
       "reason": "iShares portfolio focused on US-listed biotechnology companies.",
       "cells": [
         {
-          "value": 5.06401691,
-          "label": "+5.1%",
-          "close": 207.74000549316406,
-          "color": "#e1e9e1",
+          "value": 3.48728052,
+          "label": "+3.5%",
+          "close": 212.1999969482422,
+          "color": "#e7ede5",
           "ink": "#000"
         },
         {
-          "value": 0.8649392,
-          "label": "+0.9%",
-          "close": 216.38836669921875,
-          "color": "#f1f4ed",
+          "value": 2.24013624,
+          "label": "+2.2%",
+          "close": 214.7884521484375,
+          "color": "#ebf0e9",
           "ink": "#000"
         },
         {
-          "value": 29.33374781,
+          "value": 29.29284926,
           "label": "+29.3%",
-          "close": 168.75718688964844,
-          "color": "#adc8bb",
+          "close": 169.84698486328125,
+          "color": "#b0cabd",
           "ink": "#000"
         },
         {
-          "value": 26.90661528,
-          "label": "+26.9%",
-          "close": 171.98472595214844,
-          "color": "#b1cbbe",
+          "value": 26.70785284,
+          "label": "+26.7%",
+          "close": 173.31207275390625,
+          "color": "#b4cdc0",
           "ink": "#000"
         },
         {
-          "value": 56.61564537,
-          "label": "+56.6%",
-          "close": 139.3602752685547,
-          "color": "#84ae9c",
+          "value": 55.70749632,
+          "label": "+55.7%",
+          "close": 141.03367614746094,
+          "color": "#8ab2a1",
           "ink": "#000"
         },
         {
-          "value": 44.08472337,
-          "label": "+44.1%",
-          "close": 151.48031616210938,
-          "color": "#95b9a9",
+          "value": 43.56549681,
+          "label": "+43.6%",
+          "close": 152.9615478515625,
+          "color": "#9abcad",
           "ink": "#000"
         }
       ],
-      "close": 218.25999450683594
+      "close": 219.60000610351562
     },
     {
       "group": "Themes and industries",
@@ -893,49 +893,49 @@
       "reason": "iShares global portfolio of clean energy producers and equipment makers.",
       "cells": [
         {
-          "value": -11.36080272,
-          "label": "-11.4%",
-          "close": 16.020000457763672,
-          "color": "#ead6d1",
+          "value": -6.99873695,
+          "label": "-7.0%",
+          "close": 15.859999656677246,
+          "color": "#eee0db",
           "ink": "#000"
         },
         {
-          "value": -19.54674155,
-          "label": "-19.5%",
-          "close": 17.649999618530273,
-          "color": "#e3c7c3",
+          "value": -17.27425652,
+          "label": "-17.3%",
+          "close": 17.829999923706055,
+          "color": "#e6cdc9",
           "ink": "#000"
         },
         {
-          "value": -36.46535885,
-          "label": "-36.5%",
-          "close": 22.350011825561523,
-          "color": "#d8aeab",
+          "value": -36.11408124,
+          "label": "-36.1%",
+          "close": 23.088029861450195,
+          "color": "#dab1af",
           "ink": "#000"
         },
         {
-          "value": -12.66653724,
-          "label": "-12.7%",
-          "close": 16.259517669677734,
-          "color": "#e9d3cf",
+          "value": -11.28179866,
+          "label": "-11.3%",
+          "close": 16.625675201416016,
+          "color": "#ead7d3",
           "ink": "#000"
         },
         {
-          "value": 18.66192469,
-          "label": "+18.7%",
-          "close": 11.96677017211914,
-          "color": "#c0d5c9",
+          "value": 23.15818878,
+          "label": "+23.2%",
+          "close": 11.97646713256836,
+          "color": "#bad1c4",
           "ink": "#000"
         },
         {
-          "value": -36.54762387,
-          "label": "-36.5%",
-          "close": 22.37898826599121,
-          "color": "#d8aeab",
+          "value": -33.22420551,
+          "label": "-33.2%",
+          "close": 22.088842391967773,
+          "color": "#dcb5b2",
           "ink": "#000"
         }
       ],
-      "close": 14.199999809265137
+      "close": 14.75
     },
     {
       "group": "Themes and industries",
@@ -944,49 +944,49 @@
       "reason": "iShares portfolio of US aerospace and defense companies.",
       "cells": [
         {
-          "value": 2.0174943,
-          "label": "+2.0%",
-          "close": 67.41000366210938,
-          "color": "#ecf0e9",
+          "value": 2.3567105,
+          "label": "+2.4%",
+          "close": 68.73999786376953,
+          "color": "#ebf0e8",
           "ink": "#000"
         },
         {
-          "value": -11.84414196,
-          "label": "-11.8%",
-          "close": 78.00955963134766,
-          "color": "#e9d5d1",
+          "value": -9.79053861,
+          "label": "-9.8%",
+          "close": 77.99625396728516,
+          "color": "#ecdad6",
           "ink": "#000"
         },
         {
-          "value": -8.28675254,
-          "label": "-8.3%",
-          "close": 74.98371124267578,
-          "color": "#eddcd8",
+          "value": -8.24668203,
+          "label": "-8.2%",
+          "close": 76.68387603759766,
+          "color": "#edded9",
           "ink": "#000"
         },
         {
-          "value": 2.18790069,
-          "label": "+2.2%",
-          "close": 67.29759216308594,
-          "color": "#ebf0e9",
+          "value": 3.8833066,
+          "label": "+3.9%",
+          "close": 67.72984313964844,
+          "color": "#e5ece4",
           "ink": "#000"
         },
         {
-          "value": 36.5456846,
-          "label": "+36.5%",
-          "close": 50.36409378051758,
+          "value": 38.81286003,
+          "label": "+38.8%",
+          "close": 50.686946868896484,
           "color": "#a1c1b2",
           "ink": "#000"
         },
         {
-          "value": 105.35161866,
-          "label": "+105.4%",
-          "close": 33.48889923095703,
-          "color": "#4a8971",
+          "value": 119.8598267,
+          "label": "+119.9%",
+          "close": 32.0022087097168,
+          "color": "#42846c",
           "ink": "#000"
         }
       ],
-      "close": 68.7699966430664
+      "close": 70.36000061035156
     },
     {
       "group": "Themes and industries",
@@ -995,49 +995,49 @@
       "reason": "iShares portfolio focused on US homebuilders and related suppliers.",
       "cells": [
         {
-          "value": 8.57899599,
-          "label": "+8.6%",
-          "close": 90.56999969482422,
-          "color": "#d7e3da",
+          "value": 9.2529062,
+          "label": "+9.3%",
+          "close": 90.3499984741211,
+          "color": "#d6e3d9",
           "ink": "#000"
         },
         {
-          "value": 1.02929865,
-          "label": "+1.0%",
-          "close": 97.33809661865234,
-          "color": "#f0f3ed",
+          "value": 4.09232483,
+          "label": "+4.1%",
+          "close": 94.82927703857422,
+          "color": "#e5ece4",
           "ink": "#000"
         },
         {
-          "value": 9.19343488,
-          "label": "+9.2%",
-          "close": 90.06035614013672,
-          "color": "#d5e2d8",
+          "value": 6.55873896,
+          "label": "+6.6%",
+          "close": 92.63435363769531,
+          "color": "#dde7df",
           "ink": "#000"
         },
         {
-          "value": -2.82779454,
-          "label": "-2.8%",
-          "close": 101.20177459716797,
-          "color": "#f3ebe5",
+          "value": -3.68270012,
+          "label": "-3.7%",
+          "close": 102.48418426513672,
+          "color": "#f2e9e4",
           "ink": "#000"
         },
         {
-          "value": -19.84967858,
-          "label": "-19.8%",
-          "close": 122.69445037841797,
-          "color": "#e3c7c3",
+          "value": -17.82573484,
+          "label": "-17.8%",
+          "close": 120.12276458740234,
+          "color": "#e5ccc8",
           "ink": "#000"
         },
         {
-          "value": 31.47210669,
-          "label": "+31.5%",
-          "close": 74.79913330078125,
-          "color": "#a9c6b8",
+          "value": 34.90314703,
+          "label": "+34.9%",
+          "close": 73.17101287841797,
+          "color": "#a7c4b6",
           "ink": "#000"
         }
       ],
-      "close": 98.33999633789062
+      "close": 98.70999908447266
     }
   ],
   "rankings": [
@@ -1047,28 +1047,28 @@
         {
           "name": "Housing and homebuilders",
           "ticker": "ITB",
-          "value": 8.57899599,
-          "label": "+8.6%",
-          "close": 90.56999969482422,
-          "color": "#d7e3da",
-          "ink": "#000"
-        },
-        {
-          "name": "Biotechnology",
-          "ticker": "IBB",
-          "value": 5.06401691,
-          "label": "+5.1%",
-          "close": 207.74000549316406,
-          "color": "#e1e9e1",
+          "value": 9.2529062,
+          "label": "+9.3%",
+          "close": 90.3499984741211,
+          "color": "#d6e3d9",
           "ink": "#000"
         },
         {
           "name": "Consumer staples",
           "ticker": "XLP",
-          "value": 4.57738593,
-          "label": "+4.6%",
-          "close": 88.26000213623047,
-          "color": "#e2eae2",
+          "value": 6.34538001,
+          "label": "+6.3%",
+          "close": 87.1500015258789,
+          "color": "#dee8df",
+          "ink": "#000"
+        },
+        {
+          "name": "Real estate",
+          "ticker": "XLRE",
+          "value": 4.00565697,
+          "label": "+4.0%",
+          "close": 42.439998626708984,
+          "color": "#e5ece4",
           "ink": "#000"
         }
       ],
@@ -1076,32 +1076,32 @@
         {
           "name": "Semiconductors",
           "ticker": "SOXX",
-          "value": -19.71141264,
-          "label": "-19.7%",
-          "close": 159.39999389648438,
-          "color": "#e3c7c3",
+          "value": -21.29886434,
+          "label": "-21.3%",
+          "close": 170.35333251953125,
+          "color": "#e3c6c3",
           "ink": "#000"
         },
         {
           "name": "Information technology",
           "ticker": "XLK",
-          "value": -14.97571527,
-          "label": "-15.0%",
-          "close": 183.22999572753906,
-          "color": "#e7cfcb",
+          "value": -15.48367236,
+          "label": "-15.5%",
+          "close": 189.49000549316406,
+          "color": "#e7d0cc",
           "ink": "#000"
         },
         {
           "name": "Artificial intelligence",
           "ticker": "AIQ",
-          "value": -14.14352423,
-          "label": "-14.1%",
-          "close": 62.290000915527344,
-          "color": "#e7d1cc",
+          "value": -12.84951355,
+          "label": "-12.8%",
+          "close": 63.65999984741211,
+          "color": "#e9d4d0",
           "ink": "#000"
         }
       ],
-      "scale": 19.71141264,
+      "scale": 21.29886434,
       "ahead": 12,
       "eligible": 19
     },
@@ -1111,28 +1111,28 @@
         {
           "name": "Consumer staples",
           "ticker": "XLP",
-          "value": 7.38216158,
-          "label": "+7.4%",
-          "close": 85.9546890258789,
-          "color": "#dae5dc",
+          "value": 9.64918947,
+          "label": "+9.6%",
+          "close": 84.52410888671875,
+          "color": "#d5e2d9",
           "ink": "#000"
         },
         {
           "name": "Health care",
           "ticker": "XLV",
-          "value": 5.1873876,
-          "label": "+5.2%",
-          "close": 174.62168884277344,
-          "color": "#e0e9e1",
+          "value": 7.76603145,
+          "label": "+7.8%",
+          "close": 170.92584228515625,
+          "color": "#dae5dc",
           "ink": "#000"
         },
         {
-          "name": "Cybersecurity",
-          "ticker": "CIBR",
-          "value": 2.56623576,
-          "label": "+2.6%",
-          "close": 92.45732879638672,
-          "color": "#e9efe7",
+          "name": "Housing and homebuilders",
+          "ticker": "ITB",
+          "value": 4.09232483,
+          "label": "+4.1%",
+          "close": 94.82927703857422,
+          "color": "#e5ece4",
           "ink": "#000"
         }
       ],
@@ -1140,33 +1140,33 @@
         {
           "name": "Semiconductors",
           "ticker": "SOXX",
-          "value": -25.26338887,
-          "label": "-25.3%",
-          "close": 171.2413787841797,
-          "color": "#dfbebb",
+          "value": -23.40121037,
+          "label": "-23.4%",
+          "close": 175.0288848876953,
+          "color": "#e2c3bf",
           "ink": "#000"
         },
         {
           "name": "Clean energy",
           "ticker": "ICLN",
-          "value": -19.54674155,
-          "label": "-19.5%",
-          "close": 17.649999618530273,
-          "color": "#e3c7c3",
+          "value": -17.27425652,
+          "label": "-17.3%",
+          "close": 17.829999923706055,
+          "color": "#e6cdc9",
           "ink": "#000"
         },
         {
-          "name": "Artificial intelligence",
-          "ticker": "AIQ",
-          "value": -15.218773,
-          "label": "-15.2%",
-          "close": 63.08000183105469,
-          "color": "#e7cfca",
+          "name": "Information technology",
+          "ticker": "XLK",
+          "value": -14.99025176,
+          "label": "-15.0%",
+          "close": 188.39015197753906,
+          "color": "#e7d1cc",
           "ink": "#000"
         }
       ],
-      "scale": 25.26338887,
-      "ahead": 11,
+      "scale": 23.40121037,
+      "ahead": 12,
       "eligible": 19
     },
     {
@@ -1175,28 +1175,28 @@
         {
           "name": "Biotechnology",
           "ticker": "IBB",
-          "value": 29.33374781,
+          "value": 29.29284926,
           "label": "+29.3%",
-          "close": 168.75718688964844,
-          "color": "#adc8bb",
+          "close": 169.84698486328125,
+          "color": "#b0cabd",
           "ink": "#000"
         },
         {
           "name": "Health care",
           "ticker": "XLV",
-          "value": 23.55469265,
-          "label": "+23.6%",
-          "close": 148.66290283203125,
+          "value": 24.82052256,
+          "label": "+24.8%",
+          "close": 147.57188415527344,
           "color": "#b7cfc2",
           "ink": "#000"
         },
         {
           "name": "Cybersecurity",
           "ticker": "CIBR",
-          "value": 12.617801,
-          "label": "+12.6%",
-          "close": 84.20516204833984,
-          "color": "#cdddd2",
+          "value": 19.18189791,
+          "label": "+19.2%",
+          "close": 81.96714782714844,
+          "color": "#c1d5ca",
           "ink": "#000"
         }
       ],
@@ -1204,32 +1204,32 @@
         {
           "name": "Clean energy",
           "ticker": "ICLN",
-          "value": -36.46535885,
-          "label": "-36.5%",
-          "close": 22.350011825561523,
-          "color": "#d8aeab",
+          "value": -36.11408124,
+          "label": "-36.1%",
+          "close": 23.088029861450195,
+          "color": "#dab1af",
           "ink": "#000"
         },
         {
           "name": "Semiconductors",
           "ticker": "SOXX",
-          "value": -28.46602726,
-          "label": "-28.5%",
-          "close": 178.9080047607422,
-          "color": "#ddb9b6",
+          "value": -28.60312046,
+          "label": "-28.6%",
+          "close": 187.7813262939453,
+          "color": "#debbb8",
           "ink": "#000"
         },
         {
           "name": "Artificial intelligence",
           "ticker": "AIQ",
-          "value": -14.85432515,
-          "label": "-14.9%",
-          "close": 62.810001373291016,
-          "color": "#e7cfcb",
+          "value": -14.77726445,
+          "label": "-14.8%",
+          "close": 65.0999984741211,
+          "color": "#e8d1cd",
           "ink": "#000"
         }
       ],
-      "scale": 36.46535885,
+      "scale": 36.11408124,
       "ahead": 12,
       "eligible": 19
     },
@@ -1239,28 +1239,28 @@
         {
           "name": "Energy",
           "ticker": "XLE",
-          "value": 41.37541572,
-          "label": "+41.4%",
-          "close": 43.07679748535156,
-          "color": "#9abcac",
+          "value": 42.08854718,
+          "label": "+42.1%",
+          "close": 43.40251159667969,
+          "color": "#9cbeae",
           "ink": "#000"
         },
         {
           "name": "Semiconductors",
           "ticker": "SOXX",
-          "value": 35.82545938,
-          "label": "+35.8%",
-          "close": 94.22386932373047,
-          "color": "#a2c1b3",
+          "value": 38.47508976,
+          "label": "+38.5%",
+          "close": 96.81886291503906,
+          "color": "#a1c1b2",
           "ink": "#000"
         },
         {
           "name": "Cybersecurity",
           "ticker": "CIBR",
-          "value": 29.52193245,
-          "label": "+29.5%",
-          "close": 73.21540069580078,
-          "color": "#acc8ba",
+          "value": 34.61691066,
+          "label": "+34.6%",
+          "close": 72.56889343261719,
+          "color": "#a7c5b7",
           "ink": "#000"
         }
       ],
@@ -1268,32 +1268,32 @@
         {
           "name": "Clean energy",
           "ticker": "ICLN",
-          "value": -12.66653724,
-          "label": "-12.7%",
-          "close": 16.259517669677734,
-          "color": "#e9d3cf",
+          "value": -11.28179866,
+          "label": "-11.3%",
+          "close": 16.625675201416016,
+          "color": "#ead7d3",
           "ink": "#000"
         },
         {
           "name": "Software",
           "ticker": "IGV",
-          "value": -7.90017737,
-          "label": "-7.9%",
-          "close": 103.17066192626953,
-          "color": "#edddd9",
+          "value": -5.26533587,
+          "label": "-5.3%",
+          "close": 102.95069885253906,
+          "color": "#f0e5df",
           "ink": "#000"
         },
         {
           "name": "Communication services",
           "ticker": "XLC",
-          "value": -6.66238644,
-          "label": "-6.7%",
-          "close": 112.90196228027344,
-          "color": "#eee0db",
+          "value": -4.93544032,
+          "label": "-4.9%",
+          "close": 113.06001281738281,
+          "color": "#f0e5e0",
           "ink": "#000"
         }
       ],
-      "scale": 41.37541572,
+      "scale": 42.08854718,
       "ahead": 12,
       "eligible": 19
     },
@@ -1303,28 +1303,28 @@
         {
           "name": "Semiconductors",
           "ticker": "SOXX",
-          "value": 77.72330055,
-          "label": "+77.7%",
-          "close": 72.01081848144531,
-          "color": "#699d89",
-          "ink": "#000"
-        },
-        {
-          "name": "Biotechnology",
-          "ticker": "IBB",
-          "value": 56.61564537,
-          "label": "+56.6%",
-          "close": 139.3602752685547,
-          "color": "#84ae9c",
+          "value": 91.19052518,
+          "label": "+91.2%",
+          "close": 70.12377166748047,
+          "color": "#609782",
           "ink": "#000"
         },
         {
           "name": "Cybersecurity",
           "ticker": "CIBR",
-          "value": 50.16978065,
-          "label": "+50.2%",
-          "close": 63.14852523803711,
-          "color": "#8db4a3",
+          "value": 56.29488416,
+          "label": "+56.3%",
+          "close": 62.50364685058594,
+          "color": "#89b1a0",
+          "ink": "#000"
+        },
+        {
+          "name": "Biotechnology",
+          "ticker": "IBB",
+          "value": 55.70749632,
+          "label": "+55.7%",
+          "close": 141.03367614746094,
+          "color": "#8ab2a1",
           "ink": "#000"
         }
       ],
@@ -1332,32 +1332,32 @@
         {
           "name": "Housing and homebuilders",
           "ticker": "ITB",
-          "value": -19.84967858,
-          "label": "-19.8%",
-          "close": 122.69445037841797,
-          "color": "#e3c7c3",
+          "value": -17.82573484,
+          "label": "-17.8%",
+          "close": 120.12276458740234,
+          "color": "#e5ccc8",
           "ink": "#000"
         },
         {
           "name": "Software",
           "ticker": "IGV",
-          "value": -10.16371181,
-          "label": "-10.2%",
-          "close": 105.77017211914062,
-          "color": "#ebd8d4",
+          "value": -6.47336121,
+          "label": "-6.5%",
+          "close": 104.28044891357422,
+          "color": "#efe2dd",
           "ink": "#000"
         },
         {
           "name": "Real estate",
           "ticker": "XLRE",
-          "value": 5.11007653,
-          "label": "+5.1%",
-          "close": 41.727684020996094,
-          "color": "#e0e9e1",
+          "value": 4.54101029,
+          "label": "+4.5%",
+          "close": 42.22266387939453,
+          "color": "#e3ebe3",
           "ink": "#000"
         }
       ],
-      "scale": 77.72330055,
+      "scale": 91.19052518,
       "ahead": 8,
       "eligible": 19
     },
@@ -1367,28 +1367,28 @@
         {
           "name": "Energy",
           "ticker": "XLE",
-          "value": 150.75062293,
-          "label": "+150.8%",
-          "close": 24.287078857421875,
-          "color": "#1c6c4f",
+          "value": 164.56577507,
+          "label": "+164.6%",
+          "close": 23.309892654418945,
+          "color": "#18694d",
           "ink": "#fff"
         },
         {
           "name": "Semiconductors",
           "ticker": "SOXX",
-          "value": 124.21731065,
-          "label": "+124.2%",
-          "close": 57.078556060791016,
-          "color": "#367c63",
+          "value": 141.61097411,
+          "label": "+141.6%",
+          "close": 55.49003219604492,
+          "color": "#2d765c",
           "ink": "#fff"
         },
         {
           "name": "Aerospace and defense",
           "ticker": "ITA",
-          "value": 105.35161866,
-          "label": "+105.4%",
-          "close": 33.48889923095703,
-          "color": "#4a8971",
+          "value": 119.8598267,
+          "label": "+119.9%",
+          "close": 32.0022087097168,
+          "color": "#42846c",
           "ink": "#000"
         }
       ],
@@ -1396,32 +1396,32 @@
         {
           "name": "Clean energy",
           "ticker": "ICLN",
-          "value": -36.54762387,
-          "label": "-36.5%",
-          "close": 22.37898826599121,
-          "color": "#d8aeab",
+          "value": -33.22420551,
+          "label": "-33.2%",
+          "close": 22.088842391967773,
+          "color": "#dcb5b2",
           "ink": "#000"
         },
         {
           "name": "Real estate",
           "ticker": "XLRE",
-          "value": 5.81939505,
-          "label": "+5.8%",
-          "close": 41.44797897338867,
-          "color": "#dee8df",
+          "value": 9.45805048,
+          "label": "+9.5%",
+          "close": 40.325950622558594,
+          "color": "#d6e3d9",
           "ink": "#000"
         },
         {
           "name": "Software",
           "ticker": "IGV",
-          "value": 12.55721077,
-          "label": "+12.6%",
-          "close": 84.4192886352539,
-          "color": "#cdddd2",
+          "value": 16.64934128,
+          "label": "+16.6%",
+          "close": 83.60955810546875,
+          "color": "#c6d9cd",
           "ink": "#000"
         }
       ],
-      "scale": 150.75062293,
+      "scale": 164.56577507,
       "ahead": 7,
       "eligible": 19
     }
@@ -1430,56 +1430,56 @@
     {
       "name": "Energy",
       "ticker": "XLE",
-      "amount": 25075.062292999995,
-      "label": "$25,075"
+      "amount": 26456.577506999998,
+      "label": "$26,457"
     },
     {
       "name": "Semiconductors",
       "ticker": "SOXX",
-      "amount": 22421.731065,
-      "label": "$22,422"
+      "amount": 24161.097411000002,
+      "label": "$24,161"
     },
     {
       "name": "Aerospace and defense",
       "ticker": "ITA",
-      "amount": 20535.161866,
-      "label": "$20,535"
+      "amount": 21985.982669999998,
+      "label": "$21,986"
     },
     {
       "name": "Information technology",
       "ticker": "XLK",
-      "amount": 18991.222339,
-      "label": "$18,991"
+      "amount": 20022.581608000004,
+      "label": "$20,023"
     },
     {
       "name": "Cybersecurity",
       "ticker": "CIBR",
-      "amount": 18255.026204,
-      "label": "$18,255"
+      "amount": 19093.074688,
+      "label": "$19,093"
     },
     {
       "name": "Artificial intelligence",
       "ticker": "AIQ",
-      "amount": 16674.712148,
-      "label": "$16,675"
+      "amount": 17641.004934,
+      "label": "$17,641"
     },
     {
       "name": "S&P 500",
       "ticker": "SPY",
-      "amount": 16323.197676999998,
-      "label": "$16,323"
+      "amount": 16966.248202,
+      "label": "$16,966"
     },
     {
       "name": "Real estate",
       "ticker": "XLRE",
-      "amount": 10581.939505,
-      "label": "$10,582"
+      "amount": 10945.805047999998,
+      "label": "$10,946"
     },
     {
       "name": "Clean energy",
       "ticker": "ICLN",
-      "amount": 6345.237613,
-      "label": "$6,345"
+      "amount": 6677.579449,
+      "label": "$6,678"
     }
   ],
   "growth_scale": 30000,
@@ -1488,48 +1488,48 @@
       "ticker": "SPY",
       "name": "S&P 500",
       "moves": [
-        2.4381507152082538,
-        -5.69364056
+        3.07797491213313,
+        -5.37119862
       ]
     },
     {
       "ticker": "SOXX",
       "name": "Semiconductors",
       "moves": [
-        -10.903934058370568,
-        -19.71141264
+        -9.281004729476127,
+        -21.29886434
       ]
     },
     {
       "ticker": "XLE",
       "name": "Energy",
       "moves": [
-        18.078773913063806,
-        -12.15923854
+        21.267377024020327,
+        -9.58803842
       ]
     },
     {
       "ticker": "IBB",
       "name": "Biotechnology",
       "moves": [
-        23.09994573979641,
-        5.06401691
+        24.935981123864572,
+        3.48728052
       ]
     },
     {
       "ticker": "XLV",
       "name": "Health care",
       "moves": [
-        20.594980566105825,
-        2.4542581
+        21.41878766503389,
+        2.80165447
       ]
     },
     {
       "ticker": "ITB",
       "name": "Housing and homebuilders",
       "moves": [
-        0.5658911162803815,
-        8.57899599
+        -2.465991366991793,
+        9.2529062
       ]
     }
   ],
